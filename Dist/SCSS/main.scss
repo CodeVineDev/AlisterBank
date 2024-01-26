@@ -6,23 +6,40 @@
     @media (max-width : $smallpc) {
         @content
     }
+
 }
 
+;
+
+@mixin biggerphone {
+    @media (max-width : $biggerPhone) {
+        @content
+    }
+}
+
+;
+
+@mixin mobile {
+    @media (max-width: $mobile) {
+        @content
+    }
+}
+
+;
+
 .first-navbar {
+    position: relative;
+    z-index: 10;
     width: 100%;
     background: $lavender;
     padding: 1rem;
     margin-bottom: 5px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr .5fr 1.5fr;
     gap: 5rem;
     align-items: center;
     color: $black;
-    box-shadow: .5px .5px 2px #dbdbdb;
-
-    @include smallpc {
-        border: $red-border;
-    }
+    box-shadow: .5px .5px 2px $grey;
 
     .logo {
         display: flex;
@@ -42,14 +59,14 @@
             width: 100%;
             padding-left: 5px;
             font-weight: 800;
+            white-space: nowrap;
         }
     }
 }
 
 .nav-secondary-container {
-    justify-content: center;
+    justify-content: right;
     align-items: center;
-    transform: translateX(60px);
     display: flex;
 
     a {
@@ -94,21 +111,49 @@
     font-weight: 600;
     border-radius: 20px;
     color: $white;
+    transition: 200ms;
+
+    &:hover {
+        color: $black;
+        background: $grey;
+    }
+}
+
+.search {
+    border: none;
+    background: $grey;
+    padding: 5px 15px;
+    border-radius: 20px;
+    transition: 200ms;
+
+    &:hover {
+        background: $darkorange;
+        color: $white;
+    }
 }
 
 .nav-primary-container {
-    grid-column: span 2;
+    justify-content: right;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+
+    .untouch-links {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
 
     .container-box {
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: right;
     }
 
     a {
         color: $black;
         padding: 2px;
-        margin: 0 10px;
+        margin: 0 5px;
         font-size: 14px;
         font-weight: 100;
         font-family: $normal-font;
@@ -124,9 +169,19 @@
     }
 }
 
+.sidebarBtn {
+    display: none;
+}
+
+.sideBar {
+    display: none;
+}
+
+
 // HERO SECTION
 .body-slider {
     display: flex;
+    transition: 200ms;
     padding: 0 2rem;
     justify-content: center;
     align-items: center;
@@ -180,7 +235,7 @@
         }
 
         p {
-            font-size: clamp(16px, 4vw, 20px);
+            font-size: clamp(14px, 4vw, 20px);
             font-family: $normal-font;
             margin-bottom: 30px;
             font-weight: 400;
@@ -215,9 +270,9 @@
 }
 
 .manual-btn {
-    border: 2px solid $white;
+    border: 1px solid $darkorange;
     width: 30px;
-    height: 8px;
+    height: 5px;
     cursor: pointer;
     transition: 1000ms;
 
@@ -226,7 +281,7 @@
     }
 
     &:hover {
-        background: $lavender;
+        background: $darkorange;
 
     }
 }
@@ -249,12 +304,12 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    bottom: 25px;
+    bottom: 28px;
 
     div {
-        border: $lavender;
+        border: $darkorange;
         width: 30px;
-        height: 7px;
+        height: 4px;
         transition: 1000ms;
     }
 
@@ -264,13 +319,137 @@
 }
 
 #radio1:checked~.navigation-auto .auto-btn1 {
-    background: $lavender;
+    background: $darkorange;
 }
 
 #radio2:checked~.navigation-auto .auto-btn2 {
-    background: $lavender;
+    background: $darkorange;
 }
 
 #radio3:checked~.navigation-auto .auto-btn3 {
-    background: $lavender;
+    background: $darkorange;
 }
+
+
+@include smallpc {
+    .first-navbar {
+        grid-template-columns: repeat(2, 1fr);
+
+        .nav-primary-container {
+            grid-column: span 1;
+        }
+
+        .nav-primary-container .container-box {
+            display: none;
+        }
+
+        .nav-secondary-container {
+            display: none;
+        }
+
+        .untouch-links {
+            display: flex;
+            justify-content: right;
+            align-items: center;
+        }
+    }
+
+    .sidebarBtn {
+        display: block;
+    }
+
+    .sideBar {
+        display: block;
+        width: 100%;
+        background: $white;
+        position: absolute;
+        transition: 200ms;
+        top: -305px;
+        left: 0;
+        display: grid;
+        gap: 10px;
+        grid-template-columns: 1fr;
+        box-shadow: 5px 5px 7px $grey;
+    
+
+        a {
+            font-size: 14px;
+            color: $black;
+            background: $white;
+            font-weight: 400;
+            font-family: $normal-font;
+            padding: 10px;
+            transition: 200ms;
+            position: relative;
+
+            &::before {
+                position: absolute;
+                left: -30px;
+                top: 17px;
+                border-radius: 5px;
+                content: "";
+                background: $darkorange;
+                height: 7px;
+                width: 30px;
+            }
+            &:after{
+                position: absolute;
+                content: '';
+                height: 1px;
+                width: 100%;
+            }
+
+            &:hover {
+                font-weight: 600;
+                margin-left: 20px;
+            }
+
+        }
+
+        // &:after{
+        //     position: relative;
+        //     content:'';
+        //     width: 100%;
+        //     z-index: 9;
+        //     height: 100%;
+        //     background: grey;
+        // }
+    }
+
+}
+
+@include biggerphone {
+    .first-navbar {
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    .nav-primary-container {
+        display: none;
+    }
+
+    .body-slider {
+        .slider {
+            .slides {
+                .content {
+                    h3 {
+                        width: 80%;
+                    }
+
+                    p {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+// @include mobile{
+//     .second {
+//         img{
+//             object-position: -0px;
+//         }
+//     }
+// }
