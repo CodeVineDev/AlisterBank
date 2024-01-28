@@ -18,7 +18,7 @@ let bodySlider = document.querySelector('.body-slider');
 sidebarBtn.addEventListener('click', () => {
     sideBar.style.top = "60px"
     sidebarBtn.style.opacity = 0;
-    bodySlider.style.marginTop = "315px"
+    bodySlider.style.marginTop = "320px"
 })
 closeModal.addEventListener('click', () => {
     sideBar.style.top = "-305px"

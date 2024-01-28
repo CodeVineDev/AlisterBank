@@ -27,9 +27,13 @@
 
 ;
 
+.navbar {
+    box-shadow: .5px .5px 2px $grey;
+}
+
 .first-navbar {
     position: relative;
-    z-index: 10;
+    z-index: 1;
     width: 100%;
     background: $lavender;
     padding: 1rem;
@@ -39,7 +43,6 @@
     gap: 5rem;
     align-items: center;
     color: $black;
-    box-shadow: .5px .5px 2px $grey;
 
     .logo {
         display: flex;
@@ -138,16 +141,16 @@
     align-items: center;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 
-    .untouch-links {
-        align-items: center;
-        display: flex;
-        justify-content: center;
-    }
-
     .container-box {
         display: flex;
         align-items: center;
         justify-content: right;
+    }
+
+    .untouch-links {
+        align-items: center;
+        display: flex;
+        justify-content: center;
     }
 
     a {
@@ -181,7 +184,7 @@
 // HERO SECTION
 .body-slider {
     display: flex;
-    transition: 200ms;
+    transition: 400ms;
     padding: 0 2rem;
     justify-content: center;
     align-items: center;
@@ -223,7 +226,6 @@
 
     .content {
         position: absolute;
-        z-index: 4;
         top: 20%;
         left: 5%;
 
@@ -356,21 +358,62 @@
 
     .sidebarBtn {
         display: block;
+        transition: 200ms;
+        width: 50px;
+        padding: 5px;
+
+        .cube {
+            width: 15px;
+            transform: translateX(5px);
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 5px;
+            transition: 200ms;
+        }
+
+        .box {
+            background: $black;
+            width: 5px;
+            height: 5px;
+            transition: 200ms;
+        }
+    }
+
+    .close-modal {
+        background: none;
+        border-radius: 10px;
+        font-weight: 900;
+        border: 1px solid $grey;
+        width: max-content;
+        position: absolute;
+        padding: 0 10px;
+        right: 10px;
+        top: 5px;
+        z-index: 1;
+
+        p {
+            margin-left: 3px;
+            rotate: 45deg;
+            font-size: 30px;
+        }
     }
 
     .sideBar {
         display: block;
         width: 100%;
+        height: 300px;
         background: $white;
         position: absolute;
-        transition: 200ms;
+        transition: 400ms;
         top: -305px;
         left: 0;
-        display: grid;
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
         gap: 10px;
-        grid-template-columns: 1fr;
+
         box-shadow: 5px 5px 7px $grey;
-    
+
 
         a {
             font-size: 14px;
@@ -392,7 +435,8 @@
                 height: 7px;
                 width: 30px;
             }
-            &:after{
+
+            &:after {
                 position: absolute;
                 content: '';
                 height: 1px;
@@ -424,11 +468,18 @@
 
     }
 
-    .nav-primary-container {
+    .container-box {
         display: none;
     }
 
+    .untouch-links button {
+        display: none;
+    }
+
+
     .body-slider {
+        padding: .5rem;
+
         .slider {
             .slides {
                 .content {
