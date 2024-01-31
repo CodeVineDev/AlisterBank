@@ -329,7 +329,6 @@ a {
   .close-modal {
     background: none;
     border-radius: 10px;
-    font-weight: 900;
     border: 1px solid #dbdbdb;
     width: 40px;
     height: 40px;
@@ -340,10 +339,12 @@ a {
     z-index: 1;
   }
   .close-modal p {
-    margin-left: 3.5px;
-    margin-top: -6.5px;
+    margin-left: 1px;
+    margin-top: -1px;
+    font-weight: 900;
+    font-family: "Open Sans", sans-serif;
     rotate: 45deg;
-    font-size: 40px;
+    font-size: 30px;
   }
   .sideBar {
     display: block;
