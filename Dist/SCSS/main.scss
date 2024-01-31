@@ -378,15 +378,17 @@
             transition: 200ms;
         }
     }
+   
 
     .close-modal {
         background: none;
         border-radius: 10px;
         font-weight: 900;
         border: 1px solid $grey;
-        width: max-content;
+        width: 40px;
+        height: 40px;
         position: absolute;
-        padding: 0 10px;
+        background: $grey;
         right: 10px;
         top: 5px;
         z-index: 1;
@@ -397,6 +399,7 @@
             font-size: 30px;
         }
     }
+  
 
     .sideBar {
         display: block;
