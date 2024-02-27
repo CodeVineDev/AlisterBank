@@ -22,6 +22,73 @@ html {
   overflow-x: hidden;
 }
 
+@media (max-width: 800px) {
+  .hamburger-btn {
+    right: -80%;
+    width: 30px;
+    height: 3px;
+    background: #242424;
+    position: relative;
+    top: 35px;
+  }
+  .hamburger-btn::before {
+    content: "";
+    position: absolute;
+    background: #242424;
+    width: 30px;
+    height: 3px;
+    top: -8px;
+    left: 0;
+  }
+  .hamburger-btn::after {
+    content: "";
+    position: absolute;
+    background: #242424;
+    width: 30px;
+    height: 3px;
+    top: 8px;
+    left: 0;
+  }
+  .navlink-con {
+    border: 2px solid red;
+    display: none !important;
+  }
+  .second-sidebar {
+    display: block !important;
+    border: 2px solid red;
+  }
+  .second-sidebar-con {
+    padding-top: 100px;
+    position: absolute;
+    height: 100dvh;
+    width: 40%;
+    top: 0;
+    right: 0;
+    background: white;
+    z-index: 1;
+  }
+  .second-sidebar-con .close-btn {
+    background: #dbdbdb;
+    border-radius: 5px;
+    padding: 9px 20px;
+    font-weight: 900;
+    border-radius: 50%;
+    width: 30px;
+    rotate: 45deg;
+    display: flex;
+    justify-content: center;
+  }
+  .second-sidebar-con .side-link {
+    border: 2px solid red;
+    padding: 20px;
+  }
+  .second-sidebar-con .side-link a {
+    color: #242424;
+  }
+  .second-sidebar-con .top-nav {
+    position: relative;
+  }
+}
 .navbar {
   font-family: "Open Sans", sans-serif;
   font-size: min(14px, 4vw, 15px);
@@ -50,6 +117,7 @@ html {
   padding: 0 0 0 5px;
 }
 .navbar .top-nav .navlink-con {
+  display: block;
   display: flex;
   align-items: center;
   justify-content: center;

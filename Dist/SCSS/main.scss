@@ -2,8 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
-@mixin smallpc {
-    @media (max-width : $smallpc) {
+@mixin iPad {
+    @media (max-width : $iPad) {
         @content
     }
 
@@ -25,16 +25,106 @@
     }
 }
 
+
+
 html {
     overflow-x: hidden;
 }
 
 ;
 
+@include iPad {
+    .hamburger-btn {
+        right: -80%;
+        width: 30px;
+        height: 3px;
+        background: $black;
+        position: relative;
+        top: 35px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            background: $black;
+            width: 30px;
+            height: 3px;
+            top: -8px;
+            left: 0;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            background: $black;
+            width: 30px;
+            height: 3px;
+            top: 8px;
+            left: 0;
+        }
+    }
+
+    .navlink-con {
+        border: $red-border;
+        display: none !important;
+    }
+
+    .second-sidebar {
+        display: block !important;
+        border: $red-border;
+    }
+
+    .second-sidebar-con {
+        padding-top: 100px;
+        position: absolute;
+        height: 100dvh;
+        width: 40%;
+        top: 0;
+        right: 0;
+        background: $white;
+        z-index: 1;
+        .close-btn{
+            background: $grey;
+            border-radius: 5px;
+            padding: 9px 20px ;
+            font-weight: 900;
+            border-radius: 50%;
+            width: 30px;
+            rotate: 45deg;
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .side-link {
+            border: $red-border;
+            padding: 20px;
+
+            a {
+                color: $black;
+            }
+
+
+        }
+
+        .top-nav {
+            position: relative;
+        }
+    }
+}
+
+// @include biggerphone{
+
+// }
+// @include mobile{
+
+// }
+
+
 .navbar {
     font-family: $normal-font;
     font-size: min(14px, 4vw, 15px);
     background: $lavender;
+
     .top-nav {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -61,6 +151,7 @@ html {
         }
 
         .navlink-con {
+            display: block;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -140,13 +231,16 @@ html {
             }
         }
     }
-    .first-sidebar{
+
+    .first-sidebar {
         display: none;
     }
-    .second-sidebar{
+
+    .second-sidebar {
         display: none;
     }
 }
+
 
 
 
