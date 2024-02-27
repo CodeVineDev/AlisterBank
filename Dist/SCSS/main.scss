@@ -24,6 +24,9 @@
         @content
     }
 }
+body{
+    overflow-x: hidden;
+}
 
 ;
 
@@ -112,7 +115,7 @@
     padding: 5px 15px;
     border: none;
     font-weight: 600;
-    border-radius: 20px;
+    border-radius: 5px;
     color: $white;
     transition: 200ms;
 
@@ -126,7 +129,7 @@
     border: none;
     background: $grey;
     padding: 5px 15px;
-    border-radius: 20px;
+    border-radius: 5px;
     transition: 200ms;
 
     &:hover {
@@ -250,7 +253,7 @@
             background: $darkorange;
             border: none;
             padding: 10px 30px;
-            border-radius: 20px;
+            border-radius: 5px;
 
         }
     }
@@ -361,22 +364,7 @@
         transition: 200ms;
         width: 50px;
         padding: 5px;
-
-        .cube {
-            width: 15px;
-            transform: translateX(5px);
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 5px;
-            transition: 200ms;
-        }
-
-        .box {
-            background: $black;
-            width: 5px;
-            height: 5px;
-            transition: 200ms;
-        }
+        border: $red-border;
     }
    
 
