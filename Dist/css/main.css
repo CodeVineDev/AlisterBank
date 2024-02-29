@@ -22,7 +22,7 @@ a {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
-  background: #004688;
+  background: #D6B4E1;
   font-family: "Open Sans", sans-serif;
 }
 .top-nav .topNav-left {
@@ -44,7 +44,7 @@ a {
   border: 1px solid #6c757d;
 }
 .top-nav .topNav-right {
-  color: white;
+  color: #333333;
   width: min(50%, 400px);
   margin: auto;
   font-size: clamp(14px, 4vw, 15px);
@@ -64,61 +64,80 @@ a {
   padding: 5px;
   border-radius: 2px;
   border: 1px solid #6c757d;
-  color: white;
+  color: #333333;
 }
 #currency option {
   color: black;
 }
 
-.main-nav {
-  border: 2px solid red;
-  font-family: "Open Sans", sans-serif;
+.bottom-nav {
+  background: white;
+  border-bottom: 1px solid #6c757d;
+}
+.bottom-nav .main-nav {
+  padding: 10px;
+  font-family: "Noto Sans", sans-serif;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
+  width: min(95%, 1200px);
+  margin: auto;
   background: white;
 }
-.main-nav .logo {
-  border: 2px solid red;
+.bottom-nav .main-nav .logo {
   padding: 10px;
   display: flex;
   font-family: "Noto Sans", sans-serif;
 }
-.main-nav .logo img {
+.bottom-nav .main-nav .logo .hidden {
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.bottom-nav .main-nav .logo img {
   width: 40px;
 }
-.main-nav .logo h3 {
+.bottom-nav .main-nav .logo h3 {
+  margin-left: 5px;
+  color: #542F6F;
   font-size: clamp(16px, 4vw, 30px);
 }
-.main-nav .mainNavLink-con {
-  border: 2px solid red;
+.bottom-nav .main-nav .mainNavLink-con {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.main-nav .mainNavLink-con ul {
+.bottom-nav .main-nav .mainNavLink-con ul {
   display: flex;
   justify-content: center;
   align-items: center;
   list-style: none;
 }
-.main-nav .mainNavLink-con ul a {
+.bottom-nav .main-nav .mainNavLink-con ul a {
   color: #242424;
   padding: 10px;
   margin: 7px 5px;
+  font-weight: 500;
+  color: #333333;
+  transition: 200ms ease-in-out;
 }
-.main-nav .mainNavLink-con ul button {
+.bottom-nav .main-nav .mainNavLink-con ul a:hover {
+  color: #7D5299;
+}
+.bottom-nav .main-nav .mainNavLink-con ul button {
   padding: 10px;
-  background: #0d6efd;
+  background: #542F6F;
   color: white;
-  border: 2px solid #0d6efd;
+  border: 2px solid #542F6F;
   transition: 200ms ease-in-out;
   font-size: 16px;
   font-weight: 400;
   border-radius: 5px;
   margin-left: 10px;
 }
-.main-nav .mainNavLink-con ul button:hover {
-  background: white;
-  color: #0d6efd;
+.bottom-nav .main-nav .mainNavLink-con ul button:hover {
+  background: #A785CA;
+  border: 2px solid #A785CA;
+  color: white;
 }/*# sourceMappingURL=main.css.map */
