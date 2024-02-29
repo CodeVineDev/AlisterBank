@@ -31,11 +31,11 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
-    background: $ss-color;
+    background: rgb(214, 214, 214);
     font-family: $normal-font;
 
     .topNav-left {
-        padding: 3px;
+        padding: 1px;
         width: 200px;
         margin: auto;
 
@@ -53,6 +53,10 @@
                 padding: 10px;
                 border: 1px solid $grey;
             }
+
+            i {
+                width: 20px;
+            }
         }
     }
 
@@ -62,7 +66,7 @@
         width: min(50%, 400px);
         margin: auto;
         font-size: clamp(14px, 4vw, 15px);
-        padding: 10px;
+        padding: 1px;
         display: grid;
         gap: 1rem;
         grid-template-columns: repeat(2, 1fr);
@@ -75,66 +79,75 @@
 }
 
 #currency {
-    padding: 5px;
     background: none;
-    background: none;
-    padding: 5px;
+    padding: 1px;
     border-radius: 2px;
     border: 1px solid $grey;
     color: $txt-color;
+    transform: translateY(-1px);
+
 
     option {
         color: black;
     }
 }
-.bottom-nav{
+#navbar{
+    position: sticky;
+    top: -30px;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    transition: 300ms ease-in-out;
     background: $white;
     border-bottom: 1px solid $grey;
+
     .main-nav {
         padding: 10px;
         font-family: $large-font;
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         gap: 2rem;
         width: min(95%, 1200px);
         margin: auto;
-    
-    
-        background:$white;
-    
+
+
+        background: $white;
+
         .logo {
             padding: 10px;
             display: flex;
             font-family: $large-font;
-            .hidden{
+
+            .hidden {
                 width: 40px;
                 height: 40px;
                 overflow: hidden;
                 border-radius: 50%;
             }
-            img{
+
+            img {
                 width: 40px;
-                
+
             }
-    
+
             h3 {
                 margin-left: 5px;
                 color: $header-color;
                 font-size: clamp(16px, 4vw, 30px);
             }
         }
-    
+
         .mainNavLink-con {
             display: flex;
             justify-content: center;
             align-items: center;
-    
+
             ul {
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 list-style: none;
-    
+
                 a {
                     color: $black;
                     padding: 10px;
@@ -142,31 +155,47 @@
                     font-weight: 500;
                     color: $txt-color;
                     transition: 200ms ease-in-out;
-                    &:hover{
+
+                    &:hover {
                         color: $b-color;
                     }
                 }
-    
-                button {
-                    padding: 10px;
-                    background: $header-color;
+
+
+            }
+        }
+
+        .login {
+            display: flex;
+            justify-content: end;
+            align-items: center;
+
+            button {
+                padding: 7px 25px;
+                background: $b-color;
+                color: $white;
+                border: 2px solid $b-color;
+                transition: 200ms ease-in-out;
+                font-size: 16px;
+                font-family: $large-font;
+                font-weight: 400;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 30px;
+                margin-left: 10px;
+
+                &:hover {
+                    background: $HE-color;
+                    border: 2px solid $HE-color;
                     color: $white;
-                    border: 2px solid $header-color;
-                    transition: 200ms ease-in-out;
-                    font-size: 16px;
-                    font-weight: 400;
-                    border-radius: 5px;
-                    margin-left: 10px;
-    
-                    &:hover {
-                        background: $HE-color;
-                        border: 2px solid $HE-color;
-                        color: $white;
-                    }
                 }
             }
         }
-    
+
     }
 }
 
+.home-page {
+    height: 3000px;
+}

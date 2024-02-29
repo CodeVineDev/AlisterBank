@@ -22,11 +22,11 @@ a {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
-  background: #D6B4E1;
+  background: rgb(214, 214, 214);
   font-family: "Open Sans", sans-serif;
 }
 .top-nav .topNav-left {
-  padding: 3px;
+  padding: 1px;
   width: 200px;
   margin: auto;
   display: grid;
@@ -43,12 +43,15 @@ a {
   padding: 10px;
   border: 1px solid #6c757d;
 }
+.top-nav .topNav-left .left-icons i {
+  width: 20px;
+}
 .top-nav .topNav-right {
   color: #333333;
   width: min(50%, 400px);
   margin: auto;
   font-size: clamp(14px, 4vw, 15px);
-  padding: 10px;
+  padding: 1px;
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(2, 1fr);
@@ -58,63 +61,68 @@ a {
 }
 
 #currency {
-  padding: 5px;
   background: none;
-  background: none;
-  padding: 5px;
+  padding: 1px;
   border-radius: 2px;
   border: 1px solid #6c757d;
   color: #333333;
+  transform: translateY(-1px);
 }
 #currency option {
   color: black;
 }
 
-.bottom-nav {
+#navbar {
+  position: sticky;
+  top: -30px;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  transition: 300ms ease-in-out;
   background: white;
   border-bottom: 1px solid #6c757d;
 }
-.bottom-nav .main-nav {
+#navbar .main-nav {
   padding: 10px;
   font-family: "Noto Sans", sans-serif;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   width: min(95%, 1200px);
   margin: auto;
   background: white;
 }
-.bottom-nav .main-nav .logo {
+#navbar .main-nav .logo {
   padding: 10px;
   display: flex;
   font-family: "Noto Sans", sans-serif;
 }
-.bottom-nav .main-nav .logo .hidden {
+#navbar .main-nav .logo .hidden {
   width: 40px;
   height: 40px;
   overflow: hidden;
   border-radius: 50%;
 }
-.bottom-nav .main-nav .logo img {
+#navbar .main-nav .logo img {
   width: 40px;
 }
-.bottom-nav .main-nav .logo h3 {
+#navbar .main-nav .logo h3 {
   margin-left: 5px;
   color: #542F6F;
   font-size: clamp(16px, 4vw, 30px);
 }
-.bottom-nav .main-nav .mainNavLink-con {
+#navbar .main-nav .mainNavLink-con {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.bottom-nav .main-nav .mainNavLink-con ul {
+#navbar .main-nav .mainNavLink-con ul {
   display: flex;
   justify-content: center;
   align-items: center;
   list-style: none;
 }
-.bottom-nav .main-nav .mainNavLink-con ul a {
+#navbar .main-nav .mainNavLink-con ul a {
   color: #242424;
   padding: 10px;
   margin: 7px 5px;
@@ -122,22 +130,35 @@ a {
   color: #333333;
   transition: 200ms ease-in-out;
 }
-.bottom-nav .main-nav .mainNavLink-con ul a:hover {
-  color: #7D5299;
+#navbar .main-nav .mainNavLink-con ul a:hover {
+  color: #9931df;
 }
-.bottom-nav .main-nav .mainNavLink-con ul button {
-  padding: 10px;
-  background: #542F6F;
+#navbar .main-nav .login {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+#navbar .main-nav .login button {
+  padding: 7px 25px;
+  background: #9931df;
   color: white;
-  border: 2px solid #542F6F;
+  border: 2px solid #9931df;
   transition: 200ms ease-in-out;
   font-size: 16px;
+  font-family: "Noto Sans", sans-serif;
   font-weight: 400;
-  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
   margin-left: 10px;
 }
-.bottom-nav .main-nav .mainNavLink-con ul button:hover {
+#navbar .main-nav .login button:hover {
   background: #A785CA;
   border: 2px solid #A785CA;
   color: white;
+}
+
+.home-page {
+  height: 3000px;
 }/*# sourceMappingURL=main.css.map */
