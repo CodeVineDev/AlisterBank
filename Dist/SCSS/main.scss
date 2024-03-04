@@ -27,57 +27,7 @@
 
 ;
 
-@include $ipad  {
-    .side-nav {
-        display: block;
-    }
-}
-.top-nav {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    background: rgb(214, 214, 214);
-    font-family: $normal-font;
-
-    .topNav-left {
-        padding: 1px;
-        width: 200px;
-        margin: auto;
-    }
-
-    .topNav-right {
-
-        color: $txt-color;
-        width: min(50%, 400px);
-        margin: auto;
-        font-size: clamp(14px, 4vw, 15px);
-        padding: 1px;
-        display: grid;
-        gap: 1rem;
-        grid-template-columns: repeat(2, 1fr);
-
-        .p-number {
-            border-right: 1px solid $grey;
-        }
-
-    }
-}
-
-#currency {
-    background: none;
-    padding: 1px;
-    border-radius: 2px;
-    border: 1px solid $grey;
-    color: $txt-color;
-    transform: translateY(-1px);
-
-
-    option {
-        color: black;
-    }
-}
-
-.lower-nav {
+.navbar {
     width: 100%;
     transition: 300ms ease-in-out;
     background: $white;
@@ -101,14 +51,17 @@
             font-family: $large-font;
 
             img {
-                width: 40px;
+                width: 45px;
 
             }
 
             h3 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 margin-left: 5px;
                 color: $header-color;
-                font-size: clamp(16px, 4vw, 30px);
+                font-size: clamp(16px, 4vw, 24px);
             }
         }
 
