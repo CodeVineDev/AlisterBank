@@ -27,6 +27,11 @@
 
 ;
 
+@include $ipad  {
+    .side-nav {
+        display: block;
+    }
+}
 .top-nav {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -38,26 +43,6 @@
         padding: 1px;
         width: 200px;
         margin: auto;
-
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
-
-        .left-icons {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            justify-content: left;
-
-            .icons {
-                padding: 10px;
-                border: 1px solid $grey;
-            }
-
-            i {
-                width: 20px;
-            }
-        }
     }
 
     .topNav-right {
@@ -91,15 +76,12 @@
         color: black;
     }
 }
-#navbar{
-    position: sticky;
-    top: -30px;
-    left: 0;
-    z-index: 10;
+
+.lower-nav {
     width: 100%;
     transition: 300ms ease-in-out;
     background: $white;
-    border-bottom: 1px solid $grey;
+
 
     .main-nav {
         padding: 10px;
@@ -117,13 +99,6 @@
             padding: 10px;
             display: flex;
             font-family: $large-font;
-
-            .hidden {
-                width: 40px;
-                height: 40px;
-                overflow: hidden;
-                border-radius: 50%;
-            }
 
             img {
                 width: 40px;
@@ -194,6 +169,12 @@
         }
 
     }
+
+    .side-nav {
+        display: none;
+    }
+
+ 
 }
 
 .home-page {

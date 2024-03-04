@@ -22,7 +22,6 @@
       rel="stylesheet"
       href="font-awesome(4.7.0)/css/font-awesome.min.css"
     />
-    <script src="script.js" defer></script>
 
     <title>Alister Bank</title>
   </head>
@@ -31,12 +30,6 @@
     <!-- NAVBAR SECTION -->
     <nav class="navbar">
       <div class="top-nav">
-        <div class="topNav-left">
-          <div class="left-icons">
-            <div class="icons"><i class="fi fi-brands-facebook"></i></div>
-            <div class="icons"><i class="fi fi-brands-twitter"></i></div>
-            <div class="icons"><i class="fi fi-brands-linkedin"></i></div>
-          </div>
           <div class="right-currencySelect">
             <select name="currency" id="currency">
               <option value="0">USD</option>
@@ -53,17 +46,28 @@
         </div>
       </div>
 
-      <div  id="navbar">
+      <div class="lower-nav">
         <div class="main-nav">
           <div class="logo">
-            <div class="hidden">
               <img
                 src="IMAGES/font-family 'Open Sans', sans-serif;.png"
                 alt="logo"
               />
-            </div>
 
             <h3>Alister Bank</h3>
+          </div>
+          <div class="side-nav">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Service</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+            <button href="#">
+              <span class="material-symbols-outlined"> shield_person </span>Open
+              An Account</button
+            >
           </div>
           <div class="mainNavLink-con">
             <ul>
@@ -86,5 +90,7 @@
     <section class="body-section">
       <div class="home-page"> </div>
     </section>
+
+    <script src="Javascript/script.js"></script>
   </body>
 </html>

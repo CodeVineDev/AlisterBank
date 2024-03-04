@@ -29,22 +29,6 @@ a {
   padding: 1px;
   width: 200px;
   margin: auto;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
-}
-.top-nav .topNav-left .left-icons {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  justify-content: left;
-}
-.top-nav .topNav-left .left-icons .icons {
-  padding: 10px;
-  border: 1px solid #6c757d;
-}
-.top-nav .topNav-left .left-icons i {
-  width: 20px;
 }
 .top-nav .topNav-right {
   color: #333333;
@@ -72,17 +56,12 @@ a {
   color: black;
 }
 
-#navbar {
-  position: sticky;
-  top: -30px;
-  left: 0;
-  z-index: 10;
+.lower-nav {
   width: 100%;
   transition: 300ms ease-in-out;
   background: white;
-  border-bottom: 1px solid #6c757d;
 }
-#navbar .main-nav {
+.lower-nav .main-nav {
   padding: 10px;
   font-family: "Noto Sans", sans-serif;
   display: grid;
@@ -92,37 +71,31 @@ a {
   margin: auto;
   background: white;
 }
-#navbar .main-nav .logo {
+.lower-nav .main-nav .logo {
   padding: 10px;
   display: flex;
   font-family: "Noto Sans", sans-serif;
 }
-#navbar .main-nav .logo .hidden {
-  width: 40px;
-  height: 40px;
-  overflow: hidden;
-  border-radius: 50%;
-}
-#navbar .main-nav .logo img {
+.lower-nav .main-nav .logo img {
   width: 40px;
 }
-#navbar .main-nav .logo h3 {
+.lower-nav .main-nav .logo h3 {
   margin-left: 5px;
   color: #542F6F;
   font-size: clamp(16px, 4vw, 30px);
 }
-#navbar .main-nav .mainNavLink-con {
+.lower-nav .main-nav .mainNavLink-con {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-#navbar .main-nav .mainNavLink-con ul {
+.lower-nav .main-nav .mainNavLink-con ul {
   display: flex;
   justify-content: center;
   align-items: center;
   list-style: none;
 }
-#navbar .main-nav .mainNavLink-con ul a {
+.lower-nav .main-nav .mainNavLink-con ul a {
   color: #242424;
   padding: 10px;
   margin: 7px 5px;
@@ -130,15 +103,15 @@ a {
   color: #333333;
   transition: 200ms ease-in-out;
 }
-#navbar .main-nav .mainNavLink-con ul a:hover {
+.lower-nav .main-nav .mainNavLink-con ul a:hover {
   color: #9931df;
 }
-#navbar .main-nav .login {
+.lower-nav .main-nav .login {
   display: flex;
   justify-content: end;
   align-items: center;
 }
-#navbar .main-nav .login button {
+.lower-nav .main-nav .login button {
   padding: 7px 25px;
   background: #9931df;
   color: white;
@@ -153,10 +126,13 @@ a {
   border-radius: 30px;
   margin-left: 10px;
 }
-#navbar .main-nav .login button:hover {
+.lower-nav .main-nav .login button:hover {
   background: #A785CA;
   border: 2px solid #A785CA;
   color: white;
+}
+.lower-nav .side-nav {
+  display: none;
 }
 
 .home-page {
