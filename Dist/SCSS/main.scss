@@ -175,11 +175,21 @@
 
                 ul {
                     list-style: none;
+                    width: min(95%, 1200px);
+                    margin: auto;
+                    li{
+                        border-bottom: 1px solid $grey;
+                        padding: 20px;
+                        &:hover a{
+                            color: $b-color;
+                        }
+                    }
                 }
 
                 a {
                     color: $txt-color;
                     font-family: $normal-font;
+                    transition: 200ms;
                 }
             }
 

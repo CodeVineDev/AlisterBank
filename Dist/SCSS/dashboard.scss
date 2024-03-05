@@ -1,0 +1,37 @@
+@import 'resets', 'variables';
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+@mixin smallpc {
+    @media (max-width : $smallpc) {
+        @content
+    }
+
+}
+
+;
+
+@mixin iPad {
+    @media (max-width : $iPad) {
+        @content
+    }
+
+}
+
+;
+
+@mixin biggerphone {
+    @media (max-width : $biggerPhone) {
+        @content
+    }
+}
+
+;
+
+@mixin mobile {
+    @media (max-width: $mobile) {
+        @content
+    }
+}
+
+;

@@ -132,10 +132,20 @@ a {
   }
   .navbar .main-nav .dropnav-container ul {
     list-style: none;
+    width: min(95%, 1200px);
+    margin: auto;
+  }
+  .navbar .main-nav .dropnav-container ul li {
+    border-bottom: 1px solid #6c757d;
+    padding: 20px;
+  }
+  .navbar .main-nav .dropnav-container ul li:hover a {
+    color: #9931df;
   }
   .navbar .main-nav .dropnav-container a {
     color: #333333;
     font-family: "Open Sans", sans-serif;
+    transition: 200ms;
   }
   .navbar .main-nav .dropnav-btn {
     width: 50px;
