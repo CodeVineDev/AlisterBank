@@ -22,16 +22,19 @@ a {
   width: 100%;
   transition: 300ms ease-in-out;
   background: white;
+  position: sticky;
+  z-index: 1000;
+  top: 0;
+  left: 0;
 }
 .navbar .main-nav {
   padding: 10px;
+  padding-inline: 20px;
   font-family: "Noto Sans", sans-serif;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr));
   gap: 2rem;
-  width: min(95%, 1200px);
-  margin: auto;
-  position: relative;
+  width: 100%;
   background: white;
 }
 .navbar .main-nav .logo {
@@ -104,10 +107,35 @@ a {
 .navbar .dropnav-container {
   display: none;
 }
+.navbar .active {
+  height: 30rem !important;
+  transition: 300ms ease-in-out;
+}
 
 @media (max-width: 1000px) {
   .navbar .main-nav .mainNavLink-con {
     display: none;
+  }
+  .navbar .main-nav .dropnav-container {
+    transition: 300ms ease-in-out;
+    display: block;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 85px;
+    left: 0;
+    background: white;
+    z-index: -1;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  .navbar .main-nav .dropnav-container ul {
+    list-style: none;
+  }
+  .navbar .main-nav .dropnav-container a {
+    color: #333333;
+    font-family: "Open Sans", sans-serif;
   }
   .navbar .main-nav .dropnav-btn {
     width: 50px;
@@ -162,4 +190,5 @@ a {
 }
 .home-page {
   height: 3000px;
+  background: black;
 }/*# sourceMappingURL=main.css.map */
