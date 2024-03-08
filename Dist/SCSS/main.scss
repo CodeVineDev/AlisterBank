@@ -151,6 +151,51 @@
     }
 }
 
+// HOME PAGE 
+.home-page {
+    padding: 10px;
+    font-family: $large-font;
+
+    h1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: .7rem;
+        font-size: $big-text;
+        scroll-snap-type: y mandatory;
+        color: $header-color;
+        width: min(95%, 1000px);
+        margin: auto;
+
+        .autoscroll-text {
+            position: relative;
+            z-index: -1;
+            display: flex;
+            height: 2.5ch;
+            overflow: hidden;
+            flex-direction: column;
+            text-align: right;
+            scroll-snap-align: start;
+            span{
+                animation: auto-scroll 10s infinite;
+            }
+
+
+        }
+    }
+}
+@keyframes auto-scroll {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-1.3em);
+    }
+    100%{
+        transform: translateY(-2.68em);
+    }
+}
+
 
 @include smallpc {
     .navbar {
@@ -177,10 +222,12 @@
                     list-style: none;
                     width: min(95%, 1200px);
                     margin: auto;
-                    li{
+
+                    li {
                         border-bottom: 1px solid $grey;
                         padding: 20px;
-                        &:hover a{
+
+                        &:hover a {
                             color: $b-color;
                         }
                     }
@@ -200,7 +247,7 @@
                 background: none;
                 display: block;
 
-                
+
 
                 .bars {
                     width: 60%;
@@ -233,15 +280,16 @@
                     }
                 }
             }
+
             .dropnav-btn.toggle .bars {
                 background: transparent;
             }
-        
+
             .dropnav-btn.toggle .bars::before {
                 top: 0;
                 transform: rotate(45deg);
             }
-        
+
             .dropnav-btn.toggle .bars::after {
                 top: 0;
                 transform: rotate(-45deg);
@@ -250,7 +298,7 @@
         }
     }
 
-   
+
 }
 
 @include biggerphone {
@@ -280,10 +328,4 @@
             gap: .5rem;
         }
     }
-}
-
-
-.home-page {
-    height: 3000px;
-    background: black;
 }

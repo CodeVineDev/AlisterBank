@@ -112,6 +112,46 @@ a {
   transition: 300ms ease-in-out;
 }
 
+.home-page {
+  padding: 10px;
+  font-family: "Noto Sans", sans-serif;
+}
+.home-page h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.7rem;
+  font-size: clamp(30px, 4vw, 60px);
+  scroll-snap-type: y mandatory;
+  color: #542F6F;
+  width: min(95%, 1000px);
+  margin: auto;
+}
+.home-page h1 .autoscroll-text {
+  position: relative;
+  z-index: -1;
+  display: flex;
+  height: 2.5ch;
+  overflow: hidden;
+  flex-direction: column;
+  text-align: right;
+  scroll-snap-align: start;
+}
+.home-page h1 .autoscroll-text span {
+  animation: auto-scroll 10s infinite;
+}
+
+@keyframes auto-scroll {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-1.3em);
+  }
+  100% {
+    transform: translateY(-2.68em);
+  }
+}
 @media (max-width: 1000px) {
   .navbar .main-nav .mainNavLink-con {
     display: none;
@@ -211,8 +251,4 @@ a {
     grid-template-columns: 1.5fr 0.5fr;
     gap: 0.5rem;
   }
-}
-.home-page {
-  height: 3000px;
-  background: black;
 }/*# sourceMappingURL=main.css.map */

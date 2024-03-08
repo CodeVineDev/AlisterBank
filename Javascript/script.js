@@ -1,5 +1,5 @@
 // NAVBAR SCRIPT
-document.addEventListener("DOMContentLoaded", ()=>{
+document.addEventListener("DOMContentLoaded", () => {
   let dropnavBtn = document.querySelector('.dropnav-btn');
   let dropnavContainer = document.querySelector('.dropnav-container');
   let dropnavBars = document.querySelector('.bars');
@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
   dropnavBtn.addEventListener('click', () => {
     dropnavContainer.classList.toggle('active')
     dropnavBtn.classList.toggle("toggle");
-    
+
   })
 });
 
