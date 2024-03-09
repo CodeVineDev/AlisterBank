@@ -138,7 +138,8 @@ a {
   scroll-snap-align: start;
 }
 .home-page h1 .autoscroll-text span {
-  animation: auto-scroll 10s infinite;
+  animation: auto-scroll 10s infinite 2s;
+  margin-top: 10px;
 }
 
 @keyframes auto-scroll {
@@ -146,10 +147,10 @@ a {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-1.3em);
+    transform: translateY(-1.38em);
   }
   100% {
-    transform: translateY(-2.68em);
+    transform: translateY(-2.79em);
   }
 }
 @media (max-width: 1000px) {
@@ -235,6 +236,30 @@ a {
   }
 }
 @media (max-width: 660px) {
+  h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.7rem;
+    font-size: 26px;
+    scroll-snap-type: y mandatory;
+    color: #542F6F;
+    width: min(95%, 1000px);
+    margin: auto;
+  }
+  h1 .autoscroll-text {
+    position: relative;
+    z-index: -1;
+    display: flex;
+    height: 2.5ch;
+    overflow: hidden;
+    flex-direction: column;
+    text-align: right;
+    scroll-snap-align: start;
+  }
+  h1 .autoscroll-text span {
+    animation: auto-scroll 10s infinite;
+  }
   .navbar .main-nav .nav-btns .login {
     display: none;
   }
@@ -246,6 +271,31 @@ a {
   }
 }
 @media (max-width: 450px) {
+  h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 0.7rem;
+    font-size: clamp(30px, 4vw, 60px);
+    scroll-snap-type: y mandatory;
+    color: #542F6F;
+    width: min(95%, 1000px);
+    margin: auto;
+  }
+  h1 .autoscroll-text {
+    position: relative;
+    z-index: -1;
+    display: flex;
+    height: 2.5ch;
+    overflow: hidden;
+    flex-direction: column;
+    text-align: right;
+    scroll-snap-align: start;
+  }
+  h1 .autoscroll-text span {
+    animation: auto-scroll 10s infinite;
+  }
   .navbar .main-nav {
     display: grid;
     grid-template-columns: 1.5fr 0.5fr;
