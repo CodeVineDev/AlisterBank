@@ -170,7 +170,7 @@
             position: relative;
             z-index: -1;
             display: flex;
-            height: 2.5ch;
+            height: 50px;
             margin-bottom: -5px;
             overflow: hidden;
             flex-direction: column;
@@ -197,7 +197,7 @@
     .get-started {
         width: min(95%, 1250px);
         margin: auto;
-        margin-bottom: 3rem;
+        margin-bottom: 10em;
 
         button {
             padding: 15px 30px;
