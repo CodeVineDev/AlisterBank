@@ -120,7 +120,7 @@ a {
   font-size: clamp(45px, 4vw, 60px);
   scroll-snap-type: y mandatory;
   color: #542F6F;
-  width: min(90%, 1250px);
+  width: min(95%, 1250px);
   margin: auto;
   margin-top: 0.5em;
   margin-bottom: 20px;
@@ -142,13 +142,14 @@ a {
   font-family: "Open Sans", sans-serif;
   color: #333333;
   font-size: clamp(14px, 4vw, 16px);
-  width: min(90%, 1250px);
+  width: min(95%, 1250px);
   margin: auto;
   margin-bottom: 20px;
 }
 .home-page .get-started {
-  width: min(90%, 1250px);
+  width: min(95%, 1250px);
   margin: auto;
+  margin-bottom: 3rem;
 }
 .home-page .get-started button {
   padding: 15px 30px;
@@ -161,6 +162,23 @@ a {
 }
 .home-page .get-started button:hover {
   background: #A785CA;
+}
+.home-page .banking-process {
+  border: 2px solid red;
+  width: min(95%, 1250px);
+  margin: auto;
+  padding: 10px;
+}
+.home-page .banking-process .topic-text {
+  width: -moz-max-content;
+  width: max-content;
+  margin: auto;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  border-radius: 30px;
+  background: rgba(128, 128, 128, 0.185);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
 }
 
 @keyframes auto-scroll {

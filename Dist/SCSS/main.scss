@@ -160,9 +160,9 @@
         font-size: $big-text;
         scroll-snap-type: y mandatory;
         color: $header-color;
-        width: min(90%, 1250px);
+        width: min(95%, 1250px);
         margin: auto;
-        margin-top: .5em ;
+        margin-top: .5em;
         margin-bottom: 20px;
 
         .autoscroll-text {
@@ -172,27 +172,32 @@
             height: 2.5ch;
             margin-bottom: -5px;
             overflow: hidden;
-            flex-direction: column;           
+            flex-direction: column;
             scroll-snap-align: start;
-            span{
+
+            span {
                 animation: auto-scroll 15s infinite 3s;
             }
 
 
         }
     }
-    p{
+
+    p {
         font-family: $normal-font;
         color: $txt-color;
         font-size: $p-text;
-        width: min(90%, 1250px);
+        width: min(95%, 1250px);
         margin: auto;
         margin-bottom: 20px;
     }
-    .get-started{
-        width: min(90%, 1250px);
+
+    .get-started {
+        width: min(95%, 1250px);
         margin: auto;
-        button{
+        margin-bottom: 3rem;
+
+        button {
             padding: 15px 30px;
             font-size: $p-text;
             color: $white;
@@ -200,26 +205,50 @@
             border-radius: 30px;
             border: none;
             transition: 200ms ease-in-out;
-            &:hover{
+
+            &:hover {
                 background: $HE-color;
             }
         }
     }
+
+    // SERVICES
+    .banking-process {
+        border: $red-border;
+        width: min(95%, 1250px);
+        margin: auto;
+        padding: 10px;
+
+        .topic-text {
+            width: max-content;
+            margin: auto;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            border-radius: 30px;
+            background: rgba(128, 128, 128, 0.185);
+            backdrop-filter: blur(20px);
+        }
+    }
 }
+
 @keyframes auto-scroll {
-    0%{
+    0% {
         transform: translateY(0);
     }
-    25%{
-        transform: translateY(-100%); 
+
+    25% {
+        transform: translateY(-100%);
     }
-    50%{
+
+    50% {
         transform: translateY(-200%);
     }
-    75%{
-        transform: translateY(-300%); 
+
+    75% {
+        transform: translateY(-300%);
     }
-    100%{
+
+    100% {
         transform: translateY(-400%);
     }
 }
@@ -325,7 +354,8 @@
 
         }
     }
-    .home-page{
+
+    .home-page {
         .header {
             font-size: $medium-text;
             margin-top: 3em;
@@ -334,8 +364,9 @@
 
 
 }
-@include iPad{
-    .home-page{
+
+@include iPad {
+    .home-page {
         .header {
             font-size: $medium-text;
         }
@@ -359,21 +390,22 @@
             }
         }
     }
+
     // .home-page{
     //     .header {
     //         width: min(90%, 400px);
     //     }
     // }
-   
+
 }
 
 @include mobile {
-    .home-page{
+    .home-page {
         .header {
             font-size: $small-text;
         }
     }
-   
+
     .navbar {
         .main-nav {
             display: grid;
