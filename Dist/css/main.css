@@ -115,6 +115,7 @@ a {
 .home-page {
   padding: 10px;
   font-family: "Noto Sans", sans-serif;
+  text-align: center;
 }
 .home-page .header {
   font-size: clamp(45px, 4vw, 60px);
@@ -145,6 +146,7 @@ a {
   width: min(95%, 1250px);
   margin: auto;
   margin-bottom: 20px;
+  line-height: 1.5;
 }
 .home-page .get-started {
   width: min(95%, 1250px);
@@ -163,13 +165,13 @@ a {
 .home-page .get-started button:hover {
   background: #A785CA;
 }
-.home-page .banking-process {
-  border: 2px solid red;
+
+.banking-process {
   width: min(95%, 1250px);
   margin: auto;
   padding: 10px;
 }
-.home-page .banking-process .topic-text {
+.banking-process .topic-text {
   width: min(95%, 250px);
   text-align: center;
   margin: auto;
@@ -180,21 +182,31 @@ a {
   -webkit-backdrop-filter: blur(20px);
           backdrop-filter: blur(20px);
 }
-.home-page .banking-process h2 {
+.banking-process h2 {
   font-size: clamp(20px, 6vw, 25px);
   font-weight: 600;
   text-align: center;
   width: min(95%, 300px);
   margin: auto;
+  margin-bottom: 20px;
+  line-height: 1.5;
 }
-.home-page .banking-process h2 span {
+.banking-process h2 span {
   color: #9931df;
 }
-.home-page .banking-process .offers {
+.banking-process .offers {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
   width: min(95%, 1250px);
+  gap: 1rem;
   margin: auto;
+}
+.banking-process .offers .offer {
+  background: rgba(128, 128, 128, 0.185);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  padding: 20px;
+  border-radius: 10px;
 }
 
 @keyframes auto-scroll {
@@ -314,6 +326,9 @@ a {
     height: 50px;
     border: none;
     display: block;
+  }
+  .home-page {
+    text-align: left;
   }
 }
 @media (max-width: 450px) {
