@@ -143,7 +143,7 @@ a {
   font-family: "Open Sans", sans-serif;
   color: #333333;
   font-size: clamp(14px, 4vw, 16px);
-  width: min(95%, 1250px);
+  width: min(95%, 900px);
   margin: auto;
   margin-bottom: 20px;
   line-height: 1.5;
@@ -172,6 +172,8 @@ a {
   padding: 10px;
 }
 .banking-process .topic-text {
+  display: flex;
+  align-items: center;
   width: min(95%, 250px);
   text-align: center;
   margin: auto;
@@ -181,15 +183,23 @@ a {
   background: rgba(128, 128, 128, 0.185);
   -webkit-backdrop-filter: blur(20px);
           backdrop-filter: blur(20px);
+  font-family: "Open Sans", sans-serif;
+  font-size: clamp(14px, 4vw, 16px);
+}
+.banking-process .topic-text .iconify-icon {
+  font-size: 20px;
+  color: #ffc107;
+  margin-right: 3px;
 }
 .banking-process h2 {
-  font-size: clamp(20px, 6vw, 25px);
+  font-size: clamp(25px, 5vw, 45px);
+  font-family: "Noto Sans", sans-serif;
   font-weight: 600;
   text-align: center;
-  width: min(95%, 300px);
+  width: min(95%, 550px);
   margin: auto;
-  margin-bottom: 20px;
-  line-height: 1.5;
+  margin-bottom: 3rem;
+  line-height: 1.2;
 }
 .banking-process h2 span {
   color: #9931df;
@@ -198,15 +208,47 @@ a {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
   width: min(95%, 1250px);
-  gap: 1rem;
+  gap: 2rem;
   margin: auto;
 }
 .banking-process .offers .offer {
-  background: rgba(128, 128, 128, 0.185);
+  background: rgba(128, 128, 128, 0.07);
   -webkit-backdrop-filter: blur(20px);
           backdrop-filter: blur(20px);
   padding: 20px;
+  padding-block: 2rem;
   border-radius: 10px;
+  color: #333333;
+  transition: 200ms ease;
+}
+.banking-process .offers .offer:hover {
+  color: white;
+  background: #A785CA;
+}
+.banking-process .offers .offer .offer-iconify {
+  font-size: 40px;
+  color: #333333;
+}
+.banking-process .offers .offer .round-icon {
+  margin-bottom: 20px;
+  border-radius: 50%;
+  background: white;
+  width: 65px;
+  height: 62px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.banking-process .offers .offer h3 {
+  font-size: clamp(20px, 6vw, 25px);
+  font-family: "Noto Sans", sans-serif;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+.banking-process .offers .offer p {
+  font-size: clamp(14px, 4vw, 16px);
+  line-height: 1.5;
+  font-family: "Open Sans", sans-serif;
 }
 
 @keyframes auto-scroll {
