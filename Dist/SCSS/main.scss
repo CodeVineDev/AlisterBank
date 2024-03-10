@@ -160,8 +160,7 @@
         font-size: $big-text;
         scroll-snap-type: y mandatory;
         color: $header-color;
-        width: min(90%, 800px);
-        border: $red-border;
+        width: min(90%, 1250px);
         margin: auto;
 
         .autoscroll-text {
@@ -299,40 +298,19 @@
 
         }
     }
+    .home-page{
+        .header {
+            // width: min(90%, 550px);
+            font-size: $medium-text;
+        }
+    }
 
 
 }
 @include iPad{
     .home-page{
         .header {
-          display: grid;
-          grid-template-columns: 1fr;
-            justify-content: center;
-            align-items: center;
-            flex-direction: row;
-            gap: 0;
-            font-size: $big-text;
-            scroll-snap-type: y mandatory;
-            color: $header-color;
-            width: min(95%, 1000px);
-            margin: auto;
-           
-    
-            .autoscroll-text {
-                position: relative;
-                z-index: -1;
-                display: flex;
-                height: 2.2ch;
-                overflow: hidden;
-                flex-direction: column;
-                text-align: left;
-                scroll-snap-align: start;
-                span{
-                    animation: auto-scroll 10s infinite;
-                }
-    
-    
-            }
+            font-size: $medium-text;
         }
     }
 }
@@ -354,10 +332,20 @@
             }
         }
     }
+    // .home-page{
+    //     .header {
+    //         width: min(90%, 400px);
+    //     }
+    // }
+   
 }
 
 @include mobile {
-   
+    .home-page{
+        .header {
+            font-size: $small-text;
+        }
+    }
    
     .navbar {
         .main-nav {

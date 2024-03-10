@@ -120,8 +120,7 @@ a {
   font-size: clamp(45px, 4vw, 60px);
   scroll-snap-type: y mandatory;
   color: #542F6F;
-  width: min(90%, 800px);
-  border: 2px solid red;
+  width: min(90%, 1250px);
   margin: auto;
 }
 .home-page .header .autoscroll-text {
@@ -235,33 +234,13 @@ a {
     top: 0;
     transform: rotate(-45deg);
   }
+  .home-page .header {
+    font-size: clamp(25px, 5vw, 45px);
+  }
 }
 @media (max-width: 800px) {
   .home-page .header {
-    display: grid;
-    grid-template-columns: 1fr;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    gap: 0;
-    font-size: clamp(45px, 4vw, 60px);
-    scroll-snap-type: y mandatory;
-    color: #542F6F;
-    width: min(95%, 1000px);
-    margin: auto;
-  }
-  .home-page .header .autoscroll-text {
-    position: relative;
-    z-index: -1;
-    display: flex;
-    height: 2.2ch;
-    overflow: hidden;
-    flex-direction: column;
-    text-align: left;
-    scroll-snap-align: start;
-  }
-  .home-page .header .autoscroll-text span {
-    animation: auto-scroll 10s infinite;
+    font-size: clamp(25px, 5vw, 45px);
   }
 }
 @media (max-width: 660px) {
@@ -276,6 +255,9 @@ a {
   }
 }
 @media (max-width: 450px) {
+  .home-page .header {
+    font-size: clamp(20px, 6vw, 25px);
+  }
   .navbar .main-nav {
     display: grid;
     grid-template-columns: 1.5fr 0.5fr;
