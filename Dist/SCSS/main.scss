@@ -162,13 +162,15 @@
         color: $header-color;
         width: min(90%, 1250px);
         margin: auto;
-        margin-top: 1em;
+        margin-top: .5em ;
+        margin-bottom: 20px;
 
         .autoscroll-text {
             position: relative;
             z-index: -1;
             display: flex;
-            height: 2.3ch;
+            height: 2.4ch;
+            margin-bottom: -5px;
             overflow: hidden;
             flex-direction: column;           
             scroll-snap-align: start;
@@ -177,6 +179,30 @@
             }
 
 
+        }
+    }
+    p{
+        font-family: $normal-font;
+        color: $txt-color;
+        font-size: $p-text;
+        width: min(90%, 1250px);
+        margin: auto;
+        margin-bottom: 20px;
+    }
+    .get-started{
+        width: min(90%, 1250px);
+        margin: auto;
+        button{
+            padding: 15px 30px;
+            font-size: $p-text;
+            color: $white;
+            background: $btn-color;
+            border-radius: 30px;
+            border: none;
+            transition: 200ms ease-in-out;
+            &:hover{
+                background: $HE-color;
+            }
         }
     }
 }
