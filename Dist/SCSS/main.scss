@@ -220,13 +220,30 @@
         padding: 10px;
 
         .topic-text {
-            width: max-content;
+            width: min(95%, 250px);
+            text-align: center;
             margin: auto;
             margin-bottom: 20px;
-            padding: 10px 20px;
+            padding: 10px;
             border-radius: 30px;
             background: rgba(128, 128, 128, 0.185);
             backdrop-filter: blur(20px);
+        }
+        h2{
+            font-size: $small-text;
+            font-weight: 600;
+            text-align: center;
+            width: min(95%, 300px);
+            margin: auto;
+            span{
+                color: $b-color; 
+            }
+        }
+        .offers{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            width: min(95%, 1250px);
+            margin: auto;
         }
     }
 }
