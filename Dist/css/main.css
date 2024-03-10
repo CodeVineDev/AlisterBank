@@ -122,12 +122,13 @@ a {
   color: #542F6F;
   width: min(90%, 1250px);
   margin: auto;
+  margin-top: 1em;
 }
 .home-page .header .autoscroll-text {
   position: relative;
   z-index: -1;
   display: flex;
-  height: 2.3ch;
+  height: 2ch;
   overflow: hidden;
   flex-direction: column;
   scroll-snap-align: start;
@@ -236,6 +237,7 @@ a {
   }
   .home-page .header {
     font-size: clamp(25px, 5vw, 45px);
+    margin-top: 3em;
   }
 }
 @media (max-width: 800px) {

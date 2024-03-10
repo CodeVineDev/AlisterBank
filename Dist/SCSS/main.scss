@@ -162,12 +162,13 @@
         color: $header-color;
         width: min(90%, 1250px);
         margin: auto;
+        margin-top: 1em;
 
         .autoscroll-text {
             position: relative;
             z-index: -1;
             display: flex;
-            height: 2.3ch;
+            height: 2ch;
             overflow: hidden;
             flex-direction: column;           
             scroll-snap-align: start;
@@ -300,8 +301,8 @@
     }
     .home-page{
         .header {
-            // width: min(90%, 550px);
             font-size: $medium-text;
+            margin-top: 3em;
         }
     }
 
