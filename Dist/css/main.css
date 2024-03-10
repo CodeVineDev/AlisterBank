@@ -129,14 +129,14 @@ a {
   position: relative;
   z-index: -1;
   display: flex;
-  height: 2.4ch;
+  height: 2.5ch;
   margin-bottom: -5px;
   overflow: hidden;
   flex-direction: column;
   scroll-snap-align: start;
 }
 .home-page .header .autoscroll-text span {
-  animation: auto-scroll 15s infinite 2s;
+  animation: auto-scroll 15s infinite 3s;
 }
 .home-page p {
   font-family: "Open Sans", sans-serif;
