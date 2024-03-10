@@ -156,15 +156,12 @@
     padding: 10px;
     font-family: $large-font;
 
-    h1 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: .7rem;
+    .header {
         font-size: $big-text;
         scroll-snap-type: y mandatory;
         color: $header-color;
-        width: min(95%, 1000px);
+        width: min(90%, 800px);
+        border: $red-border;
         margin: auto;
 
         .autoscroll-text {
@@ -173,11 +170,10 @@
             display: flex;
             height: 2.3ch;
             overflow: hidden;
-            flex-direction: column;
-            text-align: right;
+            flex-direction: column;           
             scroll-snap-align: start;
             span{
-                animation: auto-scroll 10s infinite 2s;
+                animation: auto-scroll 15s infinite 2s;
             }
 
 
@@ -188,11 +184,17 @@
     0%{
         transform: translateY(0);
     }
-    50%{
+    25%{
         transform: translateY(-100%); 
     }
-    100%{
+    50%{
         transform: translateY(-200%);
+    }
+    75%{
+        transform: translateY(-300%); 
+    }
+    100%{
+        transform: translateY(-400%);
     }
 }
 
@@ -300,36 +302,42 @@
 
 
 }
-
-@include biggerphone {
-    h1 {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        gap: .7rem;
-        font-size: 26px;
-        scroll-snap-type: y mandatory;
-        color: $header-color;
-        width: min(95%, 1000px);
-        margin: auto;
-
-        .autoscroll-text {
-            position: relative;
-            z-index: -1;
-            display: flex;
-            height: 2.5ch;
-            overflow: hidden;
-            flex-direction: column;
-            text-align: right;
-            scroll-snap-align: start;
-            span{
-                animation: auto-scroll 10s infinite;
+@include iPad{
+    .home-page{
+        .header {
+          display: grid;
+          grid-template-columns: 1fr;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            gap: 0;
+            font-size: $big-text;
+            scroll-snap-type: y mandatory;
+            color: $header-color;
+            width: min(95%, 1000px);
+            margin: auto;
+           
+    
+            .autoscroll-text {
+                position: relative;
+                z-index: -1;
+                display: flex;
+                height: 2.2ch;
+                overflow: hidden;
+                flex-direction: column;
+                text-align: left;
+                scroll-snap-align: start;
+                span{
+                    animation: auto-scroll 10s infinite;
+                }
+    
+    
             }
-
-
         }
     }
+}
+
+@include biggerphone {
     .navbar {
         .main-nav {
             .nav-btns {
@@ -349,34 +357,8 @@
 }
 
 @include mobile {
-    h1 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: row;
-        gap: .7rem;
-        font-size: $big-text;
-        scroll-snap-type: y mandatory;
-        color: $header-color;
-        width: min(95%, 1000px);
-        margin: auto;
-
-        .autoscroll-text {
-            position: relative;
-            z-index: -1;
-            display: flex;
-            height: 2.5ch;
-            overflow: hidden;
-            flex-direction: column;
-            text-align: right;
-            scroll-snap-align: start;
-            span{
-                animation: auto-scroll 10s infinite;
-            }
-
-
-        }
-    }
+   
+   
     .navbar {
         .main-nav {
             display: grid;
