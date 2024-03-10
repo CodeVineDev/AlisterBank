@@ -155,7 +155,6 @@
 .home-page {
     padding: 10px;
     font-family: $large-font;
-    text-align: center;
 
     .header {
         font-size: $big-text;
@@ -188,7 +187,7 @@
         font-family: $normal-font;
         color: $txt-color;
         font-size: $p-text;
-        width: min(95%, 900px);
+        width: min(95%, 1250px);
         margin: auto;
         margin-bottom: 20px;
         line-height: 1.5;

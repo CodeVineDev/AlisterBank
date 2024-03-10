@@ -115,7 +115,6 @@ a {
 .home-page {
   padding: 10px;
   font-family: "Noto Sans", sans-serif;
-  text-align: center;
 }
 .home-page .header {
   font-size: clamp(45px, 4vw, 60px);
@@ -143,7 +142,7 @@ a {
   font-family: "Open Sans", sans-serif;
   color: #333333;
   font-size: clamp(14px, 4vw, 16px);
-  width: min(95%, 900px);
+  width: min(95%, 1250px);
   margin: auto;
   margin-bottom: 20px;
   line-height: 1.5;
