@@ -471,19 +471,23 @@
                 margin-bottom: 20px;
             }
 
-            button {
-                padding: 15px 30px;
-                font-size: $p-text;
-                color: $white;
-                background: $btn-color;
-                border-radius: 30px;
-                border: none;
-                transition: 200ms ease-in-out;
+            .user-global {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+                span{
+                    font-size: $medium-text;
+                    color: $b-color;  
+                    font-family: $large-font ;
+                    font-weight: 600;
+                };
+                p{
+                    font-size: $p-text;
+                    color: $txt-color;
 
-                &:hover {
-                    background: $HE-color;
                 }
             }
+
         }
 
         .right-info-content {
@@ -609,6 +613,7 @@
         }
 
     }
+
     .navbar {
         .main-nav {
             .mainNavLink-con {
@@ -739,6 +744,7 @@
                 }
             }
         }
+
         .info {
             grid-template-columns: 1fr;
 

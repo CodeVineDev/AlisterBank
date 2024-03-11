@@ -406,17 +406,20 @@ a {
   font-family: "Open Sans", sans-serif;
   margin-bottom: 20px;
 }
-.about .info .left-info-content button {
-  padding: 15px 30px;
-  font-size: clamp(14px, 4vw, 16px);
-  color: white;
-  background: #6E45A1;
-  border-radius: 30px;
-  border: none;
-  transition: 200ms ease-in-out;
+.about .info .left-info-content .user-global {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
 }
-.about .info .left-info-content button:hover {
-  background: #A785CA;
+.about .info .left-info-content .user-global span {
+  font-size: clamp(25px, 5vw, 45px);
+  color: #9931df;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 600;
+}
+.about .info .left-info-content .user-global p {
+  font-size: clamp(14px, 4vw, 16px);
+  color: #333333;
 }
 .about .info .right-info-content {
   display: flex;
