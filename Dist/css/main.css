@@ -97,7 +97,7 @@ a {
   padding: 7px 25px;
   background: #6E45A1;
   color: white;
-  border: 2px solid #9931df;
+  border: 2px solid #6E45A1;
   transition: 200ms ease-in-out;
   font-size: 16px;
   font-family: "Noto Sans", sans-serif;
@@ -131,6 +131,7 @@ a {
   text-align: center;
   background-position: center;
   background-size: cover;
+  background-attachment: fixed;
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.7), rgba(0, 0, 0, 0.6)), url(../../IMAGES/skyline-district-3302126.jpg);
 }
 .home-page .header {
@@ -293,17 +294,16 @@ a {
 .about .get-app {
   display: grid;
   gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr));
+  grid-template-columns: repeat(2, 1fr);
 }
 .about .get-app .left-about-content {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
 }
 .about .get-app .left-about-content .download-image {
   width: 370px;
   height: 370px;
-  margin: auto;
   border-radius: 50%;
   background: linear-gradient(to bottom, #A785CA, white);
 }
@@ -363,7 +363,7 @@ a {
 .about .info {
   display: grid;
   gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr));
+  grid-template-columns: repeat(2, 1fr);
 }
 .about .info .left-info-content {
   padding: 0 10px;
@@ -423,13 +423,12 @@ a {
 }
 .about .info .right-info-content {
   display: flex;
-  justify-content: center;
+  justify-content: right;
   align-items: center;
 }
 .about .info .right-info-content .download-image {
   width: 370px;
   height: 370px;
-  margin: auto;
   border-radius: 50%;
   background: linear-gradient(to bottom, #A785CA, white);
 }
@@ -452,77 +451,13 @@ a {
   }
 }
 @media (max-width: 1000px) {
-  .info {
-    display: grid;
-    gap: 2rem;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr));
+  .about .get-app .left-about-content .download-image {
+    width: 350px;
+    height: 350px;
   }
-  .info .left-info-content {
-    padding: 0 10px;
-    order: 2;
-    padding-block: 1.5rem;
-  }
-  .info .left-info-content .topic-text {
-    display: flex;
-    align-items: center;
-    width: min(95%, 350px);
-    justify-content: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding: 10px;
-    border-radius: 30px;
-    background: rgba(128, 128, 128, 0.185);
-    -webkit-backdrop-filter: blur(20px);
-            backdrop-filter: blur(20px);
-    font-family: "Open Sans", sans-serif;
-    font-size: clamp(14px, 4vw, 16px);
-  }
-  .info .left-info-content .topic-text .iconify-icon {
-    font-size: 16px;
-    color: #ffc107;
-    margin-right: 5px;
-  }
-  .info .left-info-content h2 {
-    font-size: clamp(25px, 5vw, 45px);
-    font-family: "Noto Sans", sans-serif;
-    font-weight: 600;
-    width: 100%;
-    margin-bottom: 20px;
-    line-height: 1.2;
-  }
-  .info .left-info-content h2 span {
-    color: #9931df;
-  }
-  .info .left-info-content p {
-    font-size: clamp(14px, 4vw, 16px);
-    line-height: 1.5;
-    font-family: "Open Sans", sans-serif;
-    margin-bottom: 20px;
-  }
-  .info .left-info-content button {
-    padding: 15px 30px;
-    font-size: clamp(14px, 4vw, 16px);
-    color: white;
-    background: #6E45A1;
-    border-radius: 30px;
-    border: none;
-    transition: 200ms ease-in-out;
-  }
-  .info .left-info-content button:hover {
-    background: #A785CA;
-  }
-  .info .right-info-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    order: 1;
-  }
-  .info .right-info-content .download-image {
-    width: 370px;
-    height: 370px;
-    margin: auto;
-    border-radius: 50%;
-    background: linear-gradient(to bottom, #A785CA, white);
+  .about .info .right-info-content .download-image {
+    width: 350px;
+    height: 350px;
   }
   .navbar .main-nav .mainNavLink-con {
     display: none;
@@ -610,6 +545,30 @@ a {
   }
 }
 @media (max-width: 800px) {
+  .about .get-app {
+    grid-template-columns: 1fr;
+  }
+  .about .get-app .left-about-content {
+    justify-content: center;
+  }
+  .about .get-app .left-about-content .download-image {
+    width: 320px;
+    height: 320px;
+  }
+  .about .info {
+    grid-template-columns: 1fr;
+  }
+  .about .info .left-info-content {
+    order: 2;
+  }
+  .about .info .right-info-content {
+    order: 1;
+    justify-content: center;
+  }
+  .about .info .right-info-content .download-image {
+    width: 320px;
+    height: 320px;
+  }
   .home-page .header {
     font-size: clamp(25px, 5vw, 45px);
   }
@@ -619,15 +578,15 @@ a {
     grid-template-columns: 1fr;
   }
   .about .get-app .left-about-content .download-image {
-    width: 320px;
-    height: 320px;
+    width: 300px;
+    height: 300px;
   }
   .about .info {
     grid-template-columns: 1fr;
   }
   .about .info .right-info-content .download-image {
-    width: 320px;
-    height: 320px;
+    width: 300px;
+    height: 300px;
   }
   .navbar .main-nav .nav-btns .login {
     display: none;
@@ -643,6 +602,20 @@ a {
   }
 }
 @media (max-width: 450px) {
+  .about .get-app {
+    grid-template-columns: 1fr;
+  }
+  .about .get-app .left-about-content .download-image {
+    width: 280px;
+    height: 280px;
+  }
+  .about .info {
+    grid-template-columns: 1fr;
+  }
+  .about .info .right-info-content .download-image {
+    width: 280px;
+    height: 280px;
+  }
   .home-page .header {
     font-size: clamp(20px, 6vw, 25px);
   }

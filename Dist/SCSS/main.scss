@@ -116,7 +116,7 @@
                 padding: 7px 25px;
                 background: $btn-color;
                 color: $white;
-                border: 2px solid $b-color;
+                border: 2px solid $btn-color;
                 transition: 200ms ease-in-out;
                 font-size: 16px;
                 font-family: $large-font;
@@ -159,9 +159,8 @@
     text-align: center;
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.7), rgba(0, 0, 0, 0.6)), url(../../IMAGES/skyline-district-3302126.jpg);
-
-    // background-image: url(../../IMAGES/building-839362.jpg);
 
     .header {
         font-size: $big-text;
@@ -344,17 +343,16 @@
     .get-app {
         display: grid;
         gap: 2rem;
-        grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr));
+        grid-template-columns: repeat(2, 1fr);
 
         .left-about-content {
             display: flex;
-            justify-content: center;
+            justify-content: left;
             align-items: center;
 
             .download-image {
                 width: 370px;
                 height: 370px;
-                margin: auto;
                 border-radius: 50%;
                 background: linear-gradient(to bottom, $HE-color, $white);
             }
@@ -424,7 +422,7 @@
     .info {
         display: grid;
         gap: 2rem;
-        grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr));
+        grid-template-columns: repeat(2, 1fr);
 
         .left-info-content {
             padding: 0 10px;
@@ -475,13 +473,17 @@
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
                 gap: 1rem;
-                span{
+
+                span {
                     font-size: $medium-text;
-                    color: $b-color;  
+                    color: $b-color;
                     font-family: $large-font ;
                     font-weight: 600;
-                };
-                p{
+                }
+
+                ;
+
+                p {
                     font-size: $p-text;
                     color: $txt-color;
 
@@ -492,13 +494,12 @@
 
         .right-info-content {
             display: flex;
-            justify-content: center;
+            justify-content: right;
             align-items: center;
 
             .download-image {
                 width: 370px;
                 height: 370px;
-                margin: auto;
                 border-radius: 50%;
                 background: linear-gradient(to bottom, $HE-color, $white);
             }
@@ -531,87 +532,26 @@
 
 
 @include smallpc {
-    .info {
-        display: grid;
-        gap: 2rem;
-        grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr));
-
-        .left-info-content {
-            padding: 0 10px;
-            order: 2;
-            padding-block: max(1.5rem, .5rem);
-
-            .topic-text {
-                display: flex;
-                align-items: center;
-                width: min(95%, 350px);
-                justify-content: center;
-                margin-top: 20px;
-                margin-bottom: 20px;
-                padding: 10px;
-                border-radius: 30px;
-                background: rgba(128, 128, 128, 0.185);
-                backdrop-filter: blur(20px);
-                font-family: $normal-font;
-                font-size: $p-text;
-
-                .iconify-icon {
-                    font-size: 16px;
-                    color: $yellow;
-                    margin-right: 5px;
+    .about {
+        .get-app {
+            .left-about-content {
+                .download-image {
+                    width: 350px;
+                    height: 350px;
                 }
             }
 
-            h2 {
-                font-size: $medium-text;
-                font-family: $large-font;
-                font-weight: 600;
-                width: 100%;
-                margin-bottom: 20px;
-                line-height: 1.2;
-
-                span {
-                    color: $b-color;
-                }
-            }
-
-            p {
-                font-size: $p-text;
-                line-height: 1.5;
-                font-family: $normal-font;
-                margin-bottom: 20px;
-            }
-
-            button {
-                padding: 15px 30px;
-                font-size: $p-text;
-                color: $white;
-                background: $btn-color;
-                border-radius: 30px;
-                border: none;
-                transition: 200ms ease-in-out;
-
-                &:hover {
-                    background: $HE-color;
-                }
-            }
         }
 
-        .right-info-content {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            order: 1;
-
-            .download-image {
-                width: 370px;
-                height: 370px;
-                margin: auto;
-                border-radius: 50%;
-                background: linear-gradient(to bottom, $HE-color, $white);
+        .info {
+            .right-info-content {
+                .download-image {
+                    width: 350px;
+                    height: 350px;
+                }
             }
-        }
 
+        }
     }
 
     .navbar {
@@ -725,6 +665,39 @@
 }
 
 @include iPad {
+
+    
+    .about {
+        .get-app {
+            grid-template-columns: 1fr;
+
+            .left-about-content {
+                justify-content: center;
+                .download-image {
+                    width: 320px;
+                    height: 320px;
+                }
+            }
+        }
+
+        .info {
+            grid-template-columns: 1fr;
+            .left-info-content{
+                order: 2;
+            }
+
+            .right-info-content {
+                order: 1;
+                justify-content: center;
+                .download-image {
+                    width: 320px;
+                    height: 320px;
+                }
+            }
+        }
+
+    }
+
     .home-page {
         .header {
             font-size: $medium-text;
@@ -739,8 +712,8 @@
 
             .left-about-content {
                 .download-image {
-                    width: 320px;
-                    height: 320px;
+                    width: 300px;
+                    height: 300px;
                 }
             }
         }
@@ -750,8 +723,8 @@
 
             .right-info-content {
                 .download-image {
-                    width: 320px;
-                    height: 320px;
+                    width: 300px;
+                    height: 300px;
                 }
             }
         }
@@ -782,6 +755,31 @@
 }
 
 @include mobile {
+    .about {
+        .get-app {
+            grid-template-columns: 1fr;
+
+            .left-about-content {
+                .download-image {
+                    width: 280px;
+                    height: 280px;
+                }
+            }
+        }
+
+        .info {
+            grid-template-columns: 1fr;
+
+            .right-info-content {
+                .download-image {
+                    width: 280px;
+                    height: 280px;
+                }
+            }
+        }
+
+    }
+
     .home-page {
         .header {
             font-size: $small-text;
