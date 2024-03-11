@@ -115,6 +115,7 @@ a {
 .home-page {
   padding: 10px;
   font-family: "Noto Sans", sans-serif;
+  background: #F7F7F7;
 }
 .home-page .header {
   font-size: clamp(45px, 4vw, 60px);
@@ -127,7 +128,6 @@ a {
 }
 .home-page .header .autoscroll-text {
   position: relative;
-  z-index: -1;
   display: flex;
   height: 1.2em;
   margin-bottom: -5px;
@@ -168,7 +168,8 @@ a {
   background: rgba(128, 128, 128, 0.8);
   -webkit-backdrop-filter: blur(20px);
           backdrop-filter: blur(20px);
-  margin-left: 2em;
+  margin-left: 1.5em;
+  padding: 15px 40px;
 }
 .home-page .get-started .signin-btn:hover {
   background: #A785CA;
@@ -185,6 +186,7 @@ a {
   width: min(95%, 250px);
   text-align: center;
   margin: auto;
+  margin-top: 20px;
   margin-bottom: 20px;
   padding: 10px;
   border-radius: 30px;
