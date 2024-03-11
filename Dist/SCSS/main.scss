@@ -160,7 +160,7 @@
     background-position: center;
     background-size: cover;
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.7), rgba(0, 0, 0, 0.6)), url(../../IMAGES/skyline-district-3302126.jpg);
-   
+
     // background-image: url(../../IMAGES/building-839362.jpg);
 
     .header {
@@ -227,7 +227,7 @@
 
             &:hover {
                 background: rgba(128, 128, 128, 0.8);
-            backdrop-filter: blur(20px);
+                backdrop-filter: blur(20px);
             }
         }
     }
@@ -235,9 +235,9 @@
 
 // SERVICES
 .banking-process {
-    width: min(95%, 1250px);
+    width: min(90%, 1150px);
     margin: auto;
-    padding: 10px;
+    margin-bottom: 7em;
 
     .topic-text {
         display: flex;
@@ -255,7 +255,7 @@
         font-size: $p-text;
 
         .iconify-icon {
-            font-size: 20px;
+            font-size: 16px;
             color: $yellow;
             margin-right: 3px;
         }
@@ -279,10 +279,8 @@
     .offers {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
-        width: min(95%, 1250px);
+        width: 100%;
         gap: 2rem;
-        margin: auto;
-
 
         .offer {
             background: $bg-color;
@@ -306,7 +304,8 @@
             .round-icon {
                 margin-bottom: 20px;
                 border-radius: 50%;
-                background: $white;
+                background: rgba(255, 255, 255, 0.685);
+                backdrop-filter: blur(20px);
                 width: 65px;
                 height: 62px;
                 display: flex;
@@ -327,6 +326,105 @@
                 font-family: $normal-font;
             }
         }
+    }
+}
+.about-section{
+    background: $bg-color;
+    padding-block: max(3rem, 1.5rem);
+}
+.about {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: min(90%, 1150px);
+    margin: auto;
+    gap: 7em;
+
+    .get-app {
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr));
+
+        .left-about-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .download-image {
+                width: 370px;
+                height: 370px;
+                margin: auto;
+                border-radius: 50%;
+                background: linear-gradient(to bottom, $HE-color, $white);
+            }
+        }
+
+        .right-about-content {
+            padding: 0 10px;
+            padding-block: max(1.5rem, .5rem);
+
+            .topic-text {
+                display: flex;
+                align-items: center;
+                width: min(95%, 350px);
+                justify-content: center;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                padding: 10px;
+                border-radius: 30px;
+                background: rgba(128, 128, 128, 0.185);
+                backdrop-filter: blur(20px);
+                font-family: $normal-font;
+                font-size: $p-text;
+
+                .iconify-icon {
+                    font-size: 16px;
+                    color: $yellow;
+                    margin-right: 5px;
+                }
+            }
+
+            h2 {
+                font-size: $medium-text;
+                font-family: $large-font;
+                font-weight: 600;
+                width: 100%;
+                margin-bottom: 20px;
+                line-height: 1.2;
+
+                span {
+                    color: $b-color;
+                }
+            }
+
+            p {
+                font-size: $p-text;
+                line-height: 1.5;
+                font-family: $normal-font;
+                margin-bottom: 20px;
+            }
+
+            button {
+                padding: 15px 30px;
+                font-size: $p-text;
+                color: $white;
+                background: $btn-color;
+                border-radius: 30px;
+                border: none;
+                transition: 200ms ease-in-out;
+
+                &:hover {
+                    background: $HE-color;
+                }
+            }
+        }
+    }
+
+    .info {
+        border: $red-border;
+        padding: 1rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
     }
 }
 
@@ -473,6 +571,17 @@
 }
 
 @include biggerphone {
+    .about {
+        .get-app {
+            .left-about-content {
+                .download-image {
+                    width: 320px;
+                    height: 320px;
+                }
+            }
+        }
+    }
+
     .navbar {
         .main-nav {
             .nav-btns {
