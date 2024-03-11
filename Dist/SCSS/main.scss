@@ -328,10 +328,12 @@
         }
     }
 }
-.about-section{
+
+.about-section {
     background: $bg-color;
     padding-block: max(3rem, 1.5rem);
 }
+
 .about {
     display: grid;
     grid-template-columns: 1fr;
@@ -420,10 +422,83 @@
     }
 
     .info {
-        border: $red-border;
-        padding: 1rem;
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr));
+
+        .left-info-content {
+            padding: 0 10px;
+            padding-block: max(1.5rem, .5rem);
+
+            .topic-text {
+                display: flex;
+                align-items: center;
+                width: min(95%, 350px);
+                justify-content: center;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                padding: 10px;
+                border-radius: 30px;
+                background: rgba(128, 128, 128, 0.185);
+                backdrop-filter: blur(20px);
+                font-family: $normal-font;
+                font-size: $p-text;
+
+                .iconify-icon {
+                    font-size: 16px;
+                    color: $yellow;
+                    margin-right: 5px;
+                }
+            }
+
+            h2 {
+                font-size: $medium-text;
+                font-family: $large-font;
+                font-weight: 600;
+                width: 100%;
+                margin-bottom: 20px;
+                line-height: 1.2;
+
+                span {
+                    color: $b-color;
+                }
+            }
+
+            p {
+                font-size: $p-text;
+                line-height: 1.5;
+                font-family: $normal-font;
+                margin-bottom: 20px;
+            }
+
+            button {
+                padding: 15px 30px;
+                font-size: $p-text;
+                color: $white;
+                background: $btn-color;
+                border-radius: 30px;
+                border: none;
+                transition: 200ms ease-in-out;
+
+                &:hover {
+                    background: $HE-color;
+                }
+            }
+        }
+
+        .right-info-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .download-image {
+                width: 370px;
+                height: 370px;
+                margin: auto;
+                border-radius: 50%;
+                background: linear-gradient(to bottom, $HE-color, $white);
+            }
+        }
 
     }
 }
@@ -452,6 +527,88 @@
 
 
 @include smallpc {
+    .info {
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr));
+
+        .left-info-content {
+            padding: 0 10px;
+            order: 2;
+            padding-block: max(1.5rem, .5rem);
+
+            .topic-text {
+                display: flex;
+                align-items: center;
+                width: min(95%, 350px);
+                justify-content: center;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                padding: 10px;
+                border-radius: 30px;
+                background: rgba(128, 128, 128, 0.185);
+                backdrop-filter: blur(20px);
+                font-family: $normal-font;
+                font-size: $p-text;
+
+                .iconify-icon {
+                    font-size: 16px;
+                    color: $yellow;
+                    margin-right: 5px;
+                }
+            }
+
+            h2 {
+                font-size: $medium-text;
+                font-family: $large-font;
+                font-weight: 600;
+                width: 100%;
+                margin-bottom: 20px;
+                line-height: 1.2;
+
+                span {
+                    color: $b-color;
+                }
+            }
+
+            p {
+                font-size: $p-text;
+                line-height: 1.5;
+                font-family: $normal-font;
+                margin-bottom: 20px;
+            }
+
+            button {
+                padding: 15px 30px;
+                font-size: $p-text;
+                color: $white;
+                background: $btn-color;
+                border-radius: 30px;
+                border: none;
+                transition: 200ms ease-in-out;
+
+                &:hover {
+                    background: $HE-color;
+                }
+            }
+        }
+
+        .right-info-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            order: 1;
+
+            .download-image {
+                width: 370px;
+                height: 370px;
+                margin: auto;
+                border-radius: 50%;
+                background: linear-gradient(to bottom, $HE-color, $white);
+            }
+        }
+
+    }
     .navbar {
         .main-nav {
             .mainNavLink-con {
@@ -573,6 +730,8 @@
 @include biggerphone {
     .about {
         .get-app {
+            grid-template-columns: 1fr;
+
             .left-about-content {
                 .download-image {
                     width: 320px;
@@ -580,6 +739,17 @@
                 }
             }
         }
+        .info {
+            grid-template-columns: 1fr;
+
+            .right-info-content {
+                .download-image {
+                    width: 320px;
+                    height: 320px;
+                }
+            }
+        }
+
     }
 
     .navbar {

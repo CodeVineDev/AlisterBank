@@ -361,10 +361,74 @@ a {
   background: #A785CA;
 }
 .about .info {
-  border: 2px solid red;
-  padding: 1rem;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr));
+}
+.about .info .left-info-content {
+  padding: 0 10px;
+  padding-block: 1.5rem;
+}
+.about .info .left-info-content .topic-text {
+  display: flex;
+  align-items: center;
+  width: min(95%, 350px);
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 30px;
+  background: rgba(128, 128, 128, 0.185);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  font-family: "Open Sans", sans-serif;
+  font-size: clamp(14px, 4vw, 16px);
+}
+.about .info .left-info-content .topic-text .iconify-icon {
+  font-size: 16px;
+  color: #ffc107;
+  margin-right: 5px;
+}
+.about .info .left-info-content h2 {
+  font-size: clamp(25px, 5vw, 45px);
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 600;
+  width: 100%;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+.about .info .left-info-content h2 span {
+  color: #9931df;
+}
+.about .info .left-info-content p {
+  font-size: clamp(14px, 4vw, 16px);
+  line-height: 1.5;
+  font-family: "Open Sans", sans-serif;
+  margin-bottom: 20px;
+}
+.about .info .left-info-content button {
+  padding: 15px 30px;
+  font-size: clamp(14px, 4vw, 16px);
+  color: white;
+  background: #6E45A1;
+  border-radius: 30px;
+  border: none;
+  transition: 200ms ease-in-out;
+}
+.about .info .left-info-content button:hover {
+  background: #A785CA;
+}
+.about .info .right-info-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about .info .right-info-content .download-image {
+  width: 370px;
+  height: 370px;
+  margin: auto;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, #A785CA, white);
 }
 
 @keyframes auto-scroll {
@@ -385,6 +449,78 @@ a {
   }
 }
 @media (max-width: 1000px) {
+  .info {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr));
+  }
+  .info .left-info-content {
+    padding: 0 10px;
+    order: 2;
+    padding-block: 1.5rem;
+  }
+  .info .left-info-content .topic-text {
+    display: flex;
+    align-items: center;
+    width: min(95%, 350px);
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 30px;
+    background: rgba(128, 128, 128, 0.185);
+    -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+    font-family: "Open Sans", sans-serif;
+    font-size: clamp(14px, 4vw, 16px);
+  }
+  .info .left-info-content .topic-text .iconify-icon {
+    font-size: 16px;
+    color: #ffc107;
+    margin-right: 5px;
+  }
+  .info .left-info-content h2 {
+    font-size: clamp(25px, 5vw, 45px);
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 600;
+    width: 100%;
+    margin-bottom: 20px;
+    line-height: 1.2;
+  }
+  .info .left-info-content h2 span {
+    color: #9931df;
+  }
+  .info .left-info-content p {
+    font-size: clamp(14px, 4vw, 16px);
+    line-height: 1.5;
+    font-family: "Open Sans", sans-serif;
+    margin-bottom: 20px;
+  }
+  .info .left-info-content button {
+    padding: 15px 30px;
+    font-size: clamp(14px, 4vw, 16px);
+    color: white;
+    background: #6E45A1;
+    border-radius: 30px;
+    border: none;
+    transition: 200ms ease-in-out;
+  }
+  .info .left-info-content button:hover {
+    background: #A785CA;
+  }
+  .info .right-info-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    order: 1;
+  }
+  .info .right-info-content .download-image {
+    width: 370px;
+    height: 370px;
+    margin: auto;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, #A785CA, white);
+  }
   .navbar .main-nav .mainNavLink-con {
     display: none;
   }
@@ -476,7 +612,17 @@ a {
   }
 }
 @media (max-width: 660px) {
+  .about .get-app {
+    grid-template-columns: 1fr;
+  }
   .about .get-app .left-about-content .download-image {
+    width: 320px;
+    height: 320px;
+  }
+  .about .info {
+    grid-template-columns: 1fr;
+  }
+  .about .info .right-info-content .download-image {
     width: 320px;
     height: 320px;
   }
