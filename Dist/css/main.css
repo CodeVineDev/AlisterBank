@@ -305,7 +305,13 @@ a {
   width: 370px;
   height: 370px;
   border-radius: 50%;
+  overflow: hidden;
   background: linear-gradient(to bottom, #A785CA, white);
+}
+.about .get-app .left-about-content .download-image img {
+  width: 100%;
+  scale: 1.4;
+  transform: translateY(22%);
 }
 .about .get-app .right-about-content {
   padding: 0 10px;
@@ -420,6 +426,7 @@ a {
 .about .info .left-info-content .user-global p {
   font-size: clamp(14px, 4vw, 16px);
   color: #333333;
+  font-weight: 600;
 }
 .about .info .right-info-content {
   display: flex;
@@ -430,7 +437,13 @@ a {
   width: 370px;
   height: 370px;
   border-radius: 50%;
+  overflow: hidden;
   background: linear-gradient(to bottom, #A785CA, white);
+}
+.about .info .right-info-content .download-image img {
+  width: 100%;
+  scale: 1.4;
+  transform: translateY(22%);
 }
 
 @keyframes auto-scroll {

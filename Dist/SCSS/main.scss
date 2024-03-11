@@ -354,7 +354,14 @@
                 width: 370px;
                 height: 370px;
                 border-radius: 50%;
+                overflow: hidden;
                 background: linear-gradient(to bottom, $HE-color, $white);
+                img{
+                    width: 100%;
+                    scale: 1.4;
+                    transform: translateY(22%);
+
+                }
             }
         }
 
@@ -486,6 +493,7 @@
                 p {
                     font-size: $p-text;
                     color: $txt-color;
+                    font-weight: 600;
 
                 }
             }
@@ -501,7 +509,14 @@
                 width: 370px;
                 height: 370px;
                 border-radius: 50%;
+                overflow: hidden;
                 background: linear-gradient(to bottom, $HE-color, $white);
+                img{
+                    width: 100%;
+                    scale: 1.4;
+                    transform: translateY(22%);
+
+                }
             }
         }
 
