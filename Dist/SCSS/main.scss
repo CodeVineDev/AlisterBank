@@ -155,7 +155,13 @@
 .home-page {
     padding: 10px;
     font-family: $large-font;
-    background: $bg-color ;
+    background: $bg-color;
+    text-align: center;
+    background-position: center;
+    background-size: cover;
+    background-image: linear-gradient(to bottom, rgba(247, 247, 247, 0.6), rgba(0, 0, 0, 0.4)), url(../../IMAGES/skyline-district-3302126.jpg);
+   
+    // background-image: url(../../IMAGES/building-839362.jpg);
 
     .header {
         font-size: $big-text;
@@ -163,7 +169,7 @@
         color: $header-color;
         width: min(95%, 1250px);
         margin: auto;
-        margin-top: 1.5em;
+        margin-top: 1em;
         margin-bottom: 20px;
 
         .autoscroll-text {
@@ -185,8 +191,9 @@
 
     p {
         font-family: $normal-font;
-        color: $txt-color;
+        color: $white;
         font-size: $p-text;
+        font-weight: 600;
         width: min(95%, 1250px);
         margin: auto;
         margin-bottom: 20px;
@@ -213,13 +220,14 @@
         }
 
         .signin-btn {
-            background: rgba(128, 128, 128, 0.8);
-            backdrop-filter: blur(20px);
+            border: 2px solid $white;
             margin-left: 1.5em;
+            background: transparent;
             padding: 15px 40px;
 
             &:hover {
-                background: $HE-color;
+                background: rgba(128, 128, 128, 0.8);
+            backdrop-filter: blur(20px);
             }
         }
     }

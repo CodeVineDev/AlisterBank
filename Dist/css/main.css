@@ -116,6 +116,10 @@ a {
   padding: 10px;
   font-family: "Noto Sans", sans-serif;
   background: #F7F7F7;
+  text-align: center;
+  background-position: center;
+  background-size: cover;
+  background-image: linear-gradient(to bottom, rgba(247, 247, 247, 0.6), rgba(0, 0, 0, 0.4)), url(../../IMAGES/skyline-district-3302126.jpg);
 }
 .home-page .header {
   font-size: clamp(45px, 4vw, 60px);
@@ -123,7 +127,7 @@ a {
   color: #542F6F;
   width: min(95%, 1250px);
   margin: auto;
-  margin-top: 1.5em;
+  margin-top: 1em;
   margin-bottom: 20px;
 }
 .home-page .header .autoscroll-text {
@@ -140,8 +144,9 @@ a {
 }
 .home-page p {
   font-family: "Open Sans", sans-serif;
-  color: #333333;
+  color: white;
   font-size: clamp(14px, 4vw, 16px);
+  font-weight: 600;
   width: min(95%, 1250px);
   margin: auto;
   margin-bottom: 20px;
@@ -165,14 +170,15 @@ a {
   background: #A785CA;
 }
 .home-page .get-started .signin-btn {
-  background: rgba(128, 128, 128, 0.8);
-  -webkit-backdrop-filter: blur(20px);
-          backdrop-filter: blur(20px);
+  border: 2px solid white;
   margin-left: 1.5em;
+  background: transparent;
   padding: 15px 40px;
 }
 .home-page .get-started .signin-btn:hover {
-  background: #A785CA;
+  background: rgba(128, 128, 128, 0.8);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
 }
 
 .banking-process {
