@@ -123,7 +123,7 @@ a {
   color: #542F6F;
   width: min(95%, 1250px);
   margin: auto;
-  margin-top: 0.5em;
+  margin-top: 1.5em;
   margin-bottom: 20px;
 }
 .home-page .header .autoscroll-text {
@@ -216,15 +216,13 @@ a {
 }
 .banking-process .offers {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
   width: min(95%, 1250px);
   gap: 2rem;
   margin: auto;
 }
 .banking-process .offers .offer {
-  background: rgba(128, 128, 128, 0.07);
-  -webkit-backdrop-filter: blur(20px);
-          backdrop-filter: blur(20px);
+  background: #F7F7F7;
   padding: 20px;
   padding-block: 2rem;
   border-radius: 10px;
