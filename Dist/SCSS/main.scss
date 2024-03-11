@@ -211,6 +211,14 @@
                 background: $HE-color;
             }
         }
+        .signin-btn{
+            background: rgba(128, 128, 128, 0.8);
+            backdrop-filter: blur(20px);
+            margin-left: 2em;
+            &:hover{
+                background: $HE-color;   
+            }
+        }
     }
 }
 
