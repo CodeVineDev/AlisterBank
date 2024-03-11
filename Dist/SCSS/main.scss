@@ -356,7 +356,8 @@
                 border-radius: 50%;
                 overflow: hidden;
                 background: linear-gradient(to bottom, $HE-color, $white);
-                img{
+
+                img {
                     width: 100%;
                     scale: 1.4;
                     transform: translateY(22%);
@@ -511,7 +512,8 @@
                 border-radius: 50%;
                 overflow: hidden;
                 background: linear-gradient(to bottom, $HE-color, $white);
-                img{
+
+                img {
                     width: 100%;
                     scale: 1.4;
                     transform: translateY(22%);
@@ -520,6 +522,90 @@
             }
         }
 
+    }
+}
+
+.blog-section {
+    margin-top: 7em;
+    width: 100%;
+    background: $white;
+    font-family: $normal-font;
+    margin-bottom: 7em;
+
+    .blog {
+        width: min(90%, 1150px);
+        margin: auto;
+
+        .topic-text {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: min(95%, 200px);
+            margin: auto;
+            justify-content: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            padding: 10px;
+            border-radius: 30px;
+            background: rgba(128, 128, 128, 0.185);
+            backdrop-filter: blur(20px);
+            font-family: $normal-font;
+            font-size: $p-text;
+
+            .iconify-icon {
+                font-size: 16px;
+                color: $yellow;
+                margin-right: 5px;
+            }
+        }
+
+        h2 {
+            font-size: $medium-text;
+            font-family: $large-font;
+            font-weight: 600;
+            text-align: center;
+            width: 100%;
+            margin-bottom: 1.5em;
+            line-height: 1.2;
+
+            span {
+                color: $b-color;
+            }
+        }
+
+        .testimonial-slider {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+            gap: 2rem;
+
+            .card {
+                background: $white ;
+                box-shadow: 1px 1px 10px  rgba(128, 128, 128, 0.308);
+                border-radius: 20px;
+                padding: 1rem;
+                padding-block: max(3rem, 1.5rem);
+
+                img {
+                  margin-left:34% ;
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 50%;
+                    margin-bottom: 30px;
+                }
+
+                h3 {
+                    font-size: $small-text;
+                    margin-bottom: 20px;
+                    color: $txt-color;
+                }
+
+                p {
+                    margin-bottom: 20px;
+                    color: $txt-color;
+                }
+            }
+
+        }
     }
 }
 
@@ -681,13 +767,14 @@
 
 @include iPad {
 
-    
+
     .about {
         .get-app {
             grid-template-columns: 1fr;
 
             .left-about-content {
                 justify-content: center;
+
                 .download-image {
                     width: 320px;
                     height: 320px;
@@ -697,13 +784,15 @@
 
         .info {
             grid-template-columns: 1fr;
-            .left-info-content{
+
+            .left-info-content {
                 order: 2;
             }
 
             .right-info-content {
                 order: 1;
                 justify-content: center;
+
                 .download-image {
                     width: 320px;
                     height: 320px;
