@@ -446,18 +446,18 @@ a {
   transform: translateY(22%);
 }
 
-.blog-section {
+.testimonial-section {
   margin-top: 7em;
   width: 100%;
   background: white;
   font-family: "Open Sans", sans-serif;
   margin-bottom: 7em;
 }
-.blog-section .blog {
+.testimonial-section .testimonial {
   width: min(90%, 1150px);
   margin: auto;
 }
-.blog-section .blog .topic-text {
+.testimonial-section .testimonial .topic-text {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -474,12 +474,12 @@ a {
   font-family: "Open Sans", sans-serif;
   font-size: clamp(14px, 4vw, 16px);
 }
-.blog-section .blog .topic-text .iconify-icon {
+.testimonial-section .testimonial .topic-text .iconify-icon {
   font-size: 16px;
   color: #ffc107;
   margin-right: 5px;
 }
-.blog-section .blog h2 {
+.testimonial-section .testimonial h2 {
   font-size: clamp(25px, 5vw, 45px);
   font-family: "Noto Sans", sans-serif;
   font-weight: 600;
@@ -488,34 +488,34 @@ a {
   margin-bottom: 1.5em;
   line-height: 1.2;
 }
-.blog-section .blog h2 span {
+.testimonial-section .testimonial h2 span {
   color: #9931df;
 }
-.blog-section .blog .testimonial-slider {
+.testimonial-section .testimonial .testimonial-slider {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
-.blog-section .blog .testimonial-slider .card {
+.testimonial-section .testimonial .testimonial-slider .card {
   background: white;
   box-shadow: 1px 1px 10px rgba(128, 128, 128, 0.308);
   border-radius: 20px;
   padding: 1rem;
   padding-block: 3rem;
 }
-.blog-section .blog .testimonial-slider .card img {
+.testimonial-section .testimonial .testimonial-slider .card img {
   margin-left: 34%;
   width: 100px;
   height: 100px;
   border-radius: 50%;
   margin-bottom: 30px;
 }
-.blog-section .blog .testimonial-slider .card h3 {
+.testimonial-section .testimonial .testimonial-slider .card h3 {
   font-size: clamp(20px, 6vw, 25px);
   margin-bottom: 20px;
   color: #333333;
 }
-.blog-section .blog .testimonial-slider .card p {
+.testimonial-section .testimonial .testimonial-slider .card p {
   margin-bottom: 20px;
   color: #333333;
 }
