@@ -27,7 +27,6 @@ $(document).ready(function () {
     slidesToScroll: 4,
     autoplay: true,
     autoplaySpeed: 3000,
-    centerMode: true,
     dots: true,
     arrows: true,
     responsive: [
