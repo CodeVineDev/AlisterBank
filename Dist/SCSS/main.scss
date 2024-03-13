@@ -574,16 +574,14 @@
         }
 
         .testimonial-slider {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-
             .card {
                 background: $white ;
                 box-shadow: 1px 1px 10px  rgba(128, 128, 128, 0.308);
                 border-radius: 20px;
                 padding: 1rem;
                 padding-block: max(3rem, 1.5rem);
+                height: 100%;
+                margin: 1rem;
 
                 img {
                   margin-left:34% ;

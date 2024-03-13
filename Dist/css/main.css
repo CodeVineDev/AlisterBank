@@ -491,17 +491,14 @@ a {
 .testimonial-section .testimonial h2 span {
   color: #9931df;
 }
-.testimonial-section .testimonial .testimonial-slider {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-}
 .testimonial-section .testimonial .testimonial-slider .card {
   background: white;
   box-shadow: 1px 1px 10px rgba(128, 128, 128, 0.308);
   border-radius: 20px;
   padding: 1rem;
   padding-block: 3rem;
+  height: 100%;
+  margin: 1rem;
 }
 .testimonial-section .testimonial .testimonial-slider .card img {
   margin-left: 34%;
