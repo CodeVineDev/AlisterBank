@@ -26,19 +26,20 @@ $(document).ready(function () {
     slidesToShow: 3,
     slidesToScroll: 4,
     autoplay: true,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 3000,
+    centerMode: true,
     dots: true,
     arrows: true,
     responsive: [
       {
-        breakpoint: 768,
+        breakpoint: 1150,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1
         }
       },
       {
-        breakpoint: 576,
+        breakpoint: 700,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1
