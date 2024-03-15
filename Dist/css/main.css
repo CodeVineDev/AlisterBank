@@ -518,6 +518,30 @@ a {
   color: #333333;
 }
 
+footer {
+  border: 2px solid red;
+  background: #333333;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr));
+}
+footer .footer-linking {
+  grid-column: span 2;
+}
+footer .links {
+  color: white;
+}
+footer .links h4 {
+  font-weight: 600;
+  font-family: "Noto Sans", sans-serif;
+  font-size: clamp(14px, 4vw, 16px);
+  margin-bottom: 20px;
+}
+footer .links p {
+  font-family: "Open Sans", sans-serif;
+  font-size: clamp(14px, 4vw, 16px);
+  margin-bottom: 20px;
+}
+
 @keyframes auto-scroll {
   0% {
     transform: translateY(0);

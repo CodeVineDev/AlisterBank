@@ -607,6 +607,30 @@
         }
     }
 }
+footer{
+    border: $red-border;
+    background: $txt-color;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr));
+    .footer-linking{
+        grid-column: span 2;
+    }
+    .links{
+        color: $white;
+        h4{
+            font-weight: 600;
+            font-family: $large-font;
+            font-size: $p-text;
+            margin-bottom: 20px;
+        }
+        p{
+            font-family: $normal-font;
+            font-size: $p-text;
+            margin-bottom: 20px;
+
+        }
+    }
+}
 
 @keyframes auto-scroll {
     0% {
