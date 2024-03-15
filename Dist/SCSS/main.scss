@@ -608,6 +608,10 @@
 
 .blog-section {
     .blog {
+        width: min(90%, 1150px);
+        margin: auto;
+        margin-bottom: 7em;
+
         .topic-text {
             display: flex;
             justify-content: center;
@@ -630,7 +634,7 @@
                 margin-right: 3px;
             }
         }
-        
+
         h2 {
             font-size: $medium-text;
             font-family: $large-font;
@@ -643,6 +647,45 @@
             span {
                 color: $b-color;
             }
+        }
+
+        .blog-grid {
+            width: 100%;
+            display: grid;
+            gap: 3rem;
+            grid-template-columns: repeat(2, 1fr);
+
+            .blog-card {
+                font-family: $normal-font;
+                color: $txt-color;
+
+                img {
+                    width: 100%;
+                    border-radius: 20px;
+                }
+
+                p {
+                    font-size: 14px;
+                    font-weight: 600;
+                    margin-bottom: 20px;
+                }
+
+                h3 {
+                    font-size: $small-text;
+                    margin-bottom: 20px;
+                }
+            }
+
+            .card-1,
+            .card-3 {
+                grid-row: span 2;
+            }
+
+            .card-2,
+            .card-4 {
+                grid-row: span 1;
+            }
+
         }
 
     }
@@ -885,7 +928,6 @@ footer {
 
 @include iPad {
 
-
     .about {
         .get-app {
             grid-template-columns: 1fr;
@@ -928,6 +970,20 @@ footer {
 }
 
 @include biggerphone {
+    
+.blog-section {
+    .blog {
+        .blog-grid {
+            .blog-card {
+                h3 {
+                    font-size: $p-text;
+                }
+            }
+        }
+
+    }
+}
+    
     .about {
         .get-app {
             grid-template-columns: 1fr;
@@ -977,11 +1033,24 @@ footer {
 }
 
 @include mobile {
-    footer{
-        .footer{
+
+    footer {
+        .footer {
             padding: 3rem 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr));
         }
     }
+
+    
+.blog-section {
+    .blog {
+        .blog-grid {
+            grid-template-columns: 1fr;
+            }
+        }
+
+    }
+
     .about {
         .get-app {
             grid-template-columns: 1fr;
@@ -1010,6 +1079,11 @@ footer {
     .home-page {
         .header {
             font-size: $small-text;
+        }
+        .get-started{
+            .signin-btn{
+              margin-left: 2%;
+            }
         }
     }
 
