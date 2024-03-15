@@ -525,7 +525,7 @@
     }
 }
 
-.testimonial-section{
+.testimonial-section {
     margin-top: 7em;
     width: 100%;
     background: $white;
@@ -576,16 +576,16 @@
         .testimonial-slider {
             .card {
                 background: $white ;
-                box-shadow: 1px 1px 10px  rgba(128, 128, 128, 0.308);
+                box-shadow: 1px 1px 10px rgba(128, 128, 128, 0.308);
                 border-radius: 20px;
                 padding: 1rem;
                 padding-block: max(3rem, 1.5rem);
                 height: 100%;
                 max-width: 400px;
                 margin: 1rem;
-             
+
                 img {
-                  margin-left:34% ;
+                    margin-left: 34%;
                     width: 100px;
                     height: 100px;
                     border-radius: 50%;
@@ -607,30 +607,111 @@
         }
     }
 }
-footer{
-    border: $red-border;
-    background: $txt-color;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr));
-    .footer-linking{
-        grid-column: span 2;
-    }
-    .links{
-        color: $white;
-        h4{
-            font-weight: 600;
-            font-family: $large-font;
-            font-size: $p-text;
+
+.blog-section {
+    .blog {
+        .topic-text {
+            display: flex;
+            align-items: center;
+            width: min(95%, 250px);
+            text-align: center;
+            margin: auto;
+            margin-top: 20px;
             margin-bottom: 20px;
-        }
-        p{
+            padding: 10px;
+            border-radius: 30px;
+            background: rgba(128, 128, 128, 0.185);
+            backdrop-filter: blur(20px);
             font-family: $normal-font;
             font-size: $p-text;
-            margin-bottom: 20px;
 
+            .iconify-icon {
+                font-size: 16px;
+                color: $yellow;
+                margin-right: 3px;
+            }
         }
     }
 }
+
+footer {
+    background: $txt-color;
+
+    .footer {
+        width: min(95%, 1150px);
+        margin: auto;
+        padding: 3rem 0;
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+
+        .footer-linking {
+            grid-column: span 2;
+
+            .footer-logo {
+                display: flex;
+                font-family: $large-font;
+                margin-bottom: 20px;
+
+                img {
+                    width: 45px;
+
+                }
+
+                h3 {
+                    color: $header-color;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-left: 5px;
+                    font-size: clamp(16px, 4vw, 24px);
+                }
+            }
+
+            p {
+                color: $white;
+                font-family: $normal-font;
+                font-size: $p-text;
+                margin-bottom: 20px;
+            }
+
+            .footer-socials {
+                display: flex;
+                justify-content: left;
+                align-items: center;
+                margin-bottom: 20px;
+
+                div {
+                    margin-right: 10px;
+
+                    .icons {
+                        font-size: 20px;
+                        color: $white
+                    }
+                }
+            }
+        }
+
+        .links {
+            color: $white;
+
+            h4 {
+                font-weight: 600;
+                font-family: $large-font;
+                font-size: $p-text;
+                margin-bottom: 20px;
+            }
+
+            p {
+                font-family: $normal-font;
+                font-size: $p-text;
+                margin-bottom: 20px;
+
+            }
+        }
+    }
+}
+
 
 @keyframes auto-scroll {
     0% {
@@ -882,6 +963,11 @@ footer{
 }
 
 @include mobile {
+    footer{
+        .footer{
+            padding: 3rem 1.5rem;
+        }
+    }
     .about {
         .get-app {
             grid-template-columns: 1fr;

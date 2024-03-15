@@ -518,25 +518,87 @@ a {
   color: #333333;
 }
 
-footer {
-  border: 2px solid red;
-  background: #333333;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr));
+.blog-section .blog .topic-text {
+  display: flex;
+  align-items: center;
+  width: min(95%, 250px);
+  text-align: center;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 30px;
+  background: rgba(128, 128, 128, 0.185);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  font-family: "Open Sans", sans-serif;
+  font-size: clamp(14px, 4vw, 16px);
 }
-footer .footer-linking {
+.blog-section .blog .topic-text .iconify-icon {
+  font-size: 16px;
+  color: #ffc107;
+  margin-right: 3px;
+}
+
+footer {
+  background: #333333;
+}
+footer .footer {
+  width: min(95%, 1150px);
+  margin: auto;
+  padding: 3rem 0;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+}
+footer .footer .footer-linking {
   grid-column: span 2;
 }
-footer .links {
+footer .footer .footer-linking .footer-logo {
+  display: flex;
+  font-family: "Noto Sans", sans-serif;
+  margin-bottom: 20px;
+}
+footer .footer .footer-linking .footer-logo img {
+  width: 45px;
+}
+footer .footer .footer-linking .footer-logo h3 {
+  color: #542F6F;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5px;
+  font-size: clamp(16px, 4vw, 24px);
+}
+footer .footer .footer-linking p {
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  font-size: clamp(14px, 4vw, 16px);
+  margin-bottom: 20px;
+}
+footer .footer .footer-linking .footer-socials {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-bottom: 20px;
+}
+footer .footer .footer-linking .footer-socials div {
+  margin-right: 10px;
+}
+footer .footer .footer-linking .footer-socials div .icons {
+  font-size: 20px;
   color: white;
 }
-footer .links h4 {
+footer .footer .links {
+  color: white;
+}
+footer .footer .links h4 {
   font-weight: 600;
   font-family: "Noto Sans", sans-serif;
   font-size: clamp(14px, 4vw, 16px);
   margin-bottom: 20px;
 }
-footer .links p {
+footer .footer .links p {
   font-family: "Open Sans", sans-serif;
   font-size: clamp(14px, 4vw, 16px);
   margin-bottom: 20px;
@@ -711,6 +773,9 @@ footer .links p {
   }
 }
 @media (max-width: 450px) {
+  footer .footer {
+    padding: 3rem 1.5rem;
+  }
   .about .get-app {
     grid-template-columns: 1fr;
   }
