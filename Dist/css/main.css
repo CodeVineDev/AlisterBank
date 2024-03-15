@@ -497,8 +497,6 @@ a {
   border-radius: 20px;
   padding: 1rem;
   padding-block: 3rem;
-  height: 100%;
-  max-width: 400px;
   margin: 1rem;
 }
 .testimonial-section .testimonial .testimonial-slider .card img {
@@ -520,6 +518,7 @@ a {
 
 .blog-section .blog .topic-text {
   display: flex;
+  justify-content: center;
   align-items: center;
   width: min(95%, 250px);
   text-align: center;
@@ -538,6 +537,18 @@ a {
   font-size: 16px;
   color: #ffc107;
   margin-right: 3px;
+}
+.blog-section .blog h2 {
+  font-size: clamp(25px, 5vw, 45px);
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 600;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 1.5em;
+  line-height: 1.2;
+}
+.blog-section .blog h2 span {
+  color: #9931df;
 }
 
 footer {
