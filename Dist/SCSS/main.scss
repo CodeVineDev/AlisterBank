@@ -658,22 +658,39 @@
             .blog-card {
                 font-family: $normal-font;
                 color: $txt-color;
+                overflow: hidden;
+
+                &:hover h3, &:hover p  {
+                 color: $b-color;
+                }
 
                 img {
                     width: 100%;
                     border-radius: 20px;
+                    margin-bottom: 20px;
                 }
 
                 p {
                     font-size: 14px;
                     font-weight: 600;
                     margin-bottom: 20px;
+                    transition: 200ms ease-in-out;
+                    
                 }
 
                 h3 {
                     font-size: $small-text;
                     margin-bottom: 20px;
+                    transition: 200ms ease-in-out;
                 }
+            }
+
+            .card-1 {
+                img {
+                    height: 100%;
+                    max-height: 655px;
+                }
+
             }
 
             .card-1,
@@ -970,20 +987,20 @@ footer {
 }
 
 @include biggerphone {
-    
-.blog-section {
-    .blog {
-        .blog-grid {
-            .blog-card {
-                h3 {
-                    font-size: $p-text;
+
+    .blog-section {
+        .blog {
+            .blog-grid {
+                .blog-card {
+                    h3 {
+                        font-size: $p-text;
+                    }
                 }
             }
-        }
 
+        }
     }
-}
-    
+
     .about {
         .get-app {
             grid-template-columns: 1fr;
@@ -1041,11 +1058,11 @@ footer {
         }
     }
 
-    
-.blog-section {
-    .blog {
-        .blog-grid {
-            grid-template-columns: 1fr;
+
+    .blog-section {
+        .blog {
+            .blog-grid {
+                grid-template-columns: 1fr;
             }
         }
 
@@ -1080,9 +1097,10 @@ footer {
         .header {
             font-size: $small-text;
         }
-        .get-started{
-            .signin-btn{
-              margin-left: 2%;
+
+        .get-started {
+            .signin-btn {
+                margin-left: 2%;
             }
         }
     }

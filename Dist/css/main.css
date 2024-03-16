@@ -564,19 +564,30 @@ a {
 .blog-section .blog .blog-grid .blog-card {
   font-family: "Open Sans", sans-serif;
   color: #333333;
+  overflow: hidden;
+}
+.blog-section .blog .blog-grid .blog-card:hover h3, .blog-section .blog .blog-grid .blog-card:hover p {
+  color: #9931df;
 }
 .blog-section .blog .blog-grid .blog-card img {
   width: 100%;
   border-radius: 20px;
+  margin-bottom: 20px;
 }
 .blog-section .blog .blog-grid .blog-card p {
   font-size: 14px;
   font-weight: 600;
   margin-bottom: 20px;
+  transition: 200ms ease-in-out;
 }
 .blog-section .blog .blog-grid .blog-card h3 {
   font-size: clamp(20px, 6vw, 25px);
   margin-bottom: 20px;
+  transition: 200ms ease-in-out;
+}
+.blog-section .blog .blog-grid .card-1 img {
+  height: 100%;
+  max-height: 655px;
 }
 .blog-section .blog .blog-grid .card-1,
 .blog-section .blog .blog-grid .card-3 {
