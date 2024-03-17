@@ -658,7 +658,15 @@
             .blog-card {
                 font-family: $normal-font;
                 color: $txt-color;
-                overflow: hidden;
+
+                div{
+                    overflow: hidden;
+                    margin-bottom: 20px;
+                    border-radius: 20px;
+                }
+                &:hover img{
+                    scale: 1.2;
+                }
 
                 &:hover h3, &:hover p  {
                  color: $b-color;
@@ -666,8 +674,9 @@
 
                 img {
                     width: 100%;
+                    height: 100%;
                     border-radius: 20px;
-                    margin-bottom: 20px;
+                    transition: 200ms ease-in-out;
                 }
 
                 p {
