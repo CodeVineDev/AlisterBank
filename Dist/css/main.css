@@ -17,6 +17,11 @@ p {
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding: 10rem;
+}
+
 html,
 body {
   margin: 0;
