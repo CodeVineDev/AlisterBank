@@ -2,14 +2,18 @@
 document.addEventListener("DOMContentLoaded", () => {
   let dropnavBtn = document.querySelector('.dropnav-btn');
   let dropnavContainer = document.querySelector('.dropnav-container');
-  let dropnavBars = document.querySelector('.bars');
-
+  
   dropnavBtn.addEventListener('click', () => {
     dropnavContainer.classList.toggle('active')
     dropnavBtn.classList.toggle("toggle");
 
   })
 });
+window.addEventListener('load', () => {
+  window.scrollTo(0, 0); // Scrolls to the top-left corner of the page
+});
+
+
 
 
 // Generate a random number
