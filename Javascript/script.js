@@ -16,6 +16,8 @@ window.addEventListener('load', () => {
 
 
 
+
+
 // Generate a random number
 var randomNumber = Math.floor(Math.random() * 1000000);
 
