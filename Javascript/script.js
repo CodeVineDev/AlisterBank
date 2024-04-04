@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   })
 });
 window.addEventListener('load', () => {
-  window.scrollTo(0, 0);  // Scrolls to the top-left corner of the page 
+  window.scrollTo(0, 0);  // Scrolls to the top left corner of the page 
 });
 
 
