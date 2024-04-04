@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 @mixin smallpc {
-    @media (max-width : $smallpc) {
+    @container(max-width : $smallpc) {
         @content
     }
 
@@ -12,7 +12,7 @@
 ;
 
 @mixin iPad {
-    @media (max-width : $iPad) {
+    @container (max-width : $iPad) {
         @content
     }
 
@@ -21,7 +21,7 @@
 ;
 
 @mixin biggerphone {
-    @media (max-width : $biggerPhone) {
+    @container (max-width : $biggerPhone) {
         @content
     }
 }
@@ -29,7 +29,7 @@
 ;
 
 @mixin mobile {
-    @media (max-width: $mobile) {
+    @container (max-width: $mobile) {
         @content
     }
 }
