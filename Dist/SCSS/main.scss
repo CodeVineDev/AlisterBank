@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 @mixin smallpc {
-    @container(max-width : $smallpc) {
+    @media(max-width : $smallpc) {
         @content
     }
 
@@ -12,7 +12,7 @@
 ;
 
 @mixin iPad {
-    @container (max-width : $iPad) {
+    @media (max-width : $iPad) {
         @content
     }
 
@@ -21,7 +21,7 @@
 ;
 
 @mixin biggerphone {
-    @container (max-width : $biggerPhone) {
+    @media (max-width : $biggerPhone) {
         @content
     }
 }
@@ -29,7 +29,7 @@
 ;
 
 @mixin mobile {
-    @container (max-width: $mobile) {
+    @media (max-width: $mobile) {
         @content
     }
 }
@@ -40,7 +40,7 @@
     width: 100%;
     transition: 300ms ease-in-out;
     background: $white;
-    position: sticky;
+    position: fixed ;
     z-index: 1000;
     top: 0;
     left: 0;
@@ -153,6 +153,7 @@
 
 // HOME PAGE 
 .home-page {
+    margin-top: 85px;
     padding: 10px;
     font-family: $large-font;
     background: $bg-color;

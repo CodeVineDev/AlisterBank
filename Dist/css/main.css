@@ -34,6 +34,7 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
+  overflow-x: hidden;
 }
 
 a {
@@ -44,7 +45,7 @@ a {
   width: 100%;
   transition: 300ms ease-in-out;
   background: white;
-  position: sticky;
+  position: fixed;
   z-index: 1000;
   top: 0;
   left: 0;
@@ -135,6 +136,7 @@ a {
 }
 
 .home-page {
+  margin-top: 85px;
   padding: 10px;
   font-family: "Noto Sans", sans-serif;
   background: #F7F7F7;
