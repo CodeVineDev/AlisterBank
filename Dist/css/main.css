@@ -42,6 +42,7 @@ a {
 }
 
 .navbar {
+  container-type: inline-size;
   width: 100%;
   transition: 300ms ease-in-out;
   background: white;
@@ -699,7 +700,7 @@ footer .footer .links p {
     transform: translateY(-400%);
   }
 }
-@media (max-width: 1000px) {
+@container (max-width: 1000px) {
   .about .get-app .left-about-content .download-image {
     width: 350px;
     height: 350px;

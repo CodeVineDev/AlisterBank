@@ -2,12 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
-@mixin smallpc {
-    @media(max-width : $smallpc) {
-        @content
-    }
 
-}
+
 
 ;
 
@@ -37,6 +33,7 @@
 ;
 
 .navbar {
+    container-type: inline-size;
     width: 100%;
     transition: 300ms ease-in-out;
     background: $white;
@@ -818,9 +815,7 @@ footer {
         transform: translateY(-400%);
     }
 }
-
-
-@include smallpc {
+@container (max-width: 1000px){
     .about {
         .get-app {
             .left-about-content {
@@ -995,6 +990,9 @@ footer {
         }
     }
 }
+
+
+
 
 @include biggerphone {
 
