@@ -1,27 +1,16 @@
 // COLORS
-$black: #242424;
-$indigo:#6610f2;
-$teal: #20c997;
-$yellow :#ffc107;
-$orange: #fd7e14;
-$blue: #0d6efd;
-$cyan:#0dcaf0;
-$blue-primary:#542F6F;
+$black: #474747;
+$indigo: #6610f2;
+$b-color: #46106d;
 $white: white;
+$grey: #6c757d;
+$bg-color: $white;
 $normal-font: 'Open Sans', sans-serif;
-$large-font: "Noto Sans", sans-serif; 
-$grey:#6c757d;
-$bg-color:#F7F7F7;
-$txt-color:#333333;
-$btn-color:#6E45A1;
-$HE-color:#A785CA;
-$header-color:#542F6F;
-$b-color:#9931df;
-$ss-color:#D6B4E1;
+$large-font: "Noto Sans", sans-serif;
 $red-border: 2px solid red;
-$big-text: clamp(45px,4vw,60px);
-$medium-text: clamp(25px,5vw,45px);
-$small-text: clamp(20px,6vw,25px);
+$big-text: clamp( 1rem, 5vw + .5rem, 2.5rem);
+$medium-text: clamp(25px, 5vw, 45px);
+$small-text: clamp(20px, 6vw, 25px);
 $p-text: clamp(14px, 4vw, 16px);
 
 

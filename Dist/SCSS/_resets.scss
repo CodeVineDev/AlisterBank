@@ -14,12 +14,10 @@ p {
     margin: 0;
     padding: 0;
 }
+
 html{
     scroll-behavior: smooth;
     scroll-padding: 6rem;
-}
-
-html{
     margin: 0;
     padding: 0;
     height: 100%;
@@ -32,6 +30,7 @@ body{
     padding: 0;
     width: 100%;
     overflow-x: hidden;
+    position: relative;
 }
 
 a {
