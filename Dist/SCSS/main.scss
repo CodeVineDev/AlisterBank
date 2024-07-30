@@ -10,6 +10,7 @@
 }
 
 ;
+
 @mixin iPad {
     @media (max-width : $iPad) {
         @content
@@ -92,7 +93,7 @@
                 list-style: none;
 
                 a {
-                   color: $black;
+                    color: $black;
                     padding: 10px;
                     margin: 7px 5px;
                     font-weight: 600;
@@ -166,122 +167,9 @@
     // background-image: url(../../IMAGES/skyline-district-3302126.jpg);
     // background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.7), rgba(0, 0, 0, 0.6)), url(../../IMAGES/skyline-district-3302126.jpg);
 
-    .header {
-        font-size: $big-text;
-        scroll-snap-type: y mandatory;
-        color: $indigo;
-        width: min(95%, 1350px);
-        margin: auto;
-        margin-top: 1em;
-        margin-bottom: 20px;
-
-        .autoscroll-text {
-            position: relative;
-            display: flex;
-            height: 1.2em;
-            margin-bottom: -5px;
-            overflow: hidden;
-            flex-direction: column;
-            scroll-snap-align: start;
-
-            span {
-                animation: auto-scroll 15s infinite 3s;
-            }
-
-
-        }
-    }
-
-    p {
-        font-family: $normal-font;
-        color: $black;
-        font-size: $p-text;
-        font-weight: 600;
-        width: min(95%, 1250px);
-        margin: auto;
-        margin-bottom: 20px;
-        line-height: 1.5;
-    }
-
-    .get-started {
-        width: min(95%, 1250px);
-        margin: auto;
-        margin-bottom: 7em;
-
-        button {
-            padding: 15px 30px;
-            font-size: $p-text;
-            color: $white;
-            background: $indigo;
-            border-radius: 30px;
-            border: none;
-            transition: 200ms ease-in-out;
-
-            &:hover {
-                background: $b-color;
-            }
-        }
-
-        .signin-btn {
-            border: 2px solid $white;
-            margin-left: 1.5em;
-            background: transparent;
-            padding: 15px 40px;
-
-            &:hover {
-                background: rgba(128, 128, 128, 0.8);
-                backdrop-filter: blur(20px);
-            }
-        }
-    }
-}
-
-
-
-@keyframes auto-scroll {
-    0% {
-        transform: translateY(0);
-    }
-
-    25% {
-        transform: translateY(-100%);
-    }
-
-    50% {
-        transform: translateY(-200%);
-    }
-
-    75% {
-        transform: translateY(-300%);
-    }
-
-    100% {
-        transform: translateY(-400%);
-    }
 }
 
 @include smallpc {
-    .about {
-        .get-app {
-            .left-about-content {
-                .download-image {
-                    width: 350px;
-                    height: 350px;
-                }
-            }
-
-        }
-
-        .info {
-            .right-info-content {
-                .download-image {
-                    width: 350px;
-                    height: 350px;
-                }
-            }
-
-        }
-    }
 
     .navbar {
         .main-nav {
@@ -383,23 +271,9 @@
         }
     }
 
-    .home-page {
-        .header {
-            font-size: $medium-text;
-        }
-    }
-
-
 }
 
-@include iPad {
-
-    .home-page {
-        .header {
-            font-size: $medium-text;
-        }
-    }
-}
+// @include iPad {}
 
 
 
@@ -429,19 +303,6 @@
 }
 
 @include mobile {
-
-    .home-page {
-        .header {
-            font-size: $small-text;
-        }
-
-        .get-started {
-            .signin-btn {
-                margin-left: 2%;
-            }
-        }
-    }
-
     .navbar {
         .main-nav {
             display: grid;
