@@ -37,277 +37,211 @@
 ;
 
 .navbar {
-    container-type: inline-size;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
-    transition: 300ms ease-in-out;
-    background: $white;
-    backdrop-filter: blur(20px);
-    position: absolute;
-    border-bottom: 2px solid $white;
-    z-index: 1000;
-    top: 0;
-    left: 0;
+    gap: 1rem;
+    padding-inline: 2.5rem;
+    height: 6rem;
+    box-shadow: 1px 1px 3px #00000050;
+    position: relative;
 
-    .main-nav {
-        padding: 10px;
-        padding-inline: 20px;
-        font-family: $large-font;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr));
-        gap: 2rem;
+    // * {
+    //     border: $red-border;
+    // }
+
+    .logo {
         width: 100%;
+        display: flex;
+        align-items: center;
+        flex: 1;
 
-
-        background: transparent;
-
-        .logo {
-            padding: 10px;
-            display: flex;
-            font-family: $large-font;
-
-            img {
-                width: 45px;
-
-            }
-
-            h3 {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                margin-left: 5px;
-                color: $indigo;
-                font-size: clamp(16px, 4vw, 24px);
-            }
-
+        img {
+            width: 50px;
+            margin-right: 5px;
         }
 
-        .mainNavLink-con {
+        h3 {
+            font-family: $large-font;
+            text-transform: uppercase;
+            color: $indigo;
+            font-size: $medium-text;
+
+        }
+    }
+
+    .navLink-con {
+        width: 100%;
+        flex: 2 0;
+
+        ul {
+            display: flex;
+            justify-content: center;
+
+            li {
+                padding: 5px 10px;
+
+                a {
+                    padding: 5px;
+                    font-family: $normal-font;
+                    font-size: $small-text;
+                    transition: 200ms ease-in-out;
+                    font-weight: bold;
+                    color: $black;
+
+                    &:hover {
+                        color: $indigo;
+                    }
+                }
+            }
+        }
+    }
+
+    .nav-btns {
+        width: 100%;
+        flex: 1;
+        display: flex;
+        gap: 1rem;
+        justify-content: end;
+        align-items: center;
+
+        .login {
+            background: $indigo;
+            color: $white;
+            border-radius: 5px;
             display: flex;
             justify-content: center;
             align-items: center;
+            font-weight: 600;
+            padding: 10px 15px;
+            transition: 200ms ease-in-out;
+            border: none;
 
-            ul {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                list-style: none;
-
-                a {
-                    color: $black;
-                    padding: 10px;
-                    margin: 7px 5px;
-                    font-weight: 600;
-                    transition: 200ms ease-in-out;
-
-                    &:hover {
-                        color: $b-color;
-                    }
-                }
-
-
+            &:hover {
+                background: $b-color;
             }
         }
 
-        .nav-btns {
-            display: flex;
-            justify-content: end;
-            align-items: center;
-
-            .login {
-                display: block;
-                padding: 7px 25px;
-                background: $indigo;
-                color: $white;
-                border: 2px solid $indigo;
-                transition: 200ms ease-in-out;
-                font-size: 16px;
-                font-family: $large-font;
-                font-weight: 400;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                border-radius: 30px;
-                margin: 0 10px;
-
-                &:hover {
-                    background: $indigo;
-                    border: 2px solid $indigo;
-                    color: $white;
-                }
-            }
+        .dropnav-btn {
+            display: none;
         }
-
-    }
-
-    .dropnav-btn {
-        display: none;
     }
 
     .dropnav-container {
         display: none;
     }
-
-    .active {
-        height: 30rem !important;
-        transition: 300ms ease-in-out;
-    }
 }
 
-// HOME PAGE 
-.home-page {
-    padding: 10px;
-    padding-top: 5rem;
-    font-family: $large-font;
-    height: 100svh;
-    width: 100%;
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-    background: $white;
-    // background-image: url(../../IMAGES/skyline-district-3302126.jpg);
-    // background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.7), rgba(0, 0, 0, 0.6)), url(../../IMAGES/skyline-district-3302126.jpg);
+// HOME PAGE STYLING
+// .body-section {
+//     border: $red-border;
+// }
 
+.homepage {
+    height: 100svh;
+    background: rgb(206, 206, 206);
+}
+
+// MEDIA QUERY
+@include biggerphone {
+    .navbar {
+        .nav-btns {
+            .login {
+                display: none;
+            }
+        }
+    }
 }
 
 @include smallpc {
-
     .navbar {
-        .main-nav {
-            .mainNavLink-con {
-                display: none;
-            }
+        .navLink-con {
+            display: none;
+        }
 
-            .dropnav-container {
-                transition: 300ms ease-in-out;
-                display: block;
-                width: 100%;
-                height: 0;
-                overflow: hidden;
-                position: absolute;
-                top: 85px;
-                left: 0;
-                background: $white;
-                z-index: -1;
-                border-bottom-left-radius: 10px;
-                border-bottom-right-radius: 10px;
-
-                ul {
-                    list-style: none;
-                    width: min(95%, 1200px);
-                    margin: auto;
-
-                    li {
-                        border-bottom: 1px solid $grey;
-                        padding: 20px;
-
-                        &:hover a {
-                            color: $b-color;
-                        }
-                    }
-                }
-
-                a {
-                    color: $indigo;
-                    font-family: $normal-font;
-                    transition: 200ms;
-                }
-            }
-
+        .nav-btns {
             .dropnav-btn {
-                width: 50px;
-                height: 50px;
-                border: none;
-                background: none;
                 display: block;
-
-
-
-                .bars {
-                    width: 60%;
-                    height: 3px;
-                    background: black;
-                    margin: auto;
-                    position: relative;
-                    transition: 200ms;
-
-                    &::before {
-                        content: "";
-                        position: absolute;
-                        top: -8px;
-                        width: 100%;
-                        left: 0;
-                        height: 3px;
-                        background: black;
-                        transition: 200ms;
-                    }
-
-                    &::after {
-                        content: "";
-                        position: absolute;
-                        top: 8px;
-                        left: 0;
-                        width: 100%;
-                        height: 3px;
-                        background: black;
-                        transition: 200ms;
-                    }
-                }
-            }
-
-            .dropnav-btn.toggle .bars {
-                background: transparent;
-            }
-
-            .dropnav-btn.toggle .bars::before {
-                top: 0;
-                transform: rotate(45deg);
-            }
-
-            .dropnav-btn.toggle .bars::after {
-                top: 0;
-                transform: rotate(-45deg);
-            }
-
-        }
-    }
-
-}
-
-// @include iPad {}
-
-
-
-
-@include biggerphone {
-    .navbar {
-        .main-nav {
-            .nav-btns {
-                .login {
-                    display: none;
-                }
-
-                .dropnav-btn {
-                    width: 50px;
-                    height: 50px;
-                    border: none;
-                    display: block;
-                }
+                width: 40px;
+                height: 40px;
             }
         }
-    }
-
-    .home-page {
-        text-align: left;
-    }
-
-}
-
-@include mobile {
-    .navbar {
-        .main-nav {
-            display: grid;
-            grid-template-columns: 1.5fr .5fr;
-            gap: .5rem;
+        .dropnav-container {
+            background: $white;
+            top: 100%;
+            right: 0;
+            display: block;
+            width: 100%;
+            border: $red-border;
+            position:absolute;
+            z-index: 10;
+            height: 350px;
         }
     }
+    .dropnav-btn {
+        border: none;
+        position: relative;
+        background: none;
+        display: block;
+        width: 30px;
+        height: 30px;
+        overflow: hidden;
+    }
+    
+    .dropnav-btn .bars {
+        background: $indigo;
+        display: block;
+        width: 25px;
+        height: 4px;
+        border-radius: 5px;
+        position: absolute;
+        top: 20px;
+        left: 5px;
+        transition: 0.3s;
+    }
+    
+    .dropnav-btn .bars::before {
+        content: "";
+        position: absolute;
+        top: -8px;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        border-radius: 5px;
+        background: $indigo;
+        transition: 0.3s;
+    }
+    
+    .dropnav-btn .bars::after {
+        content: "";
+        position: absolute;
+        top: 8px;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        border-radius: 5px;
+        background: $indigo;
+        transition: 0.3s;
+    }
+    
+    .active {
+        transition: 300ms ease;
+        right: 0
+    }
+    
+    .dropnav-btn.toggle span {
+        background: transparent;
+    }
+    
+    .dropnav-btn.toggle span::before {
+        top: 0;
+        transform: rotate(45deg);
+    }
+    
+    .dropnav-btn.toggle span::after {
+        top: 0;
+        transform: rotate(-45deg);
+    }
+    
 }

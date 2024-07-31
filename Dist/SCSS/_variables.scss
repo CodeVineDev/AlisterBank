@@ -8,16 +8,14 @@ $bg-color: $white;
 $normal-font: 'Open Sans', sans-serif;
 $large-font: "Noto Sans", sans-serif;
 $red-border: 2px solid red;
-$big-text: clamp( 1rem, 5vw + .5rem, 2.5rem);
-$medium-text: clamp(25px, 5vw, 45px);
-$small-text: clamp(20px, 6vw, 25px);
-$p-text: clamp(14px, 4vw, 16px);
+$big-text: clamp(1rem, 5vw + .5rem, 2.5rem);
+$medium-text: clamp(.8rem, 5vw + .5rem, 1.5rem);
+$small-text: clamp(.7rem, 5vw + .5rem, .9rem);
 
 
 
 // RESPONSIVENESS
-$smallpc: 1000px;
-
+$smallpc: 950px;
 $iPad: 800px;
 $biggerPhone: 660px;
 $mobile : 450px;

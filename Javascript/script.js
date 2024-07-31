@@ -13,6 +13,22 @@ window.addEventListener('load', () => {
   window.scrollTo(0, 0);  // Scrolls to the top left corner of the page 
 });
 
+// Navbar script
+document.addEventListener("DOMContentLoaded", function () {
+  var dropnavBtn = document.querySelector(".dropnav-btn");
+  var sideBar = document.querySelector(".sideBar");
+  // var centerNav = document.querySelector(".centerNav");
+
+  dropnavBtn.addEventListener("click", function () {
+    sideBar.classList.toggle("active");
+    sidebarBtn.classList.toggle("toggle");
+  });
+
+  sidebarBtn.addEventListener("click", function () {
+    sideBar.classList.toggle("active");
+    sidebarBtn.classList.toggle("toggle");
+  });
+});
 
 
 
