@@ -43,6 +43,15 @@ ul {
   list-style: none;
 }
 
+.navbar.sticky {
+  position: fixed;
+  top: -50px; /* Start hidden */
+}
+
+.navbar.show {
+  top: 0; /* Show navbar */
+}
+
 .navbar {
   display: flex;
   z-index: 100;
@@ -50,10 +59,12 @@ ul {
   align-items: center;
   width: 100%;
   gap: 1rem;
+  background: white;
   padding-inline: 2.5rem;
   height: 6rem;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3137254902);
   position: relative;
+  transition: 200ms ease-in-out;
 }
 .navbar .logo {
   width: 100%;
@@ -124,7 +135,7 @@ ul {
 }
 
 .homepage {
-  height: 100svh;
+  height: 300svh;
   background: rgb(206, 206, 206);
 }
 

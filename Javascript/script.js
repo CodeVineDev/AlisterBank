@@ -23,6 +23,24 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  var navbar = document.querySelector(".navbar");
+  var navbarHeight = navbar.offsetHeight;
+
+  window.addEventListener("scroll", function () {
+      if (window.scrollY > navbarHeight ) {
+          navbar.classList.add("sticky");
+          setTimeout(function () {
+              navbar.classList.add("show");
+          }, 10); // Small delay to allow CSS transition
+      } else {
+          navbar.classList.remove("sticky");
+          navbar.classList.remove("show");
+      }
+  });
+});
+
+
 
 
 

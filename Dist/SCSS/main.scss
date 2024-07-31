@@ -35,6 +35,14 @@
 }
 
 ;
+.navbar.sticky {
+    position: fixed;
+    top: -50px; /* Start hidden */
+}
+
+.navbar.show {
+    top: 0; /* Show navbar */
+}
 
 .navbar {
     display: flex;
@@ -43,10 +51,12 @@
     align-items: center;
     width: 100%;
     gap: 1rem;
+    background: $white;
     padding-inline: 2.5rem;
     height: 6rem;
     box-shadow: 1px 1px 3px #00000050;
     position: relative;
+    transition: 200ms ease-in-out;
 
     // * {
     //     border: $red-border;
@@ -140,7 +150,7 @@
 // }
 
 .homepage {
-    height: 100svh;
+    height: 300svh;
     background: rgb(206, 206, 206);
 }
 
