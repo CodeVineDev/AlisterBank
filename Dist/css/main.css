@@ -45,7 +45,7 @@ ul {
 
 .navbar {
   display: flex;
-  z-index: 10;
+  z-index: 100;
   justify-content: space-between;
   align-items: center;
   width: 100%;
@@ -153,18 +153,35 @@ ul {
     right: 0;
     display: block;
     width: 100%;
+    z-index: -10;
     position: absolute;
-    z-index: 10;
-    height: 350px;
+    height: 0;
+    overflow: hidden;
+    transition: 200ms ease-in-out;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3137254902);
   }
   .navbar .dropnav-container ul {
-    border: 2px solid red;
-    padding-block: 5rem;
+    padding-block: 3rem;
   }
   .navbar .dropnav-container ul li {
-    border: 2px solid red;
-    width: 100%;
+    border: 0.1px solid rgb(231, 231, 231);
+    display: flex;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 1rem;
+    width: min(95%, 800px);
+    height: 40px;
+    padding-left: 1rem;
+  }
+  .navbar .dropnav-container ul li:hover a {
+    color: #46106d;
+  }
+  .navbar .dropnav-container ul li a {
+    font-family: "Open Sans", sans-serif;
+    font-size: clamp(0.7rem, 5vw + 0.5rem, 0.9rem);
+    font-weight: 600;
+    color: #242424;
+    transition: 200ms ease-in-out;
   }
   .dropnav-btn {
     border: none;
@@ -208,18 +225,18 @@ ul {
     background: #6610f2;
     transition: 0.3s;
   }
-  .active {
+  .dropnav-container.active {
     transition: 300ms ease;
-    right: 0;
+    height: 500px;
   }
-  .dropnav-btn.toggle span {
+  .dropnav-btn.toggle .bars {
     background: transparent;
   }
-  .dropnav-btn.toggle span::before {
+  .dropnav-btn.toggle .bars::before {
     top: 0;
     transform: rotate(45deg);
   }
-  .dropnav-btn.toggle span::after {
+  .dropnav-btn.toggle .bars::after {
     top: 0;
     transform: rotate(-45deg);
   }

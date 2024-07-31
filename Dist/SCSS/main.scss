@@ -38,7 +38,7 @@
 
 .navbar {
     display: flex;
-    z-index: 10;
+    z-index: 100;
     justify-content: space-between;
     align-items: center;
     width: 100%;
@@ -181,20 +181,37 @@
             right: 0;
             display: block;
             width: 100%;
+            z-index: -10;
             position: absolute;
-            z-index: 10;
-            height: 350px;
+            height: 0;
+            overflow: hidden;
+            transition: 200ms ease-in-out;
             box-shadow: 1px 1px 3px #00000050;
 
             ul {
-                border: $red-border;
-                padding-block: 5rem;
+                padding-block: 3rem;
 
                 li {
-                    border: $red-border;
-                    width: 100%;
-                    a{
-                        
+                    border: .1px solid rgb(231, 231, 231);
+                    display: flex;
+                    align-items: center;
+                    margin: auto;
+                    margin-bottom: 1rem;
+                    width: min(95%, 800px);
+                    height: 40px;
+                    padding-left: 1rem;
+
+                    &:hover a {
+                        color: $b-color;
+                    }
+
+                    a {
+                        font-family: $normal-font;
+                        font-size: $small-text;
+                        font-weight: 600;
+                        color: $black;
+                        transition: 200ms ease-in-out;
+
                     }
 
                 }
@@ -248,23 +265,24 @@
         transition: 0.3s;
     }
 
-    .active {
+    .dropnav-container.active {
         transition: 300ms ease;
-        right: 0
+        height: 500px;
     }
 
-    .dropnav-btn.toggle span {
+    .dropnav-btn.toggle .bars {
         background: transparent;
     }
 
-    .dropnav-btn.toggle span::before {
+    .dropnav-btn.toggle .bars::before {
         top: 0;
         transform: rotate(45deg);
     }
 
-    .dropnav-btn.toggle span::after {
+    .dropnav-btn.toggle .bars::after {
         top: 0;
         transform: rotate(-45deg);
     }
+
 
 }
