@@ -38,6 +38,7 @@
 
 .navbar {
     display: flex;
+    z-index: 10;
     justify-content: space-between;
     align-items: center;
     width: 100%;
@@ -144,6 +145,12 @@
 }
 
 // MEDIA QUERY
+@include mobile {
+    .navbar {
+        padding-inline: 1rem;
+    }
+}
+
 @include biggerphone {
     .navbar {
         .nav-btns {
@@ -167,18 +174,34 @@
                 height: 40px;
             }
         }
+
         .dropnav-container {
             background: $white;
             top: 100%;
             right: 0;
             display: block;
             width: 100%;
-            border: $red-border;
-            position:absolute;
+            position: absolute;
             z-index: 10;
             height: 350px;
+            box-shadow: 1px 1px 3px #00000050;
+
+            ul {
+                border: $red-border;
+                padding-block: 5rem;
+
+                li {
+                    border: $red-border;
+                    width: 100%;
+                    a{
+                        
+                    }
+
+                }
+            }
         }
     }
+
     .dropnav-btn {
         border: none;
         position: relative;
@@ -188,7 +211,7 @@
         height: 30px;
         overflow: hidden;
     }
-    
+
     .dropnav-btn .bars {
         background: $indigo;
         display: block;
@@ -200,7 +223,7 @@
         left: 5px;
         transition: 0.3s;
     }
-    
+
     .dropnav-btn .bars::before {
         content: "";
         position: absolute;
@@ -212,7 +235,7 @@
         background: $indigo;
         transition: 0.3s;
     }
-    
+
     .dropnav-btn .bars::after {
         content: "";
         position: absolute;
@@ -224,24 +247,24 @@
         background: $indigo;
         transition: 0.3s;
     }
-    
+
     .active {
         transition: 300ms ease;
         right: 0
     }
-    
+
     .dropnav-btn.toggle span {
         background: transparent;
     }
-    
+
     .dropnav-btn.toggle span::before {
         top: 0;
         transform: rotate(45deg);
     }
-    
+
     .dropnav-btn.toggle span::after {
         top: 0;
         transform: rotate(-45deg);
     }
-    
+
 }
