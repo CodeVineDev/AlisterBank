@@ -2,7 +2,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   let dropnavBtn = document.querySelector('.dropnav-btn');
   let dropnavContainer = document.querySelector('.dropnav-container');
-  
+
   dropnavBtn.addEventListener('click', () => {
     dropnavContainer.classList.toggle('active')
     dropnavBtn.classList.toggle("toggle");
@@ -15,10 +15,9 @@ window.addEventListener('load', () => {
 
 document.addEventListener("DOMContentLoaded", function () {
   var dropnavBtn = document.querySelector(".dropnav-btn");
-  var dropnavContainer = document.querySelector("dropnav-container");
 
   dropnavBtn.addEventListener("click", function () {
-    dropnavContainer.classList.toggle("active");
+    var dropnavContainer = dropnavContainer.classList.toggle("active");
     dropnavBtn.classList.toggle("toggle");
   });
 });
@@ -28,15 +27,15 @@ document.addEventListener("DOMContentLoaded", function () {
   var navbarHeight = navbar.offsetHeight;
 
   window.addEventListener("scroll", function () {
-      if (window.scrollY > navbarHeight ) {
-          navbar.classList.add("sticky");
-          setTimeout(function () {
-              navbar.classList.add("show");
-          }, 10); // Small delay to allow CSS transition
-      } else {
-          navbar.classList.remove("sticky");
-          navbar.classList.remove("show");
-      }
+    if (window.scrollY > navbarHeight) {
+      navbar.classList.add("sticky");
+      setTimeout(function () {
+        navbar.classList.add("show");
+      }, 10); // Small delay to allow CSS transition
+    } else {
+      navbar.classList.remove("sticky");
+      navbar.classList.remove("show");
+    }
   });
 });
 

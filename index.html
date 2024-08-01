@@ -10,13 +10,14 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
     />
     <link
       rel="stylesheet"
-      href="font-awesome(4.7.0)/css/font-awesome.min.css"
+      href="./font-awesome(4.7.0)/css/font-awesome.min.css"
     />
 
     <link rel="stylesheet" href="./Dist/css/main.css" />
@@ -24,8 +25,14 @@
     <title>Alister</title>
   </head>
 
-  <body> 
+  <body>
     <!-- navbar In start-->
+    <div class="chatUs">
+      <i class="fa material-symbols-outlined"> support_agent </i>
+      <div class="tag-message">
+        <p>Chat with us !</p>
+      </div>
+    </div>
     <nav class="nav-wrap">
       <div class="navbar">
         <div class="logo">
@@ -44,8 +51,8 @@
         <div class="nav-btns">
           <button href="#" class="login">
             <span class="material-symbols-outlined"> shield_person </span>Open
-            An Account</button
-          >
+            An Account
+          </button>
           <button class="dropnav-btn">
             <span class="bars"></span>
           </button>
@@ -63,33 +70,38 @@
       </div>
     </nav>
     <!-- navbar In end-->
+
     <section class="body-section" id="home">
       <!-- home page In start -->
-      <div class="homepage">
-        <div class="home-left">
-          <div class="top-content">
-            <p class="special-text"> Simple. Transparent. Secure </p>
-            <h1>Banking Solutions</h1>
-            <p class="normal-text"
-              >Products and services designed to help you reach your financial
-              goals.</p
-            >
+      <div class="home-container">
+        <div class="homepage">
+          <div class="home-left">
+            <div class="top-content">
+              <p class="special-text"> Simple. Transparent. Secure </p>
+              <h1>Banking Solutions</h1>
+              <p class="normal-text"
+                >Products and services designed to help you reach your financial
+                goals.</p
+              >
+            </div>
+            <div class="lower-content">
+              <button class="open-account">Open Account</button>
+              <button class="getin-touch"> Get in touch</button>
+            </div>
           </div>
-          <div class="lower-content">
-            <button class="open-account">Open Account</button>
-            <button class="getin-touch"> Get in touch</button>
-          </div>
+          <img
+            class="home-image"
+            src="IMAGES/App monetization-rafiki.png"
+            alt="Home Image"
+          />
         </div>
-        <!-- <div class="home-right"> -->
-        <img
-          class="home-image"
-          src="IMAGES/App monetization-rafiki.png"
-          alt="Home Image"
-        />
-        <!-- </div> -->
       </div>
-      <!-- homepage In end-->
+
+      <!-- home page In end -->
+
+      <div class="partners"> </div>
     </section>
+
     <!-- SCRIPT LINKS -->
     <script src="https://code.iconify.design/iconify-icon/2.0.0/iconify-icon.min.js"></script>
     <script src="Javascript/script.js"></script>
