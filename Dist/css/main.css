@@ -261,7 +261,7 @@ ul {
 }
 @media (max-width: 800px) {
   .homepage {
-    height: calc(100svh - 15rem);
+    height: calc(100svh - 6rem);
     grid-template-columns: 1fr;
   }
   .homepage .home-left .top-content .special-text {
