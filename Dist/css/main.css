@@ -84,7 +84,7 @@ ul {
   font-family: "Jost", sans-serif;
   text-transform: uppercase;
   color: #1549f3;
-  font-size: clamp(1rem, 5vw + 0.5rem, 2rem);
+  font-size: clamp(1rem, 4vw + 0.5rem, 2rem);
 }
 .nav-wrap .navbar .navLink-con {
   width: 100%;
@@ -100,7 +100,7 @@ ul {
 .nav-wrap .navbar .navLink-con ul li a {
   padding: 5px;
   font-family: "Jost", sans-serif;
-  font-size: clamp(0.8rem, 5vw + 0.5rem, 1.3rem);
+  font-size: clamp(0.8rem, 2vw + 0.5rem, 1.3rem);
   transition: 200ms ease-in-out;
   font-weight: 400;
   color: #242424;
@@ -157,7 +157,7 @@ ul {
   place-content: center;
 }
 .homepage .home-left .top-content .special-text {
-  font-size: clamp(1rem, 5vw + 0.5rem, 2rem);
+  font-size: clamp(1rem, 4vw + 0.5rem, 2rem);
   color: green;
   font-weight: 600;
   margin-bottom: 1rem;
@@ -171,7 +171,7 @@ ul {
 }
 .homepage .home-left .top-content .normal-text {
   margin-bottom: 1rem;
-  font-size: clamp(0.8rem, 5vw + 0.5rem, 1.3rem);
+  font-size: clamp(0.8rem, 2vw + 0.5rem, 1.3rem);
   color: #3f3f3f;
   margin-bottom: 1rem;
 }
@@ -184,7 +184,7 @@ ul {
 .homepage .home-left .lower-content button {
   background: none;
   border: none;
-  font-size: clamp(0.8rem, 5vw + 0.5rem, 1.3rem);
+  font-size: clamp(0.8rem, 2vw + 0.5rem, 1.3rem);
   border-radius: 5px;
   font-weight: 400;
   padding: 10px 20px;
@@ -220,7 +220,7 @@ ul {
     grid-template-columns: 1fr;
   }
   .homepage .home-left .top-content .special-text {
-    font-size: clamp(0.8rem, 5vw + 0.5rem, 1.3rem);
+    font-size: clamp(0.8rem, 2vw + 0.5rem, 1.3rem);
   }
   .homepage .home-left .top-content h1 {
     font-size: calc(clamp(1.5rem, 5vw + 0.5rem, 4rem) + 0.5rem);
@@ -268,7 +268,7 @@ ul {
   }
   .nav-wrap .navbar .dropnav-container ul li a {
     font-family: "Jost", sans-serif;
-    font-size: clamp(0.8rem, 5vw + 0.5rem, 1.3rem);
+    font-size: clamp(0.8rem, 2vw + 0.5rem, 1.3rem);
     font-weight: 400;
     color: #242424;
     transition: 200ms ease-in-out;
