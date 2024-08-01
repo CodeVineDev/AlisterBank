@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  var navbar = document.querySelector(".navbar");
+  var navbar = document.querySelector(".nav-wrap");
   var navbarHeight = navbar.offsetHeight;
 
   window.addEventListener("scroll", function () {

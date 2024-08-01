@@ -49,6 +49,14 @@ ul {
   filter: drop-shadow(10px 1px 10px rgba(152, 176, 255, 0.3137254902));
   position: relative;
   z-index: 100;
+  transition: 300ms ease-in-out;
+}
+.nav-wrap.sticky {
+  position: fixed;
+  top: -50px;
+}
+.nav-wrap.show {
+  top: 0;
 }
 .nav-wrap .navbar {
   width: min(95%, 1200px);
@@ -62,13 +70,6 @@ ul {
   height: 6rem;
   background: white;
   transition: 200ms ease-in-out;
-}
-.nav-wrap .navbar.sticky {
-  position: fixed;
-  top: -50px;
-}
-.nav-wrap .navbar.show {
-  top: 0;
 }
 .nav-wrap .navbar .logo {
   width: 100%;
