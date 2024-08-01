@@ -1,16 +1,17 @@
 // COLORS
 $black: #242424;
-$indigo: #6610f2;
-$b-color: #46106d;
+$blue: #1549f3;
+$b-color: #0328a1;
 $white: white;
-$grey: #6c757d;
+$green : green;
+$lighted-blue: #f8faff;
+$grey: #3f3f3f;
 $bg-color: $white;
-$normal-font: 'Open Sans', sans-serif;
-$large-font: "Noto Sans", sans-serif;
+$large-font: "Jost", sans-serif;
 $red-border: 2px solid red;
-$big-text: clamp(1rem, 5vw + .5rem, 2.5rem);
-$medium-text: clamp(.8rem, 5vw + .5rem, 1.5rem);
-$small-text: clamp(.7rem, 5vw + .5rem, .9rem);
+$big-text: clamp(1.5rem, 5vw + .5rem, 4rem);
+$medium-text: clamp(1rem, 5vw + .5rem, 2rem);
+$small-text: clamp(.8rem, 5vw + .5rem, 1.3rem);
 
 
 

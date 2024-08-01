@@ -1,6 +1,5 @@
 @import 'resets', 'variables';
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 @mixin smallpc {
     @media (max-width : $smallpc) {
@@ -35,126 +34,176 @@
 }
 
 ;
-.navbar.sticky {
-    position: fixed;
-    top: -50px; /* Start hidden */
-}
 
-.navbar.show {
-    top: 0; /* Show navbar */
-}
-
-.navbar {
-    display: flex;
-    z-index: 100;
-    justify-content: space-between;
-    align-items: center;
+// navbar styling In start
+.nav-wrap {
     width: 100%;
-    gap: 1rem;
     background: $white;
-    padding-inline: 2.5rem;
-    height: 6rem;
-    box-shadow: 1px 1px 3px #00000050;
+    filter: drop-shadow(10px 1px 10px #98b0ff50);
     position: relative;
-    transition: 200ms ease-in-out;
+    z-index: 100;
 
-    // * {
-    //     border: $red-border;
-    // }
 
-    .logo {
-        width: 100%;
+    .navbar {
+        width: min(95%, 1200px);
+        margin: auto;
         display: flex;
+        justify-content: space-between;
         align-items: center;
-        flex: 1;
+        gap: 1rem;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        height: 6rem;
+        background: $white;
+        transition: 200ms ease-in-out;
 
-        img {
-            width: 50px;
-            margin-right: 5px;
+
+
+        &.sticky {
+            position: fixed;
+            top: -50px;
         }
 
-        h3 {
-            font-family: $large-font;
-            text-transform: uppercase;
-            color: $indigo;
-            font-size: $medium-text;
-
+        &.show {
+            top: 0;
         }
-    }
 
-    .navLink-con {
-        width: 100%;
-        flex: 2 0;
-
-        ul {
+        .logo {
+            width: 100%;
             display: flex;
-            justify-content: center;
+            align-items: center;
+            flex: 1;
 
-            li {
-                padding: 5px 10px;
+            img {
+                width: 50px;
+                margin-right: 5px;
+            }
 
-                a {
-                    padding: 5px;
-                    font-family: $normal-font;
-                    font-size: $small-text;
-                    transition: 200ms ease-in-out;
-                    font-weight: bold;
-                    color: $black;
+            h3 {
+                font-family: $large-font;
+                text-transform: uppercase;
+                color: $blue;
+                font-size: $medium-text;
 
-                    &:hover {
-                        color: $indigo;
+            }
+        }
+
+        .navLink-con {
+            width: 100%;
+            flex: 2 0;
+
+            ul {
+                display: flex;
+                justify-content: center;
+
+                li {
+                    padding: 5px 10px;
+
+                    a {
+                        padding: 5px;
+                        font-family: $large-font;
+                        font-size: $small-text;
+                        transition: 200ms ease-in-out;
+                        font-weight: 400;
+                        color: $black;
+
+                        &:hover {
+                            color: $blue;
+                        }
                     }
                 }
             }
         }
-    }
 
-    .nav-btns {
-        width: 100%;
-        flex: 1;
-        display: flex;
-        gap: 1rem;
-        justify-content: end;
-        align-items: center;
-
-        .login {
-            background: $indigo;
-            color: $white;
-            border-radius: 5px;
+        .nav-btns {
+            width: 100%;
+            flex: 1;
             display: flex;
-            justify-content: center;
+            gap: 1rem;
+            justify-content: end;
             align-items: center;
-            font-weight: 600;
-            padding: 10px 15px;
-            transition: 200ms ease-in-out;
-            border: none;
 
-            &:hover {
-                background: $b-color;
+            .login {
+                background: $blue;
+                color: $white;
+                border-radius: 5px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-weight: 600;
+                font-family: $large-font;
+                padding: 10px 15px;
+                transition: 200ms ease-in-out;
+                border: none;
+
+                &:hover {
+                    background: $b-color;
+                }
+            }
+
+            .dropnav-btn {
+                display: none;
             }
         }
 
-        .dropnav-btn {
+        .dropnav-container {
             display: none;
         }
     }
+}
 
-    .dropnav-container {
-        display: none;
+// navbar styling In end
+
+// home page styling In start
+.body-section {
+    background: $lighted-blue;
+}
+
+.homepage {
+    height: calc(100svh - 6rem);
+    width: min(95%, 1200px);
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    position: relative;
+    overflow: hidden;
+
+    .home-left {
+        place-content: center;
+
+        .top-content {
+            .special-text {
+                font-size: $medium-text;
+                color: $green;
+                font-weight: 600;
+                margin-bottom: 1rem;
+            }
+
+            h1 {
+                font-size: $big-text;
+                color: $black;
+                margin-bottom: 1rem;
+                font-family: $large-font;
+            }
+
+            .normal-text {
+                margin-bottom: 1rem;
+                font-size: $small-text;
+                color: $grey;
+            }
+        }
+    }
+
+    .home-image {
+        width: min(95%, 600px);
+        margin: auto;
+        scale: 1.2;
+        transform: translateX(35px);
     }
 }
 
-// HOME PAGE STYLING
-// .body-section {
-//     border: $red-border;
-// }
-
-.homepage {
-    height: 300svh;
-    background: rgb(206, 206, 206);
-}
-
-// MEDIA QUERY
+// media query In start
 @include mobile {
     .navbar {
         padding-inline: 1rem;
@@ -162,68 +211,81 @@
 }
 
 @include biggerphone {
-    .navbar {
-        .nav-btns {
-            .login {
-                display: none;
+    .nav-wrap {
+        .navbar {
+            .nav-btns {
+                .login {
+                    display: none;
+                }
             }
+        }
+    }
+
+}
+
+@include iPad{
+    .homepage{
+        grid-template-columns: 1fr;
+        .home-image{
+            display: none;
         }
     }
 }
 
 @include smallpc {
-    .navbar {
-        .navLink-con {
-            display: none;
-        }
-
-        .nav-btns {
-            .dropnav-btn {
-                display: block;
-                width: 40px;
-                height: 40px;
+    .nav-wrap {
+        .navbar {
+            .navLink-con {
+                display: none;
             }
-        }
 
-        .dropnav-container {
-            background: $white;
-            top: 100%;
-            right: 0;
-            display: block;
-            width: 100%;
-            z-index: -10;
-            position: absolute;
-            height: 0;
-            overflow: hidden;
-            transition: 200ms ease-in-out;
-            box-shadow: 1px 1px 3px #00000050;
-
-            ul {
-                padding-block: 3rem;
-
-                li {
-                    border: .1px solid rgb(231, 231, 231);
-                    display: flex;
-                    align-items: center;
-                    margin: auto;
-                    margin-bottom: 1rem;
-                    width: min(95%, 800px);
+            .nav-btns {
+                .dropnav-btn {
+                    display: block;
+                    width: 40px;
                     height: 40px;
-                    padding-left: 1rem;
+                }
+            }
 
-                    &:hover a {
-                        color: $b-color;
+            .dropnav-container {
+                background: $white;
+                top: 100%;
+                right: 0;
+                display: block;
+                width: 100%;
+                position: absolute;
+                height: 0;
+                overflow: hidden;
+                transition: 200ms ease-in-out;
+                box-shadow: 1px 1px 3px #00000050;
+
+                ul {
+                    padding-block: 3rem;
+
+                    li {
+                        border: .1px solid rgb(231, 231, 231);
+                        display: flex;
+                        align-items: center;
+                        margin: auto;
+                        margin-bottom: 1rem;
+                        width: min(95%, 800px);
+                        height: 40px;
+                        padding-left: 1rem;
+
+                        &:hover a {
+                            color: $b-color;
+                        }
+
+                        a {
+                            font-family: $large-font;
+                            font-size: $small-text;
+                            font-weight: 600;
+                            color: $black;
+                            transition: 200ms ease-in-out;
+
+                        }
+
                     }
-
-                    a {
-                        font-family: $normal-font;
-                        font-size: $small-text;
-                        font-weight: 600;
-                        color: $black;
-                        transition: 200ms ease-in-out;
-
-                    }
-
                 }
             }
         }
@@ -240,7 +302,7 @@
     }
 
     .dropnav-btn .bars {
-        background: $indigo;
+        background: $blue;
         display: block;
         width: 25px;
         height: 4px;
@@ -259,7 +321,7 @@
         width: 100%;
         height: 4px;
         border-radius: 5px;
-        background: $indigo;
+        background: $blue;
         transition: 0.3s;
     }
 
@@ -271,11 +333,11 @@
         width: 100%;
         height: 4px;
         border-radius: 5px;
-        background: $indigo;
+        background: $blue;
         transition: 0.3s;
     }
 
-    .dropnav-container.active {
+   .nav-wrap .dropnav-container.active {
         transition: 300ms ease;
         height: 500px;
     }

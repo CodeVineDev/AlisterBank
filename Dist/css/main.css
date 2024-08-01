@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 * {
   box-sizing: border-box;
   margin: 0;
@@ -25,6 +24,7 @@ html {
   height: 100%;
   width: 100%;
   overflow-x: hidden;
+  font-family: "Jost", sans-serif;
 }
 
 body {
@@ -43,68 +43,72 @@ ul {
   list-style: none;
 }
 
-.navbar.sticky {
-  position: fixed;
-  top: -50px; /* Start hidden */
-}
-
-.navbar.show {
-  top: 0; /* Show navbar */
-}
-
-.navbar {
-  display: flex;
+.nav-wrap {
+  width: 100%;
+  background: white;
+  filter: drop-shadow(10px 1px 10px rgba(152, 176, 255, 0.3137254902));
+  position: relative;
   z-index: 100;
+}
+.nav-wrap .navbar {
+  width: min(95%, 1200px);
+  margin: auto;
+  display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
   gap: 1rem;
-  background: white;
-  padding-inline: 2.5rem;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
   height: 6rem;
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3137254902);
-  position: relative;
+  background: white;
   transition: 200ms ease-in-out;
 }
-.navbar .logo {
+.nav-wrap .navbar.sticky {
+  position: fixed;
+  top: -50px;
+}
+.nav-wrap .navbar.show {
+  top: 0;
+}
+.nav-wrap .navbar .logo {
   width: 100%;
   display: flex;
   align-items: center;
   flex: 1;
 }
-.navbar .logo img {
+.nav-wrap .navbar .logo img {
   width: 50px;
   margin-right: 5px;
 }
-.navbar .logo h3 {
-  font-family: "Noto Sans", sans-serif;
+.nav-wrap .navbar .logo h3 {
+  font-family: "Jost", sans-serif;
   text-transform: uppercase;
-  color: #6610f2;
-  font-size: clamp(0.8rem, 5vw + 0.5rem, 1.5rem);
+  color: #1549f3;
+  font-size: clamp(1rem, 5vw + 0.5rem, 2rem);
 }
-.navbar .navLink-con {
+.nav-wrap .navbar .navLink-con {
   width: 100%;
   flex: 2 0;
 }
-.navbar .navLink-con ul {
+.nav-wrap .navbar .navLink-con ul {
   display: flex;
   justify-content: center;
 }
-.navbar .navLink-con ul li {
+.nav-wrap .navbar .navLink-con ul li {
   padding: 5px 10px;
 }
-.navbar .navLink-con ul li a {
+.nav-wrap .navbar .navLink-con ul li a {
   padding: 5px;
-  font-family: "Open Sans", sans-serif;
-  font-size: clamp(0.7rem, 5vw + 0.5rem, 0.9rem);
+  font-family: "Jost", sans-serif;
+  font-size: clamp(0.8rem, 5vw + 0.5rem, 1.3rem);
   transition: 200ms ease-in-out;
-  font-weight: bold;
+  font-weight: 400;
   color: #242424;
 }
-.navbar .navLink-con ul li a:hover {
-  color: #6610f2;
+.nav-wrap .navbar .navLink-con ul li a:hover {
+  color: #1549f3;
 }
-.navbar .nav-btns {
+.nav-wrap .navbar .nav-btns {
   width: 100%;
   flex: 1;
   display: flex;
@@ -112,31 +116,68 @@ ul {
   justify-content: end;
   align-items: center;
 }
-.navbar .nav-btns .login {
-  background: #6610f2;
+.nav-wrap .navbar .nav-btns .login {
+  background: #1549f3;
   color: white;
   border-radius: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-weight: 600;
+  font-family: "Jost", sans-serif;
   padding: 10px 15px;
   transition: 200ms ease-in-out;
   border: none;
 }
-.navbar .nav-btns .login:hover {
-  background: #46106d;
+.nav-wrap .navbar .nav-btns .login:hover {
+  background: #0328a1;
 }
-.navbar .nav-btns .dropnav-btn {
+.nav-wrap .navbar .nav-btns .dropnav-btn {
   display: none;
 }
-.navbar .dropnav-container {
+.nav-wrap .navbar .dropnav-container {
   display: none;
 }
 
+.body-section {
+  background: #f8faff;
+}
+
 .homepage {
-  height: 300svh;
-  background: rgb(206, 206, 206);
+  height: calc(100svh - 6rem);
+  width: min(95%, 1200px);
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+.homepage .home-left {
+  place-content: center;
+}
+.homepage .home-left .top-content .special-text {
+  font-size: clamp(1rem, 5vw + 0.5rem, 2rem);
+  color: green;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.homepage .home-left .top-content h1 {
+  font-size: clamp(1.5rem, 5vw + 0.5rem, 4rem);
+  color: #242424;
+  margin-bottom: 1rem;
+  font-family: "Jost", sans-serif;
+}
+.homepage .home-left .top-content .normal-text {
+  margin-bottom: 1rem;
+  font-size: clamp(0.8rem, 5vw + 0.5rem, 1.3rem);
+  color: #3f3f3f;
+}
+.homepage .home-image {
+  width: min(95%, 600px);
+  margin: auto;
+  scale: 1.2;
+  transform: translateX(35px);
 }
 
 @media (max-width: 450px) {
@@ -145,36 +186,43 @@ ul {
   }
 }
 @media (max-width: 660px) {
-  .navbar .nav-btns .login {
+  .nav-wrap .navbar .nav-btns .login {
+    display: none;
+  }
+}
+@media (max-width: 800px) {
+  .homepage {
+    grid-template-columns: 1fr;
+  }
+  .homepage .home-image {
     display: none;
   }
 }
 @media (max-width: 950px) {
-  .navbar .navLink-con {
+  .nav-wrap .navbar .navLink-con {
     display: none;
   }
-  .navbar .nav-btns .dropnav-btn {
+  .nav-wrap .navbar .nav-btns .dropnav-btn {
     display: block;
     width: 40px;
     height: 40px;
   }
-  .navbar .dropnav-container {
+  .nav-wrap .navbar .dropnav-container {
     background: white;
     top: 100%;
     right: 0;
     display: block;
     width: 100%;
-    z-index: -10;
     position: absolute;
     height: 0;
     overflow: hidden;
     transition: 200ms ease-in-out;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3137254902);
   }
-  .navbar .dropnav-container ul {
+  .nav-wrap .navbar .dropnav-container ul {
     padding-block: 3rem;
   }
-  .navbar .dropnav-container ul li {
+  .nav-wrap .navbar .dropnav-container ul li {
     border: 0.1px solid rgb(231, 231, 231);
     display: flex;
     align-items: center;
@@ -184,12 +232,12 @@ ul {
     height: 40px;
     padding-left: 1rem;
   }
-  .navbar .dropnav-container ul li:hover a {
-    color: #46106d;
+  .nav-wrap .navbar .dropnav-container ul li:hover a {
+    color: #0328a1;
   }
-  .navbar .dropnav-container ul li a {
-    font-family: "Open Sans", sans-serif;
-    font-size: clamp(0.7rem, 5vw + 0.5rem, 0.9rem);
+  .nav-wrap .navbar .dropnav-container ul li a {
+    font-family: "Jost", sans-serif;
+    font-size: clamp(0.8rem, 5vw + 0.5rem, 1.3rem);
     font-weight: 600;
     color: #242424;
     transition: 200ms ease-in-out;
@@ -204,7 +252,7 @@ ul {
     overflow: hidden;
   }
   .dropnav-btn .bars {
-    background: #6610f2;
+    background: #1549f3;
     display: block;
     width: 25px;
     height: 4px;
@@ -222,7 +270,7 @@ ul {
     width: 100%;
     height: 4px;
     border-radius: 5px;
-    background: #6610f2;
+    background: #1549f3;
     transition: 0.3s;
   }
   .dropnav-btn .bars::after {
@@ -233,10 +281,10 @@ ul {
     width: 100%;
     height: 4px;
     border-radius: 5px;
-    background: #6610f2;
+    background: #1549f3;
     transition: 0.3s;
   }
-  .dropnav-container.active {
+  .nav-wrap .dropnav-container.active {
     transition: 300ms ease;
     height: 500px;
   }
