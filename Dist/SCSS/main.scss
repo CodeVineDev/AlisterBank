@@ -191,6 +191,30 @@
                 margin-bottom: 1rem;
                 font-size: $small-text;
                 color: $grey;
+                margin-bottom: 1rem;
+            }
+        }
+
+        .lower-content {
+            width: min(95%, 500px);
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            button{
+               background: none;
+               border: none;
+               font-size: $small-text;
+               border-radius: 5px;
+               font-weight: 400;
+               padding: 10px 20px;
+            }
+            .open-account{
+                background: $blue;
+                color: $white;
+            }
+            .getin-touch{
+                color: $blue;
+                border: 2px solid $blue;
             }
         }
     }
@@ -208,6 +232,13 @@
     .navbar {
         padding-inline: 1rem;
     }
+    .homepage{
+        .lower-content{
+            button{
+                width: 100%;
+            }
+        }
+    }
 }
 
 @include biggerphone {
@@ -223,10 +254,21 @@
 
 }
 
-@include iPad{
-    .homepage{
+@include iPad {
+    .homepage {
         grid-template-columns: 1fr;
-        .home-image{
+        .home-left{
+            .top-content{
+                .special-text{
+                    font-size: $small-text;
+                }
+                h1{
+                    font-size: calc($big-text + 1rem);
+                }
+            }
+        }
+
+        .home-image {
             display: none;
         }
     }
@@ -337,7 +379,7 @@
         transition: 0.3s;
     }
 
-   .nav-wrap .dropnav-container.active {
+    .nav-wrap .dropnav-container.active {
         transition: 300ms ease;
         height: 500px;
     }

@@ -172,6 +172,29 @@ ul {
   margin-bottom: 1rem;
   font-size: clamp(0.8rem, 5vw + 0.5rem, 1.3rem);
   color: #3f3f3f;
+  margin-bottom: 1rem;
+}
+.homepage .home-left .lower-content {
+  width: min(95%, 500px);
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.homepage .home-left .lower-content button {
+  background: none;
+  border: none;
+  font-size: clamp(0.8rem, 5vw + 0.5rem, 1.3rem);
+  border-radius: 5px;
+  font-weight: 400;
+  padding: 10px 20px;
+}
+.homepage .home-left .lower-content .open-account {
+  background: #1549f3;
+  color: white;
+}
+.homepage .home-left .lower-content .getin-touch {
+  color: #1549f3;
+  border: 2px solid #1549f3;
 }
 .homepage .home-image {
   width: min(95%, 600px);
@@ -184,6 +207,9 @@ ul {
   .navbar {
     padding-inline: 1rem;
   }
+  .homepage .lower-content button {
+    width: 100%;
+  }
 }
 @media (max-width: 660px) {
   .nav-wrap .navbar .nav-btns .login {
@@ -193,6 +219,12 @@ ul {
 @media (max-width: 800px) {
   .homepage {
     grid-template-columns: 1fr;
+  }
+  .homepage .home-left .top-content .special-text {
+    font-size: clamp(0.8rem, 5vw + 0.5rem, 1.3rem);
+  }
+  .homepage .home-left .top-content h1 {
+    font-size: calc(clamp(1.5rem, 5vw + 0.5rem, 4rem) + 1rem);
   }
   .homepage .home-image {
     display: none;
