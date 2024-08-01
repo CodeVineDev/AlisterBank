@@ -185,6 +185,7 @@
                 color: $black;
                 margin-bottom: 1rem;
                 font-family: $large-font;
+                white-space: nowrap;
             }
 
             .normal-text {
@@ -196,7 +197,7 @@
         }
 
         .lower-content {
-            width: min(95%, 500px);
+            width: min(100%, 500px);
             display: flex;
             gap: 1rem;
             flex-wrap: wrap;
@@ -229,9 +230,6 @@
 
 // media query In start
 @include mobile {
-    .navbar {
-        padding-inline: 1rem;
-    }
     .homepage{
         .lower-content{
             button{
@@ -256,6 +254,7 @@
 
 @include iPad {
     .homepage {
+        height: calc(100svh - 15rem);
         grid-template-columns: 1fr;
         .home-left{
             .top-content{
@@ -263,7 +262,7 @@
                     font-size: $small-text;
                 }
                 h1{
-                    font-size: calc($big-text + 1rem);
+                    font-size: calc($big-text + .5rem);
                 }
             }
         }
@@ -321,7 +320,7 @@
                         a {
                             font-family: $large-font;
                             font-size: $small-text;
-                            font-weight: 600;
+                            font-weight: 400;
                             color: $black;
                             transition: 200ms ease-in-out;
 
