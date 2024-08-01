@@ -233,8 +233,7 @@ ul {
   align-items: center;
   border-radius: 50%;
 }
-.chatUs .fa {
-  font-size: clamp(0.8rem, 2vw + 0.5rem, 1rem);
+.chatUs #fa {
   color: #1549f3;
 }
 .chatUs .tag-message {
