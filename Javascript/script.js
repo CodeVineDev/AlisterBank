@@ -22,24 +22,23 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-document.addEventListener("DOMContentLoaded", function () {
+
+document.addEventListener("DOMContentLoaded", () => {
   const hiddenNavBtn = document.getElementById("hidden-nav");
-  hiddenNavBtn.style.opacity = 0;
-  hiddenNavBtn.style.position = 'fixed'
-  window.addEventListener('scroll', function () {
+  hiddenNavBtn.style.cssText = "opacity: 0; position: fixed;";
+  window.addEventListener("scroll", () => {
     const navbar = document.getElementById("main-nav");
     const sticky = navbar.offsetHeight;
     if (window.scrollY >= sticky) {
       navbar.style.top = "-100%";
-      hiddenNavBtn.style.opacity = 1;
-      hiddenNavBtn.style.top = "1rem"
+      hiddenNavBtn.style.cssText = "opacity: 1; top: 1rem; position: fixed;";
     } else {
-      hiddenNavBtn.style.opacity = 0;
-      hiddenNavBtn.style.top = "-100%"
-      navbar.style.top = 0
+      hiddenNavBtn.style.cssText = "opacity: 0; top: -100%; position: fixed;";
+      navbar.style.top = "0";
     }
   });
-})
+});
+
 
 
 // Generate a random number
