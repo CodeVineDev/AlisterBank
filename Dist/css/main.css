@@ -305,6 +305,7 @@ nav {
   }
   .nav-wrap .navbar .dropnav-container {
     background: white;
+    border-radius: 10px;
     top: 100%;
     right: 0;
     display: block;
