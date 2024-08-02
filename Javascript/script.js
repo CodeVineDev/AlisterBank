@@ -23,26 +23,23 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  var navbar = document.querySelector(".nav-wrap");
-  var navbarHeight = navbar.offsetHeight;
-
-  window.addEventListener("scroll", function () {
-    if (window.scrollY > navbarHeight) {
-      navbar.classList.add("sticky");
-      setTimeout(function () {
-        navbar.classList.add("show");
-      }, 10); // Small delay to allow CSS transition
+  const hiddenNavBtn = document.getElementById("hidden-nav");
+  hiddenNavBtn.style.opacity = 0;
+  hiddenNavBtn.style.position = 'fixed'
+  window.addEventListener('scroll', function () {
+    const navbar = document.getElementById("main-nav");
+    const sticky = navbar.offsetHeight;
+    if (window.scrollY >= sticky) {
+      navbar.style.top = "-100%";
+      hiddenNavBtn.style.opacity = 1;
+      hiddenNavBtn.style.top = "1rem"
     } else {
-      navbar.classList.remove("sticky");
-      navbar.classList.remove("show");
+      hiddenNavBtn.style.opacity = 0;
+      hiddenNavBtn.style.top = "-100%"
+      navbar.style.top = 0
     }
   });
-});
-
-
-
-
-
+})
 
 
 // Generate a random number
