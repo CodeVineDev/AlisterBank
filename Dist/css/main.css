@@ -45,9 +45,7 @@ ul {
 
 #hidden-nav {
   transition: 200ms ease-in-out;
-  background: rgba(255, 255, 255, 0.3);
-  -webkit-backdrop-filter: blur(30px);
-          backdrop-filter: blur(30px);
+  background: white;
   width: min(95%, 1300px);
   left: 2.5%;
   border-radius: 10px;
@@ -176,7 +174,9 @@ nav {
   position: relative;
 }
 .homepage .home-left {
-  place-content: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .homepage .home-left .top-content .special-text {
   font-size: clamp(1rem, 4vw + 0.5rem, 2rem);
