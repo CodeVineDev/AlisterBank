@@ -36,11 +36,15 @@
 ;
 
 // navbar styling In start
+body{
+    background: $lighted-blue;
+}
 #hidden-nav {
     transition: 200ms ease-in-out;
     background: $white;
     width: min(95%, 1300px);
-    left: 2.5%;
+    left: 50%;
+    transform: translateX(-50%);
     border-radius: 10px;
 
     .navbar {
@@ -168,6 +172,60 @@ nav {
 // home page styling In start
 .body-section {
     background: $white;
+    width: min(100%, 1350px);
+    margin: auto;
+}
+
+/* Preloader styles */
+/* Preloader styles */
+.preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    /* Change to your background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.loader {
+    display: flex;
+    justify-content: space-between;
+    width: 80px;
+}
+
+.dot {
+    width: 15px;
+    height: 15px;
+    background-color: $blue;
+    border-radius: 50%;
+    animation: pulse 1.5s infinite;
+}
+
+.dot:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.dot:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.5);
+        opacity: 0.5;
+    }
 }
 
 .home-container {
@@ -191,8 +249,8 @@ nav {
     .home-left {
 
         display: flex;
-       justify-content: center;
-       align-items: center;
+
+        align-items: center;
 
         .top-content {
             .special-text {
@@ -257,12 +315,45 @@ nav {
 // partners In start
 .partners {
     height: 200px;
-    transform: translateY(-20px);
+    padding: 20px;
     width: min(90%, 1200px);
+    gap: 1rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
     background: $white;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     box-shadow: 10px 1px 10px #98b0ff50;
+
+    .false-block {
+        width: 142px;
+        height: 130px;
+        background: $lighted-blue;
+        position: absolute;
+        right: -150px;
+        top: -20px;
+
+    }
+
+    .container {
+        width: min(100%, 1050px);
+        margin: auto;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .partners-header {
+        width: 100%;
+        flex: 1 0;
+
+        h2 {
+            font-size: $medium-text;
+            color: $black;
+        }
+    }
 }
 
 .chatUs {
@@ -297,6 +388,56 @@ nav {
         }
     }
 }
+
+.slider-container {
+    flex: 2 0;
+    width: min(80%, 800px);
+    margin: auto;
+    overflow: hidden;
+}
+
+.slider {
+    transition: transform 0.5s ease-in-out;
+    display: flex;
+    align-items: center;
+
+}
+
+.slide {
+    padding: 5px;
+    text-align: center;
+    white-space: nowrap;
+
+    img {
+        filter: grayscale(1);
+        width: 100px;
+    }
+}
+
+
+
+/* Media Queries */
+@media (max-width: 800px) {
+    .slide {
+        min-width: 50%;
+        /* 2 cards per view */
+    }
+}
+
+@media (max-width: 450px) {
+    .slide {
+        min-width: 100%;
+        /* 1 card per view */
+    }
+}
+
+@media (min-width: 801px) {
+    .slide {
+        min-width: 33.33%;
+        /* 3 cards per view */
+    }
+}
+
 
 // partners In end
 
@@ -348,6 +489,14 @@ nav {
 
         .home-image {
             display: none;
+        }
+    }
+
+    .partners {
+        .partners-header {
+            h2 {
+                font-size: $small-text;
+            }
         }
     }
 }
