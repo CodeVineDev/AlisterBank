@@ -89,12 +89,7 @@ function nextSlide() {
 }
 
 function startAutoScroll() {
-    stopAutoScroll();
     autoScrollInterval = setInterval(nextSlide, 3000);
-}
-
-function stopAutoScroll() {
-    clearInterval(autoScrollInterval);
 }
 
 // Update slides and totalSlides on resize
@@ -107,9 +102,6 @@ window.addEventListener('load', () => {
     slides = document.querySelectorAll('.slide'); // Initialize slides
     updateSlider();
 });
-
-slider.addEventListener('mouseenter', stopAutoScroll);
-slider.addEventListener('mouseleave', startAutoScroll);
 
 updateSlider();
 startAutoScroll();

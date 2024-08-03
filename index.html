@@ -1,169 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- LINKS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- LINKS -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link
+      rel="stylesheet"
+      href="./font-awesome(4.7.0)/css/font-awesome.min.css"
+    />
 
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-  <link rel="stylesheet" href="./font-awesome(4.7.0)/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="./Dist/css/main.css" />
 
-  <link rel="stylesheet" href="./Dist/css/main.css" />
+    <title>Alister</title>
+  </head>
 
-  <title>Alister</title>
-</head>
-
-<body id="content">
-  <!-- nav hidden In start -->
-  <nav class="nav-wrap" id="hidden-nav">
-    <div class="navbar">
-      <div class="logo">
-        <img src="IMAGES/alisterbank-logo.png" alt="logo" />
-        <h3>Alister</h3>
+  <body id="content">
+    <!-- nav hidden In start -->
+    <nav class="nav-wrap" id="hidden-nav">
+      <div class="navbar">
+        <div class="logo">
+          <img src="IMAGES/alisterbank-logo.png" alt="logo" />
+          <h3>Alister</h3>
+        </div>
+        <div class="navLink-con">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#service">Service</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#testimonial">Testimonial</a></li>
+            <li><a href="#blog">Blog</a></li>
+          </ul>
+        </div>
+        <div class="nav-btns">
+          <button href="#" class="login">
+            <span class="material-symbols-outlined"> shield_person </span>Open
+            An Account
+          </button>
+          <button class="dropnav-btn" data-target=".container1">
+            <span class="bars"></span>
+          </button>
+        </div>
+        <div class="dropnav-container container1">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#service">Service</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#testimonial">Testimonial</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#">Sign In</a></li>
+          </ul>
+        </div>
       </div>
-      <div class="navLink-con">
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#service">Service</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#testimonial">Testimonial</a></li>
-          <li><a href="#blog">Blog</a></li>
-        </ul>
-      </div>
-      <div class="nav-btns">
-        <button href="#" class="login">
-          <span class="material-symbols-outlined"> shield_person </span>Open
-          An Account
-        </button>
-        <button class="dropnav-btn" data-target=".container1">
-          <span class="bars"></span>
-        </button>
-      </div>
-      <div class="dropnav-container container1">
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#service">Service</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#testimonial">Testimonial</a></li>
-          <li><a href="#blog">Blog</a></li>
-          <li><a href="#">Sign In</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <!-- nav hidden in end -->
+    </nav>
+    <!-- nav hidden in end -->
 
-  <!-- navbar In start-->
-  <div class="preloader">
-    <div class="loader">
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-    </div>
-  </div>
-
-  <div class="chatUs">
-    <i class="material-symbols-outlined" id="fa"> support_agent </i>
-    <div class="tag-message">
-      <p>Chat with us !</p>
-    </div>
-  </div>
-
-  <nav class="nav-wrap" id="main-nav">
-    <div class="navbar">
-      <div class="logo">
-        <img src="IMAGES/alisterbank-logo.png" alt="logo" />
-        <h3>Alister</h3>
-      </div>
-      <div class="navLink-con">
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#service">Service</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#testimonial">Testimonial</a></li>
-          <li><a href="#blog">Blog</a></li>
-        </ul>
-      </div>
-      <div class="nav-btns">
-        <button href="#" class="login">
-          <span class="material-symbols-outlined"> shield_person </span>Open
-          An Account
-        </button>
-        <button class="dropnav-btn" data-target=".container2">
-          <span class="bars"></span>
-        </button>
-      </div>
-      <div class="dropnav-container container2">
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#service">Service</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#testimonial">Testimonial</a></li>
-          <li><a href="#blog">Blog</a></li>
-          <li><a href="#">Sign In</a></li>
-        </ul>
+    <!-- navbar In start-->
+    <div class="preloader">
+      <div class="loader">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
       </div>
     </div>
-  </nav>
-  <!-- navbar In end-->
 
-  <section class="body-section" id="home">
-    <!-- home page In start -->
-    <div class="home-container">
-      <div class="homepage">
-        <div class="home-left">
-          <div>
-            <div class="top-content">
-              <p class="special-text"> Simple. Transparent. Secure </p>
-              <h1>Banking Solutions</h1>
-              <p class="normal-text">Products and services designed to help you reach your
-                financial goals.</p>
+    <div class="chatUs">
+      <i class="material-symbols-outlined" id="fa"> support_agent </i>
+      <div class="tag-message">
+        <p>Chat with us !</p>
+      </div>
+    </div>
+
+    <nav class="nav-wrap" id="main-nav">
+      <div class="navbar">
+        <div class="logo">
+          <img src="IMAGES/alisterbank-logo.png" alt="logo" />
+          <h3>Alister</h3>
+        </div>
+        <div class="navLink-con">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#service">Service</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#testimonial">Testimonial</a></li>
+            <li><a href="#blog">Blog</a></li>
+          </ul>
+        </div>
+        <div class="nav-btns">
+          <button href="#" class="login">
+            <span class="material-symbols-outlined"> shield_person </span>Open
+            An Account
+          </button>
+          <button class="dropnav-btn" data-target=".container2">
+            <span class="bars"></span>
+          </button>
+        </div>
+        <div class="dropnav-container container2">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#service">Service</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#testimonial">Testimonial</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#">Sign In</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- navbar In end-->
+
+    <section class="body-section" id="home">
+      <!-- home page In start -->
+      <div class="home-container">
+        <div class="homepage">
+          <div class="home-left">
+            <div>
+              <div class="top-content">
+                <p class="special-text"> Simple. Transparent. Secure </p>
+                <h1>Banking Solutions</h1>
+                <p class="normal-text"
+                  >Products and services designed to help you reach your
+                  financial goals.</p
+                >
+              </div>
+              <div class="lower-content">
+                <button class="open-account">Open Account</button>
+                <button class="getin-touch"> Get in touch</button>
+              </div>
             </div>
-            <div class="lower-content">
-              <button class="open-account">Open Account</button>
-              <button class="getin-touch"> Get in touch</button>
+          </div>
+          <img
+            class="home-image"
+            src="IMAGES/App monetization-rafiki.png"
+            alt="Home Image"
+          />
+        </div>
+      </div>
+
+      <!-- home page In end -->
+      <!-- partners In start -->
+      <div class="partners">
+        <div class="false-block"></div>
+        <div class="container">
+          <div class="partners-header">
+            <h2>Partners</h2>
+          </div>
+          <div class="slider-container">
+            <div class="slider">
+              <div class="slide"><img src="IMAGES/visa-logo.png" /> </div>
+              <div class="slide"><img src="IMAGES/mastercard-logo.png" /></div>
+              <div class="slide"
+                ><img src="IMAGES/americanexpress-logo.png"
+              /></div>
+
+              <div class="slide"><img src="IMAGES/paypal-logo.png" /></div>
+              <div class="slide"><img src="IMAGES/stipe-logo.png" /></div>
+              <div class="slide"><img src="IMAGES/mastercard-logo.png" /></div>
+
+              <div class="slide"><img src="IMAGES/visa-logo.png" /></div>
+              <div class="slide"><img src="IMAGES/mastercard-logo.png" /></div>
+              <div class="slide"
+                ><img src="IMAGES/americanexpress-logo.png"
+              /></div>
             </div>
           </div>
         </div>
-        <img class="home-image" src="IMAGES/App monetization-rafiki.png" alt="Home Image" />
       </div>
-    </div>
 
-    <!-- home page In end -->
-    <div class="partners">
-      <div class="false-block"></div>
-      <div class="container">
-        <div class="partners-header">
-          <h2>Partners</h2>
-        </div>
-        <div class="slider-container">
-          <div class="slider">
-            <div class="slide"><img src="IMAGES/visa-logo.png" /> </div>
-            <div class="slide"><img src="IMAGES/mastercard-logo.png" /></div>
-            <div class="slide"><img src="IMAGES/americanexpress-logo.png" /></div>
+      <!-- partners In end -->
 
-            <div class="slide"><img src="IMAGES/paypal-logo.png" /></div>
-            <div class="slide"><img src="IMAGES/stipe-logo.png" /></div>
-            <div class="slide"><img src="IMAGES/mastercard-logo.png" /></div>
-
-            <div class="slide"><img src="IMAGES/visa-logo.png" /></div>
-            <div class="slide"><img src="IMAGES/mastercard-logo.png" /></div>
-            <div class="slide"><img src="IMAGES/americanexpress-logo.png" /></div>
+      <!-- notification In start -->
+      <div class="notification-container">
+        <div class="notification-section">
+          <div class="left-notification">
+            <div class="bell-icon"></div>
+            <div>
+              <p class="special-text">Smart banking</p>
+              <h2>Real time Notifications</h2>
+              <div class="normal-text">
+                Your customer stay informed in real time with everything that’s
+                happening on his account: payments, transfer, advice. Get
+                visibility on your customers' flows to anticipate their
+                needs</div>
+                <span><img src="IMAGES/green-check.png"> Cards that work all across the world.</span>
+                <span><img src="IMAGES/green-check.png"> No ATM fees. No minimum balance. No overdrafts.</span>
+            </div>
           </div>
+          <div class="right-notification"></div>
         </div>
       </div>
-    </div>
-  </section>
+      <!-- notification In end -->
+    </section>
 
-  <!-- SCRIPT LINKS -->
-  <script src="https://code.iconify.design/iconify-icon/2.0.0/iconify-icon.min.js"></script>
-  <script src="Javascript/script.js"></script>
-</body>
-
+    <!-- SCRIPT LINKS -->
+    <script src="https://code.iconify.design/iconify-icon/2.0.0/iconify-icon.min.js"></script>
+    <script src="Javascript/script.js"></script>
+  </body>
 </html>
