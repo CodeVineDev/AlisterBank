@@ -162,6 +162,7 @@ nav {
   background: white;
   width: min(100%, 1350px);
   margin: auto;
+  overflow: hidden;
 }
 
 /* Preloader styles */
