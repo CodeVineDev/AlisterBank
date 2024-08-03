@@ -175,7 +175,6 @@ nav {
     background: $white;
     width: min(100%, 1350px);
     margin: auto;
-    overflow-y: hidden;
 }
 
 /* Preloader styles */
@@ -256,7 +255,7 @@ nav {
 
         .top-content {
             .special-text {
-                font-size: $medium-text;
+                font-size: clamp(1rem, 4vw + .5rem, 1.8rem);
                 color: $green;
                 font-weight: 600;
                 margin-bottom: 1rem;
@@ -276,6 +275,7 @@ nav {
                 font-size: $medium-text;
                 color: $grey;
                 margin-bottom: 1rem;
+                font-weight: 300;
             }
         }
 
@@ -332,11 +332,11 @@ nav {
 
 
     .false-block {
-        width: 142px;
+        width: 57px;
         height: 130px;
         background: $lighted-blue;
         position: absolute;
-        right: -150px;
+        right: -66px;
         top: -20px;
 
     }
@@ -456,7 +456,7 @@ nav {
         grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
         border: .1px solid #dadada99;
-        padding: max(1rem, 5vw) 2rem ;
+        padding: max(1rem, 5vw) 2rem;
         width: $width-global;
         margin: auto;
 
@@ -498,14 +498,17 @@ nav {
                 font-size: $small-text;
                 color: $grey;
                 margin-bottom: .5rem;
+                font-weight: 300;
             }
-            span{
+
+            span {
                 display: flex;
                 align-items: center;
                 margin-bottom: 1rem;
                 gap: 1rem;
                 color: $black;
-                img{
+
+                img {
                     width: 20px;
                 }
             }
@@ -515,11 +518,13 @@ nav {
             display: flex;
             justify-content: end;
             align-items: center;
+
             .notification-imagecontainer {
                 background: $variant-blue;
                 border-radius: 50%;
                 padding: 1rem;
                 width: 75%;
+
                 img {
                     width: 100%;
                 }
@@ -530,19 +535,20 @@ nav {
 
 .investment-container {
     width: 100%;
-    margin-top: 2rem;
+    margin-block: 2rem;
 
     .investment-section {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
         border: .1px solid #dadada99;
-        padding: max(1rem, 5vw) 2rem ;
+        padding: max(1rem, 5vw) 2rem;
         width: $width-global;
         margin: auto;
 
         .left-investment {
             order: 2;
+
             .beenhere-icon {
                 width: 55px;
                 height: 55px;
@@ -578,14 +584,17 @@ nav {
                 font-size: $small-text;
                 color: $grey;
                 margin-bottom: .5rem;
+                font-weight: 300;
             }
-            span{
+
+            span {
                 display: flex;
                 align-items: center;
                 margin-bottom: 1rem;
                 gap: 1rem;
                 color: $black;
-                img{
+
+                img {
                     width: 20px;
                 }
             }
@@ -596,12 +605,14 @@ nav {
             display: flex;
             justify-content: start;
             align-items: center;
+
             .investment-imagecontainer {
                 background: $variant-blue;
                 border-radius: 50%;
                 padding: 1rem;
                 width: 75%;
                 overflow: hidden;
+
                 img {
                     padding: 1rem;
                     width: 100%;
@@ -612,6 +623,127 @@ nav {
 }
 
 // notification In end
+
+// open account In start
+.openaccount-container {
+    width: 100%;
+    background: $lighted-blue;
+
+    .openaccount-section {
+        width: 100%;
+        display: grid;
+        grid-template-rows: 2.5fr 2fr;
+        gap: 1rem;
+
+
+        .upper-info {
+            width: $width-global;
+            margin: auto;
+            text-align: center;
+            padding: max(.5rem, 5vw) 1rem;
+            transform: translateY(-20px);
+
+            .special-text {
+                font-size: $medium-text;
+                color: $green;
+                font-weight: 600;
+                margin-bottom: .5rem;
+            }
+
+            h2 {
+                font-size: $big-text_v2;
+                color: $black;
+                width: min(100%, 500px);
+                margin: auto;
+                text-wrap: balance;
+                font-weight: 600;
+                font-family: $large-font;
+            }
+
+            .normal-text {
+                margin-top: .5rem;
+                font-size: $small-text;
+                color: $grey;
+                margin-bottom: .5rem;
+                width: min(100%, 510px);
+                margin: auto;
+                font-weight: 300;
+            }
+        }
+
+        .lower-info {
+            background: $white;
+            width: 100%;
+
+            .lowerinfo-container {
+                transform: translateY(-100px);
+                width: $width-global;
+                margin: auto;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 1rem;
+
+                &__card {
+                    border-radius: 10px;
+                    padding: max(.5rem, 4vw) 2rem;
+                    background: $white;
+                    text-align: center;
+                    box-shadow: 10px 1px 10px #98b0ff50;
+
+
+                    .card-icon {
+                        margin: auto;
+                        width: 100px;
+                        height: 100px;
+                        border-radius: 50%;
+                        background: $lighted-blue;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin-bottom: 1rem;
+
+                        .icon {
+                            font-size: 55px;
+                            color: $blue;
+                        }
+                    }
+
+                    h3 {
+                        font-size: $medium-text;
+                        color: $black;
+                    }
+
+                    p {
+                        margin-top: .5rem;
+                        font-size: $small-text;
+                        color: $grey;
+                        margin-bottom: .5rem;
+                        font-weight: 300;
+                    }
+
+                    .create-button {
+                        font-weight: 400;
+
+                        a {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            color: $blue;
+                        }
+
+                    }
+
+                    #move-down {
+                        margin-top: 2rem;
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+// open account In10end
 
 
 // media query In start
@@ -689,6 +821,8 @@ nav {
     }
 
 
+
+
 }
 
 @include smallpc {
@@ -699,6 +833,7 @@ nav {
             display: none;
         }
     }
+
     .nav-wrap {
         .navbar {
             .navLink-con {
@@ -823,20 +958,35 @@ nav {
         transform: rotate(-45deg);
     }
 
-    .notification-container{
-        .notification-section{
+    .notification-container {
+        .notification-section {
             grid-template-columns: 1fr;
-            .right-notification{
+
+            .right-notification {
                 display: none;
             }
         }
     }
-    .investment-container{
-        .investment-section{
+
+    .investment-container {
+        .investment-section {
             grid-template-columns: 1fr;
-            .right-investment{
+
+            .right-investment {
                 display: none;
             }
+        }
+    }
+
+    .openaccount-container {
+        .openaccount-section {
+            grid-template-rows: 1fr 2fr;
+            .lower-info {
+                .lowerinfo-container {
+                    grid-template-columns: 1fr;
+                }
+            }
+
         }
     }
 

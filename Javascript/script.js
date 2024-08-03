@@ -1,6 +1,6 @@
-window.addEventListener('load', () => {
-  window.scrollTo(0, 0);  // Scrolls to the top left corner of the page 
-});
+// window.addEventListener('load', () => {
+//   window.scrollTo(0, 0);  // Scrolls to the top left corner of the page 
+// });
 
 
 // Generate a random number
