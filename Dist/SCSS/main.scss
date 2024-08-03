@@ -629,6 +629,24 @@ nav {
 .openaccount-container {
     width: 100%;
     background: $lighted-blue;
+    position: relative;
+
+    img {
+        width: 400px;
+        height: 350px;
+        position: absolute;
+        top: 170px;
+    }
+
+    .flip-left {
+        right: 70%;
+    }
+
+    .flip-right {
+        left: 70%;
+        transform: scaleX(-1);
+       
+    }
 
     .openaccount-section {
         width: 100%;
@@ -982,6 +1000,7 @@ nav {
     .openaccount-container {
         .openaccount-section {
             grid-template-rows: 1fr 2fr;
+
             .lower-info {
                 .lowerinfo-container {
                     grid-template-columns: 1fr;

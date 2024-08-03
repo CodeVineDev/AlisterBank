@@ -546,6 +546,20 @@ nav {
 .openaccount-container {
   width: 100%;
   background: #f5faff;
+  position: relative;
+}
+.openaccount-container img {
+  width: 400px;
+  height: 350px;
+  position: absolute;
+  top: 170px;
+}
+.openaccount-container .flip-left {
+  right: 70%;
+}
+.openaccount-container .flip-right {
+  left: 70%;
+  transform: scaleX(-1);
 }
 .openaccount-container .openaccount-section {
   width: 100%;
