@@ -6,6 +6,7 @@
     <!-- LINKS -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
@@ -19,7 +20,7 @@
       rel="stylesheet"
       href="./font-awesome(4.7.0)/css/font-awesome.min.css"
     />
-
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="./Dist/css/main.css" />
 
     <title>Alister</title>
@@ -180,7 +181,7 @@
       <!-- partners In end -->
 
       <!-- notification In start -->
-      <div class="notification-container">
+      <div class="notification-container" data-aos="fade-up">
         <div class="notification-section">
           <div class="left-notification">
             <div class="bell-icon">
@@ -214,7 +215,7 @@
       </div>
       <!-- notification In end -->
       <!-- investment In start -->
-      <div class="investment-container">
+      <div class="investment-container" data-aos="fade-up">
         <div class="investment-section">
           <div class="left-investment">
             <div class="beenhere-icon">
@@ -253,6 +254,14 @@
 
     <!-- SCRIPT LINKS -->
     <script src="https://code.iconify.design/iconify-icon/2.0.0/iconify-icon.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        once: false,
+        anchorPlacement: "top-bottom",
+        duration: "200", // No duration for immediate effect
+      });
+    </script>
     <script src="Javascript/script.js"></script>
   </body>
 </html>

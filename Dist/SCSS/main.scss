@@ -175,6 +175,7 @@ nav {
     background: $white;
     width: min(100%, 1350px);
     margin: auto;
+    overflow-y: hidden;
 }
 
 /* Preloader styles */
