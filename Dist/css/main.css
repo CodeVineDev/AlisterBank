@@ -50,7 +50,7 @@ body {
 #hidden-nav {
   transition: 200ms ease-in-out;
   background: white;
-  width: min(95%, 1300px);
+  width: min(95%, 1200px);
   left: 50%;
   transform: translateX(-50%);
   border-radius: 10px;
@@ -78,7 +78,7 @@ nav {
   height: 6rem;
 }
 .nav-wrap .navbar {
-  width: min(95%, 1200px);
+  width: min(85%, 1200px);
   margin: auto;
   display: flex;
   justify-content: space-between;
@@ -221,7 +221,7 @@ nav {
 
 .homepage {
   height: calc(100svh - 6rem);
-  width: min(95%, 1200px);
+  width: min(85%, 1200px);
   margin: auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -284,7 +284,7 @@ nav {
 .partners {
   height: 200px;
   padding: 20px;
-  width: min(90%, 1200px);
+  width: min(95%, 1400px);
   gap: 1rem;
   position: relative;
   display: flex;
@@ -304,7 +304,7 @@ nav {
   top: -20px;
 }
 .partners .container {
-  width: min(100%, 1050px);
+  width: min(87%, 1050px);
   margin: auto;
   display: flex;
   align-items: center;
@@ -392,35 +392,44 @@ nav {
     /* 3 cards per view */
   }
 }
+.notification-container {
+  width: 100%;
+  margin-top: 2rem;
+}
 .notification-container .notification-section {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
+  border: 0.1px solid rgba(218, 218, 218, 0.6);
+  padding: max(1rem, 5vw) 2rem;
+  width: min(85%, 1200px);
+  margin: auto;
 }
 .notification-container .notification-section .left-notification .bell-icon {
-  width: 60px;
-  height: 60px;
+  width: 55px;
+  height: 55px;
   border-radius: 50%;
   background: #1549f3;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 0.5rem;
 }
 .notification-container .notification-section .left-notification .bell-icon .fa {
   color: white;
-  font-size: clamp(1rem, 4vw + 0.5rem, 2rem);
+  font-size: 25px;
 }
 .notification-container .notification-section .left-notification .special-text {
   font-size: clamp(1rem, 4vw + 0.5rem, 2rem);
   color: green;
   font-weight: 600;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 .notification-container .notification-section .left-notification h2 {
-  font-size: clamp(1.5rem, 5vw + 0.5rem, 4rem);
+  font-size: clamp(1.5rem, 4vw + 0.5rem, 3rem);
   color: #242424;
   font-weight: 600;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   font-family: "Jost", sans-serif;
   white-space: nowrap;
 }
@@ -428,9 +437,106 @@ nav {
   margin-bottom: 1rem;
   font-size: clamp(0.8rem, 2vw + 0.5rem, 1rem);
   color: #3f3f3f;
+  margin-bottom: 0.5rem;
+}
+.notification-container .notification-section .left-notification span {
+  display: flex;
+  align-items: center;
   margin-bottom: 1rem;
+  gap: 1rem;
+  color: #242424;
+}
+.notification-container .notification-section .left-notification span img {
+  width: 20px;
+}
+.notification-container .notification-section .right-notification {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.notification-container .notification-section .right-notification .notification-imagecontainer {
+  background: #B8C9FF;
+  border-radius: 50%;
+  padding: 1rem;
+  width: 75%;
 }
 .notification-container .notification-section .right-notification .notification-imagecontainer img {
+  width: 100%;
+}
+
+.investment-container {
+  width: 100%;
+  margin-top: 2rem;
+}
+.investment-container .investment-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  border: 0.1px solid rgba(218, 218, 218, 0.6);
+  padding: max(1rem, 5vw) 2rem;
+  width: min(85%, 1200px);
+  margin: auto;
+}
+.investment-container .investment-section .left-investment {
+  order: 2;
+}
+.investment-container .investment-section .left-investment .beenhere-icon {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: #1549f3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+.investment-container .investment-section .left-investment .beenhere-icon #fa {
+  color: white;
+  font-size: 25px;
+}
+.investment-container .investment-section .left-investment .special-text {
+  font-size: clamp(1rem, 4vw + 0.5rem, 2rem);
+  color: green;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.investment-container .investment-section .left-investment h2 {
+  font-size: clamp(1.5rem, 4vw + 0.5rem, 3rem);
+  color: #242424;
+  font-weight: 600;
+  font-family: "Jost", sans-serif;
+}
+.investment-container .investment-section .left-investment .normal-text {
+  margin-top: 0.5rem;
+  font-size: clamp(0.8rem, 2vw + 0.5rem, 1rem);
+  color: #3f3f3f;
+  margin-bottom: 0.5rem;
+}
+.investment-container .investment-section .left-investment span {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  gap: 1rem;
+  color: #242424;
+}
+.investment-container .investment-section .left-investment span img {
+  width: 20px;
+}
+.investment-container .investment-section .right-investment {
+  order: 1;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.investment-container .investment-section .right-investment .investment-imagecontainer {
+  background: #B8C9FF;
+  border-radius: 50%;
+  padding: 1rem;
+  width: 75%;
+  overflow: hidden;
+}
+.investment-container .investment-section .right-investment .investment-imagecontainer img {
+  padding: 1rem;
   width: 100%;
 }
 
@@ -443,11 +549,16 @@ nav {
   .nav-wrap .navbar .nav-btns .login {
     display: none;
   }
+  .notification-container .notification-section .left-notification .special-text {
+    font-size: clamp(0.8rem, 2vw + 0.5rem, 1rem);
+  }
+  .investment-container .investment-section .left-investment .special-text {
+    font-size: clamp(0.8rem, 2vw + 0.5rem, 1rem);
+  }
 }
 @media (max-width: 800px) {
   .homepage {
     height: calc(100svh - 6rem);
-    grid-template-columns: 1fr;
   }
   .homepage .home-left .top-content .special-text {
     font-size: clamp(0.8rem, 2vw + 0.5rem, 1rem);
@@ -458,14 +569,17 @@ nav {
   .homepage .home-left .top-content .normal-text {
     font-size: clamp(0.8rem, 2vw + 0.5rem, 1rem);
   }
-  .homepage .home-image {
-    display: none;
-  }
   .partners .partners-header h2 {
     font-size: clamp(0.8rem, 2vw + 0.5rem, 1rem);
   }
 }
 @media (max-width: 950px) {
+  .homepage {
+    grid-template-columns: 1fr;
+  }
+  .homepage .home-image {
+    display: none;
+  }
   .nav-wrap .navbar .navLink-con {
     display: none;
   }
@@ -496,7 +610,7 @@ nav {
     align-items: center;
     margin: auto;
     margin-bottom: 1rem;
-    width: min(95%, 800px);
+    width: min(85%, 1200px);
     height: 40px;
     padding-left: 1rem;
   }
@@ -566,5 +680,17 @@ nav {
   .dropnav-btn.toggle .bars::after {
     top: 0;
     transform: rotate(-45deg);
+  }
+  .notification-container .notification-section {
+    grid-template-columns: 1fr;
+  }
+  .notification-container .notification-section .right-notification {
+    display: none;
+  }
+  .investment-container .investment-section {
+    grid-template-columns: 1fr;
+  }
+  .investment-container .investment-section .right-investment {
+    display: none;
   }
 }/*# sourceMappingURL=main.css.map */

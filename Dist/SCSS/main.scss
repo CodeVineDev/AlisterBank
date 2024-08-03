@@ -43,7 +43,7 @@ body {
 #hidden-nav {
     transition: 200ms ease-in-out;
     background: $white;
-    width: min(95%, 1300px);
+    width: min(95%, 1200px);
     left: 50%;
     transform: translateX(-50%);
     border-radius: 10px;
@@ -72,7 +72,7 @@ nav {
     height: 6rem;
 
     .navbar {
-        width: min(95%, 1200px);
+        width: $width-global;
         margin: auto;
         display: flex;
         justify-content: space-between;
@@ -237,7 +237,7 @@ nav {
 
 .homepage {
     height: calc(100svh - 6rem);
-    width: min(95%, 1200px);
+    width: $width-global;
     margin: auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -318,7 +318,7 @@ nav {
 .partners {
     height: 200px;
     padding: 20px;
-    width: min(90%, 1200px);
+    width: min(95%, 1400px);
     gap: 1rem;
     position: relative;
     display: flex;
@@ -328,6 +328,7 @@ nav {
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     box-shadow: 10px 1px 10px #98b0ff50;
+
 
     .false-block {
         width: 142px;
@@ -340,7 +341,7 @@ nav {
     }
 
     .container {
-        width: min(100%, 1050px);
+        width: min(87%, 1050px);
         margin: auto;
         display: flex;
         align-items: center;
@@ -446,24 +447,32 @@ nav {
 
 // notification In start
 .notification-container {
+    width: 100%;
+    margin-top: 2rem;
+
     .notification-section {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
+        border: .1px solid #dadada99;
+        padding: max(1rem, 5vw) 2rem ;
+        width: $width-global;
+        margin: auto;
 
         .left-notification {
             .bell-icon {
-                width: 60px;
-                height: 60px;
+                width: 55px;
+                height: 55px;
                 border-radius: 50%;
                 background: $blue;
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                margin-bottom: .5rem;
 
                 .fa {
                     color: $white;
-                    font-size: $medium-text;
+                    font-size: 25px;
                 }
             }
 
@@ -471,14 +480,14 @@ nav {
                 font-size: $medium-text;
                 color: $green;
                 font-weight: 600;
-                margin-bottom: 1rem;
+                margin-bottom: .5rem;
             }
 
             h2 {
-                font-size: $big-text;
+                font-size: $big-text_v2;
                 color: $black;
                 font-weight: 600;
-                margin-bottom: 1rem;
+                margin-bottom: .5rem;
                 font-family: $large-font;
                 white-space: nowrap;
             }
@@ -487,13 +496,113 @@ nav {
                 margin-bottom: 1rem;
                 font-size: $small-text;
                 color: $grey;
+                margin-bottom: .5rem;
+            }
+            span{
+                display: flex;
+                align-items: center;
                 margin-bottom: 1rem;
+                gap: 1rem;
+                color: $black;
+                img{
+                    width: 20px;
+                }
             }
         }
 
         .right-notification {
+            display: flex;
+            justify-content: end;
+            align-items: center;
             .notification-imagecontainer {
+                background: $variant-blue;
+                border-radius: 50%;
+                padding: 1rem;
+                width: 75%;
                 img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.investment-container {
+    width: 100%;
+    margin-top: 2rem;
+
+    .investment-section {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        border: .1px solid #dadada99;
+        padding: max(1rem, 5vw) 2rem ;
+        width: $width-global;
+        margin: auto;
+
+        .left-investment {
+            order: 2;
+            .beenhere-icon {
+                width: 55px;
+                height: 55px;
+                border-radius: 50%;
+                background: $blue;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: .5rem;
+
+                #fa {
+                    color: $white;
+                    font-size: 25px;
+                }
+            }
+
+            .special-text {
+                font-size: $medium-text;
+                color: $green;
+                font-weight: 600;
+                margin-bottom: .5rem;
+            }
+
+            h2 {
+                font-size: $big-text_v2;
+                color: $black;
+                font-weight: 600;
+                font-family: $large-font;
+            }
+
+            .normal-text {
+                margin-top: .5rem;
+                font-size: $small-text;
+                color: $grey;
+                margin-bottom: .5rem;
+            }
+            span{
+                display: flex;
+                align-items: center;
+                margin-bottom: 1rem;
+                gap: 1rem;
+                color: $black;
+                img{
+                    width: 20px;
+                }
+            }
+        }
+
+        .right-investment {
+            order: 1;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            .investment-imagecontainer {
+                background: $variant-blue;
+                border-radius: 50%;
+                padding: 1rem;
+                width: 75%;
+                overflow: hidden;
+                img {
+                    padding: 1rem;
                     width: 100%;
                 }
             }
@@ -526,12 +635,31 @@ nav {
         }
     }
 
+    .notification-container {
+        .notification-section {
+            .left-notification {
+                .special-text {
+                    font-size: $small-text;
+                }
+            }
+        }
+    }
+
+    .investment-container {
+        .investment-section {
+            .left-investment {
+                .special-text {
+                    font-size: $small-text;
+                }
+            }
+        }
+    }
+
 }
 
 @include iPad {
     .homepage {
         height: calc(100svh - 6rem);
-        grid-template-columns: 1fr;
 
         .home-left {
             .top-content {
@@ -549,9 +677,6 @@ nav {
             }
         }
 
-        .home-image {
-            display: none;
-        }
     }
 
     .partners {
@@ -561,9 +686,18 @@ nav {
             }
         }
     }
+
+
 }
 
 @include smallpc {
+    .homepage {
+        grid-template-columns: 1fr;
+
+        .home-image {
+            display: none;
+        }
+    }
     .nav-wrap {
         .navbar {
             .navLink-con {
@@ -600,7 +734,7 @@ nav {
                         align-items: center;
                         margin: auto;
                         margin-bottom: 1rem;
-                        width: min(95%, 800px);
+                        width: $width-global;
                         height: 40px;
                         padding-left: 1rem;
 
@@ -686,6 +820,23 @@ nav {
     .dropnav-btn.toggle .bars::after {
         top: 0;
         transform: rotate(-45deg);
+    }
+
+    .notification-container{
+        .notification-section{
+            grid-template-columns: 1fr;
+            .right-notification{
+                display: none;
+            }
+        }
+    }
+    .investment-container{
+        .investment-section{
+            grid-template-columns: 1fr;
+            .right-investment{
+                display: none;
+            }
+        }
     }
 
 
