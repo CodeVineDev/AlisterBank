@@ -36,9 +36,10 @@
 ;
 
 // navbar styling In start
-body{
+body {
     background: $lighted-blue;
 }
+
 #hidden-nav {
     transition: 200ms ease-in-out;
     background: $white;
@@ -263,6 +264,7 @@ nav {
             h1 {
                 font-size: $big-text;
                 color: $black;
+                font-weight: 900;
                 margin-bottom: 1rem;
                 font-family: $large-font;
                 white-space: nowrap;
@@ -441,6 +443,65 @@ nav {
 
 
 // partners In end
+
+// notification In start
+.notification-container {
+    .notification-section {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+
+        .left-notification {
+            .bell-icon {
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                background: $blue;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .fa {
+                    color: $white;
+                    font-size: $medium-text;
+                }
+            }
+
+            .special-text {
+                font-size: $medium-text;
+                color: $green;
+                font-weight: 600;
+                margin-bottom: 1rem;
+            }
+
+            h2 {
+                font-size: $big-text;
+                color: $black;
+                font-weight: 600;
+                margin-bottom: 1rem;
+                font-family: $large-font;
+                white-space: nowrap;
+            }
+
+            .normal-text {
+                margin-bottom: 1rem;
+                font-size: $small-text;
+                color: $grey;
+                margin-bottom: 1rem;
+            }
+        }
+
+        .right-notification {
+            .notification-imagecontainer {
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+// notification In end
 
 
 // media query In start

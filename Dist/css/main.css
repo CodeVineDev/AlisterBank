@@ -241,6 +241,7 @@ nav {
 .homepage .home-left .top-content h1 {
   font-size: clamp(1.5rem, 5vw + 0.5rem, 4rem);
   color: #242424;
+  font-weight: 900;
   margin-bottom: 1rem;
   font-family: "Jost", sans-serif;
   white-space: nowrap;
@@ -391,6 +392,48 @@ nav {
     /* 3 cards per view */
   }
 }
+.notification-container .notification-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+.notification-container .notification-section .left-notification .bell-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #1549f3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.notification-container .notification-section .left-notification .bell-icon .fa {
+  color: white;
+  font-size: clamp(1rem, 4vw + 0.5rem, 2rem);
+}
+.notification-container .notification-section .left-notification .special-text {
+  font-size: clamp(1rem, 4vw + 0.5rem, 2rem);
+  color: green;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.notification-container .notification-section .left-notification h2 {
+  font-size: clamp(1.5rem, 5vw + 0.5rem, 4rem);
+  color: #242424;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-family: "Jost", sans-serif;
+  white-space: nowrap;
+}
+.notification-container .notification-section .left-notification .normal-text {
+  margin-bottom: 1rem;
+  font-size: clamp(0.8rem, 2vw + 0.5rem, 1rem);
+  color: #3f3f3f;
+  margin-bottom: 1rem;
+}
+.notification-container .notification-section .right-notification .notification-imagecontainer img {
+  width: 100%;
+}
+
 @media (max-width: 450px) {
   .homepage .lower-content button {
     width: 100%;
