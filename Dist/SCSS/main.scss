@@ -633,9 +633,9 @@ nav {
 
     img {
         width: 400px;
-        height: 350px;
+        height: 400px;
         position: absolute;
-        top: 170px;
+        top: 20%;
     }
 
     .flip-left {
@@ -762,7 +762,89 @@ nav {
     }
 }
 
-// open account In10end
+// open account In end
+
+// get ap In start
+.getapp-container{
+    width: 100%;
+    margin-block: 2rem;
+    .getapp-section{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        border: .1px solid #dadada99;
+        padding: max(1rem, 5vw) 2rem;
+        width: $width-global;
+        margin: auto;
+        &__left{
+            .beenhere-icon {
+                width: 55px;
+                height: 55px;
+                border-radius: 50%;
+                background: $blue;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: .5rem;
+
+                #fa {
+                    color: $white;
+                    font-size: 25px;
+                }
+            }
+
+            .special-text {
+                font-size: $medium-text;
+                color: $green;
+                font-weight: 600;
+                margin-bottom: .5rem;
+            }
+
+            h2 {
+                font-size: $big-text_v2;
+                color: $black;
+                font-weight: 600;
+                font-family: $large-font;
+            }
+
+            .normal-text {
+                margin-top: .5rem;
+                font-size: $small-text;
+                color: $grey;
+                margin-bottom: .5rem;
+                font-weight: 300;
+            }
+
+            span {
+                display: flex;
+                align-items: center;
+                margin-bottom: 1rem;
+                gap: 1rem;
+                color: $black;
+
+                img {
+                    width: 20px;
+                }
+            }
+            .download-btns{
+                a{
+                    margin-right: 1rem;
+                    img{
+                        width: 100px;
+                        border-radius: 5px;
+                    }
+                    #appstore{
+                        width: 90px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// get ap In end
+
 
 
 // media query In start
