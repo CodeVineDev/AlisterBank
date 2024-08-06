@@ -722,6 +722,17 @@ nav {
 .getapp-container .getapp-section__left .download-btns a #appstore {
   width: 90px;
 }
+.getapp-container .getapp-section__right {
+  border: 2px solid red;
+}
+.getapp-container .getapp-section__right .right-images {
+  border: 2px solid red;
+  width: 100%;
+  background: #1549f3;
+}
+.getapp-container .getapp-section__right .right-images img {
+  width: 100%;
+}
 
 @media (max-width: 450px) {
   .homepage .lower-content button {

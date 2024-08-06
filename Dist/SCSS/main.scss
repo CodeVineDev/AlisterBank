@@ -645,7 +645,7 @@ nav {
     .flip-right {
         left: 70%;
         transform: scaleX(-1);
-       
+
     }
 
     .openaccount-section {
@@ -765,10 +765,11 @@ nav {
 // open account In end
 
 // get ap In start
-.getapp-container{
+.getapp-container {
     width: 100%;
     margin-block: 2rem;
-    .getapp-section{
+
+    .getapp-section {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
@@ -776,7 +777,8 @@ nav {
         padding: max(1rem, 5vw) 2rem;
         width: $width-global;
         margin: auto;
-        &__left{
+
+        &__left {
             .beenhere-icon {
                 width: 55px;
                 height: 55px;
@@ -826,21 +828,37 @@ nav {
                     width: 20px;
                 }
             }
-            .download-btns{
-                a{
+
+            .download-btns {
+                a {
                     margin-right: 1rem;
-                    img{
+
+                    img {
                         width: 100px;
                         border-radius: 5px;
                     }
-                    #appstore{
+
+                    #appstore {
                         width: 90px;
                     }
                 }
             }
         }
+
+        &__right {
+            border: $red-border;
+            .right-images {
+                border: $red-border;
+                width: 100%;
+                background: $blue;
+                img{
+                    width: 100%;
+                }
+            }
+        }
     }
 }
+
 
 
 // get ap In end
