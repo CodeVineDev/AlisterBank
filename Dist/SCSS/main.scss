@@ -463,8 +463,8 @@ nav {
 
         .left-notification {
             .bell-icon {
-                width: 55px;
-                height: 55px;
+                width: 40px;
+                height: 40px;
                 border-radius: 50%;
                 background: $blue;
                 display: flex;
@@ -474,7 +474,7 @@ nav {
 
                 .fa {
                     color: $white;
-                    font-size: 25px;
+                    font-size: 20px;
                 }
             }
 
@@ -551,8 +551,8 @@ nav {
             order: 2;
 
             .beenhere-icon {
-                width: 55px;
-                height: 55px;
+                width: 40px;
+                height: 40px;
                 border-radius: 50%;
                 background: $blue;
                 display: flex;
@@ -562,7 +562,7 @@ nav {
 
                 #fa {
                     color: $white;
-                    font-size: 25px;
+                    font-size: 20px;
                 }
             }
 
@@ -767,21 +767,23 @@ nav {
 // get ap In start
 .getapp-container {
     width: 100%;
+    height: 45rem;
     margin-block: 2rem;
+    display: flex;
+    align-items: center;
 
     .getapp-section {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
-        border: .1px solid #dadada99;
+        grid-template-columns: 1.5fr 1fr;
+        gap: 2rem;
         padding: max(1rem, 5vw) 2rem;
         width: $width-global;
         margin: auto;
 
         &__left {
             .beenhere-icon {
-                width: 55px;
-                height: 55px;
+                width: 40px;
+                height: 40px;
                 border-radius: 50%;
                 background: $blue;
                 display: flex;
@@ -791,7 +793,7 @@ nav {
 
                 #fa {
                     color: $white;
-                    font-size: 25px;
+                    font-size: 20px;
                 }
             }
 
@@ -806,6 +808,7 @@ nav {
                 font-size: $big-text_v2;
                 color: $black;
                 font-weight: 600;
+                width: 90%;
                 font-family: $large-font;
             }
 
@@ -846,13 +849,50 @@ nav {
         }
 
         &__right {
-            border: $red-border;
             .right-images {
-                border: $red-border;
-                width: 100%;
+                border-radius: 50%;
                 background: $blue;
-                img{
-                    width: 100%;
+                width: 500px;
+                height: 500px;
+                position: relative;
+                display: flex;
+                right: -120px;
+                align-items: center;
+
+                .back-1,
+                .back-2 {
+                    width: 260px;
+                    height: 540px;
+                    overflow: hidden;
+                    transform: rotate(-10deg);
+                    border-radius: 40px;
+                    background: rgb(240, 240, 240);
+                    filter: drop-shadow(-5px 2px 15px rgba(0, 0, 0, 0.3));
+                }
+
+                .back-1 {
+                    position: absolute;
+                    top: 0;
+                    left: -50px;
+                }
+
+                .back-2 {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                }
+
+                img {
+                    width: 650px;
+                    position: absolute;
+                    top: -41px;
+                    left: -215px;
+                    object-position: center;
+                    border: $red-border;
+                }
+                #img-2{
+                    top: -60px;
+                    left: -230px;  
                 }
             }
         }
