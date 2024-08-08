@@ -630,6 +630,7 @@ nav {
     width: 100%;
     background: $lighted-blue;
     position: relative;
+    padding-top: 5rem;
 
     img {
         width: 400px;
@@ -651,7 +652,6 @@ nav {
     .openaccount-section {
         width: 100%;
         display: grid;
-        grid-template-rows: 2.5fr 2fr;
         gap: 1rem;
 
 
@@ -693,13 +693,14 @@ nav {
         .lower-info {
             background: $white;
             width: 100%;
+            padding-bottom: 5rem;
 
             .lowerinfo-container {
-                transform: translateY(-100px);
+                transform: translateY(-20px);
                 width: $width-global;
                 margin: auto;
                 display: grid;
-                grid-template-columns: repeat(3, 1fr);
+                grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
                 gap: 1rem;
 
                 &__card {
@@ -762,6 +763,8 @@ nav {
     }
 }
 
+
+
 // open account In end
 
 // get ap In start
@@ -780,7 +783,7 @@ nav {
         width: $width-global;
         margin: auto;
 
-        &__left {    
+        &__left {
             .beenhere-icon {
                 width: 40px;
                 height: 40px;
@@ -899,6 +902,74 @@ nav {
                     top: -60px;
                     left: -230px;
                 }
+            }
+        }
+    }
+
+}
+
+.getcard-container {
+    .getcard-section {}
+
+    .getcardSlider-container {
+        position: relative;
+        width: 80%;
+        max-width: 800px;
+        overflow: hidden;
+        border: 1px solid #ddd;
+        background-color: #fff;
+        .getcardSlider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .getcardSlide {
+            min-width: 100%;
+            box-sizing: border-box;
+            padding: 40px;
+            text-align: center;
+            font-size: 20px;
+            background-color: #ccc;
+        }
+
+        .getcard-prev,
+        .getcard-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .getcard-prev {
+            left: 10px;
+        }
+
+        .getcard-next {
+            right: 10px;
+        }
+
+        .card-pagination {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+
+            div {
+                width: 10px;
+                height: 10px;
+                background-color: #ddd;
+                border-radius: 50%;
+                margin: 0 5px;
+                cursor: pointer;
+            }
+
+            .active {
+                background-color: #333;
             }
         }
     }
@@ -1142,29 +1213,20 @@ nav {
         }
     }
 
-    .openaccount-container {
-        .openaccount-section {
-            grid-template-rows: 1fr 2fr;
-
-            .lower-info {
-                .lowerinfo-container {
-                    grid-template-columns: 1fr;
-                }
-            }
-
-        }
-    }
-    .getapp-container{
+    .getapp-container {
         height: 30rem;
-        .getapp-section{
+
+        .getapp-section {
             border: .1px solid #dadada99;
             grid-template-columns: 1fr;
-            &__left{
-                .special-text{
+
+            &__left {
+                .special-text {
                     font-size: $small-text;
                 }
             }
-            &__right{
+
+            &__right {
                 display: none;
             }
         }

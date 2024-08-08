@@ -547,6 +547,7 @@ nav {
   width: 100%;
   background: #f5faff;
   position: relative;
+  padding-top: 5rem;
 }
 .openaccount-container img {
   width: 400px;
@@ -564,7 +565,6 @@ nav {
 .openaccount-container .openaccount-section {
   width: 100%;
   display: grid;
-  grid-template-rows: 2.5fr 2fr;
   gap: 1rem;
 }
 .openaccount-container .openaccount-section .upper-info {
@@ -601,13 +601,14 @@ nav {
 .openaccount-container .openaccount-section .lower-info {
   background: white;
   width: 100%;
+  padding-bottom: 5rem;
 }
 .openaccount-container .openaccount-section .lower-info .lowerinfo-container {
-  transform: translateY(-100px);
+  transform: translateY(-20px);
   width: min(87%, 1200px);
   margin: auto;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
   gap: 1rem;
 }
 .openaccount-container .openaccount-section .lower-info .lowerinfo-container__card {
@@ -774,6 +775,62 @@ nav {
   left: -230px;
 }
 
+.getcard-container .getcardSlider-container {
+  position: relative;
+  width: 80%;
+  max-width: 800px;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  background-color: #fff;
+}
+.getcard-container .getcardSlider-container .getcardSlider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+.getcard-container .getcardSlider-container .getcardSlide {
+  min-width: 100%;
+  box-sizing: border-box;
+  padding: 40px;
+  text-align: center;
+  font-size: 20px;
+  background-color: #ccc;
+}
+.getcard-container .getcardSlider-container .getcard-prev,
+.getcard-container .getcardSlider-container .getcard-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+.getcard-container .getcardSlider-container .getcard-prev {
+  left: 10px;
+}
+.getcard-container .getcardSlider-container .getcard-next {
+  right: 10px;
+}
+.getcard-container .getcardSlider-container .card-pagination {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+.getcard-container .getcardSlider-container .card-pagination div {
+  width: 10px;
+  height: 10px;
+  background-color: #ddd;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+.getcard-container .getcardSlider-container .card-pagination .active {
+  background-color: #333;
+}
+
 @media (max-width: 450px) {
   .homepage .lower-content button {
     width: 100%;
@@ -926,12 +983,6 @@ nav {
   }
   .investment-container .investment-section .right-investment {
     display: none;
-  }
-  .openaccount-container .openaccount-section {
-    grid-template-rows: 1fr 2fr;
-  }
-  .openaccount-container .openaccount-section .lower-info .lowerinfo-container {
-    grid-template-columns: 1fr;
   }
   .getapp-container {
     height: 30rem;
