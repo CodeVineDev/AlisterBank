@@ -1159,6 +1159,11 @@ nav {
         .getapp-section{
             border: .1px solid #dadada99;
             grid-template-columns: 1fr;
+            &__left{
+                .special-text{
+                    font-size: $small-text;
+                }
+            }
             &__right{
                 display: none;
             }

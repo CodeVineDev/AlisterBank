@@ -940,6 +940,9 @@ nav {
     border: 0.1px solid rgba(218, 218, 218, 0.6);
     grid-template-columns: 1fr;
   }
+  .getapp-container .getapp-section__left .special-text {
+    font-size: clamp(0.9rem, 2vw + 0.5rem, 1.1rem);
+  }
   .getapp-container .getapp-section__right {
     display: none;
   }
