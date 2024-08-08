@@ -780,7 +780,7 @@ nav {
         width: $width-global;
         margin: auto;
 
-        &__left {
+        &__left {    
             .beenhere-icon {
                 width: 40px;
                 height: 40px;
@@ -849,14 +849,18 @@ nav {
         }
 
         &__right {
+            width: 100%;
+
             .right-images {
                 border-radius: 50%;
                 background: $blue;
-                width: 500px;
+                width: 100%;
+                max-width: 500px;
+                max-height: 500px;
                 height: 500px;
                 position: relative;
                 display: flex;
-                right: -120px;
+                right: -30%;
                 align-items: center;
 
                 .back-1,
@@ -873,7 +877,7 @@ nav {
                 .back-1 {
                     position: absolute;
                     top: 0;
-                    left: -50px;
+                    left: -120px;
                 }
 
                 .back-2 {
@@ -890,9 +894,10 @@ nav {
                     object-position: center;
                     border: $red-border;
                 }
-                #img-2{
+
+                #img-2 {
                     top: -60px;
-                    left: -230px;  
+                    left: -230px;
                 }
             }
         }
@@ -1147,6 +1152,16 @@ nav {
                 }
             }
 
+        }
+    }
+    .getapp-container{
+        height: 30rem;
+        .getapp-section{
+            border: .1px solid #dadada99;
+            grid-template-columns: 1fr;
+            &__right{
+                display: none;
+            }
         }
     }
 

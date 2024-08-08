@@ -725,14 +725,19 @@ nav {
 .getapp-container .getapp-section__left .download-btns a #appstore {
   width: 90px;
 }
+.getapp-container .getapp-section__right {
+  width: 100%;
+}
 .getapp-container .getapp-section__right .right-images {
   border-radius: 50%;
   background: #1549f3;
-  width: 500px;
+  width: 100%;
+  max-width: 500px;
+  max-height: 500px;
   height: 500px;
   position: relative;
   display: flex;
-  right: -120px;
+  right: -30%;
   align-items: center;
 }
 .getapp-container .getapp-section__right .right-images .back-1,
@@ -748,7 +753,7 @@ nav {
 .getapp-container .getapp-section__right .right-images .back-1 {
   position: absolute;
   top: 0;
-  left: -50px;
+  left: -120px;
 }
 .getapp-container .getapp-section__right .right-images .back-2 {
   position: absolute;
@@ -927,5 +932,15 @@ nav {
   }
   .openaccount-container .openaccount-section .lower-info .lowerinfo-container {
     grid-template-columns: 1fr;
+  }
+  .getapp-container {
+    height: 30rem;
+  }
+  .getapp-container .getapp-section {
+    border: 0.1px solid rgba(218, 218, 218, 0.6);
+    grid-template-columns: 1fr;
+  }
+  .getapp-container .getapp-section__right {
+    display: none;
   }
 }/*# sourceMappingURL=main.css.map */
