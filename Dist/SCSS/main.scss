@@ -173,6 +173,7 @@ nav {
 // home page styling In start
 .body-section {
     background: $white;
+    overflow: hidden;
     width: min(100%, 1350px);
     margin: auto;
 }
