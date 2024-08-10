@@ -138,7 +138,12 @@ const lastSlideClone = cardSlides[cardTotalSlides - 1].cloneNode(true);
 cardSlider.appendChild(firstSlideClone);
 cardSlider.insertBefore(lastSlideClone, cardSlides[0]);
 
-function cardUpdateSlider() {
+// Variables to handle touch events
+let startX = 0;
+let currentX = 0;
+let isDragging = false;
+
+function cardMoveSlider() {
     cardSlider.style.transition = 'transform 0.5s ease-in-out';
     cardSlider.style.transform = `translateX(-${(cardCurrentIndex + 1) * 100}%)`;
 
@@ -161,12 +166,12 @@ function cardUpdateSlider() {
 
 function nSlide() {
     cardCurrentIndex++;
-    cardUpdateSlider();
+    cardMoveSlider();
 }
 
 function pSlide() {
     cardCurrentIndex--;
-    cardUpdateSlider();
+    cardMoveSlider();
 }
 
 function cardUpdatePagination() {
@@ -179,15 +184,42 @@ function cardUpdatePagination() {
         }
         cardDot.addEventListener('click', () => {
             cardCurrentIndex = i;
-            cardUpdateSlider();
+            cardMoveSlider();
         });
         cardPagination.appendChild(cardDot);
     }
 }
 
+// Touch events for mobile interaction
+cardSlider.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].clientX;
+    isDragging = true;
+    cardSlider.style.transition = 'none'; // Disable transition during drag
+});
+
+cardSlider.addEventListener('touchmove', (e) => {
+    if (!isDragging) return;
+    currentX = e.touches[0].clientX;
+    const diffX = currentX - startX;
+    cardSlider.style.transform = `translateX(calc(-${(cardCurrentIndex + 1) * 100}% + ${diffX}px))`;
+});
+
+cardSlider.addEventListener('touchend', () => {
+    isDragging = false;
+    const diffX = currentX - startX;
+    if (diffX > 50) {
+        pSlide(); // Swipe right
+    } else if (diffX < -50) {
+        nSlide(); // Swipe left
+    } else {
+        cardMoveSlider(); // Snap back if not enough swipe
+    }
+});
+
 // Initialize the slider at the first real slide
 cardSlider.style.transform = `translateX(-${100}%)`;
-cardUpdateSlider();
+cardMoveSlider();
+
 
 
 

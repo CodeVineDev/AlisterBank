@@ -786,7 +786,8 @@ nav {
   height: 100%;
 }
 .getcard-container .getcard-section__left .getcardSlider-container {
-  width: 400px;
+  width: 100%;
+  max-width: 70svw;
   margin: auto;
   overflow: hidden;
   position: relative;
@@ -842,11 +843,10 @@ nav {
   background-color: #333;
 }
 .getcard-container .getcard-section__right {
-  padding-top: 8rem;
+  padding: 8rem 0 0 2rem;
   display: grid;
   grid-template-columns: 1fr;
   justify-content: center;
-  gap: 3rem;
   grid-column: 2/4;
 }
 .getcard-container .getcard-section__right .upper-content {
@@ -878,6 +878,7 @@ nav {
   grid-column: 2/4;
   width: min(100%, 700px);
   margin: auto;
+  padding: 0 2rem 2rem 2rem;
 }
 .getcard-container .getcard-section__right-bottom .card-type {
   border: 1px solid #B8C9FF;
@@ -939,9 +940,6 @@ nav {
   .homepage .lower-content button {
     width: 100%;
   }
-  .getcard-container .getcard-section .getcardSlider-container {
-    width: 300px;
-  }
 }
 @media (max-width: 660px) {
   .nav-wrap .navbar .nav-btns .login {
@@ -952,6 +950,12 @@ nav {
   }
   .investment-container .investment-section .left-investment .special-text {
     font-size: clamp(1rem, 2vw + 0.5rem, 1.1rem);
+  }
+  .getcard-container {
+    width: 100%;
+  }
+  .getcard-container .getcard-section__left {
+    order: 2;
   }
 }
 @media (max-width: 800px) {
@@ -1110,10 +1114,13 @@ nav {
   }
   .getcard-container .getcard-section {
     grid-template-columns: 1fr;
-    border: 2px solid red;
   }
   .getcard-container .getcard-section__left {
     order: 2;
+  }
+  .getcard-container .getcard-section__left .getcardSlider-container {
+    left: 17%;
+    transform: translateX(-17%);
   }
   .getcard-container .getcard-section__right {
     order: 1;

@@ -920,8 +920,9 @@ nav {
 
         &__left {
             .getcardSlider-container {
-                width: 400px;
-                margin: auto;
+                width: 100%;
+                max-width: 70svw;
+               margin: auto;
                 overflow: hidden;
                 position: relative;
                 border: 1px solid #ddd;
@@ -986,11 +987,10 @@ nav {
         }
 
         &__right {
-            padding-top: 8rem;
+            padding: 8rem 0 0 2rem;
             display: grid;
             grid-template-columns: 1fr;
             justify-content: center;
-            gap: 3rem;
             grid-column: 2/4;
 
 
@@ -1028,6 +1028,7 @@ nav {
             grid-column: 2/4;
             width: min(100%, 700px);
             margin: auto;
+            padding: 0 2rem 2rem 2rem;
             .card-type {
                 border: 1px solid $variant-blue;
                 border-radius: 40px;
@@ -1113,16 +1114,7 @@ nav {
             }
         }
     }
-
-    .getcard-container {
-        .getcard-section {
-            .getcardSlider-container {
-                width: 300px;
-            }
-        }
-    }
 }
-
 @include biggerphone {
 
     .nav-wrap {
@@ -1152,6 +1144,19 @@ nav {
                     font-size: $small-text;
                 }
             }
+        }
+    }
+    .getcard-container {
+        width: 100%;
+    
+        .getcard-section {
+            &__left {
+              order: 2; 
+            //   .getcardSlider-container {
+              
+            //   }
+            }
+    
         }
     }
 
@@ -1371,10 +1376,14 @@ nav {
     
         .getcard-section {
             grid-template-columns: 1fr;
-            border: $red-border;
+
     
             &__left {
               order: 2; 
+              .getcardSlider-container {
+                left: 17%;
+               transform: translateX(-17%);
+              }
             }
     
             &__right {
