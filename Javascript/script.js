@@ -123,12 +123,10 @@ updateSlider();
 startAutoScroll();
 
 
-// Get card script
 const cardSlider = document.querySelector('.getcardSlider');
 const cardSlides = document.querySelectorAll('.getcardSlide');
 const cardPagination = document.querySelector('.card-pagination');
 let cardCurrentIndex = 0;
-const cardVisibleSlides = 1; // Number of slides visible at a time
 const cardTotalSlides = cardSlides.length;
 
 // Clone the first and last slides for seamless infinite scrolling
@@ -138,92 +136,87 @@ const lastSlideClone = cardSlides[cardTotalSlides - 1].cloneNode(true);
 cardSlider.appendChild(firstSlideClone);
 cardSlider.insertBefore(lastSlideClone, cardSlides[0]);
 
-// Variables to handle touch events
-let startX = 0;
-let currentX = 0;
-let isDragging = false;
-
+// Function to move the slider
 function cardMoveSlider() {
-    cardSlider.style.transition = 'transform 0.5s ease-in-out';
-    cardSlider.style.transform = `translateX(-${(cardCurrentIndex + 1) * 100}%)`;
+  const slideWidth = cardSlides[0].offsetWidth; // Calculate the width of each slide
+  cardSlider.style.transition = 'transform 0.5s ease-in-out';
+  cardSlider.style.transform = `translateX(-${(cardCurrentIndex + 1) * slideWidth}px)`;
 
-    if (cardCurrentIndex === -1) {
-        setTimeout(() => {
-            cardSlider.style.transition = 'none';
-            cardCurrentIndex = cardTotalSlides - 1;
-            cardSlider.style.transform = `translateX(-${cardTotalSlides * 100}%)`;
-        }, 500);
-    } else if (cardCurrentIndex === cardTotalSlides) {
-        setTimeout(() => {
-            cardSlider.style.transition = 'none';
-            cardCurrentIndex = 0;
-            cardSlider.style.transform = `translateX(-${100}%)`;
-        }, 500);
-    }
+  if (cardCurrentIndex === -1) {
+    setTimeout(() => {
+      cardSlider.style.transition = 'none';
+      cardCurrentIndex = cardTotalSlides - 1;
+      cardSlider.style.transform = `translateX(-${cardTotalSlides * slideWidth}px)`;
+    }, 500);
+  } else if (cardCurrentIndex === cardTotalSlides) {
+    setTimeout(() => {
+      cardSlider.style.transition = 'none';
+      cardCurrentIndex = 0;
+      cardSlider.style.transform = `translateX(-${slideWidth}px)`;
+    }, 500);
+  }
 
-    cardUpdatePagination();
+  cardUpdatePagination();
 }
 
+// Function to go to the next slide
 function nSlide() {
-    cardCurrentIndex++;
-    cardMoveSlider();
+  cardCurrentIndex++;
+  cardMoveSlider();
 }
 
+// Function to go to the previous slide
 function pSlide() {
-    cardCurrentIndex--;
-    cardMoveSlider();
+  cardCurrentIndex--;
+  cardMoveSlider();
 }
 
+// Update pagination
 function cardUpdatePagination() {
-    cardPagination.innerHTML = '';
-    const cardTotalDots = cardTotalSlides; // Number of dots should equal the original slides count
-    for (let i = 0; i < cardTotalDots; i++) {
-        const cardDot = document.createElement('div');
-        if (i === cardCurrentIndex || (cardCurrentIndex === cardTotalSlides && i === 0)) {
-            cardDot.classList.add('active');
-        }
-        cardDot.addEventListener('click', () => {
-            cardCurrentIndex = i;
-            cardMoveSlider();
-        });
-        cardPagination.appendChild(cardDot);
+  cardPagination.innerHTML = '';
+  const cardTotalDots = cardTotalSlides; // Number of dots should equal the original slides count
+  for (let i = 0; i < cardTotalDots; i++) {
+    const cardDot = document.createElement('div');
+    if (i === cardCurrentIndex || (cardCurrentIndex === cardTotalSlides && i === 0)) {
+      cardDot.classList.add('active');
     }
+    cardDot.addEventListener('click', () => {
+      cardCurrentIndex = i;
+      cardMoveSlider();
+    });
+    cardPagination.appendChild(cardDot);
+  }
 }
 
 // Touch events for mobile interaction
 cardSlider.addEventListener('touchstart', (e) => {
-    startX = e.touches[0].clientX;
-    isDragging = true;
-    cardSlider.style.transition = 'none'; // Disable transition during drag
+  startX = e.touches[0].clientX;
+  isDragging = true;
+  cardSlider.style.transition = 'none'; // Disable transition during drag
 });
 
 cardSlider.addEventListener('touchmove', (e) => {
-    if (!isDragging) return;
-    currentX = e.touches[0].clientX;
-    const diffX = currentX - startX;
-    cardSlider.style.transform = `translateX(calc(-${(cardCurrentIndex + 1) * 100}% + ${diffX}px))`;
+  if (!isDragging) return;
+  currentX = e.touches[0].clientX;
+  const diffX = currentX - startX;
+  const slideWidth = cardSlides[0].offsetWidth; // Calculate the width of each slide
+  cardSlider.style.transform = `translateX(calc(-${(cardCurrentIndex + 1) * slideWidth}px + ${diffX}px))`;
 });
 
 cardSlider.addEventListener('touchend', () => {
-    isDragging = false;
-    const diffX = currentX - startX;
-    if (diffX > 50) {
-        pSlide(); // Swipe right
-    } else if (diffX < -50) {
-        nSlide(); // Swipe left
-    } else {
-        cardMoveSlider(); // Snap back if not enough swipe
-    }
+  isDragging = false;
+  const diffX = currentX - startX;
+  if (diffX > 50) {
+    pSlide(); // Swipe right
+  } else if (diffX < -50) {
+    nSlide(); // Swipe left
+  } else {
+    cardMoveSlider(); // Snap back if not enough swipe
+  }
 });
 
 // Initialize the slider at the first real slide
-cardSlider.style.transform = `translateX(-${100}%)`;
 cardMoveSlider();
 
-
-
-
-
-
-
-
+// Ensure the slider adjusts when the window is resized
+window.addEventListener('resize', cardMoveSlider);

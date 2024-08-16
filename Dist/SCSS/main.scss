@@ -914,33 +914,36 @@ nav {
 
     .getcard-section {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1rem;
+        grid-template-columns: 2fr 1fr 1fr;
+        gap: 2rem;
 
         &__left {
             grid-row: span 2;
+          
+           
+           
 
             .getcardSlider-wrap {
-                padding: 1rem 0 5rem 0;
+                padding: 1rem 0 3rem 0;
                 position: relative;
                 top: 50%;
-                width: 100%;
+
                 transform: translateY(-50%);
 
                 .getcardSlider-container {
-                    width: 100%;
+
                     overflow: hidden;
                     position: relative;
 
                     .getcardSlider {
                         display: flex;
-                       
+
                         transition: transform 0.5s ease-in-out;
                     }
 
                     .getcardSlide {
                         min-width: 100%;
-                        width: 100%;
+                        width: 50px;
                         background-color: $white;
 
                         img {
@@ -953,9 +956,9 @@ nav {
                             left: 50%;
                             transform: translateX(-50%);
                             margin: auto;
-                            margin-block: 2rem;
+                            margin-top: 2rem;
                             background: $blue;
-                            padding: 1rem 2rem;
+                            padding: 1rem;
                             border-radius: 10px;
                             border: none;
 
@@ -979,19 +982,19 @@ nav {
                     color: #fff;
                     border: none;
                     border-radius: 50%;
-                    width: 50px;
-                    height: 50px;
+                    width: 30px;
+                    height: 30px;
                     cursor: pointer;
                 }
 
                 .getcard-prev {
-                    left: 30%;
-                    transform: translateX(-20%);
+                    left: 33%;
+                    transform: translateX(-33%);
                 }
 
                 .getcard-next {
-                    right: 25%;
-                    transform: translateX(-20%);
+                    right: 30%;
+                    transform: translateX(-30%);
                 }
 
                 .card-pagination {
@@ -1178,22 +1181,7 @@ nav {
         }
     }
 
-    .getcard-container {
-        width: 100%;
-        scale: .95;
-        .getcard-section {
-            &__left {
-                order: 2;  
-                .getcardSlider-wrap {
-                    .getcardSlider-container {
-                       width: 91vw;
-                      
-                    }
-                }
-            }
 
-        }
-    }
 
 }
 
@@ -1410,14 +1398,23 @@ nav {
 
         .getcard-section {
             grid-template-columns: 1fr;
+            gap: 0;
+            row-gap: 2rem;
 
 
             &__left {
                 order: 2;
 
-                .getcardSlider-container {
-                    left: 17%;
-                    transform: translateX(-17%);
+                .getcardSlider-wrap {
+                    .getcardSlider-container {
+                        .getcardSlide {
+                            img {
+                                border-radius: 20px;
+                            }
+                        }
+                    }
+
+
                 }
             }
 
