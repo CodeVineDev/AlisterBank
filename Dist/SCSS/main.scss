@@ -910,7 +910,7 @@ nav {
 
 .getcard-container {
     width: $width-global;
-    margin: auto;
+    margin: auto; 
 
     .getcard-section {
         display: grid;
@@ -927,17 +927,16 @@ nav {
                 padding: 1rem 0 3rem 0;
                 position: relative;
                 top: 50%;
-
-                transform: translateY(-50%);
+                transform: translateY(-20%);
 
                 .getcardSlider-container {
-
+                    width: 90%;
+                    margin: auto;
                     overflow: hidden;
                     position: relative;
 
                     .getcardSlider {
                         display: flex;
-
                         transition: transform 0.5s ease-in-out;
                     }
 
@@ -972,31 +971,30 @@ nav {
 
 
                 }
-
-                .getcard-prev,
-                .getcard-next {
-                    position: absolute;
-                    bottom: 0;
-                    transform: translateY(-50%);
-                    background: $blue;
-                    color: #fff;
-                    border: none;
-                    border-radius: 50%;
-                    width: 30px;
-                    height: 30px;
-                    cursor: pointer;
+                .control-btns{
+                    width: min(100%, 120px);
+                    margin: auto;
+                    height: 1px;
+                    display: flex;
+                    justify-content: space-between;
+                    .getcard-prev,
+                    .getcard-next {
+                        transform: translateY(20px);
+                        background: $variant-blue;
+                        color: #fff;
+                        border: none;
+                        border-radius: 50%;
+                        width: 30px;
+                        height: 30px;
+                        cursor: pointer;
+                        transition: 200ms ease-in-out;
+                        &:hover{
+                            background: $blue;
+                        }
+                    }
                 }
 
-                .getcard-prev {
-                    left: 33%;
-                    transform: translateX(-33%);
-                }
-
-                .getcard-next {
-                    right: 30%;
-                    transform: translateX(-30%);
-                }
-
+                
                 .card-pagination {
                     position: absolute;
                     bottom: 10px;
@@ -1060,17 +1058,15 @@ nav {
         &__right-bottom {
             grid-column: 2/4;
             width: 100%;
-
-
             .card-type {
                 border: 1px solid $variant-blue;
                 border-radius: 40px;
-                width: min(100%, 270px);
                 padding: 1.5rem 2rem;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
                 margin-bottom: 2rem;
+                width: min(100%, 365px);
 
                 a {
                     color: $blue;
@@ -1113,7 +1109,7 @@ nav {
                         align-items: center;
 
                         .icon {
-                            font-size: 30px;
+                            font-size: 40px;
                             color: $blue;
                         }
 
@@ -1406,6 +1402,7 @@ nav {
                 order: 2;
 
                 .getcardSlider-wrap {
+                    transform: translateY(-50%);
                     .getcardSlider-container {
                         .getcardSlide {
                             img {

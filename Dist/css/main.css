@@ -791,9 +791,11 @@ nav {
   padding: 1rem 0 3rem 0;
   position: relative;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-20%);
 }
 .getcard-container .getcard-section__left .getcardSlider-wrap .getcardSlider-container {
+  width: 90%;
+  margin: auto;
   overflow: hidden;
   position: relative;
 }
@@ -826,26 +828,28 @@ nav {
   color: white;
   font-weight: 400;
 }
-.getcard-container .getcard-section__left .getcardSlider-wrap .getcard-prev,
-.getcard-container .getcard-section__left .getcardSlider-wrap .getcard-next {
-  position: absolute;
-  bottom: 0;
-  transform: translateY(-50%);
-  background: #1549f3;
+.getcard-container .getcard-section__left .getcardSlider-wrap .control-btns {
+  width: min(100%, 120px);
+  margin: auto;
+  height: 1px;
+  display: flex;
+  justify-content: space-between;
+}
+.getcard-container .getcard-section__left .getcardSlider-wrap .control-btns .getcard-prev,
+.getcard-container .getcard-section__left .getcardSlider-wrap .control-btns .getcard-next {
+  transform: translateY(20px);
+  background: #B8C9FF;
   color: #fff;
   border: none;
   border-radius: 50%;
   width: 30px;
   height: 30px;
   cursor: pointer;
+  transition: 200ms ease-in-out;
 }
-.getcard-container .getcard-section__left .getcardSlider-wrap .getcard-prev {
-  left: 33%;
-  transform: translateX(-33%);
-}
-.getcard-container .getcard-section__left .getcardSlider-wrap .getcard-next {
-  right: 30%;
-  transform: translateX(-30%);
+.getcard-container .getcard-section__left .getcardSlider-wrap .control-btns .getcard-prev:hover,
+.getcard-container .getcard-section__left .getcardSlider-wrap .control-btns .getcard-next:hover {
+  background: #1549f3;
 }
 .getcard-container .getcard-section__left .getcardSlider-wrap .card-pagination {
   position: absolute;
@@ -902,12 +906,12 @@ nav {
 .getcard-container .getcard-section__right-bottom .card-type {
   border: 1px solid #B8C9FF;
   border-radius: 40px;
-  width: min(100%, 270px);
   padding: 1.5rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 2rem;
+  width: min(100%, 365px);
 }
 .getcard-container .getcard-section__right-bottom .card-type a {
   color: #1549f3;
@@ -946,7 +950,7 @@ nav {
   align-items: center;
 }
 .getcard-container .getcard-section__right-bottom .lower-content__box .card-icon .icon {
-  font-size: 30px;
+  font-size: 40px;
   color: #1549f3;
 }
 .getcard-container .getcard-section__right-bottom .lower-content__box p {
@@ -1129,6 +1133,9 @@ nav {
   }
   .getcard-container .getcard-section__left {
     order: 2;
+  }
+  .getcard-container .getcard-section__left .getcardSlider-wrap {
+    transform: translateY(-50%);
   }
   .getcard-container .getcard-section__left .getcardSlider-wrap .getcardSlider-container .getcardSlide img {
     border-radius: 20px;
