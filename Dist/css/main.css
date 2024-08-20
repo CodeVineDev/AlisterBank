@@ -1091,13 +1091,14 @@ nav {
 }
 .loan-section .loan-container__right {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
   gap: 2rem;
 }
 .loan-section .loan-container__right .loan-box {
   border-radius: 10px;
   transition: 200ms ease-in-out;
-  padding: 2rem;
+  padding: 1rem;
+  padding-block: 2rem;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
   border: 1px solid transparent;
 }
@@ -1343,5 +1344,8 @@ nav {
   }
   .loan-section .loan-container {
     grid-template-columns: 1fr;
+  }
+  .loan-section .loan-container__left .special-text {
+    font-size: clamp(1rem, 2vw + 0.5rem, 1.1rem);
   }
 }/*# sourceMappingURL=main.css.map */
