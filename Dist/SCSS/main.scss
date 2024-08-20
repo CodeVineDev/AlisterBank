@@ -1461,6 +1461,45 @@ nav {
 
 // loan section In end
 
+// testimonial section In start
+.testimonial-section{
+    .testimonial-container{
+        margin-block: 4rem;
+        &__top-content{
+            text-align: center;
+            padding: 2rem;
+            .special-text {
+                font-size: $medium-text;
+                color: $green;
+                font-weight: 600;
+                margin-bottom: .5rem;
+            }
+
+            h2 {
+                font-size: $big-text;
+                color: $black;
+                width: min(100%, 600px);
+                margin: auto;
+                text-wrap: balance;
+                font-weight: 600;
+                font-family: $large-font;
+            }
+
+            .normal-text {
+                margin-top: 1rem;
+                font-size: $small-text;
+                color: $grey;
+                margin-bottom: 2rem;
+                width: min(100%, 510px);
+                margin: auto;
+                font-weight: 300;
+            }
+        }
+    }
+}
+
+// testimonial section In end
+
 
 
 // media query In start

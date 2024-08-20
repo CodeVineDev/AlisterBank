@@ -256,3 +256,10 @@ cardSlider.addEventListener('touchend', () => {
 // Initialize the slider at the first real slide
 cardSlider.style.transform = `translateX(-${100}%)`;
 cardMoveSlider();
+
+
+
+
+
+// Testimonial script
+
