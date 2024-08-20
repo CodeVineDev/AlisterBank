@@ -266,14 +266,25 @@ nav {
   border-radius: 5px;
   font-weight: 400;
   padding: 10px 20px;
+  transition: 200ms ease-in-out;
 }
 .homepage .home-left .lower-content .open-account {
   background: #1549f3;
   color: white;
+  border: 1px solid transparent;
+}
+.homepage .home-left .lower-content .open-account:hover {
+  background: white;
+  color: #1549f3;
+  border: 1px solid #B8C9FF;
 }
 .homepage .home-left .lower-content .getin-touch {
   color: #1549f3;
-  border: 1px solid #1549f3;
+  border: 1px solid #B8C9FF;
+}
+.homepage .home-left .lower-content .getin-touch:hover {
+  background: #1549f3;
+  color: white;
 }
 .homepage .home-image {
   width: min(95%, 600px);
@@ -976,10 +987,10 @@ nav {
 }
 .getintouch-section .getintouch-container {
   background: white;
-  box-shadow: 10px 5px 15px rgba(0, 0, 0, 0.178);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
   transform: translateY(150px);
   border-radius: 40px;
-  width: min(100%, 700px);
+  width: min(90%, 700px);
   margin: auto;
   display: flex;
   justify-content: center;
@@ -1020,7 +1031,7 @@ nav {
 }
 .getintouch-section .getintouch-container #secondBtn {
   background: white;
-  color: #242424;
+  color: #1549f3;
   border: 1px solid #B8C9FF;
 }
 .getintouch-section .getintouch-container #secondBtn:hover {
@@ -1029,14 +1040,107 @@ nav {
   color: white;
 }
 
-.planning-section {
+.loan-section {
   width: 100%;
   background: white;
-  height: 30rem;
 }
-.planning-section .planning-container {
+.loan-section .loan-container {
   width: min(87%, 1200px);
   margin: auto;
+  display: grid;
+  margin-top: 16rem;
+  margin-bottom: 3rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+.loan-section .loan-container__left .special-text {
+  font-size: clamp(1rem, 4vw + 0.5rem, 1.3rem);
+  color: green;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.loan-section .loan-container__left h2 {
+  font-size: clamp(1.5rem, 4vw + 0.5rem, 3rem);
+  color: #242424;
+  text-wrap: balance;
+  font-weight: 600;
+  font-family: "Jost", sans-serif;
+}
+.loan-section .loan-container__left .normal-text {
+  margin-top: 1rem;
+  font-size: clamp(1rem, 2vw + 0.5rem, 1.1rem);
+  color: #1e2129;
+  margin-bottom: 2rem;
+  width: min(100%, 510px);
+  font-weight: 300;
+}
+.loan-section .loan-container__left a button {
+  background: #1549f3;
+  color: white;
+  border: 1px solid #1549f3;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  transition: 200ms ease-in-out;
+  font-weight: 400;
+  font-size: clamp(1rem, 2vw + 0.5rem, 1.1rem);
+}
+.loan-section .loan-container__left a button:hover {
+  background: white;
+  color: #1549f3;
+  border: 1px solid #B8C9FF;
+}
+.loan-section .loan-container__right {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+  gap: 2rem;
+}
+.loan-section .loan-container__right .loan-box {
+  border-radius: 10px;
+  transition: 200ms ease-in-out;
+  padding: 2rem;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+  border: 1px solid transparent;
+}
+.loan-section .loan-container__right .loan-box .card-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #f5faff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  transition: 200ms ease-in-out;
+}
+.loan-section .loan-container__right .loan-box .card-icon .icon {
+  font-size: 35px;
+  color: #1549f3;
+}
+.loan-section .loan-container__right .loan-box p {
+  font-size: clamp(1rem, 2vw + 0.5rem, 1.1rem);
+  color: #242424;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.loan-section .loan-container__right .loan-box:hover {
+  border: 1px solid #B8C9FF;
+}
+.loan-section .loan-container__right .loan-box:hover .card-icon {
+  background: #1549f3;
+}
+.loan-section .loan-container__right .loan-box:hover .card-icon .icon {
+  color: white;
+}
+.loan-section .loan-container__right .loan-box .span-text {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.loan-section .loan-container__right .loan-box span {
+  margin-bottom: 0.5rem;
+}
+.loan-section .loan-container__right .loan-box span img {
+  width: 20px;
+  margin-right: 10px;
 }
 
 @media (max-width: 450px) {
@@ -1236,5 +1340,8 @@ nav {
   }
   .getcard-container .getcard-section__right-bottom .lower-content {
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+  }
+  .loan-section .loan-container {
+    grid-template-columns: 1fr;
   }
 }/*# sourceMappingURL=main.css.map */

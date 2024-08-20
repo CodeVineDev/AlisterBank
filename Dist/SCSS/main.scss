@@ -293,16 +293,27 @@ nav {
                 border-radius: 5px;
                 font-weight: 400;
                 padding: 10px 20px;
+                transition: 200ms ease-in-out;
             }
 
             .open-account {
                 background: $blue;
                 color: $white;
+                border: 1px solid transparent;
+                &:hover{
+                    background: $white;
+                    color: $blue;
+                    border: 1px solid $variant-blue;
+                }
             }
 
             .getin-touch {
                 color: $blue;
-                border: 1px solid $blue;
+                border: 1px solid $variant-blue;
+                &:hover{
+                    background: $blue;
+                    color: $white;
+                }
             }
         }
     }
@@ -1159,10 +1170,10 @@ nav {
 
     .getintouch-container {
         background: $white;
-        box-shadow: 10px 5px 15px rgba(0, 0, 0, 0.178);
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
         transform: translateY(150px);
         border-radius: 40px;
-        width: min(100%, 700px);
+        width: min(90%, 700px);
         margin: auto;
         display: flex;
         justify-content: center;
@@ -1214,7 +1225,7 @@ nav {
 
         #secondBtn {
             background: $white;
-            color: $black;
+            color: $blue;
             border: 1px solid $variant-blue;
 
             &:hover {
@@ -1230,15 +1241,132 @@ nav {
 
 // planning section In start
 
-.planning-section{
+.loan-section {
     width: 100%;
     background: $white;
-    height: 30rem;
-    .planning-container{
-       width: $width-global;
-       margin: auto;
+
+    .loan-container {
+        width: $width-global;
+        margin: auto;
+        display: grid;
+        margin-top: 16rem;
+        margin-bottom: 3rem;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+
+        &__left {
+            .special-text {
+                font-size: $medium-text;
+                color: $green;
+                font-weight: 600;
+                margin-bottom: .5rem;
+            }
+
+            h2 {
+                font-size: $big-text_v2;
+                color: $black;
+                text-wrap: balance;
+                font-weight: 600;
+                font-family: $large-font;
+            }
+
+            .normal-text {
+                margin-top: 1rem;
+                font-size: $small-text;
+                color: $grey;
+                margin-bottom: 2rem;
+                width: min(100%, 510px);
+                font-weight: 300;
+            }
+
+            a {
+                button {
+                    background: $blue;
+                    color: $white;
+                    border: 1px solid $blue;
+                    padding: 1rem 2rem;
+                    border-radius: 10px;
+                    transition: 200ms ease-in-out;
+                    font-weight: 400;
+                    font-size: $small-text;
+
+                    &:hover {
+                        background: $white;
+                        color: $blue;
+                        border: 1px solid $variant-blue;
+                    }
+                }
+            }
+        }
+
+        &__right {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+            gap: 2rem;
+
+            .loan-box {
+                border-radius: 10px;
+                transition: 200ms ease-in-out;
+                padding: 2rem;
+                box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+                border: 1px solid transparent;
+
+                .card-icon {
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 50%;
+                    background: $lighted-blue;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-bottom: 1rem;
+                    transition: 200ms ease-in-out;
+
+                    .icon {
+                        font-size: 35px;
+                        color: $blue;
+                    }
+                }
+
+                p {
+                    font-size: $small-text;
+                    color: $black;
+                    font-weight: 600;
+                    margin-bottom: 1rem;
+                }
+
+
+                &:hover {
+                    border: 1px solid $variant-blue;
+                }
+
+                &:hover .card-icon {
+                    background: $blue;
+
+                    .icon {
+                        color: white;
+                    }
+                }
+
+                .span-text {
+                    display: grid;
+                    grid-template-columns: 1fr;
+                }
+
+                span {
+                    margin-bottom: .5rem;
+
+                    img {
+                        width: 20px;
+                        margin-right: 10px;
+                    }
+                }
+            }
+
+        }
     }
 }
+
 // planning section In end
 
 
@@ -1551,6 +1679,11 @@ nav {
 
             }
 
+        }
+    }
+    .loan-section{
+        .loan-container{
+            grid-template-columns: 1fr;
         }
     }
 
