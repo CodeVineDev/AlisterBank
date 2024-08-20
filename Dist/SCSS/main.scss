@@ -300,7 +300,8 @@ nav {
                 background: $blue;
                 color: $white;
                 border: 1px solid transparent;
-                &:hover{
+
+                &:hover {
                     background: $white;
                     color: $blue;
                     border: 1px solid $variant-blue;
@@ -310,7 +311,8 @@ nav {
             .getin-touch {
                 color: $blue;
                 border: 1px solid $variant-blue;
-                &:hover{
+
+                &:hover {
                     background: $blue;
                     color: $white;
                 }
@@ -1167,6 +1169,30 @@ nav {
 // get in touch In start
 .getintouch-section {
     background: $blue;
+    position: relative;
+
+    .backgroundimg-con {
+        overflow: hidden;
+        width: 350px;
+        height: 350px;
+        border-radius: 50%;
+        left: -30px;
+        top: 10px;
+        position: absolute;
+
+        .background-img {
+            width: 100%;
+        }
+    }
+
+    .backgroundblue-cover {
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        border-radius: 50%;
+        right: -170px;
+        background: rgb(52, 198, 255);
+    }
 
     .getintouch-container {
         background: $white;
@@ -1177,7 +1203,7 @@ nav {
         margin: auto;
         display: flex;
         justify-content: center;
-        padding: 5rem 3rem;
+        padding: 4rem 1rem;
         flex-direction: column;
         text-align: center;
 
@@ -1199,7 +1225,9 @@ nav {
         .getintouch-btns {
             a {
                 button {
-                    padding: 1rem 2rem;
+                    width: min(80%, 200px);
+                    padding: 1rem;
+                    margin: auto;
                     border: none;
                     border-radius: 10px;
                     transition: 200ms ease-in-out;
@@ -1239,7 +1267,7 @@ nav {
 
 // get in touch In end
 
-// planning section In start
+// loan section In start
 
 .loan-section {
     width: 100%;
@@ -1352,7 +1380,7 @@ nav {
                 .span-text {
                     display: grid;
                     grid-template-columns: 1fr;
-                   
+
                 }
 
                 span {
@@ -1369,7 +1397,69 @@ nav {
     }
 }
 
-// planning section In end
+.loan-section2 {
+    background: $blue;
+    padding: 2rem;
+    
+
+    .loan-section2-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        width: $width-global;
+        margin: auto;
+
+        .left {
+            img {
+                width: $width-global;
+            }
+        }
+
+        .right {
+            display: flex;
+            align-items: center;
+
+            &__container {
+                h2 {
+                    font-size: $big-text_v2;
+                    color: $white;
+                    text-wrap: balance;
+                    font-weight: 600;
+                    font-family: $large-font;
+                }
+
+                .normal-text {
+                    margin-top: 1rem;
+                    font-size: $small-text;
+                    color: $lighted-blue;
+                    margin-bottom: 2rem;
+                    width: min(100%, 510px);
+                    font-weight: 300;
+                }
+
+                button {
+                    background: rgb(52, 198, 255);
+                    color: $white;
+                    border: 1px solid $blue;
+                    padding: 1rem 2rem;
+                    border-radius: 10px;
+                    transition: 200ms ease-in-out;
+                    font-weight: 400;
+                    font-size: $small-text;
+
+                    &:hover {
+                        background: $white;
+                        color: $blue;
+                        border: 1px solid $variant-blue;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+// loan section In end
 
 
 
@@ -1683,16 +1773,28 @@ nav {
 
         }
     }
-    .loan-section{
-        .loan-container{
+
+    .loan-section {
+        .loan-container {
             grid-template-columns: 1fr;
-            &__left{
-                .special-text{
+
+            &__left {
+                .special-text {
                     font-size: $small-text;
                 }
             }
         }
     }
+    .loan-section2{
+        .loan-section2-container{
+            .left{
+                display: none;
+            }
+            grid-template-columns: 1fr;
+        }
+    }
+
+
 
 
 }

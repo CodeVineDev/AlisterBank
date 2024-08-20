@@ -984,6 +984,27 @@ nav {
 
 .getintouch-section {
   background: #1549f3;
+  position: relative;
+}
+.getintouch-section .backgroundimg-con {
+  overflow: hidden;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  left: -30px;
+  top: 10px;
+  position: absolute;
+}
+.getintouch-section .backgroundimg-con .background-img {
+  width: 100%;
+}
+.getintouch-section .backgroundblue-cover {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  border-radius: 50%;
+  right: -170px;
+  background: rgb(52, 198, 255);
 }
 .getintouch-section .getintouch-container {
   background: white;
@@ -994,7 +1015,7 @@ nav {
   margin: auto;
   display: flex;
   justify-content: center;
-  padding: 5rem 3rem;
+  padding: 4rem 1rem;
   flex-direction: column;
   text-align: center;
 }
@@ -1011,7 +1032,9 @@ nav {
   color: #242424;
 }
 .getintouch-section .getintouch-container .getintouch-btns a button {
-  padding: 1rem 2rem;
+  width: min(80%, 200px);
+  padding: 1rem;
+  margin: auto;
   border: none;
   border-radius: 10px;
   transition: 200ms ease-in-out;
@@ -1142,6 +1165,55 @@ nav {
 .loan-section .loan-container__right .loan-box span img {
   width: 20px;
   margin-right: 10px;
+}
+
+.loan-section2 {
+  background: #1549f3;
+  padding: 2rem;
+}
+.loan-section2 .loan-section2-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  width: min(87%, 1200px);
+  margin: auto;
+}
+.loan-section2 .loan-section2-container .left img {
+  width: min(87%, 1200px);
+}
+.loan-section2 .loan-section2-container .right {
+  display: flex;
+  align-items: center;
+}
+.loan-section2 .loan-section2-container .right__container h2 {
+  font-size: clamp(1.5rem, 4vw + 0.5rem, 3rem);
+  color: white;
+  text-wrap: balance;
+  font-weight: 600;
+  font-family: "Jost", sans-serif;
+}
+.loan-section2 .loan-section2-container .right__container .normal-text {
+  margin-top: 1rem;
+  font-size: clamp(1rem, 2vw + 0.5rem, 1.1rem);
+  color: #f5faff;
+  margin-bottom: 2rem;
+  width: min(100%, 510px);
+  font-weight: 300;
+}
+.loan-section2 .loan-section2-container .right__container button {
+  background: rgb(52, 198, 255);
+  color: white;
+  border: 1px solid #1549f3;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  transition: 200ms ease-in-out;
+  font-weight: 400;
+  font-size: clamp(1rem, 2vw + 0.5rem, 1.1rem);
+}
+.loan-section2 .loan-section2-container .right__container button:hover {
+  background: white;
+  color: #1549f3;
+  border: 1px solid #B8C9FF;
 }
 
 @media (max-width: 450px) {
@@ -1347,5 +1419,11 @@ nav {
   }
   .loan-section .loan-container__left .special-text {
     font-size: clamp(1rem, 2vw + 0.5rem, 1.1rem);
+  }
+  .loan-section2 .loan-section2-container {
+    grid-template-columns: 1fr;
+  }
+  .loan-section2 .loan-section2-container .left {
+    display: none;
   }
 }/*# sourceMappingURL=main.css.map */
