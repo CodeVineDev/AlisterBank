@@ -1126,8 +1126,8 @@ nav {
   border: 1px solid transparent;
 }
 .loan-section .loan-container__right .loan-box .card-icon {
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   background: #f5faff;
   display: flex;
@@ -1137,7 +1137,7 @@ nav {
   transition: 200ms ease-in-out;
 }
 .loan-section .loan-container__right .loan-box .card-icon .icon {
-  font-size: 35px;
+  font-size: 45px;
   color: #1549f3;
 }
 .loan-section .loan-container__right .loan-box p {
