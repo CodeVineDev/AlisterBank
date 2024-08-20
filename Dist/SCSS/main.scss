@@ -910,7 +910,23 @@ nav {
 
 .getcard-container {
     width: $width-global;
-    margin: auto; 
+    margin: auto;
+    position: relative;
+
+    .backgroundimg-con {
+        position: absolute;
+        left: -10%;
+        top: 50px;
+        width: 550px;
+        border-radius: 50%;
+        background: $lighted-blue;
+
+        .background-img {
+            width: 100%;
+        }
+    }
+
+
 
     .getcard-section {
         display: grid;
@@ -919,9 +935,10 @@ nav {
 
         &__left {
             grid-row: span 2;
-          
-           
-           
+
+
+
+
 
             .getcardSlider-wrap {
                 padding: 1rem 0 3rem 0;
@@ -943,7 +960,7 @@ nav {
                     .getcardSlide {
                         min-width: 100%;
                         width: 50px;
-                        background-color: $white;
+                        background-color: transparent;
 
                         img {
                             border-radius: 40px;
@@ -971,12 +988,14 @@ nav {
 
 
                 }
-                .control-btns{
+
+                .control-btns {
                     width: min(100%, 120px);
                     margin: auto;
                     height: 1px;
                     display: flex;
                     justify-content: space-between;
+
                     .getcard-prev,
                     .getcard-next {
                         transform: translateY(20px);
@@ -988,13 +1007,14 @@ nav {
                         height: 30px;
                         cursor: pointer;
                         transition: 200ms ease-in-out;
-                        &:hover{
+
+                        &:hover {
                             background: $blue;
                         }
                     }
                 }
 
-                
+
                 .card-pagination {
                     position: absolute;
                     bottom: 10px;
@@ -1058,6 +1078,7 @@ nav {
         &__right-bottom {
             grid-column: 2/4;
             width: 100%;
+
             .card-type {
                 border: 1px solid $variant-blue;
                 border-radius: 40px;
@@ -1392,6 +1413,10 @@ nav {
 
     .getcard-container {
 
+        .backgroundimg-con {
+            display: none;
+        }
+
         .getcard-section {
             grid-template-columns: 1fr;
             gap: 0;
@@ -1403,6 +1428,7 @@ nav {
 
                 .getcardSlider-wrap {
                     transform: translateY(-50%);
+
                     .getcardSlider-container {
                         .getcardSlide {
                             img {
