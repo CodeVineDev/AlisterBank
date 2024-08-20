@@ -164,7 +164,7 @@ let currentX = 0;
 let currentY = 0;
 let isDragging = false;
 const swipeThreshold = 50; // Minimum swipe distance to trigger slide change
-const angleThreshold = 30; // Maximum angle from the horizontal line
+const angleThreshold = 10; // Maximum angle from the horizontal line
 
 function cardMoveSlider() {
     cardSlider.style.transition = 'transform 0.5s ease-in-out';
