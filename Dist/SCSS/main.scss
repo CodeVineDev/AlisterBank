@@ -1400,7 +1400,7 @@ nav {
 .loan-section2 {
     background: $blue;
     padding: 2rem;
-    
+
 
     .loan-section2-container {
         display: grid;
@@ -1462,12 +1462,14 @@ nav {
 // loan section In end
 
 // testimonial section In start
-.testimonial-section{
-    .testimonial-container{
+.testimonial-section {
+    .testimonial-container {
         margin-block: 4rem;
-        &__top-content{
+
+        &__top-content {
             text-align: center;
             padding: 2rem;
+
             .special-text {
                 font-size: $medium-text;
                 color: $green;
@@ -1476,7 +1478,7 @@ nav {
             }
 
             h2 {
-                font-size: $big-text;
+                font-size: $big-text_v2;
                 color: $black;
                 width: min(100%, 600px);
                 margin: auto;
@@ -1494,6 +1496,142 @@ nav {
                 margin: auto;
                 font-weight: 300;
             }
+        }
+
+
+        &__lower-content {
+            width: $width-global;
+            margin: auto;
+
+            .testimonial-wrap {
+                padding: 1rem 0 2.2rem 0;
+                position: relative;
+
+                .testimonialSlider-container {
+                    background: $lighted-blue;
+                    width: 90%;
+                    margin: auto;
+                    overflow: hidden;
+                    position: relative;
+                    border-radius: 30px;
+
+                    .testimonialSlider {
+                        display: flex;
+                        transition: transform 0.5s ease-in-out;
+
+                        .testimonialSlide {
+                            display: grid;
+                            padding: 2rem;
+                            grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr));
+                            gap: 2rem;
+                            min-width: 100%;
+                            width: 50px;
+                            background-color: transparent;
+
+                            .left {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                .imgcon {
+                                    width: min(90%, 300px);
+                                    padding: .1rem;
+                                    background: $variant-blue;
+                                    border-radius: 20px;
+                                    overflow: hidden;
+
+                                    img {
+                                        width: 100%;
+                                        border-radius: 17px;
+                                        border: 5px solid white;
+                                    }
+                                }
+                            }
+
+                            .right {
+                                .icon{
+                                    font-size: 60px;
+                                    color: $variant-blue;
+                                }
+                                .bold-text{
+                                    font-size: $medium-text;
+                                    font-weight: 600;
+                                    color: $black;
+                                    margin-bottom: 1rem;
+                                }
+                                .normal-text{
+                                    font-size: $small-text;
+                                    font-weight: 400;
+                                    color: $black;
+                                    margin-bottom: 1rem;
+                                }
+                                .name-text{
+                                    font-size: $medium-text;
+                                    font-weight: 600;
+                                    color: $black;
+                                    margin-bottom: 1rem;
+                                }
+                                .country-text{
+                                    font-size: $small-text;
+                                    font-weight: 400;
+                                    color: $green;
+                                    margin-bottom: 1rem;
+                                }
+                                
+                            }
+                        }
+
+
+                    }
+                }
+                .control-btns {
+                    width: min(100%, 120px);
+                    height: 1px;
+                    display: flex;
+                    margin: auto;
+                    justify-content: space-between;
+
+                    .testimonial-prev,
+                    .testimonial-next {
+                        transform: translateY(10px);
+                        background: $variant-blue;
+                        color: #fff;
+                        border: none;
+                        border-radius: 50%;
+                        width: 30px;
+                        height: 30px;
+                        cursor: pointer;
+                        transition: 200ms ease-in-out;
+
+                        &:hover {
+                            background: $blue;
+                        }
+                    }
+                }
+
+
+                .testimonial-pagination {
+                    position: absolute;
+                    bottom: 10px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    display: flex;
+
+                    div {
+                        width: 10px;
+                        height: 10px;
+                        background-color: $variant-blue;
+                        border-radius: 50%;
+                        margin: 0 5px;
+                        cursor: pointer;
+                    }
+
+                    .active {
+                        background-color: $blue;
+                    }
+                }
+            }
+
+
         }
     }
 }
@@ -1579,8 +1717,6 @@ nav {
             }
         }
     }
-
-
 
 
 }
@@ -1824,11 +1960,13 @@ nav {
             }
         }
     }
-    .loan-section2{
-        .loan-section2-container{
-            .left{
+
+    .loan-section2 {
+        .loan-section2-container {
+            .left {
                 display: none;
             }
+
             grid-template-columns: 1fr;
         }
     }

@@ -262,4 +262,109 @@ cardMoveSlider();
 
 
 // Testimonial script
+// Testimonial slider script
+const testimonialSlider = document.querySelector('.testimonialSlider');
+const testimonialSlides = document.querySelectorAll('.testimonialSlide');
+const testimonialPagination = document.querySelector('.testimonial-pagination');
+let testimonialCurrentIndex = 0;
+const testimonialVisibleSlides = 1; // Number of slides visible at a time
+const testimonialTotalSlides = testimonialSlides.length;
+
+// Clone the first and last slides for seamless infinite scrolling
+const testimonialFirstSlideClone = testimonialSlides[0].cloneNode(true);
+const testimonialLastSlideClone = testimonialSlides[testimonialTotalSlides - 1].cloneNode(true);
+
+testimonialSlider.appendChild(testimonialFirstSlideClone);
+testimonialSlider.insertBefore(testimonialLastSlideClone, testimonialSlides[0]);
+
+function testimonialMoveSlider() {
+  testimonialSlider.style.transition = 'transform 0.5s ease-in-out';
+  testimonialSlider.style.transform = `translateX(-${(testimonialCurrentIndex + 1) * 100}%)`;
+
+  if (testimonialCurrentIndex === -1) {
+    setTimeout(() => {
+      testimonialSlider.style.transition = 'none';
+      testimonialCurrentIndex = testimonialTotalSlides - 1;
+      testimonialSlider.style.transform = `translateX(-${testimonialTotalSlides * 100}%)`;
+    }, 500);
+  } else if (testimonialCurrentIndex === testimonialTotalSlides) {
+    setTimeout(() => {
+      testimonialSlider.style.transition = 'none';
+      testimonialCurrentIndex = 0;
+      testimonialSlider.style.transform = `translateX(-${100}%)`;
+    }, 500);
+  }
+
+  testimonialUpdatePagination();
+}
+
+function testimonialNextSlide() {
+  testimonialCurrentIndex++;
+  testimonialMoveSlider();
+}
+
+function testimonialPreviousSlide() {
+  testimonialCurrentIndex--;
+  testimonialMoveSlider();
+}
+
+function testimonialUpdatePagination() {
+  testimonialPagination.innerHTML = '';
+  const testimonialTotalDots = testimonialTotalSlides; // Number of dots should equal the original slides count
+  for (let i = 0; i < testimonialTotalDots; i++) {
+    const testimonialDot = document.createElement('div');
+    if (i === testimonialCurrentIndex || (testimonialCurrentIndex === testimonialTotalSlides && i === 0)) {
+      testimonialDot.classList.add('active');
+    }
+    testimonialDot.addEventListener('click', () => {
+      testimonialCurrentIndex = i;
+      testimonialMoveSlider();
+    });
+    testimonialPagination.appendChild(testimonialDot);
+  }
+}
+
+// Touch events for mobile interaction
+testimonialSlider.addEventListener('touchstart', (e) => {
+  startX = e.touches[0].clientX;
+  startY = e.touches[0].clientY;
+  isDragging = true;
+  testimonialSlider.style.transition = 'none'; // Disable transition during drag
+});
+
+testimonialSlider.addEventListener('touchmove', (e) => {
+  if (!isDragging) return;
+  currentX = e.touches[0].clientX;
+  currentY = e.touches[0].clientY;
+  const diffX = currentX - startX;
+  const diffY = currentY - startY;
+  const angle = Math.atan2(Math.abs(diffY), Math.abs(diffX)) * (180 / Math.PI);
+
+  // Only move the slider if the swipe is mostly horizontal
+  if (angle < angleThreshold) {
+    testimonialSlider.style.transform = `translateX(calc(-${(testimonialCurrentIndex + 1) * 100}% + ${diffX}px))`;
+  }
+});
+
+testimonialSlider.addEventListener('touchend', () => {
+  isDragging = false;
+  const diffX = currentX - startX;
+  const diffY = currentY - startY;
+  const angle = Math.atan2(Math.abs(diffY), Math.abs(diffX)) * (180 / Math.PI);
+
+  // Only trigger slide change if the swipe is horizontal and passes the threshold
+  if (angle < angleThreshold && Math.abs(diffX) > swipeThreshold) {
+    if (diffX > 0) {
+      testimonialPreviousSlide(); // Swipe right
+    } else if (diffX < 0) {
+      testimonialNextSlide(); // Swipe left
+    }
+  } else {
+    testimonialMoveSlider(); // Snap back if not enough swipe or too vertical
+  }
+});
+
+// Initialize the slider at the first real slide
+testimonialSlider.style.transform = `translateX(-${100}%)`;
+testimonialMoveSlider();
 
