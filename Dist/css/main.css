@@ -864,7 +864,7 @@ nav {
   background: #B8C9FF;
   color: #fff;
   border: none;
-  border-radius: 50%;
+  border-radius: 5px;
   width: 30px;
   height: 30px;
   cursor: pointer;
@@ -1334,7 +1334,7 @@ nav {
   background: #B8C9FF;
   color: #fff;
   border: none;
-  border-radius: 50%;
+  border-radius: 5px;
   width: 30px;
   height: 30px;
   cursor: pointer;
@@ -1366,11 +1366,11 @@ nav {
 
 .blog-section {
   background: #f5faff;
+  padding: 4rem 0;
 }
 .blog-section .blog-container {
   width: min(87%, 1200px);
   margin: auto;
-  margin-block: 3rem;
 }
 .blog-section .blog-container__top {
   padding: max(2rem, 4vw);
@@ -1466,6 +1466,101 @@ nav {
 .blog-section .blog-container__lower .blog-card a .icon {
   margin-left: 0.5rem;
   font-size: 20px;
+}
+
+.faqs-section {
+  padding: 8rem 0;
+}
+.faqs-section .faqs-container__top {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.faqs-section .faqs-container__top .special-text {
+  font-size: clamp(1rem, 4vw + 0.5rem, 1.3rem);
+  color: green;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.faqs-section .faqs-container__top h2 {
+  font-size: clamp(1.5rem, 4vw + 0.5rem, 3rem);
+  color: #242424;
+  width: min(60%, 400px);
+  margin: auto;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-family: "Jost", sans-serif;
+}
+.faqs-section .faqs-container__top .normal-text {
+  margin-top: 1rem;
+  font-size: clamp(1rem, 2vw + 0.5rem, 1.1rem);
+  color: #1e2129;
+  margin-bottom: 2rem;
+  width: min(100%, 510px);
+  margin: auto;
+  font-weight: 300;
+}
+.faqs-section .faqs-container__top .normal-text a {
+  color: #1549f3;
+}
+.faqs-section .faqs-container__lower .accordion {
+  width: min(86%, 800px);
+  margin: 20px auto;
+}
+.faqs-section .faqs-container__lower .accordion-item {
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+}
+.faqs-section .faqs-container__lower .accordion-header {
+  background-color: white;
+  padding: max(2rem, 2vw);
+  cursor: pointer;
+  font-size: clamp(1rem, 4vw + 0.5rem, 1.3rem);
+  color: #242424;
+  font-weight: 600;
+  position: relative;
+}
+.faqs-section .faqs-container__lower .accordion-header .close-btn {
+  position: absolute;
+  right: 20px;
+  top: 30px;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  background: #f5faff;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 200ms ease-in-out;
+}
+.faqs-section .faqs-container__lower .accordion-header .close-btn .icon {
+  font-size: 30px;
+  color: #1549f3;
+  transition: 200ms ease-in-out;
+}
+.faqs-section .faqs-container__lower .accordion-header.active .close-btn {
+  background: #1549f3;
+}
+.faqs-section .faqs-container__lower .accordion-header.active .close-btn .icon {
+  transform: rotate(45deg);
+  color: white;
+}
+.faqs-section .faqs-container__lower .accordion-content {
+  max-height: 0;
+  margin: auto;
+  width: min(93%, 800px);
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+.faqs-section .faqs-container__lower .accordion-content p {
+  border-top: 1px solid #B8C9FF;
+  font-size: clamp(1rem, 2vw + 0.5rem, 1.1rem);
+  color: #242424;
+  font-weight: 400;
+  padding-block: max(2rem, 2vw);
+  margin: 0;
 }
 
 @media (max-width: 450px) {

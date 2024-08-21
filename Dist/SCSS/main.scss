@@ -1015,7 +1015,7 @@ nav {
                         background: $variant-blue;
                         color: #fff;
                         border: none;
-                        border-radius: 50%;
+                        border-radius: 5px;
                         width: 30px;
                         height: 30px;
                         cursor: pointer;
@@ -1603,7 +1603,7 @@ nav {
                         background: $variant-blue;
                         color: #fff;
                         border: none;
-                        border-radius: 50%;
+                        border-radius: 5px;
                         width: 30px;
                         height: 30px;
                         cursor: pointer;
@@ -1650,11 +1650,12 @@ nav {
 
 .blog-section {
     background: $lighted-blue;
+    padding: 4rem 0;
 
     .blog-container {
         width: $width-global;
         margin: auto;
-        margin-block: 3rem;
+
 
 
         &__top {
@@ -1775,6 +1776,124 @@ nav {
 }
 
 // blog section In end
+
+// FAQs section In start
+.faqs-section {
+    padding: 8rem 0;
+
+    .faqs-container {
+        &__top {
+            text-align: center;
+            margin-bottom: 2rem;
+
+            .special-text {
+                font-size: $medium-text;
+                color: $green;
+                font-weight: 600;
+                margin-bottom: .5rem;
+            }
+
+            h2 {
+                font-size: $big-text_v2;
+                color: $black;
+                width: min(60%, 400px);
+                margin: auto;
+                margin-bottom: 1rem;
+
+                font-weight: 600;
+                font-family: $large-font;
+            }
+
+            .normal-text {
+                margin-top: 1rem;
+                font-size: $small-text;
+                color: $grey;
+                margin-bottom: 2rem;
+                width: min(100%, 510px);
+                margin: auto;
+                font-weight: 300;
+
+                a {
+                    color: $blue;
+                }
+            }
+        }
+
+        &__lower {
+            .accordion {
+                width: min(86%, 800px);
+                margin: 20px auto;
+            }
+
+            .accordion-item {
+                box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+                border-radius: 10px;
+                margin-bottom: 1.5rem;
+                overflow: hidden;
+            }
+
+            .accordion-header {
+                background-color: $white;
+                padding: max(2rem, 2vw);
+                cursor: pointer;
+                font-size: $medium-text;
+                color: $black;
+                font-weight: 600;
+                position: relative;
+            
+                .close-btn {
+                    position: absolute;
+                    right: 20px;
+                    top: 30px;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 5px;
+                    background: $lighted-blue;
+                    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    transition: 200ms ease-in-out;
+            
+                    .icon {
+                        font-size: 30px;
+                        color: $blue;
+                        transition: 200ms ease-in-out;
+                    }
+                }
+            
+                &.active .close-btn {
+                    background: $blue;
+                }
+            
+                &.active .close-btn .icon {
+                    transform: rotate(45deg);
+                    color: $white
+                }
+            }
+            
+
+            .accordion-content {
+                max-height: 0;
+                margin: auto;
+                width: min(93%, 800px);
+                overflow: hidden;
+                transition: max-height 0.3s ease-out;
+            }
+
+            .accordion-content p {
+                border-top: 1px solid $variant-blue;
+                font-size: $small-text;
+                color: $black;
+                font-weight: 400;
+                padding-block: max(2rem, 2vw);
+                margin: 0;
+            }
+        }
+    }
+}
+
+// FAQs section In end
 
 
 

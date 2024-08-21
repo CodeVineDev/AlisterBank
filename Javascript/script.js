@@ -368,3 +368,30 @@ testimonialSlider.addEventListener('touchend', () => {
 testimonialSlider.style.transform = `translateX(-${100}%)`;
 testimonialMoveSlider();
 
+
+
+
+
+document.querySelectorAll('.accordion-header').forEach(header => {
+  header.addEventListener('click', () => {
+      const activeHeader = document.querySelector('.accordion-header.active');
+      
+      // Close the previously active accordion if it's not the current one
+      if (activeHeader && activeHeader !== header) {
+          activeHeader.classList.remove('active');
+          activeHeader.nextElementSibling.style.maxHeight = '0px';
+      }
+
+      // Toggle the clicked header's active state
+      header.classList.toggle('active');
+      
+      // Toggle the content's max-height based on active state
+      const accordionContent = header.nextElementSibling;
+      if (header.classList.contains('active')) {
+          accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
+      } else {
+          accordionContent.style.maxHeight = '0px';
+      }
+  });
+});
+
