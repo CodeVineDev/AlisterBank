@@ -1317,13 +1317,14 @@ nav {
   font-size: clamp(1rem, 2vw + 0.5rem, 1.1rem);
   font-weight: 400;
   color: green;
+  margin-bottom: 0.5rem;
 }
 .testimonial-section .testimonial-container__lower-content .testimonial-wrap .control-btns {
   width: 100%;
   margin: auto;
   position: absolute;
-  top: 30%;
-  transform: translateY(-30%);
+  top: 37%;
+  transform: translateY(-37%);
   height: 1px;
   display: flex;
   justify-content: space-between;
@@ -1335,8 +1336,8 @@ nav {
   color: #fff;
   border: none;
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   cursor: pointer;
   transition: 200ms ease-in-out;
 }
