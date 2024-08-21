@@ -1318,13 +1318,15 @@ nav {
   font-size: clamp(1rem, 2vw + 0.5rem, 1.1rem);
   font-weight: 400;
   color: green;
-  margin-bottom: 1rem;
 }
 .testimonial-section .testimonial-container__lower-content .testimonial-wrap .control-btns {
-  width: min(100%, 120px);
+  width: 100%;
+  margin: auto;
+  position: absolute;
+  top: 30%;
+  transform: translateY(-30%);
   height: 1px;
   display: flex;
-  margin: auto;
   justify-content: space-between;
 }
 .testimonial-section .testimonial-container__lower-content .testimonial-wrap .control-btns .testimonial-prev,
@@ -1334,8 +1336,8 @@ nav {
   color: #fff;
   border: none;
   border-radius: 50%;
-  width: 30px;
-  height: 30px;
+  width: 50px;
+  height: 50px;
   cursor: pointer;
   transition: 200ms ease-in-out;
 }
@@ -1348,6 +1350,7 @@ nav {
   bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
+  transform: translateY(-40px);
   display: flex;
 }
 .testimonial-section .testimonial-container__lower-content .testimonial-wrap .testimonial-pagination div {
