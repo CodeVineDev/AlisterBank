@@ -1516,7 +1516,7 @@ nav {
 }
 .faqs-section .faqs-container__lower .accordion-header {
   background-color: white;
-  padding: max(2rem, 2vw);
+  padding: max(2rem, 1vw);
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -1565,6 +1565,61 @@ nav {
   margin: 0;
 }
 
+.secondgetStarted-section {
+  background: white;
+}
+.secondgetStarted-section .secondgetStarted-container {
+  background: #1549f3;
+  width: min(87%, 1200px);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: auto;
+  padding: max(2rem, 2vw);
+  border-radius: 10px;
+}
+.secondgetStarted-section .secondgetStarted-container__left {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+.secondgetStarted-section .secondgetStarted-container__left .left-container h2 {
+  font-size: clamp(1.5rem, 4vw + 0.5rem, 3rem);
+  color: white;
+  text-wrap: balance;
+  font-weight: 600;
+  font-family: "Jost", sans-serif;
+}
+.secondgetStarted-section .secondgetStarted-container__left .left-container .normal-text {
+  margin-top: 1rem;
+  font-size: clamp(1rem, 2vw + 0.5rem, 1.1rem);
+  color: #f5faff;
+  margin-bottom: 2rem;
+  width: min(100%, 510px);
+  font-weight: 300;
+}
+.secondgetStarted-section .secondgetStarted-container__left .left-container button {
+  background: rgb(52, 198, 255);
+  color: white;
+  border: 1px solid #1549f3;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  transition: 200ms ease-in-out;
+  font-weight: 400;
+  font-size: clamp(1rem, 2vw + 0.5rem, 1.1rem);
+}
+.secondgetStarted-section .secondgetStarted-container__left .left-container button:hover {
+  background: white;
+  color: #1549f3;
+  border: 1px solid #B8C9FF;
+}
+.secondgetStarted-section .secondgetStarted-container__right {
+  width: min(60%, 800px);
+  margin: auto;
+}
+.secondgetStarted-section .secondgetStarted-container__right img {
+  width: 100%;
+}
+
 @media (max-width: 450px) {
   .homepage .lower-content button {
     width: 100%;
@@ -1579,6 +1634,9 @@ nav {
   }
   .investment-container .investment-section .left-investment .special-text {
     font-size: clamp(1rem, 2vw + 0.5rem, 1.1rem);
+  }
+  .faqs-section .faqs-container__lower .accordion-header {
+    padding: max(1rem, 1vw);
   }
 }
 @media (max-width: 800px) {
@@ -1790,6 +1848,12 @@ nav {
     grid-template-columns: 1fr;
   }
   .loan-section2 .loan-section2-container .left {
+    display: none;
+  }
+  .secondgetStarted-section .secondgetStarted-container {
+    grid-template-columns: 1fr;
+  }
+  .secondgetStarted-section .secondgetStarted-container__right {
     display: none;
   }
 }/*# sourceMappingURL=main.css.map */

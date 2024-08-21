@@ -1835,7 +1835,7 @@ nav {
 
             .accordion-header {
                 background-color: $white;
-                padding: max(2rem, 2vw);
+                padding: max(2rem, 1vw);
                 cursor: pointer;
                 display: flex;
                 align-items: center;
@@ -1895,6 +1895,74 @@ nav {
 
 // FAQs section In end
 
+// seconc getcardSlider In start
+.secondgetStarted-section {
+    background: $white;
+    .secondgetStarted-container {
+        background: $blue;
+        width: $width-global;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin: auto;
+        padding: max(2rem, 2vw);
+        border-radius: 10px;
+
+        &__left {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+
+            .left-container {
+                h2 {
+                    font-size: $big-text_v2;
+                    color: $white;
+                    text-wrap: balance;
+                    font-weight: 600;
+                    font-family: $large-font;
+                }
+
+                .normal-text {
+                    margin-top: 1rem;
+                    font-size: $small-text;
+                    color: $lighted-blue;
+                    margin-bottom: 2rem;
+                    width: min(100%, 510px);
+                    font-weight: 300;
+                }
+
+                button {
+                    background: rgb(52, 198, 255);
+                    color: $white;
+                    border: 1px solid $blue;
+                    padding: 1rem 2rem;
+                    border-radius: 10px;
+                    transition: 200ms ease-in-out;
+                    font-weight: 400;
+                    font-size: $small-text;
+
+                    &:hover {
+                        background: $white;
+                        color: $blue;
+                        border: 1px solid $variant-blue;
+                    }
+                }
+            }
+           
+        }
+
+        &__right {
+            width: min(60%, 800px);
+            margin: auto;
+
+            img {
+             width: 100%;  
+            }
+        }
+    }
+}
+
+// seconc getcardSlider In end
+
 
 
 // media query In start
@@ -1940,6 +2008,15 @@ nav {
         }
     }
 
+    .faqs-section {
+        .faqs-container {
+            &__lower {
+                .accordion-header {
+                    padding: max(1rem, 1vw);
+                }
+            }
+        }
+    }
 
 
 }
@@ -1989,8 +2066,9 @@ nav {
 
 
                         }
+
                         span:nth-child(2) {
-                          padding-top: .3rem;
+                            padding-top: .3rem;
                         }
                     }
                 }
@@ -2267,6 +2345,14 @@ nav {
         }
     }
 
+    .secondgetStarted-section{
+        .secondgetStarted-container{
+            grid-template-columns: 1fr;
+            &__right{
+                display: none;
+            }
+        }
+    }
 
 
 
