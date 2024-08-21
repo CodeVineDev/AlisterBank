@@ -1269,7 +1269,7 @@ nav {
 }
 .testimonial-section .testimonial-container__lower-content .testimonial-wrap .testimonialSlider-container .testimonialSlider .testimonialSlide {
   display: grid;
-  padding: 2rem;
+  padding: max(1.1rem, 4vw) 1rem;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr));
   gap: 2rem;
   min-width: 100%;

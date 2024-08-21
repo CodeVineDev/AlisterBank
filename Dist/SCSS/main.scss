@@ -1521,7 +1521,7 @@ nav {
 
                         .testimonialSlide {
                             display: grid;
-                            padding: 2rem;
+                            padding: max(1.1rem, 4vw) 1rem;
                             grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr));
                             gap: 2rem;
                             min-width: 100%;
@@ -1714,6 +1714,20 @@ nav {
         .partners-header {
             h2 {
                 font-size: $small-text;
+            }
+        }
+    }
+
+    .testimonial-section{
+        .testimonial-container{
+            &__lower-content{
+                .testimonial-wrap{
+                    .testimonialSlider-container{
+                        .testimonialSlider{
+                            
+                        }
+                    }
+                }
             }
         }
     }
