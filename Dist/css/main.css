@@ -1321,7 +1321,6 @@ nav {
 }
 .testimonial-section .testimonial-container__lower-content .testimonial-wrap .control-btns {
   width: 100%;
-  margin: auto;
   position: absolute;
   top: 37%;
   transform: translateY(-37%);
@@ -1336,8 +1335,8 @@ nav {
   color: #fff;
   border: none;
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   cursor: pointer;
   transition: 200ms ease-in-out;
 }
