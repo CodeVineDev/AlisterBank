@@ -1282,7 +1282,7 @@ nav {
   align-items: center;
 }
 .testimonial-section .testimonial-container__lower-content .testimonial-wrap .testimonialSlider-container .testimonialSlider .testimonialSlide .left .imgcon {
-  width: min(90%, 300px);
+  width: min(50%, 300px);
   padding: 0.1rem;
   background: #B8C9FF;
   border-radius: 20px;
