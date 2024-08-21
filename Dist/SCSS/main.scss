@@ -1619,9 +1619,9 @@ nav {
                 .testimonial-pagination {
                     position: absolute;
                     bottom: 10px;
-                    left: 50%;
+                    left: 45%;
                     transform: translateX(-50%);
-                    transform: translateY(-40px);
+                    transform: translateY(-35px);
                     display: flex;
 
                     div {
@@ -1655,7 +1655,6 @@ nav {
     .blog-container {
         width: $width-global;
         margin: auto;
-
 
 
         &__top {
@@ -1732,6 +1731,7 @@ nav {
                         align-items: center;
                         font-size: $small-text;
                         color: $black;
+                        width: 100%;
 
                         .icon {
                             font-size: 20px;
@@ -1779,12 +1779,13 @@ nav {
 
 // FAQs section In start
 .faqs-section {
-    padding: 8rem 0;
+    padding: 5rem 0;
 
     .faqs-container {
         &__top {
             text-align: center;
             margin-bottom: 2rem;
+            padding: 1rem;
 
             .special-text {
                 font-size: $medium-text;
@@ -1796,7 +1797,7 @@ nav {
             h2 {
                 font-size: $big-text_v2;
                 color: $black;
-                width: min(60%, 400px);
+                width: min(70%, 400px);
                 margin: auto;
                 margin-bottom: 1rem;
 
@@ -1809,7 +1810,7 @@ nav {
                 font-size: $small-text;
                 color: $grey;
                 margin-bottom: 2rem;
-                width: min(100%, 510px);
+                width: min(95%, 510px);
                 margin: auto;
                 font-weight: 300;
 
@@ -1836,17 +1837,16 @@ nav {
                 background-color: $white;
                 padding: max(2rem, 2vw);
                 cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
                 font-size: $medium-text;
                 color: $black;
                 font-weight: 600;
                 position: relative;
-            
+
                 .close-btn {
-                    position: absolute;
-                    right: 20px;
-                    top: 30px;
-                    width: 40px;
-                    height: 40px;
+                    height: max-content;
                     border-radius: 5px;
                     background: $lighted-blue;
                     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
@@ -1854,24 +1854,24 @@ nav {
                     align-items: center;
                     justify-content: center;
                     transition: 200ms ease-in-out;
-            
+
                     .icon {
                         font-size: 30px;
                         color: $blue;
                         transition: 200ms ease-in-out;
                     }
                 }
-            
+
                 &.active .close-btn {
                     background: $blue;
                 }
-            
+
                 &.active .close-btn .icon {
                     transform: rotate(45deg);
                     color: $white
                 }
             }
-            
+
 
             .accordion-content {
                 max-height: 0;
@@ -1975,12 +1975,23 @@ nav {
         }
     }
 
-    .testimonial-section {
-        .testimonial-container {
-            &__lower-content {
-                .testimonial-wrap {
-                    .testimonialSlider-container {
-                        .testimonialSlider {}
+    .blog-section {
+        .blog-container {
+            &__lower {
+                .blog-card {
+                    .spancon {
+                        flex-direction: column;
+
+                        span:nth-child(1) {
+                            border-right: none;
+                            border-bottom: 1px solid $variant-blue;
+                            padding-bottom: .3rem;
+
+
+                        }
+                        span:nth-child(2) {
+                          padding-top: .3rem;
+                        }
                     }
                 }
             }
@@ -1988,7 +1999,23 @@ nav {
     }
 
 
+    .faqs-section {
+        .faqs-container {
+            &__top {
+                .special-text {
+                    font-size: $small-text
+                }
+            }
+
+            &__lower {
+                .accordion-header {
+                    font-size: $small-text;
+                }
+            }
+        }
+    }
 }
+
 
 @include smallpc {
     .homepage {

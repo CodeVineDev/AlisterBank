@@ -1347,9 +1347,9 @@ nav {
 .testimonial-section .testimonial-container__lower-content .testimonial-wrap .testimonial-pagination {
   position: absolute;
   bottom: 10px;
-  left: 50%;
+  left: 45%;
   transform: translateX(-50%);
-  transform: translateY(-40px);
+  transform: translateY(-35px);
   display: flex;
 }
 .testimonial-section .testimonial-container__lower-content .testimonial-wrap .testimonial-pagination div {
@@ -1438,6 +1438,7 @@ nav {
   align-items: center;
   font-size: clamp(1rem, 2vw + 0.5rem, 1.1rem);
   color: #242424;
+  width: 100%;
 }
 .blog-section .blog-container__lower .blog-card .spancon span .icon {
   font-size: 20px;
@@ -1469,11 +1470,12 @@ nav {
 }
 
 .faqs-section {
-  padding: 8rem 0;
+  padding: 5rem 0;
 }
 .faqs-section .faqs-container__top {
   text-align: center;
   margin-bottom: 2rem;
+  padding: 1rem;
 }
 .faqs-section .faqs-container__top .special-text {
   font-size: clamp(1rem, 4vw + 0.5rem, 1.3rem);
@@ -1484,7 +1486,7 @@ nav {
 .faqs-section .faqs-container__top h2 {
   font-size: clamp(1.5rem, 4vw + 0.5rem, 3rem);
   color: #242424;
-  width: min(60%, 400px);
+  width: min(70%, 400px);
   margin: auto;
   margin-bottom: 1rem;
   font-weight: 600;
@@ -1495,7 +1497,7 @@ nav {
   font-size: clamp(1rem, 2vw + 0.5rem, 1.1rem);
   color: #1e2129;
   margin-bottom: 2rem;
-  width: min(100%, 510px);
+  width: min(95%, 510px);
   margin: auto;
   font-weight: 300;
 }
@@ -1516,17 +1518,17 @@ nav {
   background-color: white;
   padding: max(2rem, 2vw);
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   font-size: clamp(1rem, 4vw + 0.5rem, 1.3rem);
   color: #242424;
   font-weight: 600;
   position: relative;
 }
 .faqs-section .faqs-container__lower .accordion-header .close-btn {
-  position: absolute;
-  right: 20px;
-  top: 30px;
-  width: 40px;
-  height: 40px;
+  height: -moz-max-content;
+  height: max-content;
   border-radius: 5px;
   background: #f5faff;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
@@ -1593,6 +1595,23 @@ nav {
     font-size: clamp(1rem, 2vw + 0.5rem, 1.1rem);
   }
   .partners .partners-header h2 {
+    font-size: clamp(1rem, 2vw + 0.5rem, 1.1rem);
+  }
+  .blog-section .blog-container__lower .blog-card .spancon {
+    flex-direction: column;
+  }
+  .blog-section .blog-container__lower .blog-card .spancon span:nth-child(1) {
+    border-right: none;
+    border-bottom: 1px solid #B8C9FF;
+    padding-bottom: 0.3rem;
+  }
+  .blog-section .blog-container__lower .blog-card .spancon span:nth-child(2) {
+    padding-top: 0.3rem;
+  }
+  .faqs-section .faqs-container__top .special-text {
+    font-size: clamp(1rem, 2vw + 0.5rem, 1.1rem);
+  }
+  .faqs-section .faqs-container__lower .accordion-header {
     font-size: clamp(1rem, 2vw + 0.5rem, 1.1rem);
   }
 }
