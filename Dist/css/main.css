@@ -381,7 +381,6 @@ nav {
   white-space: nowrap;
 }
 .slide img {
-  filter: grayscale(1);
   width: 100px;
 }
 
@@ -412,8 +411,7 @@ nav {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
-  border: 0.1px solid rgba(218, 218, 218, 0.6);
-  padding: max(1rem, 5vw) 2rem;
+  padding-block: max(1rem, 5vw) 2rem;
   width: min(87%, 1200px);
   margin: auto;
 }
@@ -485,8 +483,7 @@ nav {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
-  border: 0.1px solid rgba(218, 218, 218, 0.6);
-  padding: max(1rem, 5vw) 2rem;
+  padding-block: max(1rem, 5vw) 2rem;
   width: min(87%, 1200px);
   margin: auto;
 }
@@ -582,7 +579,7 @@ nav {
   width: min(87%, 1200px);
   margin: auto;
   text-align: center;
-  padding: max(0.5rem, 5vw) 1rem;
+  padding: max(1rem, 3vw);
   transform: translateY(-20px);
 }
 .openaccount-container .openaccount-section .upper-info .special-text {
@@ -612,10 +609,10 @@ nav {
 .openaccount-container .openaccount-section .lower-info {
   background: white;
   width: 100%;
-  padding-bottom: 5rem;
+  padding-bottom: 0.1rem;
 }
 .openaccount-container .openaccount-section .lower-info .lowerinfo-container {
-  transform: translateY(-20px);
+  transform: translateY(-50px);
   width: min(87%, 1200px);
   margin: auto;
   display: grid;
@@ -670,15 +667,14 @@ nav {
 
 .getapp-container {
   width: 100%;
-  height: 45rem;
+  height: 40rem;
   display: flex;
-  align-items: center;
 }
 .getapp-container .getapp-section {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
   gap: 2rem;
-  padding: max(1rem, 5vw) 2rem;
+  padding: max(1rem, 3vw);
   width: min(87%, 1200px);
   margin: auto;
 }
@@ -789,7 +785,7 @@ nav {
   width: min(87%, 1200px);
   margin: auto;
   position: relative;
-  margin-bottom: 4rem;
+  margin-block: 4rem;
 }
 .getcard-container .backgroundimg-con {
   position: absolute;
@@ -797,7 +793,6 @@ nav {
   top: 50px;
   width: 550px;
   border-radius: 50%;
-  background: #f5faff;
 }
 .getcard-container .backgroundimg-con .background-img {
   width: 100%;
