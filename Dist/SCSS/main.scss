@@ -41,7 +41,7 @@ body {
 }
 
 #hidden-nav {
-    transition: 200ms ease-in-out;
+    transition: 300ms ease-in-out;
     background: $white;
     width: min(95%, 1200px);
     left: 50%;
@@ -50,6 +50,7 @@ body {
 
     .navbar {
         background: transparent;
+        width: min(95%, 1200px);
     }
 }
 
@@ -108,12 +109,171 @@ nav {
             width: 100%;
             flex: 2 0;
 
+            .dropdown {
+                position: relative;
+            }
+
+            .link {
+                border: none;
+                background: none;
+                font-weight: 400;
+                color: $black;
+                font-size: $small-text;
+                cursor: pointer;
+
+                .icon {
+                    font-size: 12px;
+                    color: $black;
+                    transition: 200ms ease-in-out;
+                }
+            }
+
+            .dropdown_content {
+                position: absolute;
+                opacity: 0;
+                border: 1px solid $variant-blue;
+                visibility: hidden;
+                left: 0;
+                top: 2rem;
+                transform: translateY(-10px);
+                width: 151px;
+                transition: 200ms ease-in;
+                border-radius: 5px;
+                box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.01);
+                padding: .25rem;
+                padding-block: .5rem;
+                background: $white;
+            }
+
+            .dropdown_content>a {
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+                text-align: center;
+                padding: .25rem;
+                color: $black;
+                font-size: $small-text;
+                font-weight: 400;
+
+                &:hover {
+                    .icon {
+                        color: $blue;
+                    }
+                }
+
+                .icon {
+                    margin-left: 5px;
+                    font-size: 12px;
+                    color: $black;
+                    transition: 200ms ease-in-out;
+                    transition: 200ms ease-in-out;
+                }
+            }
+
+            /* Hover effect for dropdown */
+            .dropdown:hover .dropdown_content,
+            .dropdown:focus-within .dropdown_content {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .dropdown:hover .link,
+            .dropdown:focus-within .link {
+                color: $blue;
+
+                .icon {
+                    color: $blue;
+                }
+            }
+
+
+            .dropdown-child {
+                position: relative;
+            }
+
+            .link-child {
+                border: none;
+                background: none;
+                font-weight: 400;
+                color: $black;
+                font-size: $small-text;
+                cursor: pointer;
+
+                .icon {
+                    font-size: 12px;
+                    color: $black;
+                    transition: 200ms ease-in-out;
+                }
+            }
+
+            .dropdown_content-child {
+                position: absolute;
+                opacity: 0;
+                border: 1px solid $variant-blue;
+                visibility: hidden;
+                left: 100%;
+                top: 0;
+                transform: translateX(-10px);
+                width: 151px;
+                transition: 200ms ease-in;
+                border-radius: 5px;
+                box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.01);
+                padding: .25rem;
+                padding-block: .5rem;
+                background: $white;
+            }
+
+            .dropdown_content-child>a {
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+                text-align: center;
+                padding: .25rem;
+                color: $black;
+                font-size: $small-text;
+                font-weight: 400;
+
+                &:hover {
+                    .icon {
+                        color: $blue;
+                    }
+                }
+
+                .icon {
+                    margin-left: 5px;
+                    font-size: 12px;
+                    color: $black;
+                    transition: 200ms ease-in-out;
+                    transition: 200ms ease-in-out;
+                }
+            }
+
+            /* Hover effect for dropdown */
+            .dropdown-child:hover .dropdown_content-child,
+            .dropdown-child:focus-within .dropdown_content-child {
+                transform: translateX(0);
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .dropdown-child:hover .link-child,
+            .dropdown-child:focus-within .link-child {
+                color: $blue;
+
+                .icon {
+                    color: $blue;
+                }
+            }
+
+
             ul {
                 display: flex;
                 justify-content: center;
 
+
                 li {
-                    padding: 5px 10px;
+                    padding: 5px 7px;
 
                     a {
                         padding: 5px;
@@ -428,7 +588,7 @@ nav {
     white-space: nowrap;
 
     img {
-      
+
         width: 100px;
     }
 }
@@ -783,7 +943,7 @@ nav {
     width: 100%;
     height: 40rem;
     display: flex;
-   
+
 
     .getapp-section {
         display: grid;
@@ -930,7 +1090,7 @@ nav {
         top: 50px;
         width: 550px;
         border-radius: 50%;
-       
+
 
         .background-img {
             width: 100%;
@@ -2363,7 +2523,7 @@ nav {
                 box-shadow: 1px 1px 3px #00000050;
 
                 ul {
-                    padding-block: 3rem;
+                    padding: 3rem 0 .5rem 0;
 
                     li {
                         border: .1px solid rgb(231, 231, 231);
@@ -2387,6 +2547,26 @@ nav {
                             transition: 200ms ease-in-out;
 
                         }
+
+                    }
+                }
+
+                button {
+                    width: min(30%, 150px);
+                    background: $blue;
+                    margin-left: 6.4%;
+                    color: $white;
+                    font-size: $small-text;
+                    font-weight: 300;
+                    border: 1px solid transparent;
+                    padding: .5rem;
+                    border-radius: 5px;
+                    transition: 200ms ease-in-out;
+
+                    &:hover {
+                        background: $white;
+                        color: $blue;
+                        border: 1px solid $variant-blue;
 
                     }
                 }

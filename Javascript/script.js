@@ -372,6 +372,8 @@ testimonialMoveSlider();
 
 
 
+
+// ACCORDIION SCRIPT
 document.querySelectorAll('.accordion-header').forEach(header => {
   header.addEventListener('click', () => {
       const activeHeader = document.querySelector('.accordion-header.active');
