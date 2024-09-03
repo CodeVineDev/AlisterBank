@@ -423,4 +423,54 @@ nav {
     }
 }
 
+.home-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    width: $width-global;
+    margin: auto;
 
+    &__left {
+        display: flex;
+        align-items: center;
+        h1 {
+            font-size: $big-text;
+            color: $black;
+            margin-bottom: 1rem;
+        }
+
+        .identification-link {
+            display: flex;
+            align-items: center;
+            gap: .3rem;
+
+            .icon {
+                color: $blue;
+            }
+
+            p {
+                color: $black;
+                a {
+                    font-size: $small-text;
+                    color: $black;
+                    transition: 200ms ease-in-out;
+                    &:hover{
+                        color: $blue;
+                    }
+                }
+
+            }
+        }
+    }
+
+    &__right {
+        display: flex;
+        justify-content: end;
+
+        img {
+            width: min(100%, 600px);
+            margin-right: -60px;
+           
+        }
+    }
+}
