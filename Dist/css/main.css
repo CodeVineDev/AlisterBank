@@ -71,7 +71,7 @@ nav {
 
 .nav-wrap {
   width: 100%;
-  filter: drop-shadow(10px 1px 10px rgba(152, 176, 255, 0.3137254902));
+  filter: drop-shadow(5px 5px 15px rgba(152, 176, 255, 0.2274509804));
   position: relative;
   top: 0;
   z-index: 100;
@@ -139,7 +139,6 @@ nav {
   width: 151px;
   transition: 200ms ease-in;
   border-radius: 5px;
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.01);
   padding: 0.25rem;
   padding-block: 0.5rem;
   background: white;
@@ -205,7 +204,7 @@ nav {
   width: 151px;
   transition: 200ms ease-in;
   border-radius: 5px;
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.01);
+  box-shadow: 5px 5px 15px rgba(152, 176, 255, 0.2274509804);
   padding: 0.25rem;
   padding-block: 0.5rem;
   background: white;
@@ -440,7 +439,7 @@ nav {
   background: white;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
-  box-shadow: 10px 1px 10px rgba(152, 176, 255, 0.3137254902);
+  box-shadow: 5px 5px 15px rgba(152, 176, 255, 0.2274509804);
 }
 .partners .false-block {
   width: 57px;
@@ -474,7 +473,7 @@ nav {
   width: 40px;
   z-index: 1000;
   height: 40px;
-  box-shadow: 3px 3px 10px rgba(152, 176, 255, 0.5960784314);
+  box-shadow: 5px 5px 15px rgba(152, 176, 255, 0.2274509804);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -759,7 +758,7 @@ nav {
   padding: max(0.5rem, 4vw) 2rem;
   background: white;
   text-align: center;
-  box-shadow: 10px 1px 10px rgba(152, 176, 255, 0.3137254902);
+  box-shadow: 5px 5px 15px rgba(152, 176, 255, 0.2274509804);
 }
 .openaccount-container .openaccount-section .lower-info .lowerinfo-container__card .card-icon {
   margin: auto;
@@ -1138,7 +1137,7 @@ nav {
 }
 .getintouch-section .getintouch-container {
   background: white;
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 5px 5px 15px rgba(152, 176, 255, 0.2274509804);
   transform: translateY(150px);
   border-radius: 40px;
   width: min(90%, 700px);
@@ -1252,7 +1251,7 @@ nav {
   transition: 200ms ease-in-out;
   padding: 1rem;
   padding-block: 2rem;
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 5px 5px 15px rgba(152, 176, 255, 0.2274509804);
   border: 1px solid transparent;
 }
 .loan-section .loan-container__right .loan-box .card-icon {
@@ -1639,7 +1638,7 @@ nav {
   margin: 20px auto;
 }
 .faqs-section .faqs-container__lower .accordion-item {
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 5px 5px 15px rgba(152, 176, 255, 0.2274509804);
   border-radius: 10px;
   margin-bottom: 1.5rem;
   overflow: hidden;
@@ -1661,7 +1660,7 @@ nav {
   height: max-content;
   border-radius: 5px;
   background: #f5faff;
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 5px 5px 15px rgba(152, 176, 255, 0.2274509804);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2008,7 +2007,7 @@ nav {
     height: 0;
     overflow: hidden;
     transition: 200ms ease-in-out;
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3137254902);
+    box-shadow: 5px 5px 15px rgba(152, 176, 255, 0.2274509804);
   }
   .nav-wrap .navbar .dropnav-container ul {
     padding: 3rem 0 0.5rem 0;

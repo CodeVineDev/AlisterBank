@@ -66,7 +66,7 @@ nav {
 
 .nav-wrap {
     width: 100%;
-    filter: drop-shadow(10px 1px 10px #98b0ff50);
+    filter: drop-shadow($global-shadow);
     position: relative;
     top: 0;
     z-index: 100;
@@ -139,7 +139,6 @@ nav {
                 width: 151px;
                 transition: 200ms ease-in;
                 border-radius: 5px;
-                box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.01);
                 padding: .25rem;
                 padding-block: .5rem;
                 background: $white;
@@ -218,7 +217,7 @@ nav {
                 width: 151px;
                 transition: 200ms ease-in;
                 border-radius: 5px;
-                box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.01);
+                box-shadow: $global-shadow;
                 padding: .25rem;
                 padding-block: .5rem;
                 background: $white;
@@ -397,7 +396,7 @@ nav {
     width: 40px;
     z-index: 1000;
     height: 40px;
-    box-shadow: 3px 3px 10px #98b0ff98;
+    box-shadow: $global-shadow;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -423,54 +422,173 @@ nav {
     }
 }
 
-.home-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-    width: $width-global;
-    margin: auto;
+.home-section {
+    width: 100%;
+    background: $lighted-blue;
+    margin-bottom: 10rem;
 
-    &__left {
-        display: flex;
-        align-items: center;
-        h1 {
-            font-size: $big-text;
-            color: $black;
-            margin-bottom: 1rem;
-        }
+    .home-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        width: $width-global;
+        margin: auto;
+        height: 30rem;
+        overflow: hidden;
 
-        .identification-link {
+        &__left {
             display: flex;
             align-items: center;
-            gap: .3rem;
+            position: relative;
 
-            .icon {
-                color: $blue;
+            img {
+                width: 80%;
+                position: absolute;
+                top: -10%;
+                left: -10%;
+                filter: grayscale(2);
+               opacity: .08;
             }
 
-            p {
-                color: $black;
-                a {
-                    font-size: $small-text;
+            .wrap {
+                z-index: 10;
+                h1 {
+                    font-size: $big-text;
                     color: $black;
-                    transition: 200ms ease-in-out;
-                    &:hover{
-                        color: $blue;
-                    }
+                    margin-bottom: 1rem;
                 }
 
+                .identification-link {
+                    display: flex;
+                    align-items: center;
+                    gap: .3rem;
+
+                    .icon {
+                        color: $blue;
+                    }
+
+                    p {
+                        color: $black;
+
+                        a {
+                            font-size: $small-text;
+                            color: $black;
+                            transition: 200ms ease-in-out;
+
+                            &:hover {
+                                color: $blue;
+                            }
+                        }
+
+                    }
+                }
             }
         }
+
+        &__right {
+            display: flex;
+            justify-content: end;
+
+            img {
+                width: min(100%, 600px);
+                margin-right: -60px;
+
+            }
+
+        }
     }
+}
 
-    &__right {
-        display: flex;
-        justify-content: end;
+.about-section {
+    width: 100%;
+    margin-bottom: 5rem;
 
-        img {
-            width: min(100%, 600px);
-            margin-right: -60px;
-           
+    .about-container {
+        width: $width-global;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+
+        &__left {
+
+            color: $black;
+
+            .special-text {
+                font-size: $medium-text;
+                color: $green;
+                font-weight: 600;
+                margin-bottom: 1rem;
+            }
+
+            h1 {
+                font-size: $big-text;
+                margin-bottom: 1rem;
+            }
+
+            .normal-text {
+                font-size: $small-text;
+                margin-bottom: 2rem;
+
+            }
+
+            .counter-section {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 2rem;
+
+
+                .counter-box{
+                    border-radius: 10px;
+                    background: $white;
+                    box-shadow: $global-shadow;
+                    padding: 2rem;
+                    padding-block: max(2rem, 2vw);
+                    text-align: center;
+
+                    .label {
+                        font-size: $small-text;
+                    }
+
+                    .counter {
+                        font-size: $medium-text;
+                        font-weight: 800;
+
+                        span {
+                            color: $blue;
+                        }
+                    }
+
+                }
+            }
+        }
+
+        &__right {
+
+            .image-container {
+                position: relative;
+
+                img {
+                    border: 8px solid $white;
+                    border-radius: 10px;
+                    position: absolute;
+                }
+
+                .img-1 {
+                    left: 50px;
+
+                }
+
+                .img-2 {
+                    left: 230px;
+                    top: 160px;
+                }
+
+                .img-3 {
+                    left: 0;
+                    top: 320px;
+                }
+            }
         }
     }
 }

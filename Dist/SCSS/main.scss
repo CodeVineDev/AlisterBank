@@ -67,7 +67,7 @@ nav {
 
 .nav-wrap {
     width: 100%;
-    filter: drop-shadow(10px 1px 10px #98b0ff50);
+    filter: drop-shadow($global-shadow);
     position: relative;
     top: 0;
     z-index: 100;
@@ -140,7 +140,6 @@ nav {
                 width: 151px;
                 transition: 200ms ease-in;
                 border-radius: 5px;
-                box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.01);
                 padding: .25rem;
                 padding-block: .5rem;
                 background: $white;
@@ -219,7 +218,7 @@ nav {
                 width: 151px;
                 transition: 200ms ease-in;
                 border-radius: 5px;
-                box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.01);
+                box-shadow: $global-shadow;
                 padding: .25rem;
                 padding-block: .5rem;
                 background: $white;
@@ -503,7 +502,7 @@ nav {
     background: $white;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
-    box-shadow: 10px 1px 10px #98b0ff50;
+    box-shadow: $global-shadow;
 
 
     .false-block {
@@ -543,7 +542,7 @@ nav {
     width: 40px;
     z-index: 1000;
     height: 40px;
-    box-shadow: 3px 3px 10px #98b0ff98;
+    box-shadow: $global-shadow;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -880,8 +879,7 @@ nav {
                     padding: max(.5rem, 4vw) 2rem;
                     background: $white;
                     text-align: center;
-                    box-shadow: 10px 1px 10px #98b0ff50;
-
+                    box-shadow: $global-shadow;
 
                     .card-icon {
                         margin: auto;
@@ -1355,7 +1353,7 @@ nav {
 
     .getintouch-container {
         background: $white;
-        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+        box-shadow: $global-shadow;
         transform: translateY(150px);
         border-radius: 40px;
         width: min(90%, 700px);
@@ -1496,7 +1494,7 @@ nav {
                 transition: 200ms ease-in-out;
                 padding: 1rem;
                 padding-block: max(2rem, 1.2rem);
-                box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+                box-shadow: $global-shadow;
                 border: 1px solid transparent;
 
                 .card-icon {
@@ -1986,7 +1984,7 @@ nav {
             }
 
             .accordion-item {
-                box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+                box-shadow: $global-shadow;
                 border-radius: 10px;
                 margin-bottom: 1.5rem;
                 overflow: hidden;
@@ -2008,7 +2006,7 @@ nav {
                     height: max-content;
                     border-radius: 5px;
                     background: $lighted-blue;
-                    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+                    box-shadow: $global-shadow;
                     display: flex;
                     align-items: center;
                     justify-content: center;
@@ -2521,7 +2519,7 @@ nav {
                 height: 0;
                 overflow: hidden;
                 transition: 200ms ease-in-out;
-                box-shadow: 1px 1px 3px #00000050;
+                box-shadow: $global-shadow;
 
                 ul {
                     padding: 3rem 0 .5rem 0;
