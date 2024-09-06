@@ -405,17 +405,17 @@ document.querySelectorAll('.accordion-header').forEach(header => {
 // ABOUT PAGE SCRIPTS
 // COUNTER BOX SCRIPT
 function animateCounter(counter) {
-  const target = +counter.getAttribute('data-target');
+  const target = +counter.getAttribute('data-count');
   const increment = target / 100;
   let current = 0;
 
   const updateCounter = () => {
       current += increment;
       if (current < target) {
-          counter.textContent = Math.ceil(current);
+          counter.firstChild.textContent = Math.ceil(current);
           requestAnimationFrame(updateCounter);
       } else {
-          counter.textContent = target;
+          counter.firstChild.textContent = target;
       }
   };
 
@@ -435,4 +435,5 @@ const observer = new IntersectionObserver(entries => {
 document.querySelectorAll('.counter').forEach(counter => {
   observer.observe(counter);
 });
+
 

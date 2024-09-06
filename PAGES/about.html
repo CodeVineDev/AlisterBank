@@ -1,286 +1,324 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- LINKS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- LINKS -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
 
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link
+      rel="stylesheet"
+      href="../font-awesome(4.7.0)/css/font-awesome.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../Dist/css/about.css" />
 
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-  <link rel="stylesheet" href="../font-awesome(4.7.0)/css/font-awesome.min.css" />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  <link rel="stylesheet" href="../Dist/css/about.css" />
+    <title>Alister - HTML Template</title>
+  </head>
 
-  <title>Alister - HTML Template</title>
-</head>
-
-<body id="content">
-  <!-- nav hidden In start -->
-  <nav class="nav-wrap" id="hidden-nav">
-    <div class="navbar">
-      <div class="logo">
-        <img src="../IMAGES/alisterbank-logo.png" alt="logo" />
-        <h3>Alister</h3>
-      </div>
-      <div class="navLink-con">
-        <ul>
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="#about.html">About Us</a></li>
-          <li class="dropdown">
-            <p class="link">Product
-              <iconify-icon class="icon" icon="teenyicons:down-solid"></iconify-icon>
-            </p>
-            <div class="dropdown_content">
-              <div href="#" class="dropdown-child">
-                <a href="#" class="link-child">
-                  Account
-                  <iconify-icon class="icon" icon="teenyicons:right-solid"></iconify-icon></a>
-                <div class="dropdown_content-child">
-                  <a href="#"> Account</a>
-                  <a href="#"> Details</a>
+  <body id="content">
+    <!-- nav hidden In start -->
+    <nav class="nav-wrap" id="hidden-nav">
+      <div class="navbar">
+        <div class="logo">
+          <img src="../IMAGES/alisterbank-logo.png" alt="logo" />
+          <h3>Alister</h3>
+        </div>
+        <div class="navLink-con">
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="#about.html">About Us</a></li>
+            <li class="dropdown">
+              <p class="link"
+                >Product
+                <iconify-icon
+                  class="icon"
+                  icon="teenyicons:down-solid"
+                ></iconify-icon>
+              </p>
+              <div class="dropdown_content">
+                <div href="#" class="dropdown-child">
+                  <a href="#" class="link-child">
+                    Account
+                    <iconify-icon
+                      class="icon"
+                      icon="teenyicons:right-solid"
+                    ></iconify-icon
+                  ></a>
+                  <div class="dropdown_content-child">
+                    <a href="#"> Account</a>
+                    <a href="#"> Details</a>
+                  </div>
                 </div>
-              </div>
-              <a href="#"> Product</a>
-              <div href="#" class="dropdown-child">
-                <a href="#" class="link-child">
-                  Loan
-                  <iconify-icon class="icon" icon="teenyicons:right-solid"></iconify-icon></a>
-                <div class="dropdown_content-child">
-                  <a href="#"> Business Loan</a>
-                  <a href="#"> Education Loan</a>
-                  <a href="#"> Home Loan</a>
-                  <a href="#"> Car Loan</a>
-                  <a href="#"> Personal Loan</a>
+                <a href="#"> Product</a>
+                <div href="#" class="dropdown-child">
+                  <a href="#" class="link-child">
+                    Loan
+                    <iconify-icon
+                      class="icon"
+                      icon="teenyicons:right-solid"
+                    ></iconify-icon
+                  ></a>
+                  <div class="dropdown_content-child">
+                    <a href="#"> Business Loan</a>
+                    <a href="#"> Education Loan</a>
+                    <a href="#"> Home Loan</a>
+                    <a href="#"> Car Loan</a>
+                    <a href="#"> Personal Loan</a>
+                  </div>
                 </div>
+                <a href="#"> Card</a>
               </div>
-              <a href="#"> Card</a>
-            </div>
-          </li>
+            </li>
 
-          <li class="dropdown">
-            <p class="link">Pages
-              <iconify-icon class="icon" icon="teenyicons:down-solid"></iconify-icon>
-            </p>
-            <div class="dropdown_content">
-              <a href="#"> Affiliate</a>
-              <a href="#"> Blog</a>
-              <a href="#"> Remittance</a>
-              <a href="#"> Faqs</a>
-              <a href="#"> Login</a>
-              <a href="#"> Password Set</a>
-              <a href="#"> Varify Number</a>
-              <a href="#"> OTP</a>
-              <a href="#"> Terms Conditions</a>
-              <a href="#"> Privacy Policy</a>
-            </div>
-          </li>
-          <li><a href="#blog">Contact Us</a></li>
-        </ul>
+            <li class="dropdown">
+              <p class="link"
+                >Pages
+                <iconify-icon
+                  class="icon"
+                  icon="teenyicons:down-solid"
+                ></iconify-icon>
+              </p>
+              <div class="dropdown_content">
+                <a href="#"> Affiliate</a>
+                <a href="#"> Blog</a>
+                <a href="#"> Remittance</a>
+                <a href="#"> Faqs</a>
+                <a href="#"> Login</a>
+                <a href="#"> Password Set</a>
+                <a href="#"> Varify Number</a>
+                <a href="#"> OTP</a>
+                <a href="#"> Terms Conditions</a>
+                <a href="#"> Privacy Policy</a>
+              </div>
+            </li>
+            <li><a href="#blog">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="nav-btns">
+          <button href="#" class="login">
+            <span class="material-symbols-outlined"> shield_person </span>Open
+            An Account
+          </button>
+          <button class="dropnav-btn" data-target=".container1">
+            <span class="bars"></span>
+          </button>
+        </div>
+        <div class="dropnav-container container1">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#service">About Us</a></li>
+            <li><a href="#about">Product</a></li>
+            <li><a href="#testimonial">Pages</a></li>
+            <li><a href="#blog">Contact us</a></li>
+            <li><a href="#">Sign In</a></li>
+          </ul>
+        </div>
       </div>
-      <div class="nav-btns">
-        <button href="#" class="login">
-          <span class="material-symbols-outlined"> shield_person </span>Open
-          An Account
-        </button>
-        <button class="dropnav-btn" data-target=".container1">
-          <span class="bars"></span>
-        </button>
-      </div>
-      <div class="dropnav-container container1">
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#service">About Us</a></li>
-          <li><a href="#about">Product</a></li>
-          <li><a href="#testimonial">Pages</a></li>
-          <li><a href="#blog">Contact us</a></li>
-          <li><a href="#">Sign In</a></li>
-        </ul>
+    </nav>
+    <!-- nav hidden in end -->
+
+    <!-- navbar In start-->
+    <div class="preloader">
+      <div class="loader">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
       </div>
     </div>
-  </nav>
-  <!-- nav hidden in end -->
 
-  <!-- navbar In start-->
-  <div class="preloader">
-    <div class="loader">
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-    </div>
-  </div>
-
-  <div class="chatUs">
-    <i class="material-symbols-outlined" id="fa"> support_agent </i>
-    <div class="tag-message">
-      <p>Chat with us !</p>
-    </div>
-  </div>
-
-  <nav class="nav-wrap" id="main-nav">
-    <div class="navbar">
-      <div class="logo">
-        <img src="../IMAGES/alisterbank-logo.png" alt="logo" />
-        <h3>Alister</h3>
+    <div class="chatUs">
+      <i class="material-symbols-outlined" id="fa"> support_agent </i>
+      <div class="tag-message">
+        <p>Chat with us !</p>
       </div>
-      <div class="navLink-con">
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#service">About Us</a></li>
-          <li class="dropdown">
-            <p class="link">Product
-              <iconify-icon class="icon" icon="teenyicons:down-solid"></iconify-icon>
-            </p>
-            <div class="dropdown_content">
-              <div href="#" class="dropdown-child">
-                <a href="#" class="link-child">
-                  Account
-                  <iconify-icon class="icon" icon="teenyicons:right-solid"></iconify-icon></a>
-                <div class="dropdown_content-child">
-                  <a href="#"> Account</a>
-                  <a href="#"> Details</a>
+    </div>
+
+    <nav class="nav-wrap" id="main-nav">
+      <div class="navbar">
+        <div class="logo">
+          <img src="../IMAGES/alisterbank-logo.png" alt="logo" />
+          <h3>Alister</h3>
+        </div>
+        <div class="navLink-con">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#service">About Us</a></li>
+            <li class="dropdown">
+              <p class="link"
+                >Product
+                <iconify-icon
+                  class="icon"
+                  icon="teenyicons:down-solid"
+                ></iconify-icon>
+              </p>
+              <div class="dropdown_content">
+                <div href="#" class="dropdown-child">
+                  <a href="#" class="link-child">
+                    Account
+                    <iconify-icon
+                      class="icon"
+                      icon="teenyicons:right-solid"
+                    ></iconify-icon
+                  ></a>
+                  <div class="dropdown_content-child">
+                    <a href="#"> Account</a>
+                    <a href="#"> Details</a>
+                  </div>
                 </div>
-              </div>
-              <a href="#"> Product</a>
-              <div href="#" class="dropdown-child">
-                <a href="#" class="link-child">
-                  Loan
-                  <iconify-icon class="icon" icon="teenyicons:right-solid"></iconify-icon></a>
-                <div class="dropdown_content-child">
-                  <a href="#"> Business Loan</a>
-                  <a href="#"> Education Loan</a>
-                  <a href="#"> Home Loan</a>
-                  <a href="#"> Car Loan</a>
-                  <a href="#"> Personal Loan</a>
+                <a href="#"> Product</a>
+                <div href="#" class="dropdown-child">
+                  <a href="#" class="link-child">
+                    Loan
+                    <iconify-icon
+                      class="icon"
+                      icon="teenyicons:right-solid"
+                    ></iconify-icon
+                  ></a>
+                  <div class="dropdown_content-child">
+                    <a href="#"> Business Loan</a>
+                    <a href="#"> Education Loan</a>
+                    <a href="#"> Home Loan</a>
+                    <a href="#"> Car Loan</a>
+                    <a href="#"> Personal Loan</a>
+                  </div>
                 </div>
+                <a href="#"> Card</a>
               </div>
-              <a href="#"> Card</a>
-            </div>
-          </li>
+            </li>
 
-          <li class="dropdown">
-            <p class="link">Pages
-              <iconify-icon class="icon" icon="teenyicons:down-solid"></iconify-icon>
-            </p>
-            <div class="dropdown_content">
-              <a href="#"> Affiliate</a>
-              <a href="#"> Blog</a>
-              <a href="#"> Remittance</a>
-              <a href="#"> Faqs</a>
-              <a href="#"> Login</a>
-              <a href="#"> Password Set</a>
-              <a href="#"> Varify Number</a>
-              <a href="#"> OTP</a>
-              <a href="#"> Terms Conditions</a>
-              <a href="#"> Privacy Policy</a>
-            </div>
-          </li>
-          <li><a href="#blog">Contact Us</a></li>
-        </ul>
+            <li class="dropdown">
+              <p class="link"
+                >Pages
+                <iconify-icon
+                  class="icon"
+                  icon="teenyicons:down-solid"
+                ></iconify-icon>
+              </p>
+              <div class="dropdown_content">
+                <a href="#"> Affiliate</a>
+                <a href="#"> Blog</a>
+                <a href="#"> Remittance</a>
+                <a href="#"> Faqs</a>
+                <a href="#"> Login</a>
+                <a href="#"> Password Set</a>
+                <a href="#"> Varify Number</a>
+                <a href="#"> OTP</a>
+                <a href="#"> Terms Conditions</a>
+                <a href="#"> Privacy Policy</a>
+              </div>
+            </li>
+            <li><a href="#blog">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="nav-btns">
+          <button href="#" class="login">
+            <span class="material-symbols-outlined"> shield_person </span>Open
+            An Account
+          </button>
+          <button class="dropnav-btn" data-target=".container2">
+            <span class="bars"></span>
+          </button>
+        </div>
+        <div class="dropnav-container container2">
+          <ul class="accordion">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#service">About Us</a></li>
+            <li><a href="#about">Product</a></li>
+            <li><a href="#testimonial">Pages</a></li>
+            <li><a href="#blog">Contact us</a></li>
+          </ul>
+          <a href="#"><button>Sign In</button></a>
+        </div>
       </div>
-      <div class="nav-btns">
-        <button href="#" class="login">
-          <span class="material-symbols-outlined"> shield_person </span>Open
-          An Account
-        </button>
-        <button class="dropnav-btn" data-target=".container2">
-          <span class="bars"></span>
-        </button>
-      </div>
-      <div class="dropnav-container container2">
-        <ul class="accordion">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#service">About Us</a></li>
-          <li><a href="#about">Product</a></li>
-          <li><a href="#testimonial">Pages</a></li>
-          <li><a href="#blog">Contact us</a></li>
-        </ul>
-        <a href="#"><button>Sign In</button></a>
-      </div>
-    </div>
-  </nav>
-  <!-- navbar In end-->
+    </nav>
+    <!-- navbar In end-->
 
-  <section class="body-section" id="home">
-    <!-- home about In start -->
-    <div class="home-section">
-      <div class="home-container">
-        <div class="home-container__left">
-          <img src="../IMAGES/Investing-rafiki.png" />
-          <div class="wrap">
-            <h1>About</h1>
-            <div class="identification-link">
-              <p><a href="../index.html">Home</a></p>
-              <iconify-icon class="icon" icon="ep:right"></iconify-icon>
-              <p>About</p>
+    <section class="body-section" id="home">
+      <!-- home about In start -->
+      <div class="home-section">
+        <div class="home-container">
+          <div class="home-container__left">
+            <img src="../IMAGES/Investing-rafiki.png" />
+            <div class="wrap">
+              <h1>About</h1>
+              <div class="identification-link">
+                <p><a href="../index.html">Home</a></p>
+                <iconify-icon class="icon" icon="ep:right"></iconify-icon>
+                <p>About</p>
+              </div>
+            </div>
+          </div>
+          <div class="home-container__right">
+            <img src="../IMAGES/Data-rafiki.png" />
+          </div>
+        </div>
+      </div>
+
+      <!-- home about In end -->
+      <!-- about In start -->
+      <div class="about-section">
+        <div class="about-container">
+          <div class="about-container__left">
+            <p class="special-text">About us</p>
+            <h1>Your ally in achieving ambition beyond borders</h1>
+            <p class="normal-text">
+              We understand that with global ambition, comes global challenges,
+              and we are here to bridge the gap by offering seamless
+              cross-border financial services. Consider us your friendly digital
+              guide to all things finance, helping you make the most of your
+              money.</p
+            >
+
+            <div class="counter-section">
+              <div class="counter-box">
+                <div class="counter" data-count="5000">0<span>K</span></div>
+                <div class="label">Customer satisfaction</div>
+              </div>
+              <div class="counter-box">
+                <div class="counter" data-count="100000">0<span>M</span></div>
+                <div class="label">Monthly active users</div>
+              </div>
+              <div class="counter-box">
+                <div class="counter" data-count="1200">0<span>%</span></div>
+                <div class="label">New Users per week</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-container__right">
+            <div class="image-container">
+              <img class="img-1" src="../IMAGES/about-img-1.png" />
+              <img class="img-2" src="../IMAGES/about-img-2.png" />
+              <img class="img-3" src="../IMAGES/about-img-3.png" />
             </div>
           </div>
         </div>
-        <div class="home-container__right">
-          <img src="../IMAGES/Data-rafiki.png" />
-        </div>
       </div>
-    </div>
 
-    <!-- home about In end -->
-    <!-- about In start -->
-    <div class="about-section">
-      <div class="about-container">
-        <div class="about-container__left">
-          <p class="special-text">About us</p>
-          <h1>Your ally in achieving ambition beyond borders</h1>
-          <p class="normal-text">
-            We understand that with global ambition, comes global challenges,
-            and we are here to bridge the gap by offering seamless
-            cross-border financial services. Consider us your friendly digital
-            guide to all things finance, helping you make the most of your
-            money.</p>
+      <!-- about In end -->
+    </section>
 
-          <div class="counter-section">
-            <div class="counter-box">
-              <div class="counter" data-target="5000">0<span>K</span></div>
-              <div class="label">Customer satisfaction</div>
-            </div>
-            <div class="counter-box">
-              <div class="counter" data-target="100000">0<span>M</span></div>
-              <div class="label">Monthly active users</div>
-            </div>
-            <div class="counter-box">
-              <div class="counter" data-target="1200">0<span>%</span></div>
-              <div class="label">New Users per week</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="about-container__right">
-          <div class="image-container">
-            <img class="img-1" src="../IMAGES/about-img-1.png" />
-            <img class="img-2" src="../IMAGES/about-img-2.png" />
-            <img class="img-3" src="../IMAGES/about-img-3.png" />
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- about In end -->
-  </section>
-
-  <!-- SCRIPT LINKS -->
-  <script src="https://code.iconify.design/iconify-icon/2.0.0/iconify-icon.min.js"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({
-      once: true,
-      anchorPlacement: "top-bottom",
-      duration: "200", // No duration for immediate effect
-    });
-  </script>
-  <script src="../Javascript/script.js"></script>
-</body>
-
+    <!-- SCRIPT LINKS -->
+    <script src="https://code.iconify.design/iconify-icon/2.0.0/iconify-icon.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        once: true,
+        anchorPlacement: "top-bottom",
+        duration: "200", // No duration for immediate effect
+      });
+    </script>
+    <script src="../Javascript/script.js"></script>
+  </body>
 </html>
