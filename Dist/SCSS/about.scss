@@ -509,9 +509,21 @@ nav {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
+        position: relative;
+
+        .circle-grey {
+            background: $variant-blue_v1;
+            position: absolute;
+            top: -150px;
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+
+
+        }
 
         &__left {
-
+            z-index: 1;
             color: $black;
 
             .special-text {
@@ -614,7 +626,7 @@ nav {
     .about-section {
         .about-container {
             &__left {
-                .counter-section{
+                .counter-section {
                     grid-template-columns: 1fr;
                 }
             }
@@ -662,7 +674,7 @@ nav {
             }
         }
     }
-    
+
 }
 
 
@@ -828,12 +840,14 @@ nav {
             margin: auto;
             padding: 0;
             grid-template-columns: 1fr;
+
             &__left {
                 h1 {
                     font-size: $big-text_v2;
                 }
             }
-            &__right{
+
+            &__right {
                 display: none;
             }
         }

@@ -450,8 +450,18 @@ nav {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
+  position: relative;
+}
+.about-section .about-container .circle-grey {
+  background: #eff2ff;
+  position: absolute;
+  top: -150px;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
 }
 .about-section .about-container__left {
+  z-index: 1;
   color: #242424;
 }
 .about-section .about-container__left .special-text {
