@@ -680,6 +680,11 @@ nav {
     padding: 0;
     grid-template-columns: 1fr;
   }
+  .about-section .about-container .circle-grey {
+    width: 200px;
+    height: 200px;
+    left: -40px;
+  }
   .about-section .about-container__left h1 {
     font-size: clamp(1.5rem, 4vw + 0.5rem, 3rem);
   }

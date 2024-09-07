@@ -836,6 +836,11 @@ nav {
 
     .about-section {
         .about-container {
+            .circle-grey {
+                width: 200px;
+                height: 200px;  
+                left: -40px;  
+            }
             width: $width-global;
             margin: auto;
             padding: 0;
