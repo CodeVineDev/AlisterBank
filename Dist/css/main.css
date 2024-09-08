@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 * {
   box-sizing: border-box;
@@ -2005,37 +2006,101 @@ nav {
     width: 100%;
     position: absolute;
     height: 0;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
+    color: #242424;
+    font-size: clamp(1rem, 2vw + 0.5rem, 1.1rem);
     transition: 200ms ease-in-out;
     box-shadow: 5px 5px 15px rgba(152, 176, 255, 0.2274509804);
+    /* General Accordion Styling */
   }
-  .nav-wrap .navbar .dropnav-container ul {
-    padding: 3rem 0 0.5rem 0;
-  }
-  .nav-wrap .navbar .dropnav-container ul li {
-    border: 0.1px solid rgb(231, 231, 231);
-    display: flex;
-    align-items: center;
-    margin: auto;
-    margin-bottom: 1rem;
-    width: min(87%, 1200px);
-    height: 40px;
-    padding-left: 1rem;
-  }
-  .nav-wrap .navbar .dropnav-container ul li:hover a {
-    color: #0328a1;
-  }
-  .nav-wrap .navbar .dropnav-container ul li a {
-    font-family: "Jost", sans-serif;
+  .nav-wrap .navbar .dropnav-container a {
     font-size: clamp(1rem, 2vw + 0.5rem, 1.1rem);
-    font-weight: 400;
     color: #242424;
+  }
+  .nav-wrap .navbar .dropnav-container .drop {
+    border: 1px solid rgb(228, 228, 228);
+    padding: 0.8rem 0.5rem;
+    margin-bottom: 1rem;
+    background: none;
+  }
+  .nav-wrap .navbar .dropnav-container .drop-2 {
+    border: 1px solid rgb(228, 228, 228);
+    margin: auto;
+    padding: 0.8rem 0.5rem;
+    width: min(96%, 800px);
+    margin-bottom: 0.2rem;
+  }
+  .nav-wrap .navbar .dropnav-container .drop-3 {
+    margin: auto;
+    width: min(96%, 800px);
+  }
+  .nav-wrap .navbar .dropnav-container .drop-3 div {
+    padding: 0.8rem 2rem;
+    border: 1px solid rgb(228, 228, 228);
+    margin-bottom: 0.2rem;
+  }
+  .nav-wrap .navbar .dropnav-container .drop-4 {
+    margin: auto;
+    width: min(96%, 800px);
+  }
+  .nav-wrap .navbar .dropnav-container .drop-4 div {
+    padding: 0.8rem 2rem;
+    border: 1px solid rgb(228, 228, 228);
+    margin-bottom: 0.2rem;
+  }
+  .nav-wrap .navbar .dropnav-container .nav-accordion {
+    width: min(87%, 1200px);
+    margin: auto;
+    padding-block: max(2rem, 1vw);
+  }
+  .nav-wrap .navbar .dropnav-container .nav-accordion-item {
+    overflow: hidden;
+  }
+  .nav-wrap .navbar .dropnav-container .nav-accordion-header {
+    cursor: pointer;
+    position: relative;
+  }
+  .nav-wrap .navbar .dropnav-container .nav-accordion-header::after {
+    content: "▾";
+    /* Unicode character for "plus" sign (+) */
+    position: absolute;
+    right: 20px;
     transition: 200ms ease-in-out;
+  }
+  .nav-wrap .navbar .dropnav-container .nav-accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: 200ms ease-out;
+  }
+  .nav-wrap .navbar .dropnav-container .nav-accordion-content p {
+    margin: 0;
+  }
+  .nav-wrap .navbar .dropnav-container .nav-accordion-item_2 {
+    overflow: hidden;
+  }
+  .nav-wrap .navbar .dropnav-container .nav-accordion-header_2 {
+    cursor: pointer;
+    position: relative;
+  }
+  .nav-wrap .navbar .dropnav-container .nav-accordion-header_2::after {
+    content: "▾";
+    /* Unicode character for "plus" sign (+) */
+    position: absolute;
+    right: 20px;
+    transition: 200ms ease-in-out;
+  }
+  .nav-wrap .navbar .dropnav-container .nav-accordion-content_2 {
+    max-height: 0;
+    overflow: hidden;
+    transition: 200ms ease-in-out;
+  }
+  .nav-wrap .navbar .dropnav-container .nav-accordion-content_2 p {
+    margin: 0;
   }
   .nav-wrap .navbar .dropnav-container button {
     width: min(30%, 150px);
     background: #1549f3;
-    margin-left: 6.4%;
     color: white;
     font-size: clamp(1rem, 2vw + 0.5rem, 1.1rem);
     font-weight: 300;
@@ -2092,8 +2157,9 @@ nav {
     transition: 0.3s;
   }
   .nav-wrap .dropnav-container.active {
-    transition: 300ms ease;
     height: 500px;
+    padding-bottom: 2rem;
+    transition: 300ms ease;
   }
   .dropnav-btn.toggle .bars {
     background: transparent;

@@ -52,6 +52,50 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+
+// RESPONSIVE NAVDROPDOWN SCRIPT
+document.querySelectorAll('.nav-accordion-header').forEach(navHeader => {
+  navHeader.addEventListener('click', () => {
+      const activeNavHeader = document.querySelector('.nav-accordion-header.active');
+      if (activeNavHeader && activeNavHeader !== navHeader) {
+          activeNavHeader.classList.remove('active');
+          activeNavHeader.nextElementSibling.style.maxHeight = '0px';
+      }
+
+      navHeader.classList.toggle('active');
+      const navAccordionContent = navHeader.nextElementSibling;
+      if (navHeader.classList.contains('active')) {
+          navAccordionContent.style.maxHeight = navAccordionContent.scrollHeight + '1px';
+      } else {
+          navAccordionContent.style.maxHeight = '0px';
+      }
+  });
+});
+document.querySelectorAll('.nav-accordion-header_2').forEach(navHeader2 => {
+  navHeader2.addEventListener('click', () => {
+      const activeNavHeader2 = document.querySelector('.nav-accordion-header_2.active');
+      if (activeNavHeader2 && activeNavHeader2 !== navHeader2) {
+          activeNavHeader2.classList.remove('active');
+          activeNavHeader2.nextElementSibling.style.maxHeight = '0px';
+      }
+
+      navHeader2.classList.toggle('active');
+      const navAccordionContent2 = navHeader2.nextElementSibling;
+      if (navHeader2.classList.contains('active')) {
+          navAccordionContent2.style.maxHeight = navAccordionContent2.scrollHeight + '1px';
+      } else {
+          navAccordionContent2.style.maxHeight = '0px';
+      }
+  });
+});
+
+
+
+
+
+
+
+
 // Preloader script
 document.addEventListener("DOMContentLoaded", function () {
   var preloader = document.querySelector(".preloader");
@@ -396,6 +440,5 @@ document.querySelectorAll('.accordion-header').forEach(header => {
       }
   });
 });
-
 
 

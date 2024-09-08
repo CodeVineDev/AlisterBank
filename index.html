@@ -1,1275 +1,1036 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- LINKS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- LINKS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
-    />
-    <link
-      rel="stylesheet"
-      href="./font-awesome(4.7.0)/css/font-awesome.min.css"
-    />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <link rel="stylesheet" href="./Dist/css/main.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
 
-    <title>Alister - HTML Template</title>
-  </head>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <link rel="stylesheet" href="./font-awesome(4.7.0)/css/font-awesome.min.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./Dist/css/main.css" />
 
-  <body id="content">
-    <!-- nav hidden In start -->
-    <nav class="nav-wrap" id="hidden-nav">
-      <div class="navbar">
-        <div class="logo">
-          <img src="IMAGES/alisterbank-logo.png" alt="logo" />
-          <h3>Alister</h3>
-        </div>
-        <div class="navLink-con">
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="PAGES/about.html">About Us</a></li>
-            <li class="dropdown">
-              <p class="link"
-                >Product
-                <iconify-icon
-                  class="icon"
-                  icon="teenyicons:down-solid"
-                ></iconify-icon>
-              </p>
-              <div class="dropdown_content">
-                <div href="#" class="dropdown-child">
-                  <a href="#" class="link-child">
-                    Account
-                    <iconify-icon
-                      class="icon"
-                      icon="teenyicons:right-solid"
-                    ></iconify-icon
-                  ></a>
-                  <div class="dropdown_content-child">
-                    <a href="#"> Account</a>
-                    <a href="#"> Details</a>
+  <title>Alister - HTML Template</title>
+</head>
+
+<body id="content">
+  <!-- nav hidden In start -->
+  <nav class="nav-wrap" id="hidden-nav">
+    <div class="navbar">
+      <div class="logo">
+        <img src="IMAGES/alisterbank-logo.png" alt="logo" />
+        <h3>Alister</h3>
+      </div>
+      <div class="navLink-con">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="PAGES/about.html">About Us</a></li>
+          <li class="dropdown">
+            <p class="link">Product
+              <iconify-icon class="icon" icon="teenyicons:down-solid"></iconify-icon>
+            </p>
+            <div class="dropdown_content">
+              <div href="#" class="dropdown-child">
+                <a href="#" class="link-child">
+                  Account
+                  <iconify-icon class="icon" icon="teenyicons:right-solid"></iconify-icon></a>
+                <div class="dropdown_content-child">
+                  <a href="#"> Account</a>
+                  <a href="#"> Details</a>
+                </div>
+              </div>
+              <a href="#"> Product</a>
+              <div href="#" class="dropdown-child">
+                <a href="#" class="link-child">
+                  Loan
+                  <iconify-icon class="icon" icon="teenyicons:right-solid"></iconify-icon></a>
+                <div class="dropdown_content-child">
+                  <a href="#"> Business Loan</a>
+                  <a href="#"> Education Loan</a>
+                  <a href="#"> Home Loan</a>
+                  <a href="#"> Car Loan</a>
+                  <a href="#"> Personal Loan</a>
+                </div>
+              </div>
+              <a href="#"> Card</a>
+            </div>
+          </li>
+
+          <li class="dropdown">
+            <p class="link">Pages
+              <iconify-icon class="icon" icon="teenyicons:down-solid"></iconify-icon>
+            </p>
+            <div class="dropdown_content">
+              <a href="#"> Affiliate</a>
+              <a href="#"> Blog</a>
+              <a href="#"> Remittance</a>
+              <a href="#"> Faqs</a>
+              <a href="#"> Login</a>
+              <a href="#"> Password Set</a>
+              <a href="#"> Varify Number</a>
+              <a href="#"> OTP</a>
+              <a href="#"> Terms Conditions</a>
+              <a href="#"> Privacy Policy</a>
+            </div>
+          </li>
+          <li><a href="#blog">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="nav-btns">
+        <button href="#" class="login">
+          <span class="material-symbols-outlined"> shield_person </span>Open
+          An Account
+        </button>
+        <button class="dropnav-btn" data-target=".container1">
+          <span class="bars"></span>
+        </button>
+      </div>
+      <div class="dropnav-container container1">
+       
+          <div class="nav-accordion">
+            <div class="drop"><a href="index.html">Home</a></div>
+            <div class="drop"><a href="PAGES/about.html">About Us</a></div>
+            <div class="nav-accordion-item">
+              <div class="nav-accordion-header drop">Product</div>
+              <div class="nav-accordion-content">
+                <div class="nav-accordion-item_2">
+                  <div class="nav-accordion-header_2  drop-2">Account</div>
+                  <div class="nav-accordion-content_2 drop-3">
+                    <div><a href="#">Account</a></div>
+                    <div><a href="#">Details</a></div>
                   </div>
                 </div>
-                <a href="#"> Product</a>
-                <div href="#" class="dropdown-child">
-                  <a href="#" class="link-child">
-                    Loan
-                    <iconify-icon
-                      class="icon"
-                      icon="teenyicons:right-solid"
-                    ></iconify-icon
-                  ></a>
-                  <div class="dropdown_content-child">
-                    <a href="#"> Business Loan</a>
-                    <a href="#"> Education Loan</a>
-                    <a href="#"> Home Loan</a>
-                    <a href="#"> Car Loan</a>
-                    <a href="#"> Personal Loan</a>
+                <div class="drop-2"><a href="#">Product</a></div>
+                <div class="nav-accordion-item_2">
+                  <div class="nav-accordion-header_2  drop-2">Loan</div>
+                  <div class="nav-accordion-content_2 drop-3">
+                    <div><a href="#"> Business Loan</a></div>
+                    <div><a href="#"> Education Loan</a></div>
+                    <div><a href="#"> Home Loan</a></div>
+                    <div><a href="#"> Car Loan</a></div>
+                    <div><a href="#"> Personal Loan</a></div>
                   </div>
                 </div>
-                <a href="#"> Card</a>
+                <div class="drop-2"><a href="#">Card</a></div>
               </div>
-            </li>
-
-            <li class="dropdown">
-              <p class="link"
-                >Pages
-                <iconify-icon
-                  class="icon"
-                  icon="teenyicons:down-solid"
-                ></iconify-icon>
-              </p>
-              <div class="dropdown_content">
-                <a href="#"> Affiliate</a>
-                <a href="#"> Blog</a>
-                <a href="#"> Remittance</a>
-                <a href="#"> Faqs</a>
-                <a href="#"> Login</a>
-                <a href="#"> Password Set</a>
-                <a href="#"> Varify Number</a>
-                <a href="#"> OTP</a>
-                <a href="#"> Terms Conditions</a>
-                <a href="#"> Privacy Policy</a>
+            </div>
+            <div class="nav-accordion-item">
+              <div class="nav-accordion-header drop">Pages</div>
+              <div class="nav-accordion-content drop-4">
+                <div><a href="#"> Affiliate</a></div>
+                <div><a href="#"> Blog</a></div>
+                <div><a href="#"> Remittance</a></div>
+                <div><a href="#"> Faqs</a></div>
+                <div><a href="#"> Login</a></div>
+                <div><a href="#"> Password Set</a></div>
+                <div><a href="#"> Varify Number</a></div>
+                <div><a href="#"> OTP</a></div>
+                <div><a href="#"> Terms Conditions</a></div>
+                <div><a href="#"> Privacy Policy</a></div>
               </div>
-            </li>
-            <li><a href="#blog">Contact Us</a></li>
-          </ul>
-        </div>
-        <div class="nav-btns">
-          <button href="#" class="login">
-            <span class="material-symbols-outlined"> shield_person </span>Open
-            An Account
-          </button>
-          <button class="dropnav-btn" data-target=".container1">
-            <span class="bars"></span>
-          </button>
-        </div>
-        <div class="dropnav-container container1">
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="PAGES/about.html">About Us</a></li>
-            <li><a href="#about">Product</a></li>
-            <li><a href="#testimonial">Pages</a></li>
-            <li><a href="#blog">Contact us</a></li>
-            <li><a href="#">Sign In</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <!-- nav hidden in end -->
-
-    <!-- navbar In start-->
-    <div class="preloader">
-      <div class="loader">
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-      </div>
-    </div>
-
-    <div class="chatUs">
-      <i class="material-symbols-outlined" id="fa"> support_agent </i>
-      <div class="tag-message">
-        <p>Chat with us !</p>
+            </div>
+            <div class="drop"><a href="PAGES/about.html">Contact Us</a></div>
+            <a href="#"><button>Sign In</button></a>
+          </div>
       </div>
     </div>
+  </nav>
+  <!-- nav hidden in end -->
 
-    <nav class="nav-wrap" id="main-nav">
-      <div class="navbar">
-        <div class="logo">
-          <img src="IMAGES/alisterbank-logo.png" alt="logo" />
-          <h3>Alister</h3>
-        </div>
-        <div class="navLink-con">
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="PAGES/about.html">About Us</a></li>
-            <li class="dropdown">
-              <p class="link"
-                >Product
-                <iconify-icon
-                  class="icon"
-                  icon="teenyicons:down-solid"
-                ></iconify-icon>
-              </p>
-              <div class="dropdown_content">
-                <div href="#" class="dropdown-child">
-                  <a href="#" class="link-child">
-                    Account
-                    <iconify-icon
-                      class="icon"
-                      icon="teenyicons:right-solid"
-                    ></iconify-icon
-                  ></a>
-                  <div class="dropdown_content-child">
-                    <a href="#"> Account</a>
-                    <a href="#"> Details</a>
-                  </div>
-                </div>
-                <a href="#"> Product</a>
-                <div href="#" class="dropdown-child">
-                  <a href="#" class="link-child">
-                    Loan
-                    <iconify-icon
-                      class="icon"
-                      icon="teenyicons:right-solid"
-                    ></iconify-icon
-                  ></a>
-                  <div class="dropdown_content-child">
-                    <a href="#"> Business Loan</a>
-                    <a href="#"> Education Loan</a>
-                    <a href="#"> Home Loan</a>
-                    <a href="#"> Car Loan</a>
-                    <a href="#"> Personal Loan</a>
-                  </div>
-                </div>
-                <a href="#"> Card</a>
-              </div>
-            </li>
+  <!-- navbar In start-->
+  <div class="preloader">
+    <div class="loader">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+  </div>
 
-            <li class="dropdown">
-              <p class="link"
-                >Pages
-                <iconify-icon
-                  class="icon"
-                  icon="teenyicons:down-solid"
-                ></iconify-icon>
-              </p>
-              <div class="dropdown_content">
-                <a href="#"> Affiliate</a>
-                <a href="#"> Blog</a>
-                <a href="#"> Remittance</a>
-                <a href="#"> Faqs</a>
-                <a href="#"> Login</a>
-                <a href="#"> Password Set</a>
-                <a href="#"> Varify Number</a>
-                <a href="#"> OTP</a>
-                <a href="#"> Terms Conditions</a>
-                <a href="#"> Privacy Policy</a>
+  <div class="chatUs">
+    <i class="material-symbols-outlined" id="fa"> support_agent </i>
+    <div class="tag-message">
+      <p>Chat with us !</p>
+    </div>
+  </div>
+
+  <nav class="nav-wrap" id="main-nav">
+    <div class="navbar">
+      <div class="logo">
+        <img src="IMAGES/alisterbank-logo.png" alt="logo" />
+        <h3>Alister</h3>
+      </div>
+      <div class="navLink-con">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="PAGES/about.html">About Us</a></li>
+          <li class="dropdown">
+            <p class="link">Product
+              <iconify-icon class="icon" icon="teenyicons:down-solid"></iconify-icon>
+            </p>
+            <div class="dropdown_content">
+              <div href="#" class="dropdown-child">
+                <a href="#" class="link-child">
+                  Account
+                  <iconify-icon class="icon" icon="teenyicons:right-solid"></iconify-icon></a>
+                <div class="dropdown_content-child">
+                  <a href="#"> Account</a>
+                  <a href="#"> Details</a>
+                </div>
               </div>
-            </li>
-            <li><a href="#blog">Contact Us</a></li>
-          </ul>
-        </div>
-        <div class="nav-btns">
-          <button href="#" class="login">
-            <span class="material-symbols-outlined"> shield_person </span>Open
-            An Account
-          </button>
-          <button class="dropnav-btn" data-target=".container2">
-            <span class="bars"></span>
-          </button>
-        </div>
-        <div class="dropnav-container container2">
-          <ul class="accordion">
-            <li><a href="#home">Home</a></li>
-            <li><a href="PAGES/about.html">About Us</a></li>
-            <li><a href="#about">Product</a></li>
-            <li><a href="#testimonial">Pages</a></li>
-            <li><a href="#blog">Contact us</a></li>
-          </ul>
+              <a href="#"> Product</a>
+              <div href="#" class="dropdown-child">
+                <a href="#" class="link-child">
+                  Loan
+                  <iconify-icon class="icon" icon="teenyicons:right-solid"></iconify-icon></a>
+                <div class="dropdown_content-child">
+                  <a href="#"> Business Loan</a>
+                  <a href="#"> Education Loan</a>
+                  <a href="#"> Home Loan</a>
+                  <a href="#"> Car Loan</a>
+                  <a href="#"> Personal Loan</a>
+                </div>
+              </div>
+              <a href="#"> Card</a>
+            </div>
+          </li>
+
+          <li class="dropdown">
+            <p class="link">Pages
+              <iconify-icon class="icon" icon="teenyicons:down-solid"></iconify-icon>
+            </p>
+            <div class="dropdown_content">
+              <a href="#"> Affiliate</a>
+              <a href="#"> Blog</a>
+              <a href="#"> Remittance</a>
+              <a href="#"> Faqs</a>
+              <a href="#"> Login</a>
+              <a href="#"> Password Set</a>
+              <a href="#"> Varify Number</a>
+              <a href="#"> OTP</a>
+              <a href="#"> Terms Conditions</a>
+              <a href="#"> Privacy Policy</a>
+            </div>
+          </li>
+          <li><a href="#blog">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="nav-btns">
+        <button href="#" class="login">
+          <span class="material-symbols-outlined"> shield_person </span>Open
+          An Account
+        </button>
+        <button class="dropnav-btn" data-target=".container2">
+          <span class="bars"></span>
+        </button>
+      </div>
+      <div class="dropnav-container container2">
+        <div class="nav-accordion">
+          <div class="drop"><a href="index.html">Home</a></div>
+          <div class="drop"><a href="PAGES/about.html">About Us</a></div>
+          <div class="nav-accordion-item">
+            <div class="nav-accordion-header drop">Product</div>
+            <div class="nav-accordion-content">
+              <div class="nav-accordion-item_2">
+                <div class="nav-accordion-header_2  drop-2">Account</div>
+                <div class="nav-accordion-content_2 drop-3">
+                  <div><a href="#">Account</a></div>
+                  <div><a href="#">Details</a></div>
+                </div>
+              </div>
+              <div class="drop-2"><a href="#">Product</a></div>
+              <div class="nav-accordion-item_2">
+                <div class="nav-accordion-header_2  drop-2">Loan</div>
+                <div class="nav-accordion-content_2 drop-3">
+                  <div><a href="#"> Business Loan</a></div>
+                  <div><a href="#"> Education Loan</a></div>
+                  <div><a href="#"> Home Loan</a></div>
+                  <div><a href="#"> Car Loan</a></div>
+                  <div><a href="#"> Personal Loan</a></div>
+                </div>
+              </div>
+              <div class="drop-2"><a href="#">Card</a></div>
+            </div>
+          </div>
+          <div class="nav-accordion-item">
+            <div class="nav-accordion-header drop">Pages</div>
+            <div class="nav-accordion-content drop-4">
+              <div><a href="#"> Affiliate</a></div>
+              <div><a href="#"> Blog</a></div>
+              <div><a href="#"> Remittance</a></div>
+              <div><a href="#"> Faqs</a></div>
+              <div><a href="#"> Login</a></div>
+              <div><a href="#"> Password Set</a></div>
+              <div><a href="#"> Varify Number</a></div>
+              <div><a href="#"> OTP</a></div>
+              <div><a href="#"> Terms Conditions</a></div>
+              <div><a href="#"> Privacy Policy</a></div>
+            </div>
+          </div>
+          <div class="drop"><a href="PAGES/about.html">Contact Us</a></div>
           <a href="#"><button>Sign In</button></a>
         </div>
       </div>
-    </nav>
-    <!-- navbar In end-->
+    </div>
+  </nav>
+  <!-- navbar In end-->
 
-    <section class="body-section" id="home">
-      <!-- home page In start -->
-      <div class="home-container">
-        <div class="homepage">
-          <div class="home-left">
-            <div>
-              <div class="top-content">
-                <p class="special-text"> Simple. Transparent. Secure </p>
-                <h1>Banking Solutions</h1>
-                <p class="normal-text"
-                  >Products and services designed to help you reach your
-                  financial goals.</p
-                >
-              </div>
-              <div class="lower-content">
-                <button class="open-account">Open Account</button>
-                <button class="getin-touch"> Get in touch</button>
-              </div>
-            </div>
-          </div>
-          <img
-            class="home-image"
-            src="IMAGES/App monetization-rafiki.png"
-            alt="Home Image"
-          />
-        </div>
-      </div>
-
-      <!-- home page In end -->
-      <!-- partners In start -->
-      <div class="partners">
-        <div class="false-block"></div>
-        <div class="container">
-          <div class="partners-header">
-            <h2>Partners</h2>
-          </div>
-          <div class="slider-container">
-            <div class="slider">
-              <div class="slide"><img src="IMAGES/visa-logo.png" /> </div>
-              <div class="slide"><img src="IMAGES/mastercard-logo.png" /></div>
-              <div class="slide"
-                ><img src="IMAGES/americanexpress-logo.png"
-              /></div>
-
-              <div class="slide"><img src="IMAGES/paypal-logo.png" /></div>
-              <div class="slide"><img src="IMAGES/stipe-logo.png" /></div>
-              <div class="slide"><img src="IMAGES/mastercard-logo.png" /></div>
-
-              <div class="slide"><img src="IMAGES/visa-logo.png" /></div>
-              <div class="slide"><img src="IMAGES/mastercard-logo.png" /></div>
-              <div class="slide"
-                ><img src="IMAGES/americanexpress-logo.png"
-              /></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- partners In end -->
-
-      <!-- notification In start -->
-      <div class="notification-container" data-aos="fade-up">
-        <div class="notification-section">
-          <div class="left-notification">
-            <div class="bell-icon">
-              <i class="fa fa-bell"></i>
-            </div>
-            <div>
-              <p class="special-text">Smart banking</p>
-              <h2>Real time Notifications</h2>
-              <div class="normal-text">
-                Your customer stay informed in real time with everything that’s
-                happening on his account: payments, transfer, advice. Get
-                visibility on your customers' flows to anticipate their
-                needs</div
-              >
-              <span
-                ><img src="IMAGES/green-check.png" /> Cards that work all across
-                the world.</span
-              >
-              <span
-                ><img src="IMAGES/green-check.png" /> No ATM fees. No minimum
-                balance. No overdrafts.</span
-              >
-            </div>
-          </div>
-          <div class="right-notification">
-            <div class="notification-imagecontainer">
-              <img src="IMAGES/notification-image.png" />
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- notification In end -->
-      <!-- investment In start -->
-      <div class="investment-container" data-aos="fade-up">
-        <div class="investment-section">
-          <div class="left-investment">
-            <div class="beenhere-icon">
-              <iconify-icon
-                icon="material-symbols:beenhere"
-                id="fa"
-              ></iconify-icon>
-            </div>
-            <div>
-              <p class="special-text">Safe Investments</p>
-              <h2>The Better Way to Save & Invest</h2>
-              <div class="normal-text">
-                Alister helps over 2 million customers achieve their financial
-                goals by helping them save and invest with ease. Put that extra
-                cash to use without putting it at risk with Alister.
-              </div>
-              <span
-                ><img src="IMAGES/green-check.png" />Profitable to invest and
-                Handy to manage</span
-              >
-              <span
-                ><img src="IMAGES/green-check.png" /> Highest Returns on your
-                investments</span
-              >
-            </div>
-          </div>
-          <div class="right-investment">
-            <div class="investment-imagecontainer">
-              <img src="IMAGES/investment-image.png" />
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- investment In end -->
-
-      <!-- open account In start -->
-      <div class="openaccount-container">
-        <img class="flip-left" src="IMAGES/building.png" />
-        <img class="flip-right" src="IMAGES/building.png" />
-        <div class="openaccount-section" data-aos="fade-up">
-          <div class="upper-info">
-            <p class="special-text"
-              >Open your account from anywhere in the world</p
-            >
-            <h2> Solutions for Every Business Need. </h2>
-            <p class="normal-text"
-              >Power up your business with a full-stack online bank account that
-              fits your needs.</p
-            >
-          </div>
-
-          <div class="lower-info">
-            <div class="lowerinfo-container">
-              <div class="lowerinfo-container__card">
-                <div class="card-icon">
-                  <iconify-icon
-                    icon="ph:receipt-thin"
-                    class="icon"
-                  ></iconify-icon>
-                </div>
-                <div class="card-info">
-                  <h3>Checking Account</h3>
-                  <p
-                    >Choose from our checking options that allow you to earn
-                    interest, avoid fees, and easily manage your account.</p
-                  >
-                  <p class="create-button" id="move-down"
-                    ><a href="#"
-                      >Open Account
-                      <iconify-icon icon="ph:arrow-right"></iconify-icon></a
-                  ></p>
-                </div>
-              </div>
-              <div class="lowerinfo-container__card">
-                <div class="card-icon">
-                  <iconify-icon
-                    icon="ph:piggy-bank-thin"
-                    class="icon"
-                  ></iconify-icon>
-                </div>
-                <div class="card-info">
-                  <h3>Savings Accounts</h3>
-                  <p
-                    >Save for your goals and watch your money grow with a CD, a
-                    money market account, a savings account.Your future starts
-                    now.</p
-                  >
-                  <p class="create-button"
-                    ><a href="#"
-                      >Start Saving
-                      <iconify-icon icon="ph:arrow-right"></iconify-icon></a
-                  ></p>
-                </div>
-              </div>
-              <div class="lowerinfo-container__card">
-                <div class="card-icon">
-                  <iconify-icon
-                    icon="ph:suitcase-thin"
-                    class="icon"
-                  ></iconify-icon>
-                </div>
-                <div class="card-info">
-                  <h3>Business Account</h3>
-                  <p
-                    >Take charge of your business banking with a business bank
-                    account. Services including virtual cards, team management
-                    and more.</p
-                  >
-                  <p class="create-button"
-                    ><a href="#"
-                      >Open Account
-                      <iconify-icon icon="ph:arrow-right"></iconify-icon></a
-                  ></p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- open account In end -->
-
-      <!-- get app In start -->
-      <div class="getapp-container">
-        <div class="getapp-section" data-aos="fade-up">
-          <div class="getapp-section__left">
-            <div class="beenhere-icon">
-              <iconify-icon
-                icon="material-symbols:beenhere"
-                id="fa"
-              ></iconify-icon>
-            </div>
-            <div>
-              <p class="special-text">Banking at Your Fingertips</p>
-              <h2>Your banking experience anytime, anywhere</h2>
-              <div class="normal-text">
-                Get your money moving with our simple to use, accessible mobile
-                app. As good as a bank branch within your phone!
-              </div>
-              <span
-                ><img src="IMAGES/green-check.png" />Bill Payments ,Funds
-                Transfer ,QR payments</span
-              >
-              <span
-                ><img src="IMAGES/green-check.png" />Credit card payments and
-                Order food</span
-              >
-              <div class="download-btns">
-                <a href="#"><img src="IMAGES/playstore-image.jpg" /></a>
-                <a href="#"
-                  ><img id="appstore" src="IMAGES/appstore-image.jpg"
-                /></a>
-              </div>
-            </div>
-          </div>
-          <div class="getapp-section__right">
-            <div class="right-images">
-              <div class="back-1">
-                <img id="img-1" src="IMAGES/getapp-image-1.png" />
-              </div>
-              <div class="back-2">
-                <img id="img-2" src="IMAGES/getapp-image-2.png" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- get app In end -->
-
-      <!-- get card In start  -->
-      <div class="getcard-container">
-        <div class="backgroundimg-con">
-          <img class="background-img" src="IMAGES/E-Wallet-pana.png" />
-        </div>
-
-        <div class="getcard-section">
-          <div class="getcard-section__left">
-            <div class="getcardSlider-wrap">
-              <div class="getcardSlider-container">
-                <div class="getcardSlider">
-                  <div class="getcardSlide"
-                    ><img src="IMAGES/atm-image-1.png" />
-                    <button class="getcardSlide__getstarted"
-                      ><a href="#"> Get Started</a></button
-                    >
-                  </div>
-                  <div class="getcardSlide"
-                    ><img src="IMAGES/atm-image.png" />
-                    <button class="getcardSlide__getstarted"
-                      ><a href="#"> Get Started</a></button
-                    >
-                  </div>
-                </div>
-              </div>
-              <div class="control-btns">
-                <button class="getcard-prev" onclick="pSlide()">❮</button>
-                <button class="getcard-next" onclick="nSlide()">❯</button>
-              </div>
-
-              <div class="card-pagination"></div>
-            </div>
-          </div>
-          <div class="getcard-section__right" data-aos="fade-up">
-            <div class="upper-content">
-              <p class="special-text"
-                >Boost your savings with the right credit card</p
-              >
-              <h2>Access Endless Possibilities with Bankio Card</h2>
-              <div class="normal-text">
-                All your needs covered with a full range of credit and debit
-                cards.
-              </div>
-            </div>
-          </div>
-          <div class="getcard-section__right-bottom">
-            <div class="card-type">
-              <a href="#"> Credit Card</a>
-              <a href="#"> Debit Card</a>
+  <section class="body-section" id="home">
+    <!-- home page In start -->
+    <div class="home-container">
+      <div class="homepage">
+        <div class="home-left">
+          <div>
+            <div class="top-content">
+              <p class="special-text"> Simple. Transparent. Secure </p>
+              <h1>Banking Solutions</h1>
+              <p class="normal-text">Products and services designed to help you reach your
+                financial goals.</p>
             </div>
             <div class="lower-content">
-              <div class="lower-content__box">
-                <div class="card-icon">
-                  <iconify-icon
-                    class="icon"
-                    icon="iconoir:card-lock"
-                  ></iconify-icon>
-                </div>
-                <p> Secured Cards</p>
+              <button class="open-account">Open Account</button>
+              <button class="getin-touch"> Get in touch</button>
+            </div>
+          </div>
+        </div>
+        <img class="home-image" src="IMAGES/App monetization-rafiki.png" alt="Home Image" />
+      </div>
+    </div>
+
+    <!-- home page In end -->
+    <!-- partners In start -->
+    <div class="partners">
+      <div class="false-block"></div>
+      <div class="container">
+        <div class="partners-header">
+          <h2>Partners</h2>
+        </div>
+        <div class="slider-container">
+          <div class="slider">
+            <div class="slide"><img src="IMAGES/visa-logo.png" /> </div>
+            <div class="slide"><img src="IMAGES/mastercard-logo.png" /></div>
+            <div class="slide"><img src="IMAGES/americanexpress-logo.png" /></div>
+
+            <div class="slide"><img src="IMAGES/paypal-logo.png" /></div>
+            <div class="slide"><img src="IMAGES/stipe-logo.png" /></div>
+            <div class="slide"><img src="IMAGES/mastercard-logo.png" /></div>
+
+            <div class="slide"><img src="IMAGES/visa-logo.png" /></div>
+            <div class="slide"><img src="IMAGES/mastercard-logo.png" /></div>
+            <div class="slide"><img src="IMAGES/americanexpress-logo.png" /></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- partners In end -->
+
+    <!-- notification In start -->
+    <div class="notification-container" data-aos="fade-up">
+      <div class="notification-section">
+        <div class="left-notification">
+          <div class="bell-icon">
+            <i class="fa fa-bell"></i>
+          </div>
+          <div>
+            <p class="special-text">Smart banking</p>
+            <h2>Real time Notifications</h2>
+            <div class="normal-text">
+              Your customer stay informed in real time with everything that’s
+              happening on his account: payments, transfer, advice. Get
+              visibility on your customers' flows to anticipate their
+              needs</div>
+            <span><img src="IMAGES/green-check.png" /> Cards that work all across
+              the world.</span>
+            <span><img src="IMAGES/green-check.png" /> No ATM fees. No minimum
+              balance. No overdrafts.</span>
+          </div>
+        </div>
+        <div class="right-notification">
+          <div class="notification-imagecontainer">
+            <img src="IMAGES/notification-image.png" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- notification In end -->
+    <!-- investment In start -->
+    <div class="investment-container" data-aos="fade-up">
+      <div class="investment-section">
+        <div class="left-investment">
+          <div class="beenhere-icon">
+            <iconify-icon icon="material-symbols:beenhere" id="fa"></iconify-icon>
+          </div>
+          <div>
+            <p class="special-text">Safe Investments</p>
+            <h2>The Better Way to Save & Invest</h2>
+            <div class="normal-text">
+              Alister helps over 2 million customers achieve their financial
+              goals by helping them save and invest with ease. Put that extra
+              cash to use without putting it at risk with Alister.
+            </div>
+            <span><img src="IMAGES/green-check.png" />Profitable to invest and
+              Handy to manage</span>
+            <span><img src="IMAGES/green-check.png" /> Highest Returns on your
+              investments</span>
+          </div>
+        </div>
+        <div class="right-investment">
+          <div class="investment-imagecontainer">
+            <img src="IMAGES/investment-image.png" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- investment In end -->
+
+    <!-- open account In start -->
+    <div class="openaccount-container">
+      <img class="flip-left" src="IMAGES/building.png" />
+      <img class="flip-right" src="IMAGES/building.png" />
+      <div class="openaccount-section" data-aos="fade-up">
+        <div class="upper-info">
+          <p class="special-text">Open your account from anywhere in the world</p>
+          <h2> Solutions for Every Business Need. </h2>
+          <p class="normal-text">Power up your business with a full-stack online bank account that
+            fits your needs.</p>
+        </div>
+
+        <div class="lower-info">
+          <div class="lowerinfo-container">
+            <div class="lowerinfo-container__card">
+              <div class="card-icon">
+                <iconify-icon icon="ph:receipt-thin" class="icon"></iconify-icon>
               </div>
-              <div class="lower-content__box">
-                <div class="card-icon">
-                  <iconify-icon
-                    class="icon"
-                    icon="solar:card-transfer-linear"
-                  ></iconify-icon>
-                </div>
-                <p> Balanced Transfer</p>
+              <div class="card-info">
+                <h3>Checking Account</h3>
+                <p>Choose from our checking options that allow you to earn
+                  interest, avoid fees, and easily manage your account.</p>
+                <p class="create-button" id="move-down"><a href="#">Open Account
+                    <iconify-icon icon="ph:arrow-right"></iconify-icon></a></p>
               </div>
-              <div class="lower-content__box">
-                <div class="card-icon">
-                  <iconify-icon
-                    class="icon"
-                    icon="healthicons:travel-alt-outline"
-                  ></iconify-icon>
-                </div>
-                <p>Travel</p>
+            </div>
+            <div class="lowerinfo-container__card">
+              <div class="card-icon">
+                <iconify-icon icon="ph:piggy-bank-thin" class="icon"></iconify-icon>
               </div>
-              <div class="lower-content__box">
-                <div class="card-icon">
-                  <iconify-icon
-                    class="icon"
-                    icon="mdi:cash-chargeback"
-                  ></iconify-icon>
-                </div>
-                <p>Cashback</p>
+              <div class="card-info">
+                <h3>Savings Accounts</h3>
+                <p>Save for your goals and watch your money grow with a CD, a
+                  money market account, a savings account.Your future starts
+                  now.</p>
+                <p class="create-button"><a href="#">Start Saving
+                    <iconify-icon icon="ph:arrow-right"></iconify-icon></a></p>
+              </div>
+            </div>
+            <div class="lowerinfo-container__card">
+              <div class="card-icon">
+                <iconify-icon icon="ph:suitcase-thin" class="icon"></iconify-icon>
+              </div>
+              <div class="card-info">
+                <h3>Business Account</h3>
+                <p>Take charge of your business banking with a business bank
+                  account. Services including virtual cards, team management
+                  and more.</p>
+                <p class="create-button"><a href="#">Open Account
+                    <iconify-icon icon="ph:arrow-right"></iconify-icon></a></p>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <!-- get card In end -->
+    </div>
+    <!-- open account In end -->
 
-      <!-- get in touch In start -->
-      <div class="getintouch-section">
-        <div class="backgroundimg-con">
-          <img class="" src="./IMAGES/wave.png" />
-        </div>
-        <div class="backgroundblue-cover"> </div>
-        <div class="getintouch-container">
-          <div data-aos="fade-up">
-            <p class="special-text"> Ready to make the leap? </p>
-            <p class="header-text"> Let us help you. </p>
+    <!-- get app In start -->
+    <div class="getapp-container">
+      <div class="getapp-section" data-aos="fade-up">
+        <div class="getapp-section__left">
+          <div class="beenhere-icon">
+            <iconify-icon icon="material-symbols:beenhere" id="fa"></iconify-icon>
           </div>
-          <div class="getintouch-btns">
-            <a href="#"><button id="firstBtn">Open Account</button></a>
-            <a href="#"><button id="secondBtn"> Get in Touch</button></a>
+          <div>
+            <p class="special-text">Banking at Your Fingertips</p>
+            <h2>Your banking experience anytime, anywhere</h2>
+            <div class="normal-text">
+              Get your money moving with our simple to use, accessible mobile
+              app. As good as a bank branch within your phone!
+            </div>
+            <span><img src="IMAGES/green-check.png" />Bill Payments ,Funds
+              Transfer ,QR payments</span>
+            <span><img src="IMAGES/green-check.png" />Credit card payments and
+              Order food</span>
+            <div class="download-btns">
+              <a href="#"><img src="IMAGES/playstore-image.jpg" /></a>
+              <a href="#"><img id="appstore" src="IMAGES/appstore-image.jpg" /></a>
+            </div>
+          </div>
+        </div>
+        <div class="getapp-section__right">
+          <div class="right-images">
+            <div class="back-1">
+              <img id="img-1" src="IMAGES/getapp-image-1.png" />
+            </div>
+            <div class="back-2">
+              <img id="img-2" src="IMAGES/getapp-image-2.png" />
+            </div>
           </div>
         </div>
       </div>
-      <!-- get in touch In end -->
+    </div>
+    <!-- get app In end -->
 
-      <!-- loan section In start -->
-      <div class="loan-section">
-        <div class="loan-container" data-aos="fade-up">
-          <div class="loan-container__left">
-            <p class="special-text"> Financial Planning </p>
-            <h2> Let's plan your finances the right way </h2>
-            <p class="normal-text">
-              Lending that doesn't weigh you down.We know how hard is it to
-              start something new, that’s why we have the perfect plan for you.
-            </p>
+    <!-- get card In start  -->
+    <div class="getcard-container">
+      <div class="backgroundimg-con">
+        <img class="background-img" src="IMAGES/E-Wallet-pana.png" />
+      </div>
+
+      <div class="getcard-section">
+        <div class="getcard-section__left">
+          <div class="getcardSlider-wrap">
+            <div class="getcardSlider-container">
+              <div class="getcardSlider">
+                <div class="getcardSlide"><img src="IMAGES/atm-image-1.png" />
+                  <button class="getcardSlide__getstarted"><a href="#"> Get Started</a></button>
+                </div>
+                <div class="getcardSlide"><img src="IMAGES/atm-image.png" />
+                  <button class="getcardSlide__getstarted"><a href="#"> Get Started</a></button>
+                </div>
+              </div>
+            </div>
+            <div class="control-btns">
+              <button class="getcard-prev" onclick="pSlide()">❮</button>
+              <button class="getcard-next" onclick="nSlide()">❯</button>
+            </div>
+
+            <div class="card-pagination"></div>
+          </div>
+        </div>
+        <div class="getcard-section__right" data-aos="fade-up">
+          <div class="upper-content">
+            <p class="special-text">Boost your savings with the right credit card</p>
+            <h2>Access Endless Possibilities with Bankio Card</h2>
+            <div class="normal-text">
+              All your needs covered with a full range of credit and debit
+              cards.
+            </div>
+          </div>
+        </div>
+        <div class="getcard-section__right-bottom">
+          <div class="card-type">
+            <a href="#"> Credit Card</a>
+            <a href="#"> Debit Card</a>
+          </div>
+          <div class="lower-content">
+            <div class="lower-content__box">
+              <div class="card-icon">
+                <iconify-icon class="icon" icon="iconoir:card-lock"></iconify-icon>
+              </div>
+              <p> Secured Cards</p>
+            </div>
+            <div class="lower-content__box">
+              <div class="card-icon">
+                <iconify-icon class="icon" icon="solar:card-transfer-linear"></iconify-icon>
+              </div>
+              <p> Balanced Transfer</p>
+            </div>
+            <div class="lower-content__box">
+              <div class="card-icon">
+                <iconify-icon class="icon" icon="healthicons:travel-alt-outline"></iconify-icon>
+              </div>
+              <p>Travel</p>
+            </div>
+            <div class="lower-content__box">
+              <div class="card-icon">
+                <iconify-icon class="icon" icon="mdi:cash-chargeback"></iconify-icon>
+              </div>
+              <p>Cashback</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- get card In end -->
+
+    <!-- get in touch In start -->
+    <div class="getintouch-section">
+      <div class="backgroundimg-con">
+        <img class="" src="./IMAGES/wave.png" />
+      </div>
+      <div class="backgroundblue-cover"> </div>
+      <div class="getintouch-container">
+        <div data-aos="fade-up">
+          <p class="special-text"> Ready to make the leap? </p>
+          <p class="header-text"> Let us help you. </p>
+        </div>
+        <div class="getintouch-btns">
+          <a href="#"><button id="firstBtn">Open Account</button></a>
+          <a href="#"><button id="secondBtn"> Get in Touch</button></a>
+        </div>
+      </div>
+    </div>
+    <!-- get in touch In end -->
+
+    <!-- loan section In start -->
+    <div class="loan-section">
+      <div class="loan-container" data-aos="fade-up">
+        <div class="loan-container__left">
+          <p class="special-text"> Financial Planning </p>
+          <h2> Let's plan your finances the right way </h2>
+          <p class="normal-text">
+            Lending that doesn't weigh you down.We know how hard is it to
+            start something new, that’s why we have the perfect plan for you.
+          </p>
+          <a href="#"><button>Apply for a loan</button></a>
+        </div>
+        <div class="loan-container__right">
+          <div class="loan-box">
+            <div class="card-icon">
+              <iconify-icon class="icon" icon="fluent-mdl2:home-verify"></iconify-icon>
+            </div>
+            <p> Home Loans</p>
+            <div class="span-text">
+              <span><img src="IMAGES/green-check.png" /> Lowest interest
+                rates</span>
+              <span>
+                <img src="IMAGES/green-check.png" /> Fast Loan Processing
+              </span>
+            </div>
+          </div>
+          <div class="loan-box">
+            <div class="card-icon">
+              <iconify-icon class="icon" icon="ph:car-light"></iconify-icon>
+            </div>
+            <p> Car Loans</p>
+            <div class="span-text">
+              <span><img src="IMAGES/green-check.png" />Competitive rates</span>
+              <span><img src="IMAGES/green-check.png" />Quick Easy</span>
+            </div>
+          </div>
+          <div class="loan-box">
+            <div class="card-icon">
+              <iconify-icon class="icon" icon="la:business-time"></iconify-icon>
+            </div>
+            <p> Business Loans</p>
+            <div class="span-text">
+              <span><img src="IMAGES/green-check.png" /> Pay back
+                conveniently</span>
+              <span><img src="IMAGES/green-check.png" /> Fast Loan
+                Processing</span>
+            </div>
+          </div>
+          <div class="loan-box">
+            <div class="card-icon">
+              <iconify-icon class="icon" icon="fluent-mdl2:education"></iconify-icon>
+            </div>
+            <p>Education Loans</p>
+            <div class="span-text">
+              <span><img src="IMAGES/green-check.png" />Easy Approvals</span>
+              <span><img src="IMAGES/green-check.png" /> Full Assistance</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="loan-section2">
+      <div class="loan-section2-container" data-aos="fade-up">
+        <div class="left">
+          <img src="./IMAGES/Finance-cuate.png" />
+        </div>
+        <div class="right">
+          <div class="right__container">
+            <h2>Need a Personalized Solution?</h2>
+            <div class="normal-text">
+              Get in touch with us, and we will help you to create the right
+              one for your business or personal needs.
+            </div>
             <a href="#"><button>Apply for a loan</button></a>
           </div>
-          <div class="loan-container__right">
-            <div class="loan-box">
-              <div class="card-icon">
-                <iconify-icon
-                  class="icon"
-                  icon="fluent-mdl2:home-verify"
-                ></iconify-icon>
-              </div>
-              <p> Home Loans</p>
-              <div class="span-text">
-                <span
-                  ><img src="IMAGES/green-check.png" /> Lowest interest
-                  rates</span
-                >
-                <span>
-                  <img src="IMAGES/green-check.png" /> Fast Loan Processing
-                </span>
+        </div>
+      </div>
+    </div>
+    <!-- loan section In end -->
+
+    <!-- testimonials section In start -->
+    <div class="testimonial-section">
+      <div class="testimonial-container" data-aos="fade-up">
+        <div class="testimonial-container__top-content">
+          <p class="special-text">Testimonial</p>
+          <h2>Don't take our word for it, take theirs</h2>
+          <p class="normal-text">
+            Take a look at our past customers success stories. Our goal is to
+            help you grow
+          </p>
+        </div>
+        <div class="testimonial-container__lower-content">
+          <div class="testimonial-wrap">
+            <div class="testimonialSlider-container">
+              <div class="testimonialSlider">
+                <div class="testimonialSlide">
+                  <div class="left">
+                    <div class="imgcon">
+                      <img src="./IMAGES/man-1690965.jpg" />
+                    </div>
+                  </div>
+                  <div class="right">
+                    <iconify-icon class="icon" icon="mingcute:quote-left-fill"></iconify-icon>
+                    <p class="bold-text">"I recently used the Alister app"</p>
+                    <p class="normal-text">
+                      I’m thrilled with how smooth and user-friendly it is.
+                      The interface is clean, making it super easy to navigate
+                      and manage my accounts. Transactions are quick, and I
+                      love the added security features that give me peace of
+                      mind. Overall, the app has made banking so much more
+                      convenient, and I couldn’t be happier with the
+                      experience!
+                    </p>
+                    <p class="name-text">James Stone</p>
+                    <p class="country-text">United Kingdom</p>
+                  </div>
+                </div>
+                <div class="testimonialSlide">
+                  <div class="left">
+                    <div class="imgcon">
+                      <img src="./IMAGES/man-1690965.jpg" />
+                    </div>
+                  </div>
+                  <div class="right">
+                    <iconify-icon class="icon" icon="mingcute:quote-left-fill"></iconify-icon>
+                    <p class="bold-text">"I recently used the Alister app"</p>
+                    <p class="normal-text">
+                      I’m thrilled with how smooth and user-friendly it is.
+                      The interface is clean, making it super easy to navigate
+                      and manage my accounts. Transactions are quick, and I
+                      love the added security features that give me peace of
+                      mind. Overall, the app has made banking so much more
+                      convenient, and I couldn’t be happier with the
+                      experience!
+                    </p>
+                    <p class="name-text">James Stone</p>
+                    <p class="country-text">United Kingdom</p>
+                  </div>
+                </div>
+                <div class="testimonialSlide">
+                  <div class="left">
+                    <div class="imgcon">
+                      <img src="./IMAGES/man-1690965.jpg" />
+                    </div>
+                  </div>
+                  <div class="right">
+                    <iconify-icon class="icon" icon="mingcute:quote-left-fill"></iconify-icon>
+                    <p class="bold-text">"I recently used the Alister app"</p>
+                    <p class="normal-text">
+                      I’m thrilled with how smooth and user-friendly it is.
+                      The interface is clean, making it super easy to navigate
+                      and manage my accounts. Transactions are quick, and I
+                      love the added security features that give me peace of
+                      mind. Overall, the app has made banking so much more
+                      convenient, and I couldn’t be happier with the
+                      experience!
+                    </p>
+                    <p class="name-text">James Stone</p>
+                    <p class="country-text">United Kingdom</p>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="loan-box">
-              <div class="card-icon">
-                <iconify-icon class="icon" icon="ph:car-light"></iconify-icon>
+            <div class="control-btns">
+              <button class="testimonial-prev" onclick="testimonialPreviousSlide()">❮</button>
+              <button class="testimonial-next" onclick="testimonialNextSlide()">❯</button>
+            </div>
+            <div class="testimonial-pagination"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- testimonials section In end -->
+
+    <!-- blog section In start -->
+    <div class="blog-section">
+      <div class="blog-container" data-aos="fade-up">
+        <div class="blog-container__top">
+          <p class="special-text">Latest insights from Bankio</p>
+          <h2>Our Latest Articles</h2>
+          <p class="normal-text">Get more Latest News and Resources here ...</p>
+        </div>
+        <div class="blog-container__lower">
+          <div class="blog-card">
+            <div class="top-image">
+              <img src="./IMAGES/inpbd7rt.png" />
+            </div>
+            <div>
+              <p class="bold-text">The future of fruad protection.</p>
+              <div class="spancon">
+                <span><iconify-icon class="icon" icon="ph:user-thin"></iconify-icon>
+                  Post by John Doe</span>
+                <span><iconify-icon class="icon" icon="simple-line-icons:calender"></iconify-icon>21 May 2023</span>
               </div>
-              <p> Car Loans</p>
-              <div class="span-text">
-                <span
-                  ><img src="IMAGES/green-check.png" />Competitive rates</span
-                >
-                <span><img src="IMAGES/green-check.png" />Quick Easy</span>
+              <p class="normal-text">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Doloribus iure voluptas minima quaerat veritatis impedit velit
+                quibusdam consequatur ipsum rem?</p>
+              <a href="#">Read more
+                <iconify-icon class="icon" icon="ph:arrow-right-light"></iconify-icon></a>
+            </div>
+          </div>
+          <div class="blog-card">
+            <div class="top-image">
+              <img src="./IMAGES/t8ee8l2l.png" />
+            </div>
+            <div>
+              <p class="bold-text">Digital Banking services</p>
+              <div class="spancon">
+                <span><iconify-icon class="icon" icon="ph:user-thin"></iconify-icon>
+                  Post by John Doe</span>
+                <span><iconify-icon class="icon" icon="simple-line-icons:calender"></iconify-icon>21 May 2023</span>
+              </div>
+              <p class="normal-text">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Doloribus iure voluptas minima quaerat veritatis impedit velit
+                quibusdam consequatur ipsum rem?</p>
+              <a href="#">Read more
+                <iconify-icon class="icon" icon="ph:arrow-right-light"></iconify-icon></a>
+            </div>
+          </div>
+          <div class="blog-card">
+            <div class="top-image">
+              <img src="./IMAGES/s25ctihx.png" />
+            </div>
+            <div>
+              <p class="bold-text">Mobile Banking at a Glance</p>
+              <div class="spancon">
+                <span><iconify-icon class="icon" icon="ph:user-thin"></iconify-icon>
+                  Post by John Doe</span>
+                <span><iconify-icon class="icon" icon="simple-line-icons:calender"></iconify-icon>21 May 2023</span>
+              </div>
+              <p class="normal-text">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Doloribus iure voluptas minima quaerat veritatis impedit velit
+                quibusdam consequatur ipsum rem?</p>
+              <a href="#">Read more
+                <iconify-icon class="icon" icon="ph:arrow-right-light"></iconify-icon></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- blog section In end -->
+
+    <!-- FAQs section In start -->
+    <div class="faqs-section">
+      <div class="faqs-container" data-aos="fade-up">
+        <div class="faqs-container__top">
+          <div class="special-text">
+            If you have question,we have answer
+          </div>
+          <h2>Frequently asked questions</h2>
+          <p class="normal-text">
+            Get answers to all questions you have and boost your knowledge so
+            you can save, invest and spend smarter.
+            <a href="#">See all questions here!</a>
+          </p>
+        </div>
+        <div class="faqs-container__lower">
+          <div class="accordion">
+            <div class="accordion-item">
+              <div class="accordion-header">How do i locate the nearest branch or ATM?
+                <div class="close-btn">
+                  <iconify-icon class="icon" icon="ic:baseline-plus"></iconify-icon>
+                </div>
+              </div>
+              <div class="accordion-content">
+                <p>If your card is missing, let us know immediately. We’ll
+                  block your card right away send over a new one on the same
+                  day.To report a lost or stolen card, call us at (406)
+                  555-0120.</p>
               </div>
             </div>
-            <div class="loan-box">
-              <div class="card-icon">
-                <iconify-icon
-                  class="icon"
-                  icon="la:business-time"
-                ></iconify-icon>
+            <div class="accordion-item">
+              <div class="accordion-header">What do i do if i lose more card or it gets stolen?
+                <div class="close-btn">
+                  <iconify-icon class="icon" icon="ic:baseline-plus"></iconify-icon>
+                </div>
               </div>
-              <p> Business Loans</p>
-              <div class="span-text">
-                <span
-                  ><img src="IMAGES/green-check.png" /> Pay back
-                  conveniently</span
-                >
-                <span
-                  ><img src="IMAGES/green-check.png" /> Fast Loan
-                  Processing</span
-                >
+              <div class="accordion-content">
+                <p>If your card is missing, let us know immediately. We’ll
+                  block your card right away send over a new one on the same
+                  day.To report a lost or stolen card, call us at (406)
+                  555-0120.</p>
               </div>
             </div>
-            <div class="loan-box">
-              <div class="card-icon">
-                <iconify-icon
-                  class="icon"
-                  icon="fluent-mdl2:education"
-                ></iconify-icon>
+            <div class="accordion-item">
+              <div class="accordion-header">What is your customer service number?
+                <div class="close-btn">
+                  <iconify-icon class="icon" icon="ic:baseline-plus"></iconify-icon>
+                </div>
               </div>
-              <p>Education Loans</p>
-              <div class="span-text">
-                <span><img src="IMAGES/green-check.png" />Easy Approvals</span>
-                <span
-                  ><img src="IMAGES/green-check.png" /> Full Assistance</span
-                >
+              <div class="accordion-content">
+                <p>If your card is missing, let us know immediately. We’ll
+                  block your card right away send over a new one on the same
+                  day.To report a lost or stolen card, call us at (406)
+                  555-0120.</p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-header">How do i reset my pin?
+                <div class="close-btn">
+                  <iconify-icon class="icon" icon="ic:baseline-plus"></iconify-icon>
+                </div>
+              </div>
+              <div class="accordion-content">
+                <p>If your card is missing, let us know immediately. We’ll
+                  block your card right away send over a new one on the same
+                  day.To report a lost or stolen card, call us at (406)
+                  555-0120.</p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-header">What is required to use Digital banking?
+                <div class="close-btn">
+                  <iconify-icon class="icon" icon="ic:baseline-plus"></iconify-icon>
+                </div>
+              </div>
+              <div class="accordion-content">
+                <p>If your card is missing, let us know immediately. We’ll
+                  block your card right away send over a new one on the same
+                  day.To report a lost or stolen card, call us at (406)
+                  555-0120.</p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-header">Is digital banking secure?
+                <div class="close-btn">
+                  <iconify-icon class="icon" icon="ic:baseline-plus"></iconify-icon>
+                </div>
+              </div>
+              <div class="accordion-content">
+                <p>If your card is missing, let us know immediately. We’ll
+                  block your card right away send over a new one on the same
+                  day.To report a lost or stolen card, call us at (406)
+                  555-0120.</p>
               </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
 
-      <div class="loan-section2">
-        <div class="loan-section2-container" data-aos="fade-up">
+    <!-- FAQs section In end -->
+
+    <!--second getstarted In start  -->
+    <div class="secondgetStarted-section">
+      <div class="secondgetStarted-container">
+        <div class="secondgetStarted-container__left" data-aos="fade-up">
+          <div class="left-container">
+            <h2>Ready to get started?</h2>
+            <div class="normal-text">
+              It only takes a few minutes to register your FREE Bankio
+              account.
+            </div>
+            <a href="#"><button>Open an Account</button></a>
+          </div>
+        </div>
+        <div class="secondgetStarted-container__right">
+          <img src="./IMAGES/Curious-bro.png" />
+        </div>
+      </div>
+    </div>
+    <!--second getstarted In end -->'
+    <!-- footer In start  -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-container__top">
+          <div class="box left">
+            <div class="logo">
+              <img src="IMAGES/alisterbank-logo.png" alt="logo" />
+              <h3>Alister</h3>
+            </div>
+            <p class="normal-text">A modern, technology-first bank built for you and your growing
+              business.</p>
+            <div class="social-icons">
+              <iconify-icon class="icon" icon="ri:facebook-circle-line"></iconify-icon>
+              <iconify-icon class="icon" icon="jam:twitter-circle"></iconify-icon>
+              <iconify-icon class="icon" icon="jam:linkedin-circle"></iconify-icon>
+              <iconify-icon class="icon" icon="mage:instagram-circle"></iconify-icon>
+            </div>
+          </div>
+          <div class="box center">
+            <h3>Company</h3>
+            <div class="links">
+              <div class="link"><iconify-icon class="icon" icon="material-symbols-light:chevron-right"></iconify-icon><a
+                  href="#">About Us</a></div>
+              <div class="link"><iconify-icon class="icon" icon="material-symbols-light:chevron-right"></iconify-icon><a
+                  href="#">Awards</a></div>
+              <div class="link"><iconify-icon class="icon" icon="material-symbols-light:chevron-right"></iconify-icon><a
+                  href="#">Careers</a></div>
+            </div>
+          </div>
+          <div class="box center">
+            <h3>Useful Links</h3>
+            <div class="links">
+              <div class="link"><iconify-icon class="icon" icon="material-symbols-light:chevron-right"></iconify-icon><a
+                  href="#">Products</a></div>
+              <div class="link"><iconify-icon class="icon" icon="material-symbols-light:chevron-right"></iconify-icon><a
+                  href="#">Business loan</a></div>
+              <div class="link"><iconify-icon class="icon" icon="material-symbols-light:chevron-right"></iconify-icon><a
+                  href="#">Affiliate Program</a></div>
+              <div class="link"><iconify-icon class="icon" icon="material-symbols-light:chevron-right"></iconify-icon><a
+                  href="#">Blog</a></div>
+            </div>
+          </div>
+          <div class="box center">
+            <h3>Support</h3>
+            <div class="links">
+              <div class="link"><iconify-icon class="icon" icon="material-symbols-light:chevron-right"></iconify-icon><a
+                  href="#">Support@Alister</a></div>
+              <div class="link"><iconify-icon class="icon" icon="material-symbols-light:chevron-right"></iconify-icon><a
+                  href="#">Contact Us</a></div>
+              <div class="link"><iconify-icon class="icon" icon="material-symbols-light:chevron-right"></iconify-icon><a
+                  href="#">FAQ</a></div>
+            </div>
+          </div>
+          <div class="box right">
+            <h3>Suscribe</h3>
+            <input type="email" name="email" id="email" placeholder="Enter Your Email Address" />
+            <a href="#"><button>Suscribe</button></a>
+            <p class="normal-text">Get the latest updates via email. Any time you may
+              unsubscribe</p>
+          </div>
+        </div>
+        <div class="footer-container__lower">
           <div class="left">
-            <img src="./IMAGES/Finance-cuate.png" />
+            <span>Copyright <i class="fa fa-copyright"></i>
+              <a href="#">Alister</a></span>
           </div>
           <div class="right">
-            <div class="right__container">
-              <h2>Need a Personalized Solution?</h2>
-              <div class="normal-text">
-                Get in touch with us, and we will help you to create the right
-                one for your business or personal needs.
-              </div>
-              <a href="#"><button>Apply for a loan</button></a>
-            </div>
+            <span><a href="#">Privacy</a></span>
+            <span><a href="#">Terms and Condition</a></span>
           </div>
         </div>
       </div>
-      <!-- loan section In end -->
+    </footer>
+    <!-- footer In end  -->
+  </section>
 
-      <!-- testimonials section In start -->
-      <div class="testimonial-section">
-        <div class="testimonial-container" data-aos="fade-up">
-          <div class="testimonial-container__top-content">
-            <p class="special-text">Testimonial</p>
-            <h2>Don't take our word for it, take theirs</h2>
-            <p class="normal-text">
-              Take a look at our past customers success stories. Our goal is to
-              help you grow
-            </p>
-          </div>
-          <div class="testimonial-container__lower-content">
-            <div class="testimonial-wrap">
-              <div class="testimonialSlider-container">
-                <div class="testimonialSlider">
-                  <div class="testimonialSlide">
-                    <div class="left">
-                      <div class="imgcon">
-                        <img src="./IMAGES/man-1690965.jpg" />
-                      </div>
-                    </div>
-                    <div class="right">
-                      <iconify-icon
-                        class="icon"
-                        icon="mingcute:quote-left-fill"
-                      ></iconify-icon>
-                      <p class="bold-text">"I recently used the Alister app"</p>
-                      <p class="normal-text">
-                        I’m thrilled with how smooth and user-friendly it is.
-                        The interface is clean, making it super easy to navigate
-                        and manage my accounts. Transactions are quick, and I
-                        love the added security features that give me peace of
-                        mind. Overall, the app has made banking so much more
-                        convenient, and I couldn’t be happier with the
-                        experience!
-                      </p>
-                      <p class="name-text">James Stone</p>
-                      <p class="country-text">United Kingdom</p>
-                    </div>
-                  </div>
-                  <div class="testimonialSlide">
-                    <div class="left">
-                      <div class="imgcon">
-                        <img src="./IMAGES/man-1690965.jpg" />
-                      </div>
-                    </div>
-                    <div class="right">
-                      <iconify-icon
-                        class="icon"
-                        icon="mingcute:quote-left-fill"
-                      ></iconify-icon>
-                      <p class="bold-text">"I recently used the Alister app"</p>
-                      <p class="normal-text">
-                        I’m thrilled with how smooth and user-friendly it is.
-                        The interface is clean, making it super easy to navigate
-                        and manage my accounts. Transactions are quick, and I
-                        love the added security features that give me peace of
-                        mind. Overall, the app has made banking so much more
-                        convenient, and I couldn’t be happier with the
-                        experience!
-                      </p>
-                      <p class="name-text">James Stone</p>
-                      <p class="country-text">United Kingdom</p>
-                    </div>
-                  </div>
-                  <div class="testimonialSlide">
-                    <div class="left">
-                      <div class="imgcon">
-                        <img src="./IMAGES/man-1690965.jpg" />
-                      </div>
-                    </div>
-                    <div class="right">
-                      <iconify-icon
-                        class="icon"
-                        icon="mingcute:quote-left-fill"
-                      ></iconify-icon>
-                      <p class="bold-text">"I recently used the Alister app"</p>
-                      <p class="normal-text">
-                        I’m thrilled with how smooth and user-friendly it is.
-                        The interface is clean, making it super easy to navigate
-                        and manage my accounts. Transactions are quick, and I
-                        love the added security features that give me peace of
-                        mind. Overall, the app has made banking so much more
-                        convenient, and I couldn’t be happier with the
-                        experience!
-                      </p>
-                      <p class="name-text">James Stone</p>
-                      <p class="country-text">United Kingdom</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="control-btns">
-                <button
-                  class="testimonial-prev"
-                  onclick="testimonialPreviousSlide()"
-                  >❮</button
-                >
-                <button
-                  class="testimonial-next"
-                  onclick="testimonialNextSlide()"
-                  >❯</button
-                >
-              </div>
-              <div class="testimonial-pagination"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- testimonials section In end -->
+  <!-- SCRIPT LINKS -->
+  <script src="https://code.iconify.design/iconify-icon/2.0.0/iconify-icon.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      once: true,
+      anchorPlacement: "top-bottom",
+      duration: "200", // No duration for immediate effect
+    });
+  </script>
+  <script src="Javascript/script.js"></script>
+</body>
 
-      <!-- blog section In start -->
-      <div class="blog-section">
-        <div class="blog-container" data-aos="fade-up">
-          <div class="blog-container__top">
-            <p class="special-text">Latest insights from Bankio</p>
-            <h2>Our Latest Articles</h2>
-            <p class="normal-text"
-              >Get more Latest News and Resources here ...</p
-            >
-          </div>
-          <div class="blog-container__lower">
-            <div class="blog-card">
-              <div class="top-image">
-                <img src="./IMAGES/inpbd7rt.png" />
-              </div>
-              <div>
-                <p class="bold-text">The future of fruad protection.</p>
-                <div class="spancon">
-                  <span
-                    ><iconify-icon
-                      class="icon"
-                      icon="ph:user-thin"
-                    ></iconify-icon>
-                    Post by John Doe</span
-                  >
-                  <span
-                    ><iconify-icon
-                      class="icon"
-                      icon="simple-line-icons:calender"
-                    ></iconify-icon
-                    >21 May 2023</span
-                  >
-                </div>
-                <p class="normal-text">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Doloribus iure voluptas minima quaerat veritatis impedit velit
-                  quibusdam consequatur ipsum rem?</p
-                >
-                <a href="#"
-                  >Read more
-                  <iconify-icon
-                    class="icon"
-                    icon="ph:arrow-right-light"
-                  ></iconify-icon
-                ></a>
-              </div>
-            </div>
-            <div class="blog-card">
-              <div class="top-image">
-                <img src="./IMAGES/t8ee8l2l.png" />
-              </div>
-              <div>
-                <p class="bold-text">Digital Banking services</p>
-                <div class="spancon">
-                  <span
-                    ><iconify-icon
-                      class="icon"
-                      icon="ph:user-thin"
-                    ></iconify-icon>
-                    Post by John Doe</span
-                  >
-                  <span
-                    ><iconify-icon
-                      class="icon"
-                      icon="simple-line-icons:calender"
-                    ></iconify-icon
-                    >21 May 2023</span
-                  >
-                </div>
-                <p class="normal-text">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Doloribus iure voluptas minima quaerat veritatis impedit velit
-                  quibusdam consequatur ipsum rem?</p
-                >
-                <a href="#"
-                  >Read more
-                  <iconify-icon
-                    class="icon"
-                    icon="ph:arrow-right-light"
-                  ></iconify-icon
-                ></a>
-              </div>
-            </div>
-            <div class="blog-card">
-              <div class="top-image">
-                <img src="./IMAGES/s25ctihx.png" />
-              </div>
-              <div>
-                <p class="bold-text">Mobile Banking at a Glance</p>
-                <div class="spancon">
-                  <span
-                    ><iconify-icon
-                      class="icon"
-                      icon="ph:user-thin"
-                    ></iconify-icon>
-                    Post by John Doe</span
-                  >
-                  <span
-                    ><iconify-icon
-                      class="icon"
-                      icon="simple-line-icons:calender"
-                    ></iconify-icon
-                    >21 May 2023</span
-                  >
-                </div>
-                <p class="normal-text">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Doloribus iure voluptas minima quaerat veritatis impedit velit
-                  quibusdam consequatur ipsum rem?</p
-                >
-                <a href="#"
-                  >Read more
-                  <iconify-icon
-                    class="icon"
-                    icon="ph:arrow-right-light"
-                  ></iconify-icon
-                ></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- blog section In end -->
-
-      <!-- FAQs section In start -->
-      <div class="faqs-section">
-        <div class="faqs-container" data-aos="fade-up">
-          <div class="faqs-container__top">
-            <div class="special-text">
-              If you have question,we have answer
-            </div>
-            <h2>Frequently asked questions</h2>
-            <p class="normal-text">
-              Get answers to all questions you have and boost your knowledge so
-              you can save, invest and spend smarter.
-              <a href="#">See all questions here!</a>
-            </p>
-          </div>
-          <div class="faqs-container__lower">
-            <div class="accordion">
-              <div class="accordion-item">
-                <div class="accordion-header"
-                  >How do i locate the nearest branch or ATM?
-                  <div class="close-btn">
-                    <iconify-icon
-                      class="icon"
-                      icon="ic:baseline-plus"
-                    ></iconify-icon>
-                  </div>
-                </div>
-                <div class="accordion-content">
-                  <p
-                    >If your card is missing, let us know immediately. We’ll
-                    block your card right away send over a new one on the same
-                    day.To report a lost or stolen card, call us at (406)
-                    555-0120.</p
-                  >
-                </div>
-              </div>
-              <div class="accordion-item">
-                <div class="accordion-header"
-                  >What do i do if i lose more card or it gets stolen?
-                  <div class="close-btn">
-                    <iconify-icon
-                      class="icon"
-                      icon="ic:baseline-plus"
-                    ></iconify-icon>
-                  </div>
-                </div>
-                <div class="accordion-content">
-                  <p
-                    >If your card is missing, let us know immediately. We’ll
-                    block your card right away send over a new one on the same
-                    day.To report a lost or stolen card, call us at (406)
-                    555-0120.</p
-                  >
-                </div>
-              </div>
-              <div class="accordion-item">
-                <div class="accordion-header"
-                  >What is your customer service number?
-                  <div class="close-btn">
-                    <iconify-icon
-                      class="icon"
-                      icon="ic:baseline-plus"
-                    ></iconify-icon>
-                  </div>
-                </div>
-                <div class="accordion-content">
-                  <p
-                    >If your card is missing, let us know immediately. We’ll
-                    block your card right away send over a new one on the same
-                    day.To report a lost or stolen card, call us at (406)
-                    555-0120.</p
-                  >
-                </div>
-              </div>
-              <div class="accordion-item">
-                <div class="accordion-header"
-                  >How do i reset my pin?
-                  <div class="close-btn">
-                    <iconify-icon
-                      class="icon"
-                      icon="ic:baseline-plus"
-                    ></iconify-icon>
-                  </div>
-                </div>
-                <div class="accordion-content">
-                  <p
-                    >If your card is missing, let us know immediately. We’ll
-                    block your card right away send over a new one on the same
-                    day.To report a lost or stolen card, call us at (406)
-                    555-0120.</p
-                  >
-                </div>
-              </div>
-              <div class="accordion-item">
-                <div class="accordion-header"
-                  >What is required to use Digital banking?
-                  <div class="close-btn">
-                    <iconify-icon
-                      class="icon"
-                      icon="ic:baseline-plus"
-                    ></iconify-icon>
-                  </div>
-                </div>
-                <div class="accordion-content">
-                  <p
-                    >If your card is missing, let us know immediately. We’ll
-                    block your card right away send over a new one on the same
-                    day.To report a lost or stolen card, call us at (406)
-                    555-0120.</p
-                  >
-                </div>
-              </div>
-              <div class="accordion-item">
-                <div class="accordion-header"
-                  >Is digital banking secure?
-                  <div class="close-btn">
-                    <iconify-icon
-                      class="icon"
-                      icon="ic:baseline-plus"
-                    ></iconify-icon>
-                  </div>
-                </div>
-                <div class="accordion-content">
-                  <p
-                    >If your card is missing, let us know immediately. We’ll
-                    block your card right away send over a new one on the same
-                    day.To report a lost or stolen card, call us at (406)
-                    555-0120.</p
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- FAQs section In end -->
-
-      <!--second getstarted In start  -->
-      <div class="secondgetStarted-section">
-        <div class="secondgetStarted-container">
-          <div class="secondgetStarted-container__left" data-aos="fade-up">
-            <div class="left-container">
-              <h2>Ready to get started?</h2>
-              <div class="normal-text">
-                It only takes a few minutes to register your FREE Bankio
-                account.
-              </div>
-              <a href="#"><button>Open an Account</button></a>
-            </div>
-          </div>
-          <div class="secondgetStarted-container__right">
-            <img src="./IMAGES/Curious-bro.png" />
-          </div>
-        </div>
-      </div>
-      <!--second getstarted In end -->'
-      <!-- footer In start  -->
-      <footer class="footer">
-        <div class="footer-container">
-          <div class="footer-container__top">
-            <div class="box left">
-              <div class="logo">
-                <img src="IMAGES/alisterbank-logo.png" alt="logo" />
-                <h3>Alister</h3>
-              </div>
-              <p class="normal-text"
-                >A modern, technology-first bank built for you and your growing
-                business.</p
-              >
-              <div class="social-icons">
-                <iconify-icon
-                  class="icon"
-                  icon="ri:facebook-circle-line"
-                ></iconify-icon>
-                <iconify-icon
-                  class="icon"
-                  icon="jam:twitter-circle"
-                ></iconify-icon>
-                <iconify-icon
-                  class="icon"
-                  icon="jam:linkedin-circle"
-                ></iconify-icon>
-                <iconify-icon
-                  class="icon"
-                  icon="mage:instagram-circle"
-                ></iconify-icon>
-              </div>
-            </div>
-            <div class="box center">
-              <h3>Company</h3>
-              <div class="links">
-                <div class="link"
-                  ><iconify-icon
-                    class="icon"
-                    icon="material-symbols-light:chevron-right"
-                  ></iconify-icon
-                  ><a href="#">About Us</a></div
-                >
-                <div class="link"
-                  ><iconify-icon
-                    class="icon"
-                    icon="material-symbols-light:chevron-right"
-                  ></iconify-icon
-                  ><a href="#">Awards</a></div
-                >
-                <div class="link"
-                  ><iconify-icon
-                    class="icon"
-                    icon="material-symbols-light:chevron-right"
-                  ></iconify-icon
-                  ><a href="#">Careers</a></div
-                >
-              </div>
-            </div>
-            <div class="box center">
-              <h3>Useful Links</h3>
-              <div class="links">
-                <div class="link"
-                  ><iconify-icon
-                    class="icon"
-                    icon="material-symbols-light:chevron-right"
-                  ></iconify-icon
-                  ><a href="#">Products</a></div
-                >
-                <div class="link"
-                  ><iconify-icon
-                    class="icon"
-                    icon="material-symbols-light:chevron-right"
-                  ></iconify-icon
-                  ><a href="#">Business loan</a></div
-                >
-                <div class="link"
-                  ><iconify-icon
-                    class="icon"
-                    icon="material-symbols-light:chevron-right"
-                  ></iconify-icon
-                  ><a href="#">Affiliate Program</a></div
-                >
-                <div class="link"
-                  ><iconify-icon
-                    class="icon"
-                    icon="material-symbols-light:chevron-right"
-                  ></iconify-icon
-                  ><a href="#">Blog</a></div
-                >
-              </div>
-            </div>
-            <div class="box center">
-              <h3>Support</h3>
-              <div class="links">
-                <div class="link"
-                  ><iconify-icon
-                    class="icon"
-                    icon="material-symbols-light:chevron-right"
-                  ></iconify-icon
-                  ><a href="#">Support@Alister</a></div
-                >
-                <div class="link"
-                  ><iconify-icon
-                    class="icon"
-                    icon="material-symbols-light:chevron-right"
-                  ></iconify-icon
-                  ><a href="#">Contact Us</a></div
-                >
-                <div class="link"
-                  ><iconify-icon
-                    class="icon"
-                    icon="material-symbols-light:chevron-right"
-                  ></iconify-icon
-                  ><a href="#">FAQ</a></div
-                >
-              </div>
-            </div>
-            <div class="box right">
-              <h3>Suscribe</h3>
-              <input
-                type="email"
-                name="email"
-                id="email"
-                placeholder="Enter Your Email Address"
-              />
-              <a href="#"><button>Suscribe</button></a>
-              <p class="normal-text"
-                >Get the latest updates via email. Any time you may
-                unsubscribe</p
-              >
-            </div>
-          </div>
-          <div class="footer-container__lower">
-            <div class="left">
-              <span
-                >Copyright <i class="fa fa-copyright"></i>
-                <a href="#">Alister</a></span
-              >
-            </div>
-            <div class="right">
-              <span><a href="#">Privacy</a></span>
-              <span><a href="#">Terms and Condition</a></span>
-            </div>
-          </div>
-        </div>
-      </footer>
-      <!-- footer In end  -->
-    </section>
-
-    <!-- SCRIPT LINKS -->
-    <script src="https://code.iconify.design/iconify-icon/2.0.0/iconify-icon.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init({
-        once: true,
-        anchorPlacement: "top-bottom",
-        duration: "200", // No duration for immediate effect
-      });
-    </script>
-    <script src="Javascript/script.js"></script>
-  </body>
 </html>

@@ -702,43 +702,123 @@ nav {
                 width: 100%;
                 position: absolute;
                 height: 0;
-                overflow: hidden;
+                overflow-x: hidden;
+                overflow-y: auto;
+                color: $black;
+                font-size: $small-text;
                 transition: 200ms ease-in-out;
                 box-shadow: $global-shadow;
 
-                ul {
-                    padding: 3rem 0 .5rem 0;
+                a {
+                    font-size: $small-text;
+                    color: $black;
+                }
 
-                    li {
-                        border: .1px solid rgb(231, 231, 231);
-                        display: flex;
-                        align-items: center;
-                        margin: auto;
-                        margin-bottom: 1rem;
-                        width: $width-global;
-                        height: 40px;
-                        padding-left: 1rem;
+                .drop {
+                    border: $grey-border;
+                    padding: .8rem .5rem;
+                    margin-bottom: 1rem;
+                    background: none;
+                }
 
-                        &:hover a {
-                            color: $b-color;
-                        }
+                .drop-2 {
+                    border: $grey-border;
+                    margin: auto;
+                    padding: .8rem .5rem;
+                    width: min(96%, 800px);
+                    margin-bottom: .2rem;
+                }
 
-                        a {
-                            font-family: $large-font;
-                            font-size: $small-text;
-                            font-weight: 400;
-                            color: $black;
-                            transition: 200ms ease-in-out;
+                .drop-3 {
+                   
+                    margin: auto;
+                    width: min(96%, 800px);
+                div{
+                    padding: .8rem 2rem;
+                    border: $grey-border;
+                    margin-bottom: .2rem;
+                }
+                }
+                .drop-4{
+                    margin: auto;
+                    width: min(96%, 800px);
 
-                        }
-
+                    div{
+                        padding: .8rem 2rem;
+                        border: $grey-border;
+                        margin-bottom: .2rem;
                     }
                 }
+
+                /* General Accordion Styling */
+                .nav-accordion {
+                    width: $width-global;
+                    margin: auto;
+                    padding-block: max(2rem, 1vw);
+
+                }
+
+                .nav-accordion-item {
+                    overflow: hidden;
+                }
+
+                .nav-accordion-header {
+                    cursor: pointer;
+                    position: relative;
+                }
+
+                .nav-accordion-header::after {
+                    content: '▾';
+                    /* Unicode character for "plus" sign (+) */
+                    position: absolute;
+                    right: 20px;
+                    transition: 200ms ease-in-out;
+                }
+
+                .nav-accordion-content {
+                    max-height: 0;
+                    overflow: hidden;
+                    transition: 200ms ease-out;
+                }
+
+                .nav-accordion-content p {
+                    margin: 0;
+                }
+
+
+
+                .nav-accordion-item_2 {
+                    overflow: hidden;
+                }
+
+                .nav-accordion-header_2 {
+                    cursor: pointer;
+                    position: relative;
+                }
+
+                .nav-accordion-header_2::after {
+                    content: '▾';
+                    /* Unicode character for "plus" sign (+) */
+                    position: absolute;
+                    right: 20px;
+                    transition: 200ms ease-in-out;
+                }
+
+
+                .nav-accordion-content_2 {
+                    max-height: 0;
+                    overflow: hidden;
+                    transition: 200ms ease-in-out;
+                }
+
+                .nav-accordion-content_2 p {
+                    margin: 0;
+                }
+
 
                 button {
                     width: min(30%, 150px);
                     background: $blue;
-                    margin-left: 6.4%;
                     color: $white;
                     font-size: $small-text;
                     font-weight: 300;
@@ -805,8 +885,9 @@ nav {
     }
 
     .nav-wrap .dropnav-container.active {
-        transition: 300ms ease;
         height: 500px;
+        padding-bottom: 2rem;
+        transition: 300ms ease;
     }
 
     .dropnav-btn.toggle .bars {
