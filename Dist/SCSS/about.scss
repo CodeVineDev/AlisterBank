@@ -555,8 +555,7 @@ nav {
                     border-radius: 10px;
                     background: $white;
                     box-shadow: $global-shadow;
-                    padding: 1rem;
-                    padding-block: max(2rem, 2vw);
+                    padding: max(1rem, 2vw);
                     text-align: center;
 
                     .label {
@@ -582,7 +581,7 @@ nav {
                 position: relative;
 
                 img {
-                    border: 8px solid $white;
+                    border: 6px solid $white;
                     border-radius: 10px;
                     position: absolute;
                     width: min(100%, 350px);

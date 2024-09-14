@@ -1,3 +1,35 @@
+// Load navigation bar
+// Function to load external HTML files and inject them into the page
+function loadComponent(componentId, filePath) {
+    fetch(filePath)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`Failed to load ${filePath}: ${response.statusText}`);
+            }
+            return response.text();
+        })
+        .then(data => {
+            document.getElementById(componentId).innerHTML = data;
+        })
+        .catch(error => {
+            console.error(error);
+            document.getElementById(componentId).innerHTML = `<p>Failed to load content.</p>`;
+        });
+}
+
+// Load navbar
+loadComponent('navbar', '../PAGES/navbar.html');
+
+// Load footer
+loadComponent('footer', '../PAGES/footer.html');
+
+
+
+
+
+
+
+
 
 // ABOUT PAGE SCRIPTS
 // COUNTER BOX SCRIPT
@@ -32,4 +64,4 @@ function animateCounter(counter) {
   document.querySelectorAll('.counter').forEach(counter => {
     observer.observe(counter);
   });
-  
+

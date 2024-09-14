@@ -489,8 +489,7 @@ nav {
   border-radius: 10px;
   background: white;
   box-shadow: 5px 5px 15px rgba(152, 176, 255, 0.2274509804);
-  padding: 1rem;
-  padding-block: max(2rem, 2vw);
+  padding: max(1rem, 2vw);
   text-align: center;
 }
 .about-section .about-container__left .counter-section .counter-box .label {
@@ -507,7 +506,7 @@ nav {
   position: relative;
 }
 .about-section .about-container__right .image-container img {
-  border: 8px solid white;
+  border: 6px solid white;
   border-radius: 10px;
   position: absolute;
   width: min(100%, 350px);

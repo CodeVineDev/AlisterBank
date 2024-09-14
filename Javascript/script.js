@@ -5,14 +5,11 @@
 
 
 
+// // Generate a random number
+// var randomNumber = Math.floor(Math.random() * 1000000);
 
-
-
-// Generate a random number
-var randomNumber = Math.floor(Math.random() * 1000000);
-
-// Update the CSS link with the random number as a cache-busting parameter
-document.querySelector('link[rel="stylesheet"]').href = './Dist/css/main.css?v=' + randomNumber;
+// // Update the CSS link with the random number as a cache-busting parameter
+// document.querySelector('link[rel="stylesheet"]').href = './Dist/css/main.css?v=' + randomNumber;
 
 // Navbar script
 document.addEventListener("DOMContentLoaded", () => {
@@ -56,36 +53,36 @@ document.addEventListener("DOMContentLoaded", () => {
 // RESPONSIVE NAVDROPDOWN SCRIPT
 document.querySelectorAll('.nav-accordion-header').forEach(navHeader => {
   navHeader.addEventListener('click', () => {
-      const activeNavHeader = document.querySelector('.nav-accordion-header.active');
-      if (activeNavHeader && activeNavHeader !== navHeader) {
-          activeNavHeader.classList.remove('active');
-          activeNavHeader.nextElementSibling.style.maxHeight = '0px';
-      }
+    const activeNavHeader = document.querySelector('.nav-accordion-header.active');
+    if (activeNavHeader && activeNavHeader !== navHeader) {
+      activeNavHeader.classList.remove('active');
+      activeNavHeader.nextElementSibling.style.maxHeight = '0px';
+    }
 
-      navHeader.classList.toggle('active');
-      const navAccordionContent = navHeader.nextElementSibling;
-      if (navHeader.classList.contains('active')) {
-          navAccordionContent.style.maxHeight = navAccordionContent.scrollHeight + '1px';
-      } else {
-          navAccordionContent.style.maxHeight = '0px';
-      }
+    navHeader.classList.toggle('active');
+    const navAccordionContent = navHeader.nextElementSibling;
+    if (navHeader.classList.contains('active')) {
+      navAccordionContent.style.maxHeight = navAccordionContent.scrollHeight + '1px';
+    } else {
+      navAccordionContent.style.maxHeight = '0px';
+    }
   });
 });
 document.querySelectorAll('.nav-accordion-header_2').forEach(navHeader2 => {
   navHeader2.addEventListener('click', () => {
-      const activeNavHeader2 = document.querySelector('.nav-accordion-header_2.active');
-      if (activeNavHeader2 && activeNavHeader2 !== navHeader2) {
-          activeNavHeader2.classList.remove('active');
-          activeNavHeader2.nextElementSibling.style.maxHeight = '0px';
-      }
+    const activeNavHeader2 = document.querySelector('.nav-accordion-header_2.active');
+    if (activeNavHeader2 && activeNavHeader2 !== navHeader2) {
+      activeNavHeader2.classList.remove('active');
+      activeNavHeader2.nextElementSibling.style.maxHeight = '0px';
+    }
 
-      navHeader2.classList.toggle('active');
-      const navAccordionContent2 = navHeader2.nextElementSibling;
-      if (navHeader2.classList.contains('active')) {
-          navAccordionContent2.style.maxHeight = navAccordionContent2.scrollHeight + '1px';
-      } else {
-          navAccordionContent2.style.maxHeight = '0px';
-      }
+    navHeader2.classList.toggle('active');
+    const navAccordionContent2 = navHeader2.nextElementSibling;
+    if (navHeader2.classList.contains('active')) {
+      navAccordionContent2.style.maxHeight = navAccordionContent2.scrollHeight + '1px';
+    } else {
+      navAccordionContent2.style.maxHeight = '0px';
+    }
   });
 });
 
@@ -211,90 +208,90 @@ const swipeThreshold = 50; // Minimum swipe distance to trigger slide change
 const angleThreshold = 10; // Maximum angle from the horizontal line
 
 function cardMoveSlider() {
-    cardSlider.style.transition = 'transform 0.5s ease-in-out';
-    cardSlider.style.transform = `translateX(-${(cardCurrentIndex + 1) * 100}%)`;
+  cardSlider.style.transition = 'transform 0.5s ease-in-out';
+  cardSlider.style.transform = `translateX(-${(cardCurrentIndex + 1) * 100}%)`;
 
-    if (cardCurrentIndex === -1) {
-        setTimeout(() => {
-            cardSlider.style.transition = 'none';
-            cardCurrentIndex = cardTotalSlides - 1;
-            cardSlider.style.transform = `translateX(-${cardTotalSlides * 100}%)`;
-        }, 500);
-    } else if (cardCurrentIndex === cardTotalSlides) {
-        setTimeout(() => {
-            cardSlider.style.transition = 'none';
-            cardCurrentIndex = 0;
-            cardSlider.style.transform = `translateX(-${100}%)`;
-        }, 500);
-    }
+  if (cardCurrentIndex === -1) {
+    setTimeout(() => {
+      cardSlider.style.transition = 'none';
+      cardCurrentIndex = cardTotalSlides - 1;
+      cardSlider.style.transform = `translateX(-${cardTotalSlides * 100}%)`;
+    }, 500);
+  } else if (cardCurrentIndex === cardTotalSlides) {
+    setTimeout(() => {
+      cardSlider.style.transition = 'none';
+      cardCurrentIndex = 0;
+      cardSlider.style.transform = `translateX(-${100}%)`;
+    }, 500);
+  }
 
-    cardUpdatePagination();
+  cardUpdatePagination();
 }
 
 function nSlide() {
-    cardCurrentIndex++;
-    cardMoveSlider();
+  cardCurrentIndex++;
+  cardMoveSlider();
 }
 
 function pSlide() {
-    cardCurrentIndex--;
-    cardMoveSlider();
+  cardCurrentIndex--;
+  cardMoveSlider();
 }
 
 function cardUpdatePagination() {
-    cardPagination.innerHTML = '';
-    const cardTotalDots = cardTotalSlides; // Number of dots should equal the original slides count
-    for (let i = 0; i < cardTotalDots; i++) {
-        const cardDot = document.createElement('div');
-        if (i === cardCurrentIndex || (cardCurrentIndex === cardTotalSlides && i === 0)) {
-            cardDot.classList.add('active');
-        }
-        cardDot.addEventListener('click', () => {
-            cardCurrentIndex = i;
-            cardMoveSlider();
-        });
-        cardPagination.appendChild(cardDot);
+  cardPagination.innerHTML = '';
+  const cardTotalDots = cardTotalSlides; // Number of dots should equal the original slides count
+  for (let i = 0; i < cardTotalDots; i++) {
+    const cardDot = document.createElement('div');
+    if (i === cardCurrentIndex || (cardCurrentIndex === cardTotalSlides && i === 0)) {
+      cardDot.classList.add('active');
     }
+    cardDot.addEventListener('click', () => {
+      cardCurrentIndex = i;
+      cardMoveSlider();
+    });
+    cardPagination.appendChild(cardDot);
+  }
 }
 
 // Touch events for mobile interaction
 cardSlider.addEventListener('touchstart', (e) => {
-    startX = e.touches[0].clientX;
-    startY = e.touches[0].clientY;
-    isDragging = true;
-    cardSlider.style.transition = 'none'; // Disable transition during drag
+  startX = e.touches[0].clientX;
+  startY = e.touches[0].clientY;
+  isDragging = true;
+  cardSlider.style.transition = 'none'; // Disable transition during drag
 });
 
 cardSlider.addEventListener('touchmove', (e) => {
-    if (!isDragging) return;
-    currentX = e.touches[0].clientX;
-    currentY = e.touches[0].clientY;
-    const diffX = currentX - startX;
-    const diffY = currentY - startY;
-    const angle = Math.atan2(Math.abs(diffY), Math.abs(diffX)) * (180 / Math.PI);
+  if (!isDragging) return;
+  currentX = e.touches[0].clientX;
+  currentY = e.touches[0].clientY;
+  const diffX = currentX - startX;
+  const diffY = currentY - startY;
+  const angle = Math.atan2(Math.abs(diffY), Math.abs(diffX)) * (180 / Math.PI);
 
-    // Only move the slider if the swipe is mostly horizontal
-    if (angle < angleThreshold) {
-        cardSlider.style.transform = `translateX(calc(-${(cardCurrentIndex + 1) * 100}% + ${diffX}px))`;
-    }
+  // Only move the slider if the swipe is mostly horizontal
+  if (angle < angleThreshold) {
+    cardSlider.style.transform = `translateX(calc(-${(cardCurrentIndex + 1) * 100}% + ${diffX}px))`;
+  }
 });
 
 cardSlider.addEventListener('touchend', () => {
-    isDragging = false;
-    const diffX = currentX - startX;
-    const diffY = currentY - startY;
-    const angle = Math.atan2(Math.abs(diffY), Math.abs(diffX)) * (180 / Math.PI);
+  isDragging = false;
+  const diffX = currentX - startX;
+  const diffY = currentY - startY;
+  const angle = Math.atan2(Math.abs(diffY), Math.abs(diffX)) * (180 / Math.PI);
 
-    // Only trigger slide change if the swipe is horizontal and passes the threshold
-    if (angle < angleThreshold && Math.abs(diffX) > swipeThreshold) {
-        if (diffX > 0) {
-            pSlide(); // Swipe right
-        } else if (diffX < 0) {
-            nSlide(); // Swipe left
-        }
-    } else {
-        cardMoveSlider(); // Snap back if not enough swipe or too vertical
+  // Only trigger slide change if the swipe is horizontal and passes the threshold
+  if (angle < angleThreshold && Math.abs(diffX) > swipeThreshold) {
+    if (diffX > 0) {
+      pSlide(); // Swipe right
+    } else if (diffX < 0) {
+      nSlide(); // Swipe left
     }
+  } else {
+    cardMoveSlider(); // Snap back if not enough swipe or too vertical
+  }
 });
 
 // Initialize the slider at the first real slide
@@ -420,24 +417,24 @@ testimonialMoveSlider();
 // ACCORDIION SCRIPT
 document.querySelectorAll('.accordion-header').forEach(header => {
   header.addEventListener('click', () => {
-      const activeHeader = document.querySelector('.accordion-header.active');
-      
-      // Close the previously active accordion if it's not the current one
-      if (activeHeader && activeHeader !== header) {
-          activeHeader.classList.remove('active');
-          activeHeader.nextElementSibling.style.maxHeight = '0px';
-      }
+    const activeHeader = document.querySelector('.accordion-header.active');
 
-      // Toggle the clicked header's active state
-      header.classList.toggle('active');
-      
-      // Toggle the content's max-height based on active state
-      const accordionContent = header.nextElementSibling;
-      if (header.classList.contains('active')) {
-          accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
-      } else {
-          accordionContent.style.maxHeight = '0px';
-      }
+    // Close the previously active accordion if it's not the current one
+    if (activeHeader && activeHeader !== header) {
+      activeHeader.classList.remove('active');
+      activeHeader.nextElementSibling.style.maxHeight = '0px';
+    }
+
+    // Toggle the clicked header's active state
+    header.classList.toggle('active');
+
+    // Toggle the content's max-height based on active state
+    const accordionContent = header.nextElementSibling;
+    if (header.classList.contains('active')) {
+      accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
+    } else {
+      accordionContent.style.maxHeight = '0px';
+    }
   });
 });
 
