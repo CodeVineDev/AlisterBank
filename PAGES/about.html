@@ -132,24 +132,6 @@
         anchorPlacement: "top-bottom",
         duration: "200", // No duration for immediate effect
       });
-
-      fetch("../index.html")
-        .then((response) => response.text())
-        .then((html) => {
-          // Create a temporary DOM to parse the fetched HTML
-          const tempDiv = document.createElement("div");
-          tempDiv.innerHTML = html;
-
-          // Extract the specific part of the HTML
-          const reusableHeader = tempDiv.querySelector("#footer");
-          if (reusableHeader) {
-            document.getElementById("header-placeholder").innerHTML =
-              reusableHeader.innerHTML;
-          } else {
-            console.error("Reusable header not found.");
-          }
-        })
-        .catch((error) => console.error("Error loading the HTML file:", error));
     </script>
     <script src="../Javascript/script.js"></script>
     <script src="../Javascript/linkedscript.js"></script>
